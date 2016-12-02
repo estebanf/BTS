@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<test:testxsl xmlns:test="http://intalio.com/xsltestcase" xsl="NewRequest.xslt" xmlns:BTS_metrics="http://test.com/xvar/example" xmlns:tns="http://everteam.com/xvar/example" xmlns:this="http://bts.com/Processes/Core/ContentTransmissionBooking/BTS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BTS="http://www.example.org/BTS" xmlns:ContentTransmissionBooking="http://bts.com/Processes/Core/ContentTransmissionBooking" xmlns:Client="http://bts.com/Processes/Core/ContentTransmissionBooking/Client">
+  <!--XSL Test sample  generated on Thu Dec 01 16:16:08 EST 2016
+ for F/BTS/Processes/Core/ContentTransmissionBooking.bpm
+   pool:BTS
+   activity: Save request data
+ Complete doXslTransform: bpel:doXslTransform("../../XSLT/NewRequest.xslt", $thisReceive_requestRequest1Msg.body, "pid", $ode:pid)
+ Input document as defined in the mapper: $thisReceive_requestRequest1Msg.body-->
+  <test:input>
+    <this:Receive_requestRequest>
+      <BTS:Action>New</BTS:Action>
+      <BTS:RequestInfo>
+        <BTS:CustomerId>1</BTS:CustomerId>
+        <BTS:EventDateTime>something</BTS:EventDateTime>
+        <BTS:EventType>News</BTS:EventType>
+        <BTS:RequestType>Inquiry</BTS:RequestType>
+        <BTS:Location>St Johns</BTS:Location>
+      </BTS:RequestInfo>
+    </this:Receive_requestRequest>
+  </test:input>
+  <test:param name="pid">123</test:param>
+</test:testxsl>

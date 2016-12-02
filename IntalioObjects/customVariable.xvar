@@ -1,0 +1,16 @@
+﻿<xbpms:descriptor targetNamespace="http://everteam.com/xvar/example" xmlns:xbpms="http://bpms.intalio.com/externalVariables" xmlns:tns="http://everteam.com/xvar/example" xmlns:xjdbc="http://ode.apache.org/externalVariables/jdbc" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xvar="http://ode.apache.org/externalVariables">
+  <xbpms:import namespace="http://everteam.com/xvar/example" schemaLocation="${currentFileName}.xsd"/>
+  <xbpms:externalVariable name="customVariable">
+    <xbpms:description>default description</xbpms:description>
+    <xbpms:binding>
+      <xjdbc:jdbc>
+        <xjdbc:datasource-jndi>${com.intalio.bpms.jndi.bpmsdb}</xjdbc:datasource-jndi>
+        <xjdbc:table xbpms:isDefault="true">customVariable</xjdbc:table>
+        <xjdbc:column generator="iid" key="yes" name="id" sql-type="BIGINT" xbpms:type-label="process-instance-id"/>
+        <xjdbc:column key="no" name="businessReference" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:column key="no" name="businessStatus" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:init mode="update-insert"/>
+      </xjdbc:jdbc>
+    </xbpms:binding>
+  </xbpms:externalVariable>
+</xbpms:descriptor>

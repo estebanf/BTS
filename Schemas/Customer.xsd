@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><element name="iob_response_root"><complexType><sequence><element name="customerid" type="integer"/><element name="customername" type="string"/><element name="customertier" type="integer"/><element name="approvalthreshold" type="integer"/></sequence></complexType></element></schema>

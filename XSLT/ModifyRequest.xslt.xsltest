@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<test:testxsl xmlns:test="http://intalio.com/xsltestcase" xsl="ModifyRequest.xslt" xmlns:BTS_metrics="http://test.com/xvar/example" xmlns:tns="http://everteam.com/xvar/example" xmlns:this="http://bts.com/Processes/Core/ContentTransmissionBooking/BTS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BTS="http://www.example.org/BTS" xmlns:ContentTransmissionBooking="http://bts.com/Processes/Core/ContentTransmissionBooking" xmlns:Client="http://bts.com/Processes/Core/ContentTransmissionBooking/Client">
+  <!--XSL Test sample  generated on Fri Dec 02 03:47:03 EST 2016
+ for F/BTS/Processes/Core/ContentTransmissionBooking.bpm
+   pool:BTS
+   activity: Mofidy request data
+ Complete doXslTransform: bpel:doXslTransform("../../XSLT/ModifyRequest.xslt", $thisReceive_requestRequest1Msg.body)
+ Input document as defined in the mapper: $thisReceive_requestRequest1Msg.body-->
+  <test:input>
+    <this:Receive_requestRequest>
+      <BTS:Action>Modify</BTS:Action>
+      <BTS:RequestId>2016122-49</BTS:RequestId>
+      <BTS:RequestInfo>
+        <BTS:CustomerId>string</BTS:CustomerId>
+        <BTS:EventDateTime>dateTime</BTS:EventDateTime>
+        <BTS:EventType>string</BTS:EventType>
+        <BTS:RequestType>string</BTS:RequestType>
+        <BTS:Location>string</BTS:Location>
+      </BTS:RequestInfo>
+    </this:Receive_requestRequest>
+  </test:input>
+  <!--No parameters are currently passed to doXslTransform.-->
+</test:testxsl>

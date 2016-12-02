@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_EYJ0AbdEEeaCaYmVKR7BjA" iD="_EYJ0ALdEEeaCaYmVKR7BjA" name="ContentTransmissionBooking">
+  <pools xmi:type="bpmn:Pool" xmi:id="_EYmf97dEEeaCaYmVKR7BjA" iD="_EYmf9rdEEeaCaYmVKR7BjA" name="Client">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EYmf-LdEEeaCaYmVKR7BjA" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EYmf-bdEEeaCaYmVKR7BjA" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_LZhdqLdHEeaCaYmVKR7BjA" iD="_LZhdp7dHEeaCaYmVKR7BjA" name="bTSReceive_requestResponse1Msg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LZhdqbdHEeaCaYmVKR7BjA" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LZhdqrdHEeaCaYmVKR7BjA" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LZhds7dHEeaCaYmVKR7BjA" key="defaultDeclarationName" value="bTSReceive_requestResponse1Msg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LZqnk7dHEeaCaYmVKR7BjA" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/BTS}Receive_requestResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_LZqnkLdHEeaCaYmVKR7BjA" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LZqnkbdHEeaCaYmVKR7BjA" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LZqnkrdHEeaCaYmVKR7BjA" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYmf-7dEEeaCaYmVKR7BjA" iD="_EYmf-rdEEeaCaYmVKR7BjA" outgoingEdges="_EYvp6LdEEeaCaYmVKR7BjA" name="" activityType="EventStartEmpty"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvp4bdEEeaCaYmVKR7BjA" iD="_EYvp4LdEEeaCaYmVKR7BjA" associations="_LZqnkLdHEeaCaYmVKR7BjA" outgoingEdges="_EYvp6bdEEeaCaYmVKR7BjA" incomingEdges="_EYvp6LdEEeaCaYmVKR7BjA" name="Submit request" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_EYmf8bdEEeaCaYmVKR7BjA"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_LZExsbdHEeaCaYmVKR7BjA"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvp5LdEEeaCaYmVKR7BjA" iD="_EYvp47dEEeaCaYmVKR7BjA" outgoingEdges="_EYvp6rdEEeaCaYmVKR7BjA" incomingEdges="_EYvp6bdEEeaCaYmVKR7BjA" name="Recieve approval request" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvp57dEEeaCaYmVKR7BjA" iD="_EYvp5rdEEeaCaYmVKR7BjA" incomingEdges="_EYvp6rdEEeaCaYmVKR7BjA" name="Receive notification" activityType="Task"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EYvp6LdEEeaCaYmVKR7BjA" iD="_EYmf_LdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EYvp6bdEEeaCaYmVKR7BjA" iD="_EYvp4rdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EYvp6rdEEeaCaYmVKR7BjA" iD="_EYvp5bdEEeaCaYmVKR7BjA" name=""/>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_EYvp7LdEEeaCaYmVKR7BjA" iD="_EYvp67dEEeaCaYmVKR7BjA" name="BTS">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EYvp7bdEEeaCaYmVKR7BjA" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EYvp7rdEEeaCaYmVKR7BjA" key="poolIsExecutable" value="true"/>
+    </eAnnotations>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_aFitobdEEeaCaYmVKR7BjA" iD="_aFithrdEEeaCaYmVKR7BjA" name="customVariable">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aFitordEEeaCaYmVKR7BjA" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_aFito7dEEeaCaYmVKR7BjA" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_aFitpLdEEeaCaYmVKR7BjA" key="douri" value="project:///IntalioObjects/customVariable.xvar?xvartype={http://everteam.com/xvar/example}customVariable"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_aF1ocLdEEeaCaYmVKR7BjA" key="defaultDeclarationName" value="customVariable"/>
+      </eAnnotations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_LZOisbdHEeaCaYmVKR7BjA" iD="_LZOisLdHEeaCaYmVKR7BjA" name="thisReceive_requestResponse1Msg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LZOisrdHEeaCaYmVKR7BjA" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LZOis7dHEeaCaYmVKR7BjA" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LZXsqLdHEeaCaYmVKR7BjA" key="defaultDeclarationName" value="thisReceive_requestResponse1Msg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LZhdobdHEeaCaYmVKR7BjA" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/BTS}Receive_requestResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_LZXsqbdHEeaCaYmVKR7BjA" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LZXsqrdHEeaCaYmVKR7BjA" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LZhdoLdHEeaCaYmVKR7BjA" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_T77vLLgBEeaCaYmVKR7BjA" iD="_T77vEbgBEeaCaYmVKR7BjA" name="RequestOperation">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T77vLbgBEeaCaYmVKR7BjA" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T77vLrgBEeaCaYmVKR7BjA" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T77vL7gBEeaCaYmVKR7BjA" key="douri" value="project:///Schemas/BTS.xsd?xsdelement={http://www.example.org/BTS}RequestOperation"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T8FgELgBEeaCaYmVKR7BjA" key="defaultDeclarationName" value="RequestOperation"/>
+      </eAnnotations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_5N8TgbgJEeaCaYmVKR7BjA" iD="_5N8TZrgJEeaCaYmVKR7BjA" name="BTS_Request">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5N8TgrgJEeaCaYmVKR7BjA" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5N8Tg7gJEeaCaYmVKR7BjA" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5N8ThLgJEeaCaYmVKR7BjA" key="douri" value="project:///Metrics/BTS_metrics.xvar?xvartype={http://test.com/xvar/example}BTS_Request"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5OGEYLgJEeaCaYmVKR7BjA" key="defaultDeclarationName" value="BTS_Request"/>
+      </eAnnotations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvp8LdEEeaCaYmVKR7BjA" iD="_EYvp77dEEeaCaYmVKR7BjA" associations="_LZXsqbdHEeaCaYmVKR7BjA" outgoingEdges="_EY5bHbdEEeaCaYmVKR7BjA" name="Receive request" activityType="EventStartMessage">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_EYmf8bdEEeaCaYmVKR7BjA"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_LZExsbdHEeaCaYmVKR7BjA"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvp87dEEeaCaYmVKR7BjA" iD="_EYvp8rdEEeaCaYmVKR7BjA" incomingEdges="_EY5bDrdEEeaCaYmVKR7BjA" name="End released" activityType="EventEndEmpty"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvp-rdEEeaCaYmVKR7BjA" iD="_EYvp-bdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bD7dEEeaCaYmVKR7BjA _EY5bELdEEeaCaYmVKR7BjA" incomingEdges="_h5dG8bgOEeavcMke7hVtyg" name="" activityType="GatewayParallel"/>
+    <vertices xmi:type="bpmn:ActivityRule" xmi:id="_EYvp_rdEEeaCaYmVKR7BjA" iD="_EYvp_bdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bEbdEEeaCaYmVKR7BjA" incomingEdges="_EY5bELdEEeaCaYmVKR7BjA" name="Check external dependencies" activityType="RuleTask"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqAbdEEeaCaYmVKR7BjA" iD="_EYvqALdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bErdEEeaCaYmVKR7BjA _EY5bFrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bEbdEEeaCaYmVKR7BjA" name="" activityType="GatewayParallel"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqBbdEEeaCaYmVKR7BjA" iD="_EYvqBLdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bE7dEEeaCaYmVKR7BjA _EY5bFLdEEeaCaYmVKR7BjA" incomingEdges="_EY5bErdEEeaCaYmVKR7BjA" name="Requires HSAN" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqCbdEEeaCaYmVKR7BjA" iD="_EYvqCLdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bGrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bE7dEEeaCaYmVKR7BjA _EY5bFbdEEeaCaYmVKR7BjA" name="" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqDbdEEeaCaYmVKR7BjA" iD="_EYvqDLdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bGLdEEeaCaYmVKR7BjA _EY5bF7dEEeaCaYmVKR7BjA" incomingEdges="_EY5bFrdEEeaCaYmVKR7BjA" name="Require external resources" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqEbdEEeaCaYmVKR7BjA" iD="_EYvqELdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bG7dEEeaCaYmVKR7BjA" incomingEdges="_EY5bGLdEEeaCaYmVKR7BjA _EY5bGbdEEeaCaYmVKR7BjA" name="" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqFbdEEeaCaYmVKR7BjA" iD="_EYvqFLdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bJrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bGrdEEeaCaYmVKR7BjA _EY5bG7dEEeaCaYmVKR7BjA" name="" activityType="GatewayParallel"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqGLdEEeaCaYmVKR7BjA" iD="_EYvqF7dEEeaCaYmVKR7BjA" outgoingEdges="_EY5bKLdEEeaCaYmVKR7BjA" incomingEdges="_EY5bJrdEEeaCaYmVKR7BjA _qD5ngbjMEeaF5pjuln3vAA" name="" activityType="GatewayParallel"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqG7dEEeaCaYmVKR7BjA" iD="_EYvqGrdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bH7dEEeaCaYmVKR7BjA _EY5bHrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bHbdEEeaCaYmVKR7BjA" name="Release existing request? " activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqH7dEEeaCaYmVKR7BjA" iD="_EYvqHrdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bJbdEEeaCaYmVKR7BjA _EY5bILdEEeaCaYmVKR7BjA" incomingEdges="_EY5bH7dEEeaCaYmVKR7BjA" name="New or modify existing?" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqI7dEEeaCaYmVKR7BjA" iD="_EYvqIrdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bIbdEEeaCaYmVKR7BjA _EY5bIrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bILdEEeaCaYmVKR7BjA" name="Modify existing?" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqJ7dEEeaCaYmVKR7BjA" iD="_EYvqJrdEEeaCaYmVKR7BjA" outgoingEdges="_hlfCGLgOEeavcMke7hVtyg" incomingEdges="_EY5bI7dEEeaCaYmVKR7BjA _5UFiMbgKEeaCaYmVKR7BjA" name="" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqL7dEEeaCaYmVKR7BjA" iD="_EYvqLrdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bKbdEEeaCaYmVKR7BjA" incomingEdges="_EY5bKLdEEeaCaYmVKR7BjA _EY5bJbdEEeaCaYmVKR7BjA" name="" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqMrdEEeaCaYmVKR7BjA" iD="_EYvqMbdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bLLdEEeaCaYmVKR7BjA _EY5bKrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bKbdEEeaCaYmVKR7BjA" name="Approval needed?" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqNrdEEeaCaYmVKR7BjA" iD="_EYvqNbdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bK7dEEeaCaYmVKR7BjA" incomingEdges="_EY5bKrdEEeaCaYmVKR7BjA" name="Request client approval" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqObdEEeaCaYmVKR7BjA" iD="_EYvqOLdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bLbdEEeaCaYmVKR7BjA _EY5bLrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bK7dEEeaCaYmVKR7BjA" name="Approved?" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqPbdEEeaCaYmVKR7BjA" iD="_EYvqPLdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bL7dEEeaCaYmVKR7BjA" incomingEdges="_EY5bLLdEEeaCaYmVKR7BjA _EY5bLbdEEeaCaYmVKR7BjA" name="" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqQLdEEeaCaYmVKR7BjA" iD="_EYvqP7dEEeaCaYmVKR7BjA" incomingEdges="_EY5bLrdEEeaCaYmVKR7BjA" name="End rejected" activityType="EventEndEmpty"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqQrdEEeaCaYmVKR7BjA" iD="_EYvqQbdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bMLdEEeaCaYmVKR7BjA _EY5bMbdEEeaCaYmVKR7BjA" incomingEdges="_EY5bL7dEEeaCaYmVKR7BjA" name="" activityType="GatewayParallel"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EY5a4bdEEeaCaYmVKR7BjA" iD="_EY5a4LdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bOLdEEeaCaYmVKR7BjA" incomingEdges="_EY5bMLdEEeaCaYmVKR7BjA" name="Notify Requester" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EY5a5LdEEeaCaYmVKR7BjA" iD="_EY5a47dEEeaCaYmVKR7BjA" outgoingEdges="_EY5bP7dEEeaCaYmVKR7BjA" incomingEdges="_EY5bOLdEEeaCaYmVKR7BjA _EY5bO7dEEeaCaYmVKR7BjA _EY5bPrdEEeaCaYmVKR7BjA" name="" activityType="GatewayParallel"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EY5a6bdEEeaCaYmVKR7BjA" iD="_EY5a6LdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bObdEEeaCaYmVKR7BjA" incomingEdges="_EY5bNLdEEeaCaYmVKR7BjA" name="Book on feeds" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EY5a7bdEEeaCaYmVKR7BjA" iD="_EY5a7LdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bO7dEEeaCaYmVKR7BjA" incomingEdges="_EY5bObdEEeaCaYmVKR7BjA _EY5bOrdEEeaCaYmVKR7BjA" name="" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EY5a8LdEEeaCaYmVKR7BjA" iD="_EY5a77dEEeaCaYmVKR7BjA" outgoingEdges="_EY5bOrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bM7dEEeaCaYmVKR7BjA" name="Book on Schedule ALL" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EY5a87dEEeaCaYmVKR7BjA" iD="_EY5a8rdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bPLdEEeaCaYmVKR7BjA" incomingEdges="_EY5bN7dEEeaCaYmVKR7BjA" name="Hold on Feeds" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EY5a97dEEeaCaYmVKR7BjA" iD="_EY5a9rdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bPrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bPLdEEeaCaYmVKR7BjA _EY5bPbdEEeaCaYmVKR7BjA" name="" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EY5a-rdEEeaCaYmVKR7BjA" iD="_EY5a-bdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bPbdEEeaCaYmVKR7BjA" incomingEdges="_EY5bNrdEEeaCaYmVKR7BjA" name="Hold on ScheduleAll" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EY5a_bdEEeaCaYmVKR7BjA" iD="_EY5a_LdEEeaCaYmVKR7BjA" incomingEdges="_EY5bP7dEEeaCaYmVKR7BjA" name="End" activityType="EventEndEmpty"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EY5a_7dEEeaCaYmVKR7BjA" iD="_EY5a_rdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bMrdEEeaCaYmVKR7BjA _EY5bNbdEEeaCaYmVKR7BjA" incomingEdges="_EY5bMbdEEeaCaYmVKR7BjA" name="Booking or inquiry" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EY5bA7dEEeaCaYmVKR7BjA" iD="_EY5bArdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bNLdEEeaCaYmVKR7BjA _EY5bM7dEEeaCaYmVKR7BjA" incomingEdges="_EY5bMrdEEeaCaYmVKR7BjA" name="Client" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EY5bBbdEEeaCaYmVKR7BjA" iD="_EY5bBLdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bN7dEEeaCaYmVKR7BjA _EY5bNrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bNbdEEeaCaYmVKR7BjA" name="Client" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:ActivityService" xmi:id="_EY5bB7dEEeaCaYmVKR7BjA" iD="_EY5bBrdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bDrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bHrdEEeaCaYmVKR7BjA" name="Release inquiry" activityType="ServiceTask"/>
+    <vertices xmi:type="bpmn:ActivityService" xmi:id="_EY5bCbdEEeaCaYmVKR7BjA" iD="_EY5bCLdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bI7dEEeaCaYmVKR7BjA" incomingEdges="_EY5bIbdEEeaCaYmVKR7BjA" name="Mofidy request data" activityType="ServiceTask"/>
+    <vertices xmi:type="bpmn:ActivityUser" xmi:id="_EY5bC7dEEeaCaYmVKR7BjA" iD="_EY5bCrdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bFbdEEeaCaYmVKR7BjA" incomingEdges="_EY5bFLdEEeaCaYmVKR7BjA" name="Coordinate with NBA" activityType="UserTask"/>
+    <vertices xmi:type="bpmn:ActivityUser" xmi:id="_EY5bDbdEEeaCaYmVKR7BjA" iD="_EY5bDLdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bGbdEEeaCaYmVKR7BjA" incomingEdges="_EY5bF7dEEeaCaYmVKR7BjA" name="Coordinate with vendors" activityType="UserTask"/>
+    <vertices xmi:type="bpmn:ActivityService" xmi:id="_3j4v4bgKEeaCaYmVKR7BjA" iD="_3j4v4LgKEeaCaYmVKR7BjA" outgoingEdges="_5UFiMbgKEeaCaYmVKR7BjA" incomingEdges="_EY5bIrdEEeaCaYmVKR7BjA" name="Save request data" activityType="ServiceTask"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_hlC9MbgOEeavcMke7hVtyg" iD="_hlC9MLgOEeavcMke7hVtyg" outgoingEdges="_h5dG8bgOEeavcMke7hVtyg" incomingEdges="_hlfCGLgOEeavcMke7hVtyg" activityType="EventIntermediateEmpty"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_h-PH8bjMEeaF5pjuln3vAA" iD="_EYvp9bdEEeaCaYmVKR7BjA" outgoingEdges="_pRPbgbjMEeaF5pjuln3vAA" incomingEdges="_EY5bD7dEEeaCaYmVKR7BjA" name="Confirm routers availability" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ihQVdbjMEeaF5pjuln3vAA" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ihQVdrjMEeaF5pjuln3vAA" key="blackbox" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ihQVd7jMEeaF5pjuln3vAA" key="douri2" value="project:///Processes/Integrations/RouterAssignment.bpm/_ml_ysLjLEeaF5pjuln3vAA.bptl?bptnode={http://www.intalio/designer/business-process-data-modeling/template}Confirm routers availability"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ihQVeLjMEeaF5pjuln3vAA" key="douri" value="project:///Processes/Integrations/RouterAssignment-process.wsdl?invokerequestresponsebound={http://thisproject/Processes/Integrations/RouterAssignment/process}CanonicServiceForcaller/canonicPort/Get_Router_Request"/>
+      </eAnnotations>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_pQ75gbjMEeaF5pjuln3vAA" iD="_pQ75gLjMEeaF5pjuln3vAA" outgoingEdges="_qD5ngbjMEeaF5pjuln3vAA" incomingEdges="_pRPbgbjMEeaF5pjuln3vAA" activityType="EventIntermediateEmpty"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bDrdEEeaCaYmVKR7BjA" iD="_EYvp9LdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bD7dEEeaCaYmVKR7BjA" iD="_EYvp97dEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bELdEEeaCaYmVKR7BjA" iD="_EYvp_LdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bEbdEEeaCaYmVKR7BjA" iD="_EYvp_7dEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bErdEEeaCaYmVKR7BjA" iD="_EYvqArdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bE7dEEeaCaYmVKR7BjA" iD="_EYvqBrdEEeaCaYmVKR7BjA" name="No" conditionType="Default" isDefault="true"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bFLdEEeaCaYmVKR7BjA" iD="_EYvqB7dEEeaCaYmVKR7BjA" name="Yes"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bFbdEEeaCaYmVKR7BjA" iD="_EYvqCrdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bFrdEEeaCaYmVKR7BjA" iD="_EYvqA7dEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bF7dEEeaCaYmVKR7BjA" iD="_EYvqDrdEEeaCaYmVKR7BjA" name="Yes"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bGLdEEeaCaYmVKR7BjA" iD="_EYvqD7dEEeaCaYmVKR7BjA" name="No" conditionType="Default" isDefault="true"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bGbdEEeaCaYmVKR7BjA" iD="_EYvqErdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bGrdEEeaCaYmVKR7BjA" iD="_EYvqC7dEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bG7dEEeaCaYmVKR7BjA" iD="_EYvqE7dEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bHbdEEeaCaYmVKR7BjA" iD="_EYvp8bdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bHrdEEeaCaYmVKR7BjA" iD="_EYvqHLdEEeaCaYmVKR7BjA" name="Yes"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bH7dEEeaCaYmVKR7BjA" iD="_EYvqHbdEEeaCaYmVKR7BjA" name="No" conditionType="Default" isDefault="true"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bILdEEeaCaYmVKR7BjA" iD="_EYvqILdEEeaCaYmVKR7BjA" name="Yes"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bIbdEEeaCaYmVKR7BjA" iD="_EYvqJLdEEeaCaYmVKR7BjA" name="Yes"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bIrdEEeaCaYmVKR7BjA" iD="_EYvqJbdEEeaCaYmVKR7BjA" name="No" conditionType="Default" isDefault="true"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bI7dEEeaCaYmVKR7BjA" iD="_EYvqKLdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bJbdEEeaCaYmVKR7BjA" iD="_EYvqIbdEEeaCaYmVKR7BjA" name="No" conditionType="Default" isDefault="true"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bJrdEEeaCaYmVKR7BjA" iD="_EYvqFrdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bKLdEEeaCaYmVKR7BjA" iD="_EYvqGbdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bKbdEEeaCaYmVKR7BjA" iD="_EYvqMLdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bKrdEEeaCaYmVKR7BjA" iD="_EYvqM7dEEeaCaYmVKR7BjA" name="Yes" conditionType="Default" isDefault="true"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bK7dEEeaCaYmVKR7BjA" iD="_EYvqN7dEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bLLdEEeaCaYmVKR7BjA" iD="_EYvqNLdEEeaCaYmVKR7BjA" name="No"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bLbdEEeaCaYmVKR7BjA" iD="_EYvqOrdEEeaCaYmVKR7BjA" name="Yes"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bLrdEEeaCaYmVKR7BjA" iD="_EYvqO7dEEeaCaYmVKR7BjA" name="No" conditionType="Default" isDefault="true"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bL7dEEeaCaYmVKR7BjA" iD="_EYvqPrdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bMLdEEeaCaYmVKR7BjA" iD="_EYvqQ7dEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bMbdEEeaCaYmVKR7BjA" iD="_EYvqRLdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bMrdEEeaCaYmVKR7BjA" iD="_EY5bALdEEeaCaYmVKR7BjA" name="Booking"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bM7dEEeaCaYmVKR7BjA" iD="_EY5a8bdEEeaCaYmVKR7BjA" name="News" conditionType="Default" isDefault="true"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bNLdEEeaCaYmVKR7BjA" iD="_EY5a6rdEEeaCaYmVKR7BjA" name="Entertainment"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bNbdEEeaCaYmVKR7BjA" iD="_EY5bAbdEEeaCaYmVKR7BjA" name="Inquiry" conditionType="Default" isDefault="true"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bNrdEEeaCaYmVKR7BjA" iD="_EY5a-7dEEeaCaYmVKR7BjA" name="News" conditionType="Default" isDefault="true"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bN7dEEeaCaYmVKR7BjA" iD="_EY5a9LdEEeaCaYmVKR7BjA" name="Entertainment"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bOLdEEeaCaYmVKR7BjA" iD="_EY5a4rdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bObdEEeaCaYmVKR7BjA" iD="_EY5a67dEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bOrdEEeaCaYmVKR7BjA" iD="_EY5a7rdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bO7dEEeaCaYmVKR7BjA" iD="_EY5a5bdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bPLdEEeaCaYmVKR7BjA" iD="_EY5a9bdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bPbdEEeaCaYmVKR7BjA" iD="_EY5a-LdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bPrdEEeaCaYmVKR7BjA" iD="_EY5a5rdEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bP7dEEeaCaYmVKR7BjA" iD="_EY5a57dEEeaCaYmVKR7BjA" name=""/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_5UFiMbgKEeaCaYmVKR7BjA" iD="_5UFiMLgKEeaCaYmVKR7BjA"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_hlfCGLgOEeavcMke7hVtyg" iD="_hlfCF7gOEeavcMke7hVtyg"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_h5dG8bgOEeavcMke7hVtyg" iD="_h5dG8LgOEeavcMke7hVtyg"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_pRPbgbjMEeaF5pjuln3vAA" iD="_pRPbgLjMEeaF5pjuln3vAA"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_qD5ngbjMEeaF5pjuln3vAA" iD="_qD5ngLjMEeaF5pjuln3vAA"/>
+  </pools>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_EYmf8bdEEeaCaYmVKR7BjA" iD="_EYmf8LdEEeaCaYmVKR7BjA" name="" source="_EYvp4bdEEeaCaYmVKR7BjA" target="_EYvp8LdEEeaCaYmVKR7BjA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QPF70Lf_EeaCaYmVKR7BjA" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QPF70bf_EeaCaYmVKR7BjA" key="douri" value="project:///Schemas/BTS.xsd?xsdtype={http://www.example.org/BTS}RequestActionType"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_LZExsbdHEeaCaYmVKR7BjA" iD="_LZExsLdHEeaCaYmVKR7BjA" source="_EYvp8LdEEeaCaYmVKR7BjA" target="_EYvp4bdEEeaCaYmVKR7BjA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Q1GL4Lf_EeaCaYmVKR7BjA" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Q1GL4bf_EeaCaYmVKR7BjA" key="douri" value="project:///Schemas/BTS.xsd?xsdtype={http://www.example.org/BTS}ACKType"/>
+    </eAnnotations>
+  </messages>
+</bpmn:BpmnDiagram>

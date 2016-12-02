@@ -1,0 +1,201 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:tns="http://everteam.com/xvar/example" xmlns:ns="http://routerassignment.rules.bts" xmlns:ax22="http://routerassignment.rules.bts/bre" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ax21="http://routerassignment.rules.bts/xsd" xmlns:Customer1="__project:///Schemas/Customer.xsd" xmlns:BTS="http://www.example.org/BTS" xmlns:diag="http://thisdiagram" xmlns:Customer="http://bts.com/Services/REST/Customer.rest" xmlns:caller="http://thisdiagram/caller" xmlns:processimplicitPartner="http://thisdiagram/processimplicitPartner" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:this="http://thisdiagram/process" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/process">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://everteam.com/xvar/example" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///IntalioObjects/customVariable.xvar"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://routerassignment.rules.bts" bpdm:prefix="ns" bpdm:comment="contrib=&apos;project:///Rules/RouterAssignment.bre/dtws_bts_rules_routerassignment/META-INF/dtws_bts_rules_routerassignment.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://routerassignment.rules.bts/bre" bpdm:prefix="ax22" bpdm:comment="contrib=&apos;project:///Rules/RouterAssignment.bre/dtws_bts_rules_routerassignment/META-INF/dtws_bts_rules_routerassignment.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://routerassignment.rules.bts/xsd" bpdm:prefix="ax21" bpdm:comment="contrib=&apos;project:///Rules/RouterAssignment.bre/dtws_bts_rules_routerassignment/META-INF/dtws_bts_rules_routerassignment.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="__project:///Schemas/Customer.xsd" bpdm:prefix="Customer1" bpdm:comment="contrib=&apos;project:///Schemas/Customer.xsd"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.example.org/BTS" bpdm:prefix="BTS" bpdm:comment="contrib=&apos;project:///Schemas/BTS.xsd"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_MdRycLiAEeavcMke7hVtyg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://bts.com/Services/REST/Customer.rest" bpdm:prefix="Customer" bpdm:comment="contrib=&apos;project:///Services/REST/Customer.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/caller" bpdm:prefix="caller" bpdm:comment="contrib=&apos;partner-pool:///_MdRycLiAEeavcMke7hVtyg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/processimplicitPartner" bpdm:prefix="processimplicitPartner" bpdm:comment="contrib=&apos;partner-pool:///_LgezALiAEeavcMke7hVtygimplicitPartner"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/process" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types">
+            <wsdl:portType name="Forcaller">
+                <wsdl:operation name="Get_Router_Request" bpdm:source="partner-pool:///_MdRycLiAEeavcMke7hVtyg">
+                    <wsdl:input message="this:Get_Router_RequestRequest" name="Get_Router_Request"/>
+                    <wsdl:output message="this:Get_Router_RequestResponse" name="Get_Router_RequestResponse"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <bpel:binding name="CanonicBindingForcaller" type="this:Forcaller" bpdm:isSynchronized="true"/>
+            <xs:element name="Get_Router_RequestRequest" type="BTS:RequestInformationType" bpdm:source="partner-pool:///_MdRycLiAEeavcMke7hVtyg"/>
+            <wsdl:message name="Get_Router_RequestRequest" bpdm:source="partner-pool:///_MdRycLiAEeavcMke7hVtyg">
+                <wsdl:part name="body" element="this:Get_Router_RequestRequest"/>
+            </wsdl:message>
+            <xs:element name="Get_Router_RequestResponse" type="BTS:RouterAssignmentType" bpdm:source="partner-pool:///_MdRycLiAEeavcMke7hVtyg"/>
+            <wsdl:message name="Get_Router_RequestResponse" bpdm:source="partner-pool:///_MdRycLiAEeavcMke7hVtyg">
+                <wsdl:part name="body" element="this:Get_Router_RequestResponse"/>
+            </wsdl:message>
+        </bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_MdRycLiAEeavcMke7hVtyg" bpdm:label="caller"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_LgezALiAEeavcMke7hVtygimplicitPartner" bpdm:label="processimplicitPartner"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Schemas/BTS.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Services/REST/Customer.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Schemas/Customer.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Rules/RouterAssignment.bre/dtws_bts_rules_routerassignment/META-INF/dtws_bts_rules_routerassignment.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar"/>
+        <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="process" bpdm:ID="_LgezALiAEeavcMke7hVtyg">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="callerAndProcessPlkVar" partnerLinkType="diag:callerAndProcess" myRole="process_for_caller" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForcaller" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/process/caller" bpdm:providedIsDefault="true" bpdm:clientTasks="_LgezALiAEeavcMke7hVtyg:_Y39KcLiAEeavcMke7hVtyg, _LgezALiAEeavcMke7hVtyg:_bFXdMLiAEeavcMke7hVtyg" bpdm:isManaged="true" bpdm:otherPoolId="_MdRycLiAEeavcMke7hVtyg"/>
+            <bpel:partnerLink name="processimplicitPartnerAndProcessForHttpPortPlkVar" partnerLinkType="diag:processimplicitPartnerAndProcessForHttpPortPlk" initializePartnerRole="yes" partnerRole="processimplicitPartner_for_process" bpdm:invokedService="Customer:restService" bpdm:invokedPort="httpPort" bpdm:invokedSOAPAddress="http://ubuntu.estebanf.com:3001/api/BtsCustomers/{customer_id}" bpdm:invokedIsDefault="true" bpdm:clientTasks="_LgezALiAEeavcMke7hVtyg:_I2CwkLiBEeavcMke7hVtyg" bpdm:isManaged="true" bpdm:otherPoolId="_LgezALiAEeavcMke7hVtygimplicitPartner"/>
+            <bpel:partnerLink name="processimplicitPartnerAndProcessForPortDtws_bts_rules_routerassignmentHttpSoap11EndpointPlkVar" partnerLinkType="diag:processimplicitPartnerAndProcessForPortDtws_bts_rules_routerassignmentHttpSoap11EndpointPlk" initializePartnerRole="yes" partnerRole="processimplicitPartner_for_process" bpdm:invokedService="ns:dtws_bts_rules_routerassignment" bpdm:invokedPort="dtws_bts_rules_routerassignmentHttpSoap11Endpoint" bpdm:invokedSOAPAddress="http://localhost:8080/everteam/ode/processes/dtws_bts_rules_routerassignment" bpdm:invokedIsDefault="true" bpdm:clientTasks="_LgezALiAEeavcMke7hVtyg:_9IfOZriuEeavcMke7hVtyg" bpdm:isManaged="true" bpdm:otherPoolId="_LgezALiAEeavcMke7hVtygimplicitPartner"/>
+        </bpel:partnerLinks>
+        <bpel:variables xmlns:xvar="http://ode.apache.org/externalVariables">
+            <bpel:variable name="customVariable" element="tns:customVariable" xvar:id="customVariable-_LnL39riAEeavcMke7hVtyg" xvar:relates-to="customVariable-keys" bpdm:xvarType="tns:customVariable" bpdm:id="_LnL39riAEeavcMke7hVtyg"/>
+            <bpel:variable name="thisGet_Router_RequestRequest2Msg" messageType="this:Get_Router_RequestRequest" bpdm:id="_Y4jAULiAEeavcMke7hVtyg" bpdm:messageIds="inc:_Y4G7cLiAEeavcMke7hVtyg"/>
+            <bpel:variable name="thisGet_Router_RequestResponse2Msg" messageType="this:Get_Router_RequestResponse" bpdm:id="_cuRUubiAEeavcMke7hVtyg" bpdm:messageIds=" out:_cuIKwLiAEeavcMke7hVtyg">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="this:Get_Router_RequestResponse" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="customerGet_customerResponse1Msg" messageType="Customer:get_customer_output" binding="Customer:restBinding" operation="get_customer" opMsgType="1" bpdm:messageIds="inc:_I2CwkLiBEeavcMke7hVtygIncoming"/>
+            <bpel:variable name="customerGet_customerRequest1Msg" messageType="Customer:get_customer_input" binding="Customer:restBinding" operation="get_customer" opMsgType="0" bpdm:messageIds=" out:_I2CwkLiBEeavcMke7hVtygOutgoing">
+                <bpel:from bpdm:toPart="customer_id">
+                    <bpel:literal bpdm:linkedMessageType="Customer:get_customer_input" bpdm:linkedPart="customer_id" bpdm:binding="Customer:restBinding" bpdm:opMsgType="0" bpdm:operation="get_customer"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="nsInvokeDecisionTableResponse1Msg" messageType="ns:invokeDecisionTableResponse" binding="ns:dtws_bts_rules_routerassignmentSoap11Binding" operation="invokeDecisionTable" opMsgType="1" bpdm:messageIds="inc:_9IfOZriuEeavcMke7hVtygIncoming"/>
+            <bpel:variable name="nsInvokeDecisionTableRequest1Msg" messageType="ns:invokeDecisionTableRequest" binding="ns:dtws_bts_rules_routerassignmentSoap11Binding" operation="invokeDecisionTable" opMsgType="0" bpdm:messageIds=" out:_9IfOZriuEeavcMke7hVtygOutgoing">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="ns:invokeDecisionTableRequest" bpdm:linkedPart="parameters" bpdm:binding="ns:dtws_bts_rules_routerassignmentSoap11Binding" bpdm:opMsgType="0" bpdm:operation="invokeDecisionTable"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="hoursUntilEvent" type="xs:duration" bpdm:id="_uZIBgLivEeavcMke7hVtyg">
+                <bpel:from>
+                    <bpel:literal bpdm:linkedType="xs:duration"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+        </bpel:variables>
+        <bpel:links>
+            <bpel:link name="_dhsKULivEeavcMke7hVtyg_to__gVZoELivEeavcMke7hVtyg"/>
+            <bpel:link name="_I2CwkLiBEeavcMke7hVtyg_to__gVZoELivEeavcMke7hVtyg"/>
+        </bpel:links>
+        <bpel:sequence>
+            <bpdm:messagingtask eventType="start: message" operation="Get_Router_Request" partnerLink="callerAndProcessPlkVar" portType="this:Forcaller" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Get Router Request" bpdm:ID="_Y39KcLiAEeavcMke7hVtyg">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisGet_Router_RequestRequest2Msg" bpdm:msgVarScopeId="_LgezALiAEeavcMke7hVtyg" bpdm:variableIsManaged="true" bpdm:messageType="this:Get_Router_RequestRequest" bpdm:ID="_Y4G7cLiAEeavcMke7hVtyg"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:gateway bpdm:label="Parallel_Gateway" bpdm:ID="_BZLAcLivEeavcMke7hVtyg" bpdm:gatewayType="parallel_and" bpdm:isMerge="false">
+                <bpel:sequence>
+                    <bpdm:messagingtask operation="get_customer" partnerLink="processimplicitPartnerAndProcessForHttpPortPlkVar" portType="Customer:restInterface" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Get Customer information" bpdm:ID="_I2CwkLiBEeavcMke7hVtyg">
+                        <bpdm:linkset bpdm:type="assignments">
+                            <bpel:copy>
+                                <bpel:from>$thisGet_Router_RequestRequest2Msg.body/BTS:CustomerId</bpel:from>
+                                <bpel:to>$customerGet_customerRequest1Msg.customer_id</bpel:to><mapper:mapperLink><mapper:vertice id="397552186" targetPath="$customerGet_customerRequest1Msg.customer_id" targetedBy="1393619986-arg0"></mapper:vertice><mapper:vertice id="1393619986" sourcePath="$thisGet_Router_RequestRequest2Msg.body/BTS:CustomerId"></mapper:vertice></mapper:mapperLink>
+                            </bpel:copy>
+                            <bpel:copy>
+                                <bpel:from>ode:get-property-value("customers_endpoint")</bpel:from>
+                                <bpel:to endpointReference="partnerRole"/><mapper:mapperLink><mapper:vertice id="1053223900" targetPath="$endpoint" targetedBy="1125339238-arg1"></mapper:vertice><mapper:vertice id="1125339238" dimension="139x24" location="335,210"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="1205530416" dimension="126x24" location="108,192" targetedBy="1125339238-arg0"><mapper:value>"customers_endpoint"</mapper:value></mapper:vertice></mapper:mapperLink>
+                            </bpel:copy>
+                        </bpdm:linkset>
+                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="customerGet_customerRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="Customer:get_customer_input" bpdm:binding="Customer:restBinding" bpdm:ID="_I2CwkLiBEeavcMke7hVtygOutgoing"></bpdm:linkset>
+                        <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="customerGet_customerResponse1Msg" bpdm:variableIsManaged="true" bpdm:messageType="Customer:get_customer_output" bpdm:binding="Customer:restBinding" bpdm:ID="_I2CwkLiBEeavcMke7hVtygIncoming"></bpdm:linkset>
+                    </bpdm:messagingtask>
+                </bpel:sequence>
+                <bpel:sequence>
+                    <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Calculate hours until event" bpdm:ID="_D3bLkLivEeavcMke7hVtyg">
+                        <bpdm:linkset bpdm:type="assignments">
+                            <bpel:copy>
+                                <bpel:from>xs:dateTime($thisGet_Router_RequestRequest2Msg.body/BTS:EventDateTime) - current-dateTime()</bpel:from>
+                                <bpel:to>$hoursUntilEvent</bpel:to><mapper:mapperLink><mapper:vertice id="1686525948" targetPath="$hoursUntilEvent" targetedBy="2141970127-arg2"></mapper:vertice><mapper:vertice id="2141970127" dimension="79x24" location="443,163"><mapper:value>-</mapper:value></mapper:vertice><mapper:vertice id="506243182" dimension="79x24" location="184,113" targetedBy="2141970127-arg0"><mapper:value>xs:dateTime()</mapper:value></mapper:vertice><mapper:vertice id="1106936876" sourcePath="$thisGet_Router_RequestRequest2Msg.body/BTS:EventDateTime" targetedBy="506243182-arg0"></mapper:vertice><mapper:vertice id="300432450" dimension="109x24" location="288,180" targetedBy="2141970127-arg1"><mapper:value>current-dateTime()</mapper:value></mapper:vertice></mapper:mapperLink>
+                            </bpel:copy>
+                        </bpdm:linkset>
+                    </bpdm:messagingtask>
+                    <bpdm:gateway bpdm:label="Hours until event?" bpdm:ID="_KDDnYLivEeavcMke7hVtyg" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                        <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_QWR497ivEeavcMke7hVtyg" bpdm:targetDisplayName="[Hours until event? - High urgency]">
+                            <bpel:condition>xs:dayTimeDuration($hoursUntilEvent)&lt; xs:dayTimeDuration(xs:duration(ode:get-property-value("high_priority_compare")))<mapper:mapperLink><mapper:vertice id="847466576" targetPath="$condition" targetedBy="910247981-arg0"></mapper:vertice><mapper:vertice id="910247981" dimension="79x24" location="576,139"><mapper:value>&lt;</mapper:value></mapper:vertice><mapper:vertice id="1259195928" dimension="121x24" location="420,120" targetedBy="910247981-arg1"><mapper:value>xs:dayTimeDuration()</mapper:value></mapper:vertice><mapper:vertice id="446680063" sourcePath="$hoursUntilEvent" targetedBy="1259195928-arg0"></mapper:vertice><mapper:vertice id="1896472576" dimension="121x24" location="456,192" targetedBy="910247981-arg2"><mapper:value>xs:dayTimeDuration()</mapper:value></mapper:vertice><mapper:vertice id="1062296058" dimension="79x24" location="360,216" targetedBy="1896472576-arg0"><mapper:value>xs:duration()</mapper:value></mapper:vertice><mapper:vertice id="1009812243" dimension="139x24" location="192,276" targetedBy="1062296058-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="147640335" dimension="137x24" location="36,324" targetedBy="1009812243-arg0"><mapper:value>"high_priority_compare"</mapper:value></mapper:vertice></mapper:mapperLink></bpel:condition>
+                        </bpdm:linkset>
+                        <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_UrlsV7ivEeavcMke7hVtyg" bpdm:targetDisplayName="default"></bpdm:linkset>
+                        <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_XAJv97ivEeavcMke7hVtyg" bpdm:targetDisplayName="[Hours until event? - Low urgency]">
+                            <bpel:condition>xs:dayTimeDuration($hoursUntilEvent)&gt; xs:dayTimeDuration(xs:duration(ode:get-property-value("low_priority_compare")))<mapper:mapperLink><mapper:vertice id="603069783" targetPath="$condition" targetedBy="87595579-arg0"></mapper:vertice><mapper:vertice id="87595579" dimension="79x24" location="552,132"><mapper:value>&gt;</mapper:value></mapper:vertice><mapper:vertice id="1818512688" dimension="121x24" location="336,120" targetedBy="87595579-arg1"><mapper:value>xs:dayTimeDuration()</mapper:value></mapper:vertice><mapper:vertice id="1481342320" sourcePath="$hoursUntilEvent" targetedBy="1818512688-arg0"></mapper:vertice><mapper:vertice id="1142452569" dimension="121x24" location="384,192" targetedBy="87595579-arg2"><mapper:value>xs:dayTimeDuration()</mapper:value></mapper:vertice><mapper:vertice id="549039356" dimension="79x24" location="276,204" targetedBy="1142452569-arg0"><mapper:value>xs:duration()</mapper:value></mapper:vertice><mapper:vertice id="142468494" dimension="139x24" location="144,264" targetedBy="549039356-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="938493877" dimension="132x24" location="0,300" targetedBy="142468494-arg0"><mapper:value>"low_priority_compare"</mapper:value></mapper:vertice></mapper:mapperLink></bpel:condition>
+                        </bpdm:linkset>
+                        <bpel:sequence>
+                            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="High urgency" bpdm:ID="_QV--ALivEeavcMke7hVtyg">
+                                <bpdm:linkset bpdm:type="assignments">
+                                    <bpel:copy>
+                                        <bpel:from>ode:get-property-value("high_urgency_key")</bpel:from>
+                                        <bpel:to>$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionModel/ax22:urgency</bpel:to><mapper:mapperLink><mapper:vertice id="1953548283" targetPath="$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionModel/ax22:urgency" targetedBy="1964495694-arg1"></mapper:vertice><mapper:vertice id="1964495694" dimension="139x24" location="361,290"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="1913216331" dimension="113x24" location="125,340" targetedBy="1964495694-arg0"><mapper:value>"high_urgency_key"</mapper:value></mapper:vertice></mapper:mapperLink>
+                                    </bpel:copy>
+                                </bpdm:linkset>
+                            </bpdm:messagingtask>
+                        </bpel:sequence>
+                        <bpel:sequence>
+                            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Normal urgency" bpdm:ID="_Urb7ULivEeavcMke7hVtyg">
+                                <bpdm:linkset bpdm:type="assignments">
+                                    <bpel:copy>
+                                        <bpel:from>ode:get-property-value("normal_urgency_key")</bpel:from>
+                                        <bpel:to>$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionModel/ax22:urgency</bpel:to><mapper:mapperLink><mapper:vertice id="1766690962" targetPath="$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionModel/ax22:urgency" targetedBy="289661918-arg1"></mapper:vertice><mapper:vertice id="289661918" dimension="139x24" location="247,201"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="1017912751" dimension="127x24" location="90,222" targetedBy="289661918-arg0"><mapper:value>"normal_urgency_key"</mapper:value></mapper:vertice></mapper:mapperLink>
+                                    </bpel:copy>
+                                </bpdm:linkset>
+                            </bpdm:messagingtask>
+                        </bpel:sequence>
+                        <bpel:sequence>
+                            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Low urgency" bpdm:ID="_W_21ALivEeavcMke7hVtyg">
+                                <bpdm:linkset bpdm:type="assignments">
+                                    <bpel:copy>
+                                        <bpel:from>ode:get-property-value("low_urgency_key")</bpel:from>
+                                        <bpel:to>$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionModel/ax22:urgency</bpel:to><mapper:mapperLink><mapper:vertice id="44282619" targetPath="$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionModel/ax22:urgency" targetedBy="1648208452-arg1"></mapper:vertice><mapper:vertice id="1648208452" dimension="139x24" location="255,151"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="235496345" dimension="108x24" location="29,160" targetedBy="1648208452-arg0"><mapper:value>"low_urgency_key"</mapper:value></mapper:vertice></mapper:mapperLink>
+                                    </bpel:copy>
+                                </bpdm:linkset>
+                            </bpdm:messagingtask>
+                        </bpel:sequence>
+                    </bpdm:gateway>
+                    <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_dhsKULivEeavcMke7hVtyg" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
+                </bpel:sequence>
+            </bpdm:gateway>
+            <bpdm:messagingtask operation="invokeDecisionTable" partnerLink="processimplicitPartnerAndProcessForPortDtws_bts_rules_routerassignmentHttpSoap11EndpointPlkVar" portType="ns:dtws_bts_rules_routerassignmentPortType" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Assignment rule" bpdm:ID="_9IfOZriuEeavcMke7hVtyg">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$customerGet_customerResponse1Msg.customer/customertier</bpel:from>
+                        <bpel:to>$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionModel/ax22:customerTier</bpel:to><mapper:mapperLink><mapper:vertice id="1588575310" targetPath="$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionModel/ax22:customerTier" targetedBy="19751182-arg0"></mapper:vertice><mapper:vertice id="19751182" sourcePath="$customerGet_customerResponse1Msg.customer/customertier"></mapper:vertice></mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$thisGet_Router_RequestRequest2Msg.body/BTS:EventType</bpel:from>
+                        <bpel:to>$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionModel/ax22:eventType</bpel:to><mapper:mapperLink><mapper:vertice id="1289476618" targetPath="$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionModel/ax22:eventType" targetedBy="2131386747-arg0"></mapper:vertice><mapper:vertice id="2131386747" sourcePath="$thisGet_Router_RequestRequest2Msg.body/BTS:EventType"></mapper:vertice></mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$thisGet_Router_RequestRequest2Msg.body/BTS:Location</bpel:from>
+                        <bpel:to>$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionModel/ax22:location</bpel:to><mapper:mapperLink><mapper:vertice id="552998306" targetPath="$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionModel/ax22:location" targetedBy="1370037017-arg0"></mapper:vertice><mapper:vertice id="1370037017" sourcePath="$thisGet_Router_RequestRequest2Msg.body/BTS:Location"></mapper:vertice></mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$ode:pid</bpel:from>
+                        <bpel:to>$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionModel/ax22:pid</bpel:to><mapper:mapperLink><mapper:vertice id="1707229132" targetPath="$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionModel/ax22:pid" targetedBy="1395671961-arg0"></mapper:vertice><mapper:vertice id="1395671961" sourcePath="$ode:pid"></mapper:vertice></mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>1000</bpel:from>
+                        <bpel:to>$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionAction/ax22:cost</bpel:to><mapper:mapperLink><mapper:vertice id="873229476" targetPath="$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionAction/ax22:cost" targetedBy="404528144-arg0"></mapper:vertice><mapper:vertice id="404528144" dimension="79x24" location="338,107"><mapper:value>1000</mapper:value></mapper:vertice></mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$thisGet_Router_RequestRequest2Msg.body/BTS:EventDuration</bpel:from>
+                        <bpel:to>$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionModel/ax22:eventDuration</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1348549703" targetPath="$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax21:routerDecisionModel/ax22:eventDuration" targetedBy="586691406-arg0"></mapper:vertice>
+  <mapper:vertice id="586691406" sourcePath="$thisGet_Router_RequestRequest2Msg.body/BTS:EventDuration"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="nsInvokeDecisionTableRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="ns:invokeDecisionTableRequest" bpdm:binding="ns:dtws_bts_rules_routerassignmentSoap11Binding" bpdm:ID="_9IfOZriuEeavcMke7hVtygOutgoing"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="nsInvokeDecisionTableResponse1Msg" bpdm:variableIsManaged="true" bpdm:messageType="ns:invokeDecisionTableResponse" bpdm:binding="ns:dtws_bts_rules_routerassignmentSoap11Binding" bpdm:ID="_9IfOZriuEeavcMke7hVtygIncoming"></bpdm:linkset>
+                <bpdm:thrownFault msgFaultNcName="Exception" msgFaultTypeQname="ns:Exception"/>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask eventType="end: message" operation="Get_Router_Request" partnerLink="callerAndProcessPlkVar" portType="this:Forcaller" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Send router assignment" bpdm:ID="_bFXdMLiAEeavcMke7hVtyg">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$nsInvokeDecisionTableResponse1Msg.parameters/ns:return/ax21:routerDecisionAction/ax22:router</bpel:from>
+                        <bpel:to>$thisGet_Router_RequestResponse2Msg.body/BTS:Router</bpel:to><mapper:mapperLink><mapper:vertice id="1077071468" targetPath="$thisGet_Router_RequestResponse2Msg.body/BTS:Router" targetedBy="1438656833-arg0"></mapper:vertice><mapper:vertice id="1438656833" sourcePath="$nsInvokeDecisionTableResponse1Msg.parameters/ns:return/ax21:routerDecisionAction/ax22:router"></mapper:vertice></mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$nsInvokeDecisionTableResponse1Msg.parameters/ns:return/ax21:routerDecisionAction/ax22:cost</bpel:from>
+                        <bpel:to>$thisGet_Router_RequestResponse2Msg.body/BTS:Cost</bpel:to><mapper:mapperLink><mapper:vertice id="953102913" targetPath="$thisGet_Router_RequestResponse2Msg.body/BTS:Cost" targetedBy="1396696830-arg0"></mapper:vertice><mapper:vertice id="1396696830" sourcePath="$nsInvokeDecisionTableResponse1Msg.parameters/ns:return/ax21:routerDecisionAction/ax22:cost"></mapper:vertice></mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisGet_Router_RequestResponse2Msg" bpdm:msgVarScopeId="_LgezALiAEeavcMke7hVtyg" bpdm:variableIsManaged="true" bpdm:messageType="this:Get_Router_RequestResponse" bpdm:ID="_cuIKwLiAEeavcMke7hVtyg"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

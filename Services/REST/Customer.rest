@@ -1,0 +1,7 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<rest:descriptor xmlns:rest="http://www.intalio/designer/business-process-data-modeling/rest" resourceURL="http://ubuntu.estebanf.com:3001/api/BtsCustomers/{customer_id}" ID="_She7IbiBEeaHvJPs_hWbsw">
+  <rest:operation verb="GET" name="get_customer" ID="_She7I7iBEeaHvJPs_hWbsw" restservice_type="json">
+    <rest:output type="project:///Schemas/Customer.xsd?xsdelement={__project:///Schemas/Customer.xsd}iob_response_root" name="customer" headerDirection="request" contentType="application/json" responseRootElement="true" ID="_She7JLiBEeaHvJPs_hWbsw"/>
+  </rest:operation>
+  <rest:url type="builtin:///xsd?xsdtype={http://www.w3.org/2001/XMLSchema}string" name="customer_id" headerDirection="request" contentType="text/xml" ID="_She7IriBEeaHvJPs_hWbsw"/>
+</rest:descriptor>

@@ -1,0 +1,228 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<decisiontable name="RouterAssignment">
+  <import>bre.RouterDecisionAction</import>
+  <import>bre.RouterDecisionModel</import>
+  <decisionheader expression="RouterDecisionModel.eventType" returntype="String" nodetype="Condition"/>
+  <decisionheader expression="RouterDecisionModel.urgency" returntype="String" nodetype="Condition"/>
+  <decisionheader expression="RouterDecisionModel.customerTier" returntype="Integer" nodetype="Condition"/>
+  <decisionheader expression="RouterDecisionModel.location" returntype="String" nodetype="Condition"/>
+  <decisionheader expression="RouterDecisionAction.cost = {value}" returntype="Double" nodetype="Action"/>
+  <decisionheader expression="RouterDecisionAction.router = {value}" returntype="String" nodetype="Action"/>
+  <decisionheader expression="Effective Date" returntype="Date" nodetype="Options"/>
+  <decisionheader expression="Expiration Date" returntype="Date" nodetype="Options"/>
+  <decisionheader expression="Salience" returntype="Integer" nodetype="Options"/>
+  <decisionheader expression="XOR Rule Group" returntype="String" nodetype="Options"/>
+  <decisionnode headerid="-1">
+    <decisionnode expression="== &quot;Entertaiment&quot;" headerid="0">
+      <decisionnode expression="*" headerid="1">
+        <decisionnode expression="*" headerid="2">
+          <decisionnode expression="*" headerid="3">
+            <decisionnode expression="RouterDecisionAction.cost * 1.5" headerid="4">
+              <decisionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="" headerid="7">
+                    <optionnode expression="0" headerid="8">
+                      <optionnode expression="" headerid="9"/>
+                    </optionnode>
+                  </optionnode>
+                </optionnode>
+              </decisionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+    </decisionnode>
+    <decisionnode expression="== &quot;News&quot;" headerid="0">
+      <decisionnode expression="*" headerid="1">
+        <decisionnode expression="*" headerid="2">
+          <decisionnode expression="*" headerid="3">
+            <decisionnode expression="RouterDecisionAction.cost * 1.2" headerid="4">
+              <decisionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="" headerid="7">
+                    <optionnode expression="0" headerid="8">
+                      <optionnode expression="" headerid="9"/>
+                    </optionnode>
+                  </optionnode>
+                </optionnode>
+              </decisionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+    </decisionnode>
+    <decisionnode expression="*" headerid="0">
+      <decisionnode expression="== &quot;High&quot;" headerid="1">
+        <decisionnode expression="&lt;= 2" headerid="2">
+          <decisionnode expression="*" headerid="3">
+            <decisionnode expression="RouterDecisionAction.cost * 1.5" headerid="4">
+              <decisionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="" headerid="7">
+                    <optionnode expression="0" headerid="8">
+                      <optionnode expression="" headerid="9"/>
+                    </optionnode>
+                  </optionnode>
+                </optionnode>
+              </decisionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+        <decisionnode expression=">= 3" headerid="2">
+          <decisionnode expression="*" headerid="3">
+            <decisionnode expression="RouterDecisionAction.cost * 2" headerid="4">
+              <decisionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="" headerid="7">
+                    <optionnode expression="0" headerid="8">
+                      <optionnode expression="" headerid="9"/>
+                    </optionnode>
+                  </optionnode>
+                </optionnode>
+              </decisionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+      <decisionnode expression="== &quot;Normal&quot;" headerid="1">
+        <decisionnode expression=">=4" headerid="2">
+          <decisionnode expression="*" headerid="3">
+            <decisionnode expression="RouterDecisionAction.cost  * 1.05" headerid="4">
+              <decisionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="" headerid="7">
+                    <optionnode expression="0" headerid="8">
+                      <optionnode expression="" headerid="9"/>
+                    </optionnode>
+                  </optionnode>
+                </optionnode>
+              </decisionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+      <decisionnode expression="== &quot;Low&quot;" headerid="1">
+        <decisionnode expression="== 1" headerid="2">
+          <decisionnode expression="*" headerid="3">
+            <decisionnode expression="RouterDecisionAction.cost * 0.8" headerid="4">
+              <decisionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="" headerid="7">
+                    <optionnode expression="0" headerid="8">
+                      <optionnode expression="" headerid="9"/>
+                    </optionnode>
+                  </optionnode>
+                </optionnode>
+              </decisionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+        <decisionnode expression="== 2" headerid="2">
+          <decisionnode expression="*" headerid="3">
+            <decisionnode expression="RouterDecisionAction.cost * 0.85" headerid="4">
+              <decisionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="" headerid="7">
+                    <optionnode expression="0" headerid="8">
+                      <optionnode expression="" headerid="9"/>
+                    </optionnode>
+                  </optionnode>
+                </optionnode>
+              </decisionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+        <decisionnode expression="== 3" headerid="2">
+          <decisionnode expression="*" headerid="3">
+            <decisionnode expression="RouterDecisionAction.cost * 0.9" headerid="4">
+              <decisionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="" headerid="7">
+                    <optionnode expression="0" headerid="8">
+                      <optionnode expression="" headerid="9"/>
+                    </optionnode>
+                  </optionnode>
+                </optionnode>
+              </decisionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+        <decisionnode expression="== 4" headerid="2">
+          <decisionnode expression="*" headerid="3">
+            <decisionnode expression="RouterDecisionAction.cost * 0.95" headerid="4">
+              <decisionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="" headerid="7">
+                    <optionnode expression="0" headerid="8">
+                      <optionnode expression="" headerid="9"/>
+                    </optionnode>
+                  </optionnode>
+                </optionnode>
+              </decisionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+        <decisionnode expression="== 5" headerid="2">
+          <decisionnode expression="*" headerid="3">
+            <decisionnode expression="RouterDecisionAction.cost " headerid="4">
+              <decisionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="" headerid="7">
+                    <optionnode expression="0" headerid="8">
+                      <optionnode expression="" headerid="9"/>
+                    </optionnode>
+                  </optionnode>
+                </optionnode>
+              </decisionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+    </decisionnode>
+    <decisionnode expression="*" headerid="0">
+      <decisionnode expression="*" headerid="1">
+        <decisionnode expression="*" headerid="2">
+          <decisionnode expression="== &quot;Florida&quot;" headerid="3">
+            <decisionnode expression="RouterDecisionAction.cost * RouterDecisionModel.eventDuration * 0.92" headerid="4">
+              <decisionnode expression="&quot;F0A1&quot; + RouterDecisionModel.pid" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="" headerid="7">
+                    <optionnode expression="0" headerid="8">
+                      <optionnode expression="" headerid="9"/>
+                    </optionnode>
+                  </optionnode>
+                </optionnode>
+              </decisionnode>
+            </decisionnode>
+          </decisionnode>
+          <decisionnode expression="== &quot;Georgia&quot;" headerid="3">
+            <decisionnode expression="RouterDecisionAction.cost * RouterDecisionModel.eventDuration * 0.83" headerid="4">
+              <decisionnode expression="&quot;X0X1&quot; + RouterDecisionModel.pid" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="" headerid="7">
+                    <optionnode expression="0" headerid="8">
+                      <optionnode expression="" headerid="9"/>
+                    </optionnode>
+                  </optionnode>
+                </optionnode>
+              </decisionnode>
+            </decisionnode>
+          </decisionnode>
+          <decisionnode expression="*" headerid="3">
+            <decisionnode expression="RouterDecisionAction.cost * RouterDecisionModel.eventDuration * 0.87" headerid="4">
+              <decisionnode expression="RouterDecisionModel.location + RouterDecisionModel.pid" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="" headerid="7">
+                    <optionnode expression="0" headerid="8">
+                      <optionnode expression="" headerid="9"/>
+                    </optionnode>
+                  </optionnode>
+                </optionnode>
+              </decisionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+    </decisionnode>
+  </decisionnode>
+</decisiontable>

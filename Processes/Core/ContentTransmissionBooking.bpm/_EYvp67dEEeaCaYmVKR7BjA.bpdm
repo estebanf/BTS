@@ -1,0 +1,382 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:BTS_metrics="http://test.com/xvar/example" xmlns:BTSimplicitPartner="http://thisdiagram/BTSimplicitPartner" xmlns:tns="http://everteam.com/xvar/example" xmlns:RouterAssignment-process="http://thisproject/Processes/Integrations/RouterAssignment/process" xmlns:this="http://thisdiagram/BTS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BTS="http://www.example.org/BTS" xmlns:ContentTransmissionBooking="http://thisdiagram" xmlns:Client="http://thisdiagram/Client" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/BTS">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://test.com/xvar/example" bpdm:prefix="BTS_metrics" bpdm:comment="contrib=&apos;project:///Metrics/BTS_metrics.xvar"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/BTSimplicitPartner" bpdm:prefix="BTSimplicitPartner" bpdm:comment="contrib=&apos;partner-pool:///_EYvp67dEEeaCaYmVKR7BjAimplicitPartner"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://everteam.com/xvar/example" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///IntalioObjects/customVariable.xvar"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisproject/Processes/Integrations/RouterAssignment/process" bpdm:prefix="RouterAssignment-process" bpdm:comment="contrib=&apos;project:///Processes/Integrations/RouterAssignment-process.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/BTS" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.example.org/BTS" bpdm:prefix="BTS" bpdm:comment="contrib=&apos;project:///Schemas/BTS.xsd"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="ContentTransmissionBooking" bpdm:comment="contrib=&apos;partner-pool:///_EYmf9rdEEeaCaYmVKR7BjA"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Client" bpdm:prefix="Client" bpdm:comment="contrib=&apos;partner-pool:///_EYmf9rdEEeaCaYmVKR7BjA"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types">
+            <wsdl:portType name="ForClient">
+                <wsdl:operation name="Receive_request" bpdm:source="partner-pool:///_EYmf9rdEEeaCaYmVKR7BjA">
+                    <wsdl:input message="this:Receive_requestRequest" name="Receive_request"/>
+                    <wsdl:output message="this:Receive_requestResponse" name="Receive_requestResponse"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <bpel:binding name="CanonicBindingForClient" type="this:ForClient" bpdm:isSynchronized="true"/>
+            <xs:element name="Receive_requestRequest" type="BTS:RequestActionType" bpdm:source="partner-pool:///_EYmf9rdEEeaCaYmVKR7BjA"/>
+            <wsdl:message name="Receive_requestRequest" bpdm:source="partner-pool:///_EYmf9rdEEeaCaYmVKR7BjA">
+                <wsdl:part name="body" element="this:Receive_requestRequest"/>
+            </wsdl:message>
+            <xs:element name="Receive_requestResponse" type="BTS:ACKType" bpdm:source="partner-pool:///_EYmf9rdEEeaCaYmVKR7BjA"/>
+            <wsdl:message name="Receive_requestResponse" bpdm:source="partner-pool:///_EYmf9rdEEeaCaYmVKR7BjA">
+                <wsdl:part name="body" element="this:Receive_requestResponse"/>
+            </wsdl:message>
+        </bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_EYmf9rdEEeaCaYmVKR7BjA" bpdm:label="Client"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_EYvp67dEEeaCaYmVKR7BjAimplicitPartner" bpdm:label="BTSimplicitPartner"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Schemas/BTS.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/RouterAssignment-process.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar"/>
+        <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Metrics/BTS_metrics.xvar"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Metrics/BTS_metrics.xvar.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="BTS" bpdm:ID="_EYvp67dEEeaCaYmVKR7BjA">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="bTsAndClientPlkVar" partnerLinkType="ContentTransmissionBooking:BTsAndClient" myRole="BTS_for_Client" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForClient" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/BTS/Client" bpdm:providedIsDefault="true" bpdm:clientTasks="_EYvp67dEEeaCaYmVKR7BjA:_EYvp77dEEeaCaYmVKR7BjA" bpdm:isManaged="true" bpdm:otherPoolId="_EYmf9rdEEeaCaYmVKR7BjA"/>
+            <bpel:partnerLink name="bTSimplicitPartnerAndBTSForCanonicPortPlkVar" partnerLinkType="ContentTransmissionBooking:BTSimplicitPartnerAndBTSForCanonicPortPlk" initializePartnerRole="yes" partnerRole="BTSimplicitPartner_for_BTS" bpdm:invokedService="RouterAssignment-process:CanonicServiceForcaller" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="epr" bpdm:invokedIsDefault="true" bpdm:clientTasks="_EYvp67dEEeaCaYmVKR7BjA:_EYvp9bdEEeaCaYmVKR7BjA" bpdm:isManaged="true" bpdm:otherPoolId="_EYvp67dEEeaCaYmVKR7BjAimplicitPartner"/>
+        </bpel:partnerLinks>
+        <bpel:variables xmlns:xvar="http://ode.apache.org/externalVariables">
+            <bpel:variable name="thisReceive_requestRequest1Msg" messageType="this:Receive_requestRequest" bpdm:messageIds="inc:_EYmf8LdEEeaCaYmVKR7BjA"/>
+            <bpel:variable name="customVariable" element="tns:customVariable" xvar:id="customVariable-_aFithrdEEeaCaYmVKR7BjA" xvar:relates-to="customVariable-keys" bpdm:xvarType="tns:customVariable" bpdm:id="_aFithrdEEeaCaYmVKR7BjA"/>
+            <bpel:variable name="thisReceive_requestResponse1Msg" messageType="this:Receive_requestResponse" bpdm:id="_LZOisLdHEeaCaYmVKR7BjA" bpdm:messageIds=" out:_LZExsLdHEeaCaYmVKR7BjA">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="this:Receive_requestResponse" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="RequestOperation" element="BTS:RequestOperation" bpdm:id="_T77vEbgBEeaCaYmVKR7BjA">
+                <bpel:from>
+                    <bpel:literal bpdm:linkedElement="BTS:RequestOperation"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="BTS_Request" element="BTS_metrics:BTS_Request" xvar:id="BTS_Request-_5N8TZrgJEeaCaYmVKR7BjA" xvar:relates-to="BTS_Request-keys" bpdm:xvarType="BTS_metrics:BTS_Request" bpdm:id="_5N8TZrgJEeaCaYmVKR7BjA"/>
+            <bpel:variable name="routerAssignment-processGet_Router_RequestResponse1Msg" messageType="RouterAssignment-process:Get_Router_RequestResponse" binding="RouterAssignment-process:callerAndProcessServiceBinding" operation="Get_Router_Request" opMsgType="1" bpdm:messageIds="inc:_EYvp9bdEEeaCaYmVKR7BjAIncoming"/>
+            <bpel:variable name="routerAssignment-processGet_Router_Request1Msg" messageType="RouterAssignment-process:Get_Router_RequestRequest" binding="RouterAssignment-process:callerAndProcessServiceBinding" operation="Get_Router_Request" opMsgType="0" bpdm:messageIds=" out:_EYvp9bdEEeaCaYmVKR7BjAOutgoing">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="RouterAssignment-process:Get_Router_RequestRequest" bpdm:linkedPart="body" bpdm:binding="RouterAssignment-process:callerAndProcessServiceBinding" bpdm:opMsgType="0" bpdm:operation="Get_Router_Request"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+        </bpel:variables>
+        <bpel:links>
+            <bpel:link name="_EY5a7LdEEeaCaYmVKR7BjA_to__EY5a47dEEeaCaYmVKR7BjA"/>
+            <bpel:link name="_EY5a9rdEEeaCaYmVKR7BjA_to__EY5a47dEEeaCaYmVKR7BjA"/>
+            <bpel:link name="_pQ75gLjMEeaF5pjuln3vAA_to__EYvqF7dEEeaCaYmVKR7BjA"/>
+            <bpel:link name="_EYvqELdEEeaCaYmVKR7BjA_to__EYvqFLdEEeaCaYmVKR7BjA"/>
+            <bpel:link name="_EYvqFLdEEeaCaYmVKR7BjA_to__EYvqF7dEEeaCaYmVKR7BjA"/>
+            <bpel:link name="_EY5a4LdEEeaCaYmVKR7BjA_to__EY5a47dEEeaCaYmVKR7BjA"/>
+            <bpel:link name="_EYvqCLdEEeaCaYmVKR7BjA_to__EYvqFLdEEeaCaYmVKR7BjA"/>
+        </bpel:links>
+        <bpel:sequence>
+            <bpdm:messagingtask eventType="start: message" operation="Receive_request" partnerLink="bTsAndClientPlkVar" portType="this:ForClient" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Receive request" bpdm:ID="_EYvp77dEEeaCaYmVKR7BjA">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisReceive_requestRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="this:Receive_requestRequest" bpdm:ID="_EYmf8LdEEeaCaYmVKR7BjA"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$ode:pid</bpel:from>
+                        <bpel:to>$thisReceive_requestResponse1Msg.body/BTS:Pid</bpel:to><mapper:mapperLink><mapper:vertice id="1631166311" targetPath="$thisReceive_requestResponse1Msg.body/BTS:Pid" targetedBy="826459816-arg0"></mapper:vertice><mapper:vertice id="826459816" sourcePath="$ode:pid"></mapper:vertice></mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>current-dateTime()</bpel:from>
+                        <bpel:to>$thisReceive_requestResponse1Msg.body/BTS:Timestamp</bpel:to><mapper:mapperLink><mapper:vertice id="632534356" targetPath="$thisReceive_requestResponse1Msg.body/BTS:Timestamp" targetedBy="777700166-arg0"></mapper:vertice><mapper:vertice id="777700166" dimension="109x24" location="480,89"><mapper:value>current-dateTime()</mapper:value></mapper:vertice></mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisReceive_requestResponse1Msg" bpdm:msgVarScopeId="_EYvp67dEEeaCaYmVKR7BjA" bpdm:variableIsManaged="true" bpdm:messageType="this:Receive_requestResponse" bpdm:ID="_LZExsLdHEeaCaYmVKR7BjA"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:gateway bpdm:label="Release existing request? " bpdm:ID="_EYvqGrdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_EYvqHbdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="default"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_EYvqHLdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="Yes">
+                    <bpel:condition>ode:get-property-value("release_key") = $thisReceive_requestRequest1Msg.body/BTS:Action<mapper:mapperLink><mapper:vertice id="1632139128" targetPath="$condition" targetedBy="805896485-arg2"></mapper:vertice><mapper:vertice id="805896485" dimension="79x24" location="483,75"><mapper:value>=</mapper:value></mapper:vertice><mapper:vertice id="759923941" dimension="139x24" location="286,38" targetedBy="805896485-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="742527223" dimension="79x24" location="133,40" targetedBy="759923941-arg0"><mapper:value>"release_key"</mapper:value></mapper:vertice><mapper:vertice id="1925582510" sourcePath="$thisReceive_requestRequest1Msg.body/BTS:Action" targetedBy="805896485-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
+                </bpdm:linkset>
+                <bpel:sequence>
+                    <bpdm:gateway bpdm:label="New or modify existing?" bpdm:ID="_EYvqHrdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                        <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_EYvqIbdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="default"></bpdm:linkset>
+                        <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_EYvqILdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="Yes">
+                            <bpel:condition>ode:get-property-value("confirm_key") != $thisReceive_requestRequest1Msg.body/BTS:Action<mapper:mapperLink><mapper:vertice id="864063789" targetPath="$condition" targetedBy="2028018803-arg2"></mapper:vertice><mapper:vertice id="2028018803" dimension="79x24" location="572,66"><mapper:value>!=</mapper:value></mapper:vertice><mapper:vertice id="1035680709" dimension="139x24" location="389,40" targetedBy="2028018803-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="1469751138" dimension="83x24" location="250,20" targetedBy="1035680709-arg0"><mapper:value>"confirm_key"</mapper:value></mapper:vertice><mapper:vertice id="1746809351" sourcePath="$thisReceive_requestRequest1Msg.body/BTS:Action" targetedBy="2028018803-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
+                        </bpdm:linkset>
+                        <bpel:sequence></bpel:sequence>
+                        <bpel:sequence>
+                            <bpdm:gateway bpdm:label="Modify existing?" bpdm:ID="_EYvqIrdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                                <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_EYvqJLdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="Yes">
+                                    <bpel:condition>ode:get-property-value("modify_key") = $thisReceive_requestRequest1Msg.body/BTS:Action<mapper:mapperLink><mapper:vertice id="1305020409" targetPath="$condition" targetedBy="1725488507-arg2"></mapper:vertice><mapper:vertice id="1725488507" dimension="79x24" location="570,74"><mapper:value>=</mapper:value></mapper:vertice><mapper:vertice id="1942717997" dimension="139x24" location="359,43" targetedBy="1725488507-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="310656162" dimension="79x24" location="75,31" targetedBy="1942717997-arg0"><mapper:value>"modify_key"</mapper:value></mapper:vertice><mapper:vertice id="692486007" sourcePath="$thisReceive_requestRequest1Msg.body/BTS:Action" targetedBy="1725488507-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
+                                </bpdm:linkset>
+                                <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_EYvqJbdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="default"></bpdm:linkset>
+                                <bpel:sequence>
+                                    <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Mofidy request data" bpdm:ID="_EY5bCLdEEeaCaYmVKR7BjA">
+                                        <bpdm:linkset bpdm:type="assignments">
+                                            <bpel:copy>
+                                                <bpel:from>bpel:doXslTransform("../../XSLT/ModifyRequest.xslt", $thisReceive_requestRequest1Msg.body)</bpel:from>
+                                                <bpel:to>$RequestOperation</bpel:to><mapper:mapperLink><mapper:vertice id="389068397" targetPath="$RequestOperation" targetedBy="1390376149-arg2"></mapper:vertice><mapper:vertice id="1390376149" dimension="126x24" location="396,84"><mapper:value>bpel:doXslTransform()</mapper:value></mapper:vertice><mapper:vertice id="168652263" dimension="171x24" location="172,47" targetedBy="1390376149-arg0"><mapper:value>"../../XSLT/ModifyRequest.xslt"</mapper:value></mapper:vertice><mapper:vertice id="987894276" sourcePath="$thisReceive_requestRequest1Msg.body" targetedBy="1390376149-arg1"></mapper:vertice></mapper:mapperLink>
+                                            </bpel:copy>
+                                        </bpdm:linkset>
+                                    </bpdm:messagingtask>
+                                </bpel:sequence>
+                                <bpel:sequence>
+                                    <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Save request data" bpdm:ID="_3j4v4LgKEeaCaYmVKR7BjA">
+                                        <bpdm:linkset bpdm:type="assignments">
+                                            <bpel:copy>
+                                                <bpel:from>bpel:doXslTransform("../../XSLT/NewRequest.xslt", $thisReceive_requestRequest1Msg.body, "pid", $ode:pid)</bpel:from>
+                                                <bpel:to>$RequestOperation</bpel:to><mapper:mapperLink><mapper:vertice id="1526978593" targetPath="$RequestOperation" targetedBy="1547497316-arg4"></mapper:vertice><mapper:vertice id="1547497316" dimension="126x24" location="300,96"><mapper:value>bpel:doXslTransform()</mapper:value></mapper:vertice><mapper:vertice id="1244846778" dimension="157x24" location="90,51" targetedBy="1547497316-arg0"><mapper:value>"../../XSLT/NewRequest.xslt"</mapper:value></mapper:vertice><mapper:vertice id="1712772776" sourcePath="$thisReceive_requestRequest1Msg.body" targetedBy="1547497316-arg1"></mapper:vertice><mapper:vertice id="1259291038" dimension="79x24" location="143,135" targetedBy="1547497316-arg2"><mapper:value>"pid"</mapper:value></mapper:vertice><mapper:vertice id="2038188632" sourcePath="$ode:pid" targetedBy="1547497316-arg3"></mapper:vertice></mapper:mapperLink>
+                                            </bpel:copy>
+                                        </bpdm:linkset>
+                                    </bpdm:messagingtask>
+                                </bpel:sequence>
+                            </bpdm:gateway>
+                            <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_EYvqJrdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
+                            <bpdm:messagingtask eventType="intermediate: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_Intermediate_Event" bpdm:ID="_hlC9MLgOEeavcMke7hVtyg">
+                                <bpdm:linkset bpdm:type="assignments">
+                                    <bpel:copy>
+                                        <bpel:from>$RequestOperation/BTS:Request/BTS:RequestId</bpel:from>
+                                        <bpel:to>$BTS_Request/BTS_metrics:RequestID</bpel:to><mapper:mapperLink><mapper:vertice id="147191945" targetPath="$BTS_Request/BTS_metrics:RequestID" targetedBy="1606566442-arg0"></mapper:vertice><mapper:vertice id="1606566442" sourcePath="$RequestOperation/BTS:Request/BTS:RequestId"></mapper:vertice></mapper:mapperLink>
+                                    </bpel:copy>
+                                    <bpel:copy>
+                                        <bpel:from>$RequestOperation/BTS:Request/BTS:Information/BTS:CustomerId</bpel:from>
+                                        <bpel:to>$BTS_Request/BTS_metrics:CustomerID</bpel:to><mapper:mapperLink><mapper:vertice id="1104993386" targetPath="$BTS_Request/BTS_metrics:CustomerID" targetedBy="535764614-arg0"></mapper:vertice><mapper:vertice id="535764614" sourcePath="$RequestOperation/BTS:Request/BTS:Information/BTS:CustomerId"></mapper:vertice></mapper:mapperLink>
+                                    </bpel:copy>
+                                    <bpel:copy>
+                                        <bpel:from>$RequestOperation/BTS:Request/BTS:Information/BTS:EventType</bpel:from>
+                                        <bpel:to>$BTS_Request/BTS_metrics:EventType</bpel:to><mapper:mapperLink><mapper:vertice id="1444107043" targetPath="$BTS_Request/BTS_metrics:EventType" targetedBy="483586459-arg0"></mapper:vertice><mapper:vertice id="483586459" sourcePath="$RequestOperation/BTS:Request/BTS:Information/BTS:EventType"></mapper:vertice></mapper:mapperLink>
+                                    </bpel:copy>
+                                    <bpel:copy>
+                                        <bpel:from>$RequestOperation/BTS:Request/BTS:Information/BTS:EventDateTime</bpel:from>
+                                        <bpel:to>$BTS_Request/BTS_metrics:EventDateTime</bpel:to><mapper:mapperLink><mapper:vertice id="324962959" targetPath="$BTS_Request/BTS_metrics:EventDateTime" targetedBy="147894018-arg0"></mapper:vertice><mapper:vertice id="147894018" sourcePath="$RequestOperation/BTS:Request/BTS:Information/BTS:EventDateTime"></mapper:vertice></mapper:mapperLink>
+                                    </bpel:copy>
+                                    <bpel:copy>
+                                        <bpel:from>$RequestOperation/BTS:Request/BTS:Information/BTS:RequestType</bpel:from>
+                                        <bpel:to>$BTS_Request/BTS_metrics:RequestType</bpel:to><mapper:mapperLink><mapper:vertice id="846519769" targetPath="$BTS_Request/BTS_metrics:RequestType" targetedBy="2003732857-arg0"></mapper:vertice><mapper:vertice id="2003732857" sourcePath="$RequestOperation/BTS:Request/BTS:Information/BTS:RequestType"></mapper:vertice></mapper:mapperLink>
+                                    </bpel:copy>
+                                    <bpel:copy>
+                                        <bpel:from>$RequestOperation/BTS:Request/BTS:Information/BTS:Location</bpel:from>
+                                        <bpel:to>$BTS_Request/BTS_metrics:Location</bpel:to><mapper:mapperLink><mapper:vertice id="912456288" targetPath="$BTS_Request/BTS_metrics:Location" targetedBy="1275401843-arg0"></mapper:vertice><mapper:vertice id="1275401843" sourcePath="$RequestOperation/BTS:Request/BTS:Information/BTS:Location"></mapper:vertice></mapper:mapperLink>
+                                    </bpel:copy>
+                                    <bpel:copy>
+                                        <bpel:from>$RequestOperation/BTS:Request/BTS:Information/BTS:EventDuration</bpel:from>
+                                        <bpel:to>$BTS_Request/BTS_metrics:EventDuration</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1765763837" targetPath="$BTS_Request/BTS_metrics:EventDuration" targetedBy="1498416342-arg0"></mapper:vertice>
+  <mapper:vertice id="1498416342" sourcePath="$RequestOperation/BTS:Request/BTS:Information/BTS:EventDuration"></mapper:vertice>
+</mapper:mapperLink>
+                                    </bpel:copy>
+                                </bpdm:linkset>
+                            </bpdm:messagingtask>
+                            <bpdm:gateway bpdm:label="Parallel_Gateway" bpdm:ID="_EYvp-bdEEeaCaYmVKR7BjA" bpdm:gatewayType="parallel_and" bpdm:isMerge="false">
+                                <bpel:sequence>
+                                    <bpdm:messagingtask operation="Get_Router_Request" partnerLink="bTSimplicitPartnerAndBTSForCanonicPortPlkVar" portType="RouterAssignment-process:Forcaller" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Confirm routers availability" bpdm:ID="_EYvp9bdEEeaCaYmVKR7BjA">
+                                        <bpdm:linkset bpdm:type="assignments">
+                                            <bpel:copy>
+                                                <bpel:from>$RequestOperation/BTS:Request/BTS:Information</bpel:from>
+                                                <bpel:to>$routerAssignment-processGet_Router_Request1Msg.body</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1524174112" targetPath="$routerAssignment-processGet_Router_Request1Msg.body" targetedBy="1993840225-arg0"></mapper:vertice>
+  <mapper:vertice id="1993840225" sourcePath="$RequestOperation/BTS:Request/BTS:Information"></mapper:vertice>
+</mapper:mapperLink>
+                                            </bpel:copy>
+                                        </bpdm:linkset>
+                                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="routerAssignment-processGet_Router_Request1Msg" bpdm:variableIsManaged="true" bpdm:messageType="RouterAssignment-process:Get_Router_RequestRequest" bpdm:binding="RouterAssignment-process:callerAndProcessServiceBinding" bpdm:ID="_EYvp9bdEEeaCaYmVKR7BjAOutgoing"></bpdm:linkset>
+                                        <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="routerAssignment-processGet_Router_RequestResponse1Msg" bpdm:variableIsManaged="true" bpdm:messageType="RouterAssignment-process:Get_Router_RequestResponse" bpdm:binding="RouterAssignment-process:callerAndProcessServiceBinding" bpdm:ID="_EYvp9bdEEeaCaYmVKR7BjAIncoming"></bpdm:linkset>
+                                    </bpdm:messagingtask>
+                                    <bpdm:messagingtask eventType="intermediate: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_Intermediate_Event" bpdm:ID="_pQ75gLjMEeaF5pjuln3vAA">
+                                        <bpdm:linkset bpdm:type="assignments">
+                                            <bpel:copy>
+                                                <bpel:from>$RequestOperation/BTS:Request/BTS:RequestId</bpel:from>
+                                                <bpel:to>$BTS_Request/BTS_metrics:RequestID</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="756975948" targetPath="$BTS_Request/BTS_metrics:RequestID" targetedBy="1234563471-arg0"></mapper:vertice>
+  <mapper:vertice id="1234563471" sourcePath="$RequestOperation/BTS:Request/BTS:RequestId"></mapper:vertice>
+</mapper:mapperLink>
+                                            </bpel:copy>
+                                            <bpel:copy>
+                                                <bpel:from>$routerAssignment-processGet_Router_RequestResponse1Msg.body/BTS:Router</bpel:from>
+                                                <bpel:to>$BTS_Request/BTS_metrics:AssignedRoute</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="537718338" targetPath="$BTS_Request/BTS_metrics:AssignedRoute" targetedBy="1443062032-arg0"></mapper:vertice>
+  <mapper:vertice id="1443062032" sourcePath="$routerAssignment-processGet_Router_RequestResponse1Msg.body/BTS:Router"></mapper:vertice>
+</mapper:mapperLink>
+                                            </bpel:copy>
+                                            <bpel:copy>
+                                                <bpel:from>$routerAssignment-processGet_Router_RequestResponse1Msg.body/BTS:Cost</bpel:from>
+                                                <bpel:to>$BTS_Request/BTS_metrics:RouterCost</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1032637487" targetPath="$BTS_Request/BTS_metrics:RouterCost" targetedBy="1885177250-arg0"></mapper:vertice>
+  <mapper:vertice id="1885177250" sourcePath="$routerAssignment-processGet_Router_RequestResponse1Msg.body/BTS:Cost"></mapper:vertice>
+</mapper:mapperLink>
+                                            </bpel:copy>
+                                            <bpel:copy>
+                                                <bpel:from>$routerAssignment-processGet_Router_RequestResponse1Msg.body/BTS:Router</bpel:from>
+                                                <bpel:to>$RequestOperation/BTS:AssignedRouter</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="444318695" targetPath="$RequestOperation/BTS:AssignedRouter" targetedBy="454429924-arg0"></mapper:vertice>
+  <mapper:vertice id="454429924" sourcePath="$routerAssignment-processGet_Router_RequestResponse1Msg.body/BTS:Router"></mapper:vertice>
+</mapper:mapperLink>
+                                            </bpel:copy>
+                                            <bpel:copy>
+                                                <bpel:from>$routerAssignment-processGet_Router_RequestResponse1Msg.body/BTS:Cost</bpel:from>
+                                                <bpel:to>$RequestOperation/BTS:RouterCost</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1043722767" targetPath="$RequestOperation/BTS:RouterCost" targetedBy="1823827758-arg0"></mapper:vertice>
+  <mapper:vertice id="1823827758" sourcePath="$routerAssignment-processGet_Router_RequestResponse1Msg.body/BTS:Cost"></mapper:vertice>
+</mapper:mapperLink>
+                                            </bpel:copy>
+                                        </bpdm:linkset>
+                                    </bpdm:messagingtask>
+                                </bpel:sequence>
+                                <bpel:sequence>
+                                    <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Check external dependencies" bpdm:ID="_EYvp_bdEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                                    <bpdm:gateway bpdm:label="Parallel_Gateway" bpdm:ID="_EYvqALdEEeaCaYmVKR7BjA" bpdm:gatewayType="parallel_and" bpdm:isMerge="false">
+                                        <bpel:sequence>
+                                            <bpdm:gateway bpdm:label="Requires HSAN" bpdm:ID="_EYvqBLdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                                                <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_EYvqBrdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="default"></bpdm:linkset>
+                                                <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_EYvqB7dEEeaCaYmVKR7BjA" bpdm:targetDisplayName="Yes">
+                                                    <bpel:condition>true() = $RequestOperation/BTS:HSANRequired<mapper:mapperLink><mapper:vertice id="559963587" targetPath="$condition" targetedBy="1108551429-arg2"></mapper:vertice><mapper:vertice id="1108551429" dimension="79x24" location="403,62"><mapper:value>=</mapper:value></mapper:vertice><mapper:vertice id="1890590048" dimension="79x24" location="238,24" targetedBy="1108551429-arg0"><mapper:value>true()</mapper:value></mapper:vertice><mapper:vertice id="1170932708" sourcePath="$RequestOperation/BTS:HSANRequired" targetedBy="1108551429-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
+                                                </bpdm:linkset>
+                                                <bpel:sequence></bpel:sequence>
+                                                <bpel:sequence>
+                                                    <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Coordinate with NBA" bpdm:ID="_EY5bCrdEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                                                </bpel:sequence>
+                                            </bpdm:gateway>
+                                            <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_EYvqCLdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
+                                        </bpel:sequence>
+                                        <bpel:sequence>
+                                            <bpdm:gateway bpdm:label="Require external resources" bpdm:ID="_EYvqDLdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                                                <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_EYvqD7dEEeaCaYmVKR7BjA" bpdm:targetDisplayName="default"></bpdm:linkset>
+                                                <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_EYvqDrdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="Yes">
+                                                    <bpel:condition>true() = $RequestOperation/BTS:ExternalResourcesRequired<mapper:mapperLink><mapper:vertice id="1158035638" targetPath="$condition" targetedBy="1670295859-arg2"></mapper:vertice><mapper:vertice id="1670295859" dimension="79x24" location="366,97"><mapper:value>=</mapper:value></mapper:vertice><mapper:vertice id="1461071726" dimension="79x24" location="227,41" targetedBy="1670295859-arg0"><mapper:value>true()</mapper:value></mapper:vertice><mapper:vertice id="1274156106" sourcePath="$RequestOperation/BTS:ExternalResourcesRequired" targetedBy="1670295859-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
+                                                </bpdm:linkset>
+                                                <bpel:sequence></bpel:sequence>
+                                                <bpel:sequence>
+                                                    <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Coordinate with vendors" bpdm:ID="_EY5bDLdEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                                                </bpel:sequence>
+                                            </bpdm:gateway>
+                                            <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_EYvqELdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
+                                        </bpel:sequence>
+                                    </bpdm:gateway>
+                                </bpel:sequence>
+                            </bpdm:gateway>
+                        </bpel:sequence>
+                    </bpdm:gateway>
+                    <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_EYvqLrdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
+                    <bpdm:gateway bpdm:label="Approval needed?" bpdm:ID="_EYvqMbdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                        <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_EYvqNLdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="No">
+                            <bpel:condition>$RequestOperation/BTS:ApprovalNeeded = false()<mapper:mapperLink><mapper:vertice id="1417411328" targetPath="$condition" targetedBy="2085268378-arg2"></mapper:vertice><mapper:vertice id="2085268378" dimension="79x24" location="378,61"><mapper:value>=</mapper:value></mapper:vertice><mapper:vertice id="158389308" sourcePath="$RequestOperation/BTS:ApprovalNeeded" targetedBy="2085268378-arg0"></mapper:vertice><mapper:vertice id="2023142268" dimension="79x24" location="276,156" targetedBy="2085268378-arg1"><mapper:value>false()</mapper:value></mapper:vertice></mapper:mapperLink></bpel:condition>
+                        </bpdm:linkset>
+                        <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_EYvqM7dEEeaCaYmVKR7BjA" bpdm:targetDisplayName="default"></bpdm:linkset>
+                        <bpel:sequence>
+                            <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_EYvqPLdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
+                            <bpdm:gateway bpdm:label="Parallel_Gateway" bpdm:ID="_EYvqQbdEEeaCaYmVKR7BjA" bpdm:gatewayType="parallel_and" bpdm:isMerge="false">
+                                <bpel:sequence>
+                                    <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Notify Requester" bpdm:ID="_EY5a4LdEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                                </bpel:sequence>
+                                <bpel:sequence>
+                                    <bpdm:gateway bpdm:label="Booking or inquiry" bpdm:ID="_EY5a_rdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                                        <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_EY5bALdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="Booking">
+                                            <bpel:condition>ode:get-property-value("booking_key") = $RequestOperation/BTS:Request/BTS:Information/BTS:RequestType<mapper:mapperLink><mapper:vertice id="1066208084" targetPath="$condition" targetedBy="1309285794-arg2"></mapper:vertice><mapper:vertice id="1309285794" dimension="79x24" location="573,74"><mapper:value>=</mapper:value></mapper:vertice><mapper:vertice id="621831607" dimension="139x24" location="389,57" targetedBy="1309285794-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="1006230458" dimension="85x24" location="211,35" targetedBy="621831607-arg0"><mapper:value>"booking_key"</mapper:value></mapper:vertice><mapper:vertice id="2116355827" sourcePath="$RequestOperation/BTS:Request/BTS:Information/BTS:RequestType" targetedBy="1309285794-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
+                                        </bpdm:linkset>
+                                        <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_EY5bAbdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="default"></bpdm:linkset>
+                                        <bpel:sequence>
+                                            <bpdm:gateway bpdm:label="Client" bpdm:ID="_EY5bArdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                                                <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_EY5a6rdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="Entertainment">
+                                                    <bpel:condition>ode:get-property-value("entertainment_key") = $RequestOperation/BTS:Request/BTS:Information/BTS:EventType<mapper:mapperLink><mapper:vertice id="906986447" targetPath="$condition" targetedBy="449680470-arg2"></mapper:vertice><mapper:vertice id="449680470" dimension="79x24" location="530,70"><mapper:value>=</mapper:value></mapper:vertice><mapper:vertice id="562303280" dimension="139x24" location="347,44" targetedBy="449680470-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="353026607" dimension="116x24" location="150,27" targetedBy="562303280-arg0"><mapper:value>"entertainment_key"</mapper:value></mapper:vertice><mapper:vertice id="205946601" sourcePath="$RequestOperation/BTS:Request/BTS:Information/BTS:EventType" targetedBy="449680470-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
+                                                </bpdm:linkset>
+                                                <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_EY5a8bdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="default"></bpdm:linkset>
+                                                <bpel:sequence>
+                                                    <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Book on feeds" bpdm:ID="_EY5a6LdEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                                                </bpel:sequence>
+                                                <bpel:sequence>
+                                                    <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Book on Schedule ALL" bpdm:ID="_EY5a77dEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                                                </bpel:sequence>
+                                            </bpdm:gateway>
+                                            <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_EY5a7LdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
+                                        </bpel:sequence>
+                                        <bpel:sequence>
+                                            <bpdm:gateway bpdm:label="Client" bpdm:ID="_EY5bBLdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                                                <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_EY5a9LdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="Entertainment">
+                                                    <bpel:condition>ode:get-property-value("entertainment_key") = $RequestOperation/BTS:Request/BTS:Information/BTS:EventType<mapper:mapperLink><mapper:vertice id="1873214420" targetPath="$condition" targetedBy="1980713009-arg2"></mapper:vertice><mapper:vertice id="1980713009" dimension="79x24" location="515,72"><mapper:value>=</mapper:value></mapper:vertice><mapper:vertice id="409483119" dimension="139x24" location="356,61" targetedBy="1980713009-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="1540834908" dimension="116x24" location="190,35" targetedBy="409483119-arg0"><mapper:value>"entertainment_key"</mapper:value></mapper:vertice><mapper:vertice id="1435699528" sourcePath="$RequestOperation/BTS:Request/BTS:Information/BTS:EventType" targetedBy="1980713009-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
+                                                </bpdm:linkset>
+                                                <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_EY5a-7dEEeaCaYmVKR7BjA" bpdm:targetDisplayName="default"></bpdm:linkset>
+                                                <bpel:sequence>
+                                                    <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Hold on Feeds" bpdm:ID="_EY5a8rdEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                                                </bpel:sequence>
+                                                <bpel:sequence>
+                                                    <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Hold on ScheduleAll" bpdm:ID="_EY5a-bdEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                                                </bpel:sequence>
+                                            </bpdm:gateway>
+                                            <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_EY5a9rdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
+                                        </bpel:sequence>
+                                    </bpdm:gateway>
+                                </bpel:sequence>
+                            </bpdm:gateway>
+                            <bpdm:messagingtask eventType="end: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="End" bpdm:ID="_EY5a_LdEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                        </bpel:sequence>
+                        <bpel:sequence>
+                            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Request client approval" bpdm:ID="_EYvqNbdEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                            <bpdm:gateway bpdm:label="Approved?" bpdm:ID="_EYvqOLdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                                <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_EYvqOrdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="Yes">
+                                    <bpel:condition>true() = $RequestOperation/BTS:Approved<mapper:mapperLink><mapper:vertice id="241829930" targetPath="$condition" targetedBy="2119468430-arg2"></mapper:vertice><mapper:vertice id="2119468430" dimension="79x24" location="421,68"><mapper:value>=</mapper:value></mapper:vertice><mapper:vertice id="796455383" dimension="79x24" location="293,26" targetedBy="2119468430-arg0"><mapper:value>true()</mapper:value></mapper:vertice><mapper:vertice id="1882898750" sourcePath="$RequestOperation/BTS:Approved" targetedBy="2119468430-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
+                                </bpdm:linkset>
+                                <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_EYvqO7dEEeaCaYmVKR7BjA" bpdm:targetDisplayName="default"></bpdm:linkset>
+                                <bpel:sequence>
+                                    <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_EYvqPLdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
+                                    <bpdm:gateway bpdm:label="Parallel_Gateway" bpdm:ID="_EYvqQbdEEeaCaYmVKR7BjA" bpdm:gatewayType="parallel_and" bpdm:isMerge="false">
+                                        <bpel:sequence>
+                                            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Notify Requester" bpdm:ID="_EY5a4LdEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                                        </bpel:sequence>
+                                        <bpel:sequence>
+                                            <bpdm:gateway bpdm:label="Booking or inquiry" bpdm:ID="_EY5a_rdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                                                <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_EY5bALdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="Booking">
+                                                    <bpel:condition>ode:get-property-value("booking_key") = $RequestOperation/BTS:Request/BTS:Information/BTS:RequestType<mapper:mapperLink><mapper:vertice id="1066208084" targetPath="$condition" targetedBy="1309285794-arg2"></mapper:vertice><mapper:vertice id="1309285794" dimension="79x24" location="573,74"><mapper:value>=</mapper:value></mapper:vertice><mapper:vertice id="621831607" dimension="139x24" location="389,57" targetedBy="1309285794-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="1006230458" dimension="85x24" location="211,35" targetedBy="621831607-arg0"><mapper:value>"booking_key"</mapper:value></mapper:vertice><mapper:vertice id="2116355827" sourcePath="$RequestOperation/BTS:Request/BTS:Information/BTS:RequestType" targetedBy="1309285794-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
+                                                </bpdm:linkset>
+                                                <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_EY5bAbdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="default"></bpdm:linkset>
+                                                <bpel:sequence>
+                                                    <bpdm:gateway bpdm:label="Client" bpdm:ID="_EY5bArdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                                                        <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_EY5a6rdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="Entertainment">
+                                                            <bpel:condition>ode:get-property-value("entertainment_key") = $RequestOperation/BTS:Request/BTS:Information/BTS:EventType<mapper:mapperLink><mapper:vertice id="906986447" targetPath="$condition" targetedBy="449680470-arg2"></mapper:vertice><mapper:vertice id="449680470" dimension="79x24" location="530,70"><mapper:value>=</mapper:value></mapper:vertice><mapper:vertice id="562303280" dimension="139x24" location="347,44" targetedBy="449680470-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="353026607" dimension="116x24" location="150,27" targetedBy="562303280-arg0"><mapper:value>"entertainment_key"</mapper:value></mapper:vertice><mapper:vertice id="205946601" sourcePath="$RequestOperation/BTS:Request/BTS:Information/BTS:EventType" targetedBy="449680470-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
+                                                        </bpdm:linkset>
+                                                        <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_EY5a8bdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="default"></bpdm:linkset>
+                                                        <bpel:sequence>
+                                                            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Book on feeds" bpdm:ID="_EY5a6LdEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                                                        </bpel:sequence>
+                                                        <bpel:sequence>
+                                                            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Book on Schedule ALL" bpdm:ID="_EY5a77dEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                                                        </bpel:sequence>
+                                                    </bpdm:gateway>
+                                                    <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_EY5a7LdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
+                                                </bpel:sequence>
+                                                <bpel:sequence>
+                                                    <bpdm:gateway bpdm:label="Client" bpdm:ID="_EY5bBLdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                                                        <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_EY5a9LdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="Entertainment">
+                                                            <bpel:condition>ode:get-property-value("entertainment_key") = $RequestOperation/BTS:Request/BTS:Information/BTS:EventType<mapper:mapperLink><mapper:vertice id="1873214420" targetPath="$condition" targetedBy="1980713009-arg2"></mapper:vertice><mapper:vertice id="1980713009" dimension="79x24" location="515,72"><mapper:value>=</mapper:value></mapper:vertice><mapper:vertice id="409483119" dimension="139x24" location="356,61" targetedBy="1980713009-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="1540834908" dimension="116x24" location="190,35" targetedBy="409483119-arg0"><mapper:value>"entertainment_key"</mapper:value></mapper:vertice><mapper:vertice id="1435699528" sourcePath="$RequestOperation/BTS:Request/BTS:Information/BTS:EventType" targetedBy="1980713009-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
+                                                        </bpdm:linkset>
+                                                        <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_EY5a-7dEEeaCaYmVKR7BjA" bpdm:targetDisplayName="default"></bpdm:linkset>
+                                                        <bpel:sequence>
+                                                            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Hold on Feeds" bpdm:ID="_EY5a8rdEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                                                        </bpel:sequence>
+                                                        <bpel:sequence>
+                                                            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Hold on ScheduleAll" bpdm:ID="_EY5a-bdEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                                                        </bpel:sequence>
+                                                    </bpdm:gateway>
+                                                    <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_EY5a9rdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
+                                                </bpel:sequence>
+                                            </bpdm:gateway>
+                                        </bpel:sequence>
+                                    </bpdm:gateway>
+                                    <bpdm:messagingtask eventType="end: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="End" bpdm:ID="_EY5a_LdEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                                </bpel:sequence>
+                                <bpel:sequence>
+                                    <bpdm:messagingtask eventType="end: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="End rejected" bpdm:ID="_EYvqP7dEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                                </bpel:sequence>
+                            </bpdm:gateway>
+                        </bpel:sequence>
+                    </bpdm:gateway>
+                </bpel:sequence>
+                <bpel:sequence>
+                    <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Release inquiry" bpdm:ID="_EY5bBrdEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                    <bpdm:messagingtask eventType="end: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="End released" bpdm:ID="_EYvp8rdEEeaCaYmVKR7BjA"></bpdm:messagingtask>
+                </bpel:sequence>
+            </bpdm:gateway>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

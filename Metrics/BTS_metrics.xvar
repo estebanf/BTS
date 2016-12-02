@@ -1,0 +1,32 @@
+﻿<xbpms:descriptor targetNamespace="http://test.com/xvar/example" xmlns:xbpms="http://bpms.intalio.com/externalVariables" xmlns:tns="http://test.com/xvar/example" xmlns:xjdbc="http://ode.apache.org/externalVariables/jdbc" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xvar="http://ode.apache.org/externalVariables">
+  <xbpms:import namespace="http://test.com/xvar/example" schemaLocation="${currentFileName}.xsd"/>
+  <xbpms:externalVariable name="BTS_Request">
+    <xbpms:description>default description</xbpms:description>
+    <xbpms:binding>
+      <xjdbc:jdbc>
+        <xjdbc:datasource-jndi>${defaultBpmsJndiDataSource}</xjdbc:datasource-jndi>
+        <xjdbc:table xbpms:isDefault="true">BTS_Request</xjdbc:table>
+        <xjdbc:column key="yes" name="RequestID" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:column key="no" name="CustomerID" sql-type="INTEGER" xbpms:type-label="integer" xsd-type="xs:integer"/>
+        <xjdbc:column key="no" name="EventType" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:column key="no" name="EventDateTime" sql-type="TIMESTAMP" xbpms:type-label="timestamp" xsd-type="xs:dateTime"/>
+        <xjdbc:column key="no" name="EventDuration" sql-type="INTEGER" xbpms:type-label="integer" xsd-type="xs:integer"/>
+        <xjdbc:column key="no" name="RequestType" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:column key="no" name="Location" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:column key="no" name="Status" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:column key="no" name="AssignedRoute" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:column key="no" name="RouterCost" sql-type="NUMERIC" xbpms:ddl-precision="15" xbpms:ddl-scale="2" xbpms:ddl-size="250" xbpms:type-label="numeric" xsd-type="xs:decimal"/>
+        <xjdbc:column key="no" name="HSANRequired" sql-type="BOOLEAN" xbpms:type-label="boolean" xsd-type="xs:boolean"/>
+        <xjdbc:column key="no" name="HSANCost" sql-type="NUMERIC" xbpms:ddl-precision="15" xbpms:ddl-scale="2" xbpms:ddl-size="250" xbpms:type-label="numeric" xsd-type="xs:decimal"/>
+        <xjdbc:column key="no" name="ExternalResourceRequired" sql-type="BOOLEAN" xbpms:type-label="boolean" xsd-type="xs:boolean"/>
+        <xjdbc:column key="no" name="ApprovalNeeded" sql-type="BOOLEAN" xbpms:type-label="boolean" xsd-type="xs:boolean"/>
+        <xjdbc:column key="no" name="Approved" sql-type="BOOLEAN" xbpms:type-label="boolean" xsd-type="xs:boolean"/>
+        <xjdbc:column generator="ctimestamp" key="no" name="created_on" xbpms:type-label="creation-timestamp"/>
+        <xjdbc:column generator="utimestamp" key="no" name="updated_on" xbpms:type-label="update-timestamp"/>
+        <xjdbc:column generator="pid" key="no" name="process_id" xbpms:type-label="process-definition-id"/>
+        <xjdbc:column generator="iid" key="no" name="instance_id" xbpms:type-label="process-instance-id"/>
+        <xjdbc:init mode="update-insert"/>
+      </xjdbc:jdbc>
+    </xbpms:binding>
+  </xbpms:externalVariable>
+</xbpms:descriptor>

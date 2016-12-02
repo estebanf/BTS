@@ -1,0 +1,38 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<sim:process xmlns:sim="http://www.intalio.com/bpms/designer/sim" poolID="_EYvp67dEEeaCaYmVKR7BjA" poolDisplayName="BTS" startingActivitiesIDs="[_EYvp77dEEeaCaYmVKR7BjA]" bpdmFile="Processes/Core/ContentTransmissionBooking.bpm/_EYvp67dEEeaCaYmVKR7BjA.bpdm">
+  <sim:activities>
+    <sim:activity ID="_EYvp77dEEeaCaYmVKR7BjA" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="Receive request" isMyRole="true">
+      <sim:request><![CDATA[<message xmlns:this="http://thisdiagram/BTS">
+  <body>
+    <this:Receive_requestRequest>
+      <BTS:Action xmlns:BTS="http://www.example.org/BTS">New</BTS:Action>
+      <BTS:RequestInfo xmlns:BTS="http://www.example.org/BTS">
+        <BTS:CustomerId xmlns:BTS="http://www.example.org/BTS">1</BTS:CustomerId>
+        <BTS:EventDateTime xmlns:BTS="http://www.example.org/BTS">2002-05-30T09:00:00</BTS:EventDateTime>
+        <BTS:EventType xmlns:BTS="http://www.example.org/BTS">News</BTS:EventType>
+        <BTS:RequestType xmlns:BTS="http://www.example.org/BTS">Inquiry</BTS:RequestType>
+        <BTS:Location xmlns:BTS="http://www.example.org/BTS">Buckedhead</BTS:Location>
+      </BTS:RequestInfo>
+    </this:Receive_requestRequest>
+  </body>
+</message>]]></sim:request>
+    </sim:activity>
+    <sim:activity ID="_EY5bCLdEEeaCaYmVKR7BjA" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="Mofidy request data" isMyRole="true"></sim:activity>
+    <sim:activity ID="_3j4v4LgKEeaCaYmVKR7BjA" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="Save request data" isMyRole="true"></sim:activity>
+    <sim:activity ID="_hlC9MLgOEeavcMke7hVtyg" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="Empty_Intermediate_Event" isMyRole="true"></sim:activity>
+    <sim:activity ID="_EYvp9bdEEeaCaYmVKR7BjA" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="Confirm routers availability" isMyRole="true"></sim:activity>
+    <sim:activity ID="_EYvp_bdEEeaCaYmVKR7BjA" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="Check external dependencies" isMyRole="true"></sim:activity>
+    <sim:activity ID="_EY5bCrdEEeaCaYmVKR7BjA" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="Coordinate with NBA" isMyRole="true"></sim:activity>
+    <sim:activity ID="_EY5bDLdEEeaCaYmVKR7BjA" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="Coordinate with vendors" isMyRole="true"></sim:activity>
+    <sim:activity ID="_EY5a4LdEEeaCaYmVKR7BjA" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="Notify Requester" isMyRole="true"></sim:activity>
+    <sim:activity ID="_EY5a6LdEEeaCaYmVKR7BjA" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="Book on feeds" isMyRole="true"></sim:activity>
+    <sim:activity ID="_EY5a77dEEeaCaYmVKR7BjA" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="Book on Schedule ALL" isMyRole="true"></sim:activity>
+    <sim:activity ID="_EY5a8rdEEeaCaYmVKR7BjA" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="Hold on Feeds" isMyRole="true"></sim:activity>
+    <sim:activity ID="_EY5a-bdEEeaCaYmVKR7BjA" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="Hold on ScheduleAll" isMyRole="true"></sim:activity>
+    <sim:activity ID="_EY5a_LdEEeaCaYmVKR7BjA" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="End" isMyRole="true"></sim:activity>
+    <sim:activity ID="_EYvqNbdEEeaCaYmVKR7BjA" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="Request client approval" isMyRole="true"></sim:activity>
+    <sim:activity ID="_EYvqP7dEEeaCaYmVKR7BjA" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="End rejected" isMyRole="true"></sim:activity>
+    <sim:activity ID="_EY5bBrdEEeaCaYmVKR7BjA" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="Release inquiry" isMyRole="true"></sim:activity>
+    <sim:activity ID="_EYvp8rdEEeaCaYmVKR7BjA" scopeID="_EYvp67dEEeaCaYmVKR7BjA" displayName="End released" isMyRole="true"></sim:activity>
+  </sim:activities>
+</sim:process>

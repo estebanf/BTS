@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/BTS" xmlns:tns="http://www.example.org/BTS" elementFormDefault="qualified">
+
+    <complexType name="ACKType">
+    	<sequence>
+    		<element name="Pid" type="string"></element>
+    		<element name="Timestamp" type="dateTime"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="RequestInformationType">
+    	<sequence>
+    		<element name="CustomerId" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="EventDateTime" type="dateTime" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+            <element name="EventDuration" type="int" maxOccurs="1" minOccurs="1"></element>
+            <element name="EventType" maxOccurs="1" minOccurs="1">
+    			<simpleType>
+    				<restriction base="string">
+    					<enumeration value="News"></enumeration>
+    					<enumeration value="Entertainment"></enumeration>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="RequestType" maxOccurs="1" minOccurs="1">
+    			<simpleType>
+    				<restriction base="string">
+    					<enumeration value="Inquiry"></enumeration>
+    					<enumeration value="Booking"></enumeration>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="Location" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="RequestType">
+    	<sequence>
+    		<element name="RequestId" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Information" type="tns:RequestInformationType" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="RequestActionType">
+    	<sequence>
+    		<element name="Action" maxOccurs="1" minOccurs="1">
+    			<simpleType>
+    				<restriction base="string">
+    					<enumeration value="New"></enumeration>
+    					<enumeration value="Modify"></enumeration>
+    					<enumeration value="Release"></enumeration>
+    					<enumeration value="Confirm"></enumeration>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="RequestId" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="RequestInfo" type="tns:RequestInformationType" maxOccurs="1" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="RequestOperationType">
+    	<sequence>
+    		<element name="Request" type="tns:RequestType" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="AssignedRouter" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="RouterCost" type="double" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="HSANRequired" type="boolean" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="HSANCost" type="double" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="ExternalResourcesRequired" type="boolean"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="ExternalResources"
+    			type="tns:ExternalResourceType" maxOccurs="unbounded"
+    			minOccurs="0">
+    		</element>
+    		<element name="ApprovalNeeded" type="boolean" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="Approved" type="boolean" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="ExternalResourceType">
+    	<sequence>
+    		<element name="Resource" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Vendor" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Cost" type="double" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="RequestOperation" type="tns:RequestOperationType"></element>
+
+    <complexType name="RouterAssignmentType">
+    	<sequence>
+    		<element name="Router" type="string"></element>
+    		<element name="Cost" type="double"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="RouterDecisionModel"
+    	type="tns:RouterDecisionModelType">
+    </element>
+    
+    <complexType name="RouterDecisionModelType">
+    	<sequence>
+    		<element name="customerTier" type="int"></element>
+    		<element name="urgency" type="string"></element>
+    		<element name="eventType" type="string"></element>
+    		<element name="location" type="string"></element>
+    		<element name="pid" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="RouterDecisionAction"
+    	type="tns:RouterDecisionActionType">
+    </element>
+    
+    <complexType name="RouterDecisionActionType">
+    	<sequence>
+    		<element name="Router" type="string"></element>
+    		<element name="Cost" type="double"></element>
+    	</sequence>
+    </complexType>
+</schema>
