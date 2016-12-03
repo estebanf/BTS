@@ -1,0 +1,190 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:tns="http://everteam.com/xvar/example" xmlns:caller="http://thisdiagram/caller" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:this="http://thisdiagram/process" xmlns:diag="http://thisdiagram" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/process">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://everteam.com/xvar/example" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///IntalioObjects/customVariable.xvar"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/caller" bpdm:prefix="caller" bpdm:comment="contrib=&apos;partner-pool:///_ImPUkLkyEea98_xmAI6CLw"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/process" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_ImPUkLkyEea98_xmAI6CLw"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types">
+            <wsdl:portType name="Forcaller">
+                <wsdl:operation name="Calculare_urgency_request" bpdm:source="partner-pool:///_ImPUkLkyEea98_xmAI6CLw">
+                    <wsdl:input message="this:Calculare_urgency_requestRequest" name="Calculare_urgency_request"/>
+                    <wsdl:output message="this:Calculare_urgency_requestResponse" name="Calculare_urgency_requestResponse"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <bpel:binding name="CanonicBindingForcaller" type="this:Forcaller" bpdm:isSynchronized="true"/>
+            <xs:element name="Calculare_urgency_requestRequest" type="xs:dateTime" bpdm:source="partner-pool:///_ImPUkLkyEea98_xmAI6CLw"/>
+            <wsdl:message name="Calculare_urgency_requestRequest" bpdm:source="partner-pool:///_ImPUkLkyEea98_xmAI6CLw">
+                <wsdl:part name="body" element="this:Calculare_urgency_requestRequest"/>
+            </wsdl:message>
+            <xs:element name="Calculare_urgency_requestResponse" type="xs:string" bpdm:source="partner-pool:///_ImPUkLkyEea98_xmAI6CLw"/>
+            <wsdl:message name="Calculare_urgency_requestResponse" bpdm:source="partner-pool:///_ImPUkLkyEea98_xmAI6CLw">
+                <wsdl:part name="body" element="this:Calculare_urgency_requestResponse"/>
+            </wsdl:message>
+        </bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_ImPUkLkyEea98_xmAI6CLw" bpdm:label="caller"/>
+        <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar"/>
+        <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="process" bpdm:ID="_Q0GG0LkyEea98_xmAI6CLw">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="processAndCallerPlkVar" partnerLinkType="diag:processAndCaller" myRole="process_for_caller" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForcaller" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/process/caller" bpdm:providedIsDefault="true" bpdm:clientTasks="_Q0GG0LkyEea98_xmAI6CLw:_XC_5ELkyEea98_xmAI6CLw, _Q0GG0LkyEea98_xmAI6CLw:_TBxC0LkzEeajYsanxe9sog" bpdm:isManaged="true" bpdm:otherPoolId="_ImPUkLkyEea98_xmAI6CLw"/>
+        </bpel:partnerLinks>
+        <bpel:variables xmlns:xvar="http://ode.apache.org/externalVariables">
+            <bpel:variable name="customVariable" element="tns:customVariable" xvar:id="customVariable-_Q0iyxrkyEea98_xmAI6CLw" xvar:relates-to="customVariable-keys" bpdm:xvarType="tns:customVariable" bpdm:id="_Q0iyxrkyEea98_xmAI6CLw"/>
+            <bpel:variable name="thisCalculare_urgency_requestRequest2Msg" messageType="this:Calculare_urgency_requestRequest" bpdm:id="_XDmWALkyEea98_xmAI6CLw" bpdm:messageIds="inc:_XC_5GbkyEea98_xmAI6CLw"/>
+            <bpel:variable name="thisCalculare_urgency_requestResponse2Msg" messageType="this:Calculare_urgency_requestResponse" bpdm:id="_UPEjcLkzEeajYsanxe9sog" bpdm:messageIds=" out:_UO0r0LkzEeajYsanxe9sog">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="this:Calculare_urgency_requestResponse" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="durationUntilEvent" type="xs:duration" bpdm:id="_pPu50LkzEeajYsanxe9sog">
+                <bpel:from>
+                    <bpel:literal bpdm:linkedType="xs:duration"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask eventType="start: message" operation="Calculare_urgency_request" partnerLink="processAndCallerPlkVar" portType="this:Forcaller" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Calculare urgency request" bpdm:ID="_XC_5ELkyEea98_xmAI6CLw">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisCalculare_urgency_requestRequest2Msg" bpdm:msgVarScopeId="_Q0GG0LkyEea98_xmAI6CLw" bpdm:variableIsManaged="true" bpdm:messageType="this:Calculare_urgency_requestRequest" bpdm:ID="_XC_5GbkyEea98_xmAI6CLw"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Calculate duration until event" bpdm:ID="_fC3SoLkyEea98_xmAI6CLw">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>xs:dateTime($thisCalculare_urgency_requestRequest2Msg.body) - current-dateTime()</bpel:from>
+                        <bpel:to>$durationUntilEvent</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="521774403" targetPath="$durationUntilEvent" targetedBy="1615293776-arg2"></mapper:vertice>
+  <mapper:vertice id="1615293776" dimension="79x24" location="535,86">
+    <mapper:value>-</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="1806697912" dimension="79x24" location="276,36" targetedBy="1615293776-arg0">
+    <mapper:value>xs:dateTime()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="1359688973" sourcePath="$thisCalculare_urgency_requestRequest2Msg.body" targetedBy="1806697912-arg0"></mapper:vertice>
+  <mapper:vertice id="1135372101" dimension="109x24" location="380,103" targetedBy="1615293776-arg1">
+    <mapper:value>current-dateTime()</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:gateway bpdm:label="Time until event?" bpdm:ID="_wfQRALkyEea98_xmAI6CLw" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_FkPGt7kzEeajYsanxe9sog" bpdm:targetDisplayName="Less than 3 hours">
+                    <bpel:condition>xs:dayTimeDuration($durationUntilEvent) &lt; xs:dayTimeDuration(xs:duration(ode:get-property-value("high_priority_compare")))
+<mapper:mapperLink>
+  <mapper:vertice id="1764910333" targetPath="$condition" targetedBy="1206284755-arg2"></mapper:vertice>
+  <mapper:vertice id="1206284755" dimension="79x24" location="600,144">
+    <mapper:value>&lt;</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="933682544" dimension="121x24" location="420,120" targetedBy="1206284755-arg0">
+    <mapper:value>xs:dayTimeDuration()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="378158132" sourcePath="$durationUntilEvent" targetedBy="933682544-arg0"></mapper:vertice>
+  <mapper:vertice id="2063155655" dimension="121x24" location="456,192" targetedBy="1206284755-arg1">
+    <mapper:value>xs:dayTimeDuration()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="1476576952" dimension="79x24" location="360,216" targetedBy="2063155655-arg0">
+    <mapper:value>xs:duration()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="150052612" dimension="139x24" location="192,276" targetedBy="1476576952-arg0">
+    <mapper:value>ode:get-property-value()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="2105010165" dimension="137x24" location="36,324" targetedBy="150052612-arg0">
+    <mapper:value>"high_priority_compare"</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink></bpel:condition>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_HqpZmbkzEeajYsanxe9sog" bpdm:targetDisplayName="default"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_KYHscLkzEeajYsanxe9sog" bpdm:targetDisplayName="More than 3 days">
+                    <bpel:condition>xs:dayTimeDuration($durationUntilEvent) &gt; xs:dayTimeDuration(xs:duration(ode:get-property-value("low_priority_compare")))
+<mapper:mapperLink>
+  <mapper:vertice id="1282239211" targetPath="$condition" targetedBy="986406898-arg2"></mapper:vertice>
+  <mapper:vertice id="986406898" dimension="79x24" location="552,132">
+    <mapper:value>&gt;</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="1360061302" dimension="121x24" location="336,120" targetedBy="986406898-arg0">
+    <mapper:value>xs:dayTimeDuration()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="302720939" sourcePath="$durationUntilEvent" targetedBy="1360061302-arg0"></mapper:vertice>
+  <mapper:vertice id="25270274" dimension="121x24" location="384,192" targetedBy="986406898-arg1">
+    <mapper:value>xs:dayTimeDuration()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="2106175321" dimension="79x24" location="276,204" targetedBy="25270274-arg0">
+    <mapper:value>xs:duration()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="1133284611" dimension="139x24" location="144,264" targetedBy="2106175321-arg0">
+    <mapper:value>ode:get-property-value()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="1259022851" dimension="132x24" location="0,300" targetedBy="1133284611-arg0">
+    <mapper:value>"low_priority_compare"</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink></bpel:condition>
+                </bpdm:linkset>
+                <bpel:sequence>
+                    <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="High priority" bpdm:ID="_FkHK4LkzEeajYsanxe9sog">
+                        <bpdm:linkset bpdm:type="assignments">
+                            <bpel:copy>
+                                <bpel:from>ode:get-property-value("high_urgency_key")</bpel:from>
+                                <bpel:to>$thisCalculare_urgency_requestResponse2Msg.body</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="718446366" targetPath="$thisCalculare_urgency_requestResponse2Msg.body" targetedBy="488193200-arg1"></mapper:vertice>
+  <mapper:vertice id="488193200" dimension="139x24" location="708,84">
+    <mapper:value>ode:get-property-value()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="1163073246" dimension="113x24" location="516,120" targetedBy="488193200-arg0">
+    <mapper:value>"high_urgency_key"</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink>
+                            </bpel:copy>
+                        </bpdm:linkset>
+                    </bpdm:messagingtask>
+                </bpel:sequence>
+                <bpel:sequence>
+                    <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Normal priority" bpdm:ID="_HqpZkLkzEeajYsanxe9sog">
+                        <bpdm:linkset bpdm:type="assignments">
+                            <bpel:copy>
+                                <bpel:from>ode:get-property-value("normal_urgency_key")</bpel:from>
+                                <bpel:to>$thisCalculare_urgency_requestResponse2Msg.body</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1759461395" targetPath="$thisCalculare_urgency_requestResponse2Msg.body" targetedBy="466349775-arg1"></mapper:vertice>
+  <mapper:vertice id="466349775" dimension="139x24" location="648,96">
+    <mapper:value>ode:get-property-value()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="1877448737" dimension="127x24" location="412,146" targetedBy="466349775-arg0">
+    <mapper:value>"normal_urgency_key"</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink>
+                            </bpel:copy>
+                        </bpdm:linkset>
+                    </bpdm:messagingtask>
+                </bpel:sequence>
+                <bpel:sequence>
+                    <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Low priority" bpdm:ID="_KX97cLkzEeajYsanxe9sog">
+                        <bpdm:linkset bpdm:type="assignments">
+                            <bpel:copy>
+                                <bpel:from>ode:get-property-value("low_urgency_key")</bpel:from>
+                                <bpel:to>$thisCalculare_urgency_requestResponse2Msg.body</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="788633175" targetPath="$thisCalculare_urgency_requestResponse2Msg.body" targetedBy="755894309-arg1"></mapper:vertice>
+  <mapper:vertice id="755894309" dimension="139x24" location="636,120">
+    <mapper:value>ode:get-property-value()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="1250485550" dimension="108x24" location="400,170" targetedBy="755894309-arg0">
+    <mapper:value>"low_urgency_key"</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink>
+                            </bpel:copy>
+                        </bpdm:linkset>
+                    </bpdm:messagingtask>
+                </bpel:sequence>
+            </bpdm:gateway>
+            <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_RuMiILkzEeajYsanxe9sog" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
+            <bpdm:messagingtask eventType="end: message" operation="Calculare_urgency_request" partnerLink="processAndCallerPlkVar" portType="this:Forcaller" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Reply" bpdm:ID="_TBxC0LkzEeajYsanxe9sog">
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisCalculare_urgency_requestResponse2Msg" bpdm:msgVarScopeId="_Q0GG0LkyEea98_xmAI6CLw" bpdm:variableIsManaged="true" bpdm:messageType="this:Calculare_urgency_requestResponse" bpdm:ID="_UO0r0LkzEeajYsanxe9sog"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

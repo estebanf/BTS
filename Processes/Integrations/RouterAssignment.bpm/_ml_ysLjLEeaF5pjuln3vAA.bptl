@@ -5,7 +5,7 @@
         <bpt:activity ID="_WA-WQLiAEeavcMke7hVtyg" displayName="Confirm routers availability" activityType="Task" messaging="invokerequestresponsebound">
             <bpt:generatedOperation providingPoolId="_LgezALiAEeavcMke7hVtyg" generatedPartnerLinkTypeLocalName="callerAndProcess" generatedService="CanonicServiceForcaller" generatedOperation="Get_Router_Request" generatedPort="canonicPort">
                 <bpt:input name="Get_Router_Request" generatedMessageTypeLocalName="Get_Router_RequestRequest">
-                    <bpt:part name="body" attachedSchemaObject="project:///Schemas/BTS.xsd?xsdtype={http://www.example.org/BTS}RequestInformationType" generatedElementLocalName="Get_Router_RequestRequest"/>
+                    <bpt:part name="body" attachedSchemaObject="project:///Schemas/BTS.xsd?xsdtype={http://www.example.org/BTS}RequestType" generatedElementLocalName="Get_Router_RequestRequest"/>
                 </bpt:input>
                 <bpt:output name="Get_Router_RequestResponse" generatedMessageTypeLocalName="Get_Router_RequestResponse">
                     <bpt:part name="body" attachedSchemaObject="project:///Schemas/BTS.xsd?xsdtype={http://www.example.org/BTS}RouterAssignmentType" generatedElementLocalName="Get_Router_RequestResponse"/>

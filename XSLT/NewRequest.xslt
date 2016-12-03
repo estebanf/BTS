@@ -8,7 +8,9 @@
  Input document as defined in the mapper: $thisReceive_requestRequest1Msg.body-->
   <xsl:output/>
   <xsl:param name="pid">
-    <!--Parameter defined in mapper as $ode:pid variable type: xs:string-->
+    <error>Parameter pid no initialized</error>
+  </xsl:param>
+  <xsl:param name="urgency">
     <error>Parameter pid no initialized</error>
   </xsl:param>
   <xsl:template match="/this:Receive_requestRequest">
@@ -16,6 +18,7 @@
       <BTS:Request>
         <BTS:RequestId><xsl:value-of select="concat(year-from-dateTime(current-dateTime()),month-from-dateTime(current-dateTime()),day-from-dateTime(current-dateTime()),'-',$pid)" /></BTS:RequestId>
         <BTS:Information><xsl:copy-of select="BTS:RequestInfo/child::*" /></BTS:Information>
+        <BTS:Urgency><xsl:value-of select="$urgency" /></BTS:Urgency>
       </BTS:Request>
       <BTS:AssignedRouter></BTS:AssignedRouter>
       <BTS:RouterCost>0</BTS:RouterCost>

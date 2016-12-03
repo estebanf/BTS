@@ -1,0 +1,16 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<bpt:template xmlns:bpt="http://www.intalio/designer/business-process-data-modeling/template" ID="_MUs4cLk0EeajYsanxe9sog" displayName="GetRequestUrgency" ownerPoolId="_ImPUkLkyEea98_xmAI6CLw" ownerPoolNcName="caller" ownerPoolIsExecutable="false" version="6000089">
+    <bpt:partnerPool ID="_Q0GG0LkyEea98_xmAI6CLw" ncName="process" isExecutable="true"/>
+    <bpt:container displayName="sequence" containerType="sequence">
+        <bpt:activity ID="_Nbkr0LkyEea98_xmAI6CLw" displayName="Get Request Urgency" activityType="Task" messaging="invokerequestresponsebound">
+            <bpt:generatedOperation providingPoolId="_Q0GG0LkyEea98_xmAI6CLw" generatedPartnerLinkTypeLocalName="processAndCaller" generatedService="CanonicServiceForcaller" generatedOperation="Calculare_urgency_request" generatedPort="canonicPort">
+                <bpt:input name="Calculare_urgency_request" generatedMessageTypeLocalName="Calculare_urgency_requestRequest">
+                    <bpt:part name="body" attachedSchemaObject="builtin:///xsd?xsdtype={http://www.w3.org/2001/XMLSchema}dateTime" generatedElementLocalName="Calculare_urgency_requestRequest"/>
+                </bpt:input>
+                <bpt:output name="Calculare_urgency_requestResponse" generatedMessageTypeLocalName="Calculare_urgency_requestResponse">
+                    <bpt:part name="body" generatedElementLocalName="Calculare_urgency_requestResponse"/>
+                </bpt:output>
+            </bpt:generatedOperation>
+        </bpt:activity>
+    </bpt:container>
+</bpt:template>

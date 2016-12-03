@@ -70,8 +70,16 @@
     </vertices>
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvp87dEEeaCaYmVKR7BjA" iD="_EYvp8rdEEeaCaYmVKR7BjA" incomingEdges="_EY5bDrdEEeaCaYmVKR7BjA" name="End released" activityType="EventEndEmpty"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvp-rdEEeaCaYmVKR7BjA" iD="_EYvp-bdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bD7dEEeaCaYmVKR7BjA _EY5bELdEEeaCaYmVKR7BjA" incomingEdges="_h5dG8bgOEeavcMke7hVtyg" name="" activityType="GatewayParallel"/>
-    <vertices xmi:type="bpmn:ActivityRule" xmi:id="_EYvp_rdEEeaCaYmVKR7BjA" iD="_EYvp_bdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bEbdEEeaCaYmVKR7BjA" incomingEdges="_EY5bELdEEeaCaYmVKR7BjA" name="Check external dependencies" activityType="RuleTask"/>
-    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqAbdEEeaCaYmVKR7BjA" iD="_EYvqALdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bErdEEeaCaYmVKR7BjA _EY5bFrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bEbdEEeaCaYmVKR7BjA" name="" activityType="GatewayParallel"/>
+    <vertices xmi:type="bpmn:ActivityRule" xmi:id="_EYvp_rdEEeaCaYmVKR7BjA" iD="_EYvp_bdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bEbdEEeaCaYmVKR7BjA" incomingEdges="_EY5bELdEEeaCaYmVKR7BjA" name="Check external dependencies" activityType="RuleTask">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZVkUdbk5EeajYsanxe9sog" source="genericFile">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZVkUdrk5EeajYsanxe9sog" key="projectRelativePath" value="Rules/ExternalDependencies.bre/ExternalDependencies.dt"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZWT7ULk5EeajYsanxe9sog" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZWT7Ubk5EeajYsanxe9sog" key="blackbox" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZWdsULk5EeajYsanxe9sog" key="douri" value="project:///Rules/ExternalDependencies.bre/dtws_bts_rules_externaldependencies/META-INF/dtws_bts_rules_externaldependencies.wsdl?invokerequestresponsebound={http://externaldependencies.rules.bts}dtws_bts_rules_externaldependencies/dtws_bts_rules_externaldependenciesHttpSoap11Endpoint/invokeDecisionTable"/>
+      </eAnnotations>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqAbdEEeaCaYmVKR7BjA" iD="_EYvqALdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bErdEEeaCaYmVKR7BjA _EY5bFrdEEeaCaYmVKR7BjA" incomingEdges="_jqb2gbk5EeajYsanxe9sog" name="" activityType="GatewayParallel"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqBbdEEeaCaYmVKR7BjA" iD="_EYvqBLdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bE7dEEeaCaYmVKR7BjA _EY5bFLdEEeaCaYmVKR7BjA" incomingEdges="_EY5bErdEEeaCaYmVKR7BjA" name="Requires HSAN" activityType="GatewayDataBasedExclusive"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqCbdEEeaCaYmVKR7BjA" iD="_EYvqCLdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bGrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bE7dEEeaCaYmVKR7BjA _EY5bFbdEEeaCaYmVKR7BjA" name="" activityType="GatewayDataBasedExclusive"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqDbdEEeaCaYmVKR7BjA" iD="_EYvqDLdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bGLdEEeaCaYmVKR7BjA _EY5bF7dEEeaCaYmVKR7BjA" incomingEdges="_EY5bFrdEEeaCaYmVKR7BjA" name="Require external resources" activityType="GatewayDataBasedExclusive"/>
@@ -80,7 +88,7 @@
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqGLdEEeaCaYmVKR7BjA" iD="_EYvqF7dEEeaCaYmVKR7BjA" outgoingEdges="_EY5bKLdEEeaCaYmVKR7BjA" incomingEdges="_EY5bJrdEEeaCaYmVKR7BjA _qD5ngbjMEeaF5pjuln3vAA" name="" activityType="GatewayParallel"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqG7dEEeaCaYmVKR7BjA" iD="_EYvqGrdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bH7dEEeaCaYmVKR7BjA _EY5bHrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bHbdEEeaCaYmVKR7BjA" name="Release existing request? " activityType="GatewayDataBasedExclusive"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqH7dEEeaCaYmVKR7BjA" iD="_EYvqHrdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bJbdEEeaCaYmVKR7BjA _EY5bILdEEeaCaYmVKR7BjA" incomingEdges="_EY5bH7dEEeaCaYmVKR7BjA" name="New or modify existing?" activityType="GatewayDataBasedExclusive"/>
-    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqI7dEEeaCaYmVKR7BjA" iD="_EYvqIrdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bIbdEEeaCaYmVKR7BjA _EY5bIrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bILdEEeaCaYmVKR7BjA" name="Modify existing?" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqI7dEEeaCaYmVKR7BjA" iD="_EYvqIrdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bIbdEEeaCaYmVKR7BjA _EY5bIrdEEeaCaYmVKR7BjA" incomingEdges="_os6Osbk1EeajYsanxe9sog" name="Modify existing?" activityType="GatewayDataBasedExclusive"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqJ7dEEeaCaYmVKR7BjA" iD="_EYvqJrdEEeaCaYmVKR7BjA" outgoingEdges="_hlfCGLgOEeavcMke7hVtyg" incomingEdges="_EY5bI7dEEeaCaYmVKR7BjA _5UFiMbgKEeaCaYmVKR7BjA" name="" activityType="GatewayDataBasedExclusive"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqL7dEEeaCaYmVKR7BjA" iD="_EYvqLrdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bKbdEEeaCaYmVKR7BjA" incomingEdges="_EY5bKLdEEeaCaYmVKR7BjA _EY5bJbdEEeaCaYmVKR7BjA" name="" activityType="GatewayDataBasedExclusive"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqMrdEEeaCaYmVKR7BjA" iD="_EYvqMbdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bLLdEEeaCaYmVKR7BjA _EY5bKrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bKbdEEeaCaYmVKR7BjA" name="Approval needed?" activityType="GatewayDataBasedExclusive"/>
@@ -115,6 +123,14 @@
       </eAnnotations>
     </vertices>
     <vertices xmi:type="bpmn:Activity" xmi:id="_pQ75gbjMEeaF5pjuln3vAA" iD="_pQ75gLjMEeaF5pjuln3vAA" outgoingEdges="_qD5ngbjMEeaF5pjuln3vAA" incomingEdges="_pRPbgbjMEeaF5pjuln3vAA" activityType="EventIntermediateEmpty"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_ckiuxLk1EeajYsanxe9sog" iD="_ckcBBrk1EeajYsanxe9sog" outgoingEdges="_os6Osbk1EeajYsanxe9sog" incomingEdges="_EY5bILdEEeaCaYmVKR7BjA" name="Get Request Urgency" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ckiuxbk1EeajYsanxe9sog" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ckiuxrk1EeajYsanxe9sog" key="blackbox" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ckiux7k1EeajYsanxe9sog" key="douri2" value="project:///Processes/Integrations/CalculateRequestUrgency.bpm/_MUs4cLk0EeajYsanxe9sog.bptl?bptnode={http://www.intalio/designer/business-process-data-modeling/template}Get Request Urgency"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ckiuyLk1EeajYsanxe9sog" key="douri" value="project:///Processes/Integrations/CalculateRequestUrgency-process.wsdl?invokerequestresponsebound={http://thisproject/Processes/Integrations/CalculateRequestUrgency/process}CanonicServiceForcaller/canonicPort/Calculare_urgency_request"/>
+      </eAnnotations>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_i1-6wbk5EeajYsanxe9sog" iD="_i1-6wLk5EeajYsanxe9sog" outgoingEdges="_jqb2gbk5EeajYsanxe9sog" incomingEdges="_EY5bEbdEEeaCaYmVKR7BjA" activityType="EventIntermediateEmpty"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bDrdEEeaCaYmVKR7BjA" iD="_EYvp9LdEEeaCaYmVKR7BjA" name=""/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bD7dEEeaCaYmVKR7BjA" iD="_EYvp97dEEeaCaYmVKR7BjA" name=""/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bELdEEeaCaYmVKR7BjA" iD="_EYvp_LdEEeaCaYmVKR7BjA" name=""/>
@@ -167,6 +183,8 @@
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_h5dG8bgOEeavcMke7hVtyg" iD="_h5dG8LgOEeavcMke7hVtyg"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_pRPbgbjMEeaF5pjuln3vAA" iD="_pRPbgLjMEeaF5pjuln3vAA"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_qD5ngbjMEeaF5pjuln3vAA" iD="_qD5ngLjMEeaF5pjuln3vAA"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_os6Osbk1EeajYsanxe9sog" iD="_os6OsLk1EeajYsanxe9sog"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_jqb2gbk5EeajYsanxe9sog" iD="_jqb2gLk5EeajYsanxe9sog"/>
   </pools>
   <messages xmi:type="bpmn:MessagingEdge" xmi:id="_EYmf8bdEEeaCaYmVKR7BjA" iD="_EYmf8LdEEeaCaYmVKR7BjA" name="" source="_EYvp4bdEEeaCaYmVKR7BjA" target="_EYvp8LdEEeaCaYmVKR7BjA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QPF70Lf_EeaCaYmVKR7BjA" source="attachedDataobject">

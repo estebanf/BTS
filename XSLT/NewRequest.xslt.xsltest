@@ -19,4 +19,5 @@
     </this:Receive_requestRequest>
   </test:input>
   <test:param name="pid">123</test:param>
+  <test:param name="urgency">LOW</test:param>
 </test:testxsl>

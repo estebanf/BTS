@@ -1,0 +1,200 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<decisiontable name="ExternalDependencies">
+  <import>bre.RequestExternalDepencies</import>
+  <decisionheader expression="RequestExternalDepencies.eventType" returntype="String" nodetype="Condition"/>
+  <decisionheader expression="RequestExternalDepencies.urgency" returntype="String" nodetype="Condition"/>
+  <decisionheader expression="RequestExternalDepencies.eventLocation" returntype="String" nodetype="Condition"/>
+  <decisionheader expression="RequestExternalDepencies.hsan = {value}" returntype="Boolean" nodetype="Action"/>
+  <decisionheader expression="RequestExternalDepencies.external = {value}" returntype="Boolean" nodetype="Action"/>
+  <decisionheader expression="Effective Date" returntype="Date" nodetype="Options"/>
+  <decisionheader expression="Expiration Date" returntype="Date" nodetype="Options"/>
+  <decisionheader expression="Salience" returntype="Integer" nodetype="Options"/>
+  <decisionheader expression="XOR Rule Group" returntype="String" nodetype="Options"/>
+  <decisionnode headerid="-1">
+    <decisionnode expression="== &quot;Entertainment&quot;" headerid="0">
+      <decisionnode expression="== &quot;Low&quot;" headerid="1">
+        <decisionnode expression="*" headerid="2">
+          <decisionnode expression="false" headerid="3">
+            <decisionnode expression="false" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="0" headerid="7">
+                    <optionnode expression="" headerid="8"/>
+                  </optionnode>
+                </optionnode>
+              </optionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+      <decisionnode expression="== &quot;Normal&quot;" headerid="1">
+        <decisionnode expression="== &quot;Florida&quot;" headerid="2">
+          <decisionnode expression="false" headerid="3">
+            <decisionnode expression="true" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="0" headerid="7">
+                    <optionnode expression="" headerid="8"/>
+                  </optionnode>
+                </optionnode>
+              </optionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+        <decisionnode expression="== &quot;Georgia&quot;" headerid="2">
+          <decisionnode expression="false" headerid="3">
+            <decisionnode expression="true" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="0" headerid="7">
+                    <optionnode expression="" headerid="8"/>
+                  </optionnode>
+                </optionnode>
+              </optionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+        <decisionnode expression="== &quot;North Carolina&quot;" headerid="2">
+          <decisionnode expression="false" headerid="3">
+            <decisionnode expression="false" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="0" headerid="7">
+                    <optionnode expression="" headerid="8"/>
+                  </optionnode>
+                </optionnode>
+              </optionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+        <decisionnode expression="== &quot;South Carolina&quot;" headerid="2">
+          <decisionnode expression="false" headerid="3">
+            <decisionnode expression="false" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="0" headerid="7">
+                    <optionnode expression="" headerid="8"/>
+                  </optionnode>
+                </optionnode>
+              </optionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+        <decisionnode expression="== &quot;Virginia&quot;" headerid="2">
+          <decisionnode expression="false" headerid="3">
+            <decisionnode expression="false" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="0" headerid="7">
+                    <optionnode expression="" headerid="8"/>
+                  </optionnode>
+                </optionnode>
+              </optionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+      <decisionnode expression="== &quot;High&quot;" headerid="1">
+        <decisionnode expression="*" headerid="2">
+          <decisionnode expression="false" headerid="3">
+            <decisionnode expression="true" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="0" headerid="7">
+                    <optionnode expression="" headerid="8"/>
+                  </optionnode>
+                </optionnode>
+              </optionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+    </decisionnode>
+    <decisionnode expression="== &quot;News&quot;" headerid="0">
+      <decisionnode expression="== &quot;Low&quot;" headerid="1">
+        <decisionnode expression="== &quot;Florida&quot;" headerid="2">
+          <decisionnode expression="true" headerid="3">
+            <decisionnode expression="true" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="0" headerid="7">
+                    <optionnode expression="" headerid="8"/>
+                  </optionnode>
+                </optionnode>
+              </optionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+        <decisionnode expression="*" headerid="2">
+          <decisionnode expression="true" headerid="3">
+            <decisionnode expression="false" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="0" headerid="7">
+                    <optionnode expression="" headerid="8"/>
+                  </optionnode>
+                </optionnode>
+              </optionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+      <decisionnode expression="== &quot;Normal&quot;" headerid="1">
+        <decisionnode expression="== &quot;Florida&quot;" headerid="2">
+          <decisionnode expression="true" headerid="3">
+            <decisionnode expression="true" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="0" headerid="7">
+                    <optionnode expression="" headerid="8"/>
+                  </optionnode>
+                </optionnode>
+              </optionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+        <decisionnode expression="== &quot;Georgia&quot;" headerid="2">
+          <decisionnode expression="true" headerid="3">
+            <decisionnode expression="true" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="0" headerid="7">
+                    <optionnode expression="" headerid="8"/>
+                  </optionnode>
+                </optionnode>
+              </optionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+        <decisionnode expression="*" headerid="2">
+          <decisionnode expression="true" headerid="3">
+            <decisionnode expression="false" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="0" headerid="7">
+                    <optionnode expression="" headerid="8"/>
+                  </optionnode>
+                </optionnode>
+              </optionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+      <decisionnode expression="== &quot;High&quot;" headerid="1">
+        <decisionnode expression="*" headerid="2">
+          <decisionnode expression="true" headerid="3">
+            <decisionnode expression="true" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="" headerid="6">
+                  <optionnode expression="0" headerid="7">
+                    <optionnode expression="" headerid="8"/>
+                  </optionnode>
+                </optionnode>
+              </optionnode>
+            </decisionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+    </decisionnode>
+  </decisionnode>
+</decisiontable>

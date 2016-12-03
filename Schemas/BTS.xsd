@@ -41,8 +41,21 @@
 
     <complexType name="RequestType">
     	<sequence>
-    		<element name="RequestId" type="string" maxOccurs="1" minOccurs="1"></element>
-    		<element name="Information" type="tns:RequestInformationType" maxOccurs="1" minOccurs="1"></element>
+    		<element name="RequestId" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="Information"
+    			type="tns:RequestInformationType" maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="Urgency" maxOccurs="1" minOccurs="1">
+    			<simpleType>
+    				<restriction base="string">
+    					<enumeration value="High"></enumeration>
+    					<enumeration value="Normal"></enumeration>
+    					<enumeration value="Low"></enumeration>
+    				</restriction>
+    			</simpleType>
+    		</element>
     	</sequence>
     </complexType>
 
@@ -68,7 +81,7 @@
     		<element name="Request" type="tns:RequestType" maxOccurs="1"
     			minOccurs="1">
     		</element>
-    		<element name="AssignedRouter" type="string" maxOccurs="1"
+            <element name="AssignedRouter" type="string" maxOccurs="1"
     			minOccurs="1">
     		</element>
     		<element name="RouterCost" type="double" maxOccurs="1"
@@ -90,7 +103,9 @@
     		<element name="ApprovalNeeded" type="boolean" maxOccurs="1"
     			minOccurs="1">
     		</element>
-    		<element name="Approved" type="boolean" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Approved" type="boolean" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
     	</sequence>
     </complexType>
 
@@ -135,4 +150,6 @@
     		<element name="Cost" type="double"></element>
     	</sequence>
     </complexType>
+
+    <element name="EventDateTime" type="dateTime"></element>
 </schema>

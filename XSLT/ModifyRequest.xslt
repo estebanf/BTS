@@ -7,12 +7,15 @@
  Complete doXslTransform: bpel:doXslTransform("../../XSLT/ModifyRequest.xslt", $thisReceive_requestRequest1Msg.body)
  Input document as defined in the mapper: $thisReceive_requestRequest1Msg.body-->
   <xsl:output/>
-  <!--No parameters are currently passed to doXslTransform.-->
+  <xsl:param name="urgency">
+    <error>Parameter pid no initialized</error>
+  </xsl:param>
   <xsl:template match="/this:Receive_requestRequest">
     <BTS:RequestOperation>
       <BTS:Request>
 		<BTS:RequestId><xsl:value-of select="BTS:RequestId" /></BTS:RequestId>
         <BTS:Information><xsl:copy-of select="BTS:RequestInfo/child::*" /></BTS:Information>
+        <BTS:Urgency><xsl:value-of select="$urgency" /></BTS:Urgency>
       </BTS:Request>
       <BTS:AssignedRouter></BTS:AssignedRouter>
       <BTS:RouterCost>0</BTS:RouterCost>

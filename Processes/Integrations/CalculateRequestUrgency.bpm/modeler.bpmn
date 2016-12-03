@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_Il8ZobkyEea98_xmAI6CLw" iD="_Il8ZoLkyEea98_xmAI6CLw">
+  <pools xmi:type="bpmn:Pool" xmi:id="_ImPUkbkyEea98_xmAI6CLw" iD="_ImPUkLkyEea98_xmAI6CLw" name="caller">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SxHNILkyEea98_xmAI6CLw" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SxHNIbkyEea98_xmAI6CLw" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_XDTbEbkyEea98_xmAI6CLw" iD="_XDTbELkyEea98_xmAI6CLw" name="processCalculare_urgency_requestRequest2Msg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XDTbErkyEea98_xmAI6CLw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XDTbE7kyEea98_xmAI6CLw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XDclCLkyEea98_xmAI6CLw" key="defaultDeclarationName" value="processCalculare_urgency_requestRequest2Msg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XDclDLkyEea98_xmAI6CLw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/process}Calculare_urgency_requestRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_XDclCbkyEea98_xmAI6CLw" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XDclCrkyEea98_xmAI6CLw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XDclC7kyEea98_xmAI6CLw" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_UPUbGLkzEeajYsanxe9sog" iD="_UPUbF7kzEeajYsanxe9sog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UPUbGbkzEeajYsanxe9sog" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UPUbGrkzEeajYsanxe9sog" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UPc9-LkzEeajYsanxe9sog" key="defaultDeclarationName" value="processCalculare_urgency_requestResponse2Msg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UPc9_LkzEeajYsanxe9sog" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/process}Calculare_urgency_requestResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_UPc9-bkzEeajYsanxe9sog" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UPc9-rkzEeajYsanxe9sog" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UPc9-7kzEeajYsanxe9sog" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_Nbkr0bkyEea98_xmAI6CLw" iD="_Nbkr0LkyEea98_xmAI6CLw" associations="_XDclCbkyEea98_xmAI6CLw _UPc9-bkzEeajYsanxe9sog" name="Get Request Urgency" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_M4sWULk0EeajYsanxe9sog" source="process_template">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_M4sWUbk0EeajYsanxe9sog" key="_MUs4cLk0EeajYsanxe9sog" value="GetRequestUrgency"/>
+      </eAnnotations>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_XC_5GrkyEea98_xmAI6CLw"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_UO0r0bkzEeajYsanxe9sog"/>
+    </vertices>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_Q0GG0bkyEea98_xmAI6CLw" iD="_Q0GG0LkyEea98_xmAI6CLw" name="process">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_Q0sjz7kyEea98_xmAI6CLw" iD="_Q0iyxrkyEea98_xmAI6CLw" name="customVariable">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Q0sj0LkyEea98_xmAI6CLw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Q0sj0bkyEea98_xmAI6CLw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Q0sj0rkyEea98_xmAI6CLw" key="douri" value="project:///IntalioObjects/customVariable.xvar?xvartype={http://everteam.com/xvar/example}customVariable"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Q0sj07kyEea98_xmAI6CLw" key="defaultDeclarationName" value="customVariable"/>
+      </eAnnotations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_XDmWAbkyEea98_xmAI6CLw" iD="_XDmWALkyEea98_xmAI6CLw" name="thisCalculare_urgency_requestRequest2Msg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XDmWArkyEea98_xmAI6CLw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XDmWA7kyEea98_xmAI6CLw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XDmWDLkyEea98_xmAI6CLw" key="defaultDeclarationName" value="thisCalculare_urgency_requestRequest2Msg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XDvf87kyEea98_xmAI6CLw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/process}Calculare_urgency_requestRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_XDvf8LkyEea98_xmAI6CLw" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XDvf8bkyEea98_xmAI6CLw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XDvf8rkyEea98_xmAI6CLw" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_UPEjcbkzEeajYsanxe9sog" iD="_UPEjcLkzEeajYsanxe9sog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UPEjcrkzEeajYsanxe9sog" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UPEjc7kzEeajYsanxe9sog" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UPMfSLkzEeajYsanxe9sog" key="defaultDeclarationName" value="thisCalculare_urgency_requestResponse2Msg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UPUbEbkzEeajYsanxe9sog" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/process}Calculare_urgency_requestResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_UPMfSbkzEeajYsanxe9sog" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UPMfSrkzEeajYsanxe9sog" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UPUbELkzEeajYsanxe9sog" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_pPu50bkzEeajYsanxe9sog" iD="_pPu50LkzEeajYsanxe9sog" name="durationUntilEvent">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pPu50rkzEeajYsanxe9sog" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pPu507kzEeajYsanxe9sog" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pPu51LkzEeajYsanxe9sog" key="defaultDeclarationName" value="variable"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rl444LkzEeajYsanxe9sog" key="douri" value="builtin:///xsd?xsdtype={http://www.w3.org/2001/XMLSchema}duration"/>
+      </eAnnotations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_XC_5EbkyEea98_xmAI6CLw" iD="_XC_5ELkyEea98_xmAI6CLw" associations="_XDvf8LkyEea98_xmAI6CLw" outgoingEdges="_fC_1iLkyEea98_xmAI6CLw" name="Calculare urgency request" activityType="EventStartMessage" looping="false">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_XC_5GrkyEea98_xmAI6CLw"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_fC3SobkyEea98_xmAI6CLw" iD="_fC3SoLkyEea98_xmAI6CLw" outgoingEdges="_wfZa-LkyEea98_xmAI6CLw" incomingEdges="_fC_1iLkyEea98_xmAI6CLw" name="Calculate duration until event" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_wfQRAbkyEea98_xmAI6CLw" iD="_wfQRALkyEea98_xmAI6CLw" outgoingEdges="_FkPGuLkzEeajYsanxe9sog _HqpZmrkzEeajYsanxe9sog _KYHscbkzEeajYsanxe9sog" incomingEdges="_wfZa-LkyEea98_xmAI6CLw" name="Time until event?" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_FkHK4bkzEeajYsanxe9sog" iD="_FkHK4LkzEeajYsanxe9sog" outgoingEdges="_RuW6OLkzEeajYsanxe9sog" incomingEdges="_FkPGuLkzEeajYsanxe9sog" name="High priority" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_HqpZkbkzEeajYsanxe9sog" iD="_HqpZkLkzEeajYsanxe9sog" outgoingEdges="_SHqyEbkzEeajYsanxe9sog" incomingEdges="_HqpZmrkzEeajYsanxe9sog" name="Normal priority" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_KX97cbkzEeajYsanxe9sog" iD="_KX97cLkzEeajYsanxe9sog" outgoingEdges="_SYe1QbkzEeajYsanxe9sog" incomingEdges="_KYHscbkzEeajYsanxe9sog" name="Low priority" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_RuMiIbkzEeajYsanxe9sog" iD="_RuMiILkzEeajYsanxe9sog" outgoingEdges="_TBxC2rkzEeajYsanxe9sog" incomingEdges="_RuW6OLkzEeajYsanxe9sog _SHqyEbkzEeajYsanxe9sog _SYe1QbkzEeajYsanxe9sog" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_TBxC0bkzEeajYsanxe9sog" iD="_TBxC0LkzEeajYsanxe9sog" associations="_UPMfSbkzEeajYsanxe9sog" incomingEdges="_TBxC2rkzEeajYsanxe9sog" name="Reply" activityType="EventEndMessage">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_UO0r0bkzEeajYsanxe9sog"/>
+    </vertices>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_fC_1iLkyEea98_xmAI6CLw" iD="_fC_1h7kyEea98_xmAI6CLw"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_wfZa-LkyEea98_xmAI6CLw" iD="_wfZa97kyEea98_xmAI6CLw"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_FkPGuLkzEeajYsanxe9sog" iD="_FkPGt7kzEeajYsanxe9sog" name="Less than 3 hours"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_HqpZmrkzEeajYsanxe9sog" iD="_HqpZmbkzEeajYsanxe9sog" name="3 days" conditionType="Default" isDefault="true"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_KYHscbkzEeajYsanxe9sog" iD="_KYHscLkzEeajYsanxe9sog" name="More than 3 days"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_RuW6OLkzEeajYsanxe9sog" iD="_RuW6N7kzEeajYsanxe9sog"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_SHqyEbkzEeajYsanxe9sog" iD="_SHqyELkzEeajYsanxe9sog"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_SYe1QbkzEeajYsanxe9sog" iD="_SYe1QLkzEeajYsanxe9sog"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_TBxC2rkzEeajYsanxe9sog" iD="_TBxC2bkzEeajYsanxe9sog"/>
+  </pools>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_XC_5GrkyEea98_xmAI6CLw" iD="_XC_5GbkyEea98_xmAI6CLw" source="_Nbkr0bkyEea98_xmAI6CLw" target="_XC_5EbkyEea98_xmAI6CLw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kDuH8LkzEeajYsanxe9sog" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kDuH8bkzEeajYsanxe9sog" key="douri" value="builtin:///xsd?xsdtype={http://www.w3.org/2001/XMLSchema}dateTime"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kDuH8rkzEeajYsanxe9sog" key="douri2" value="project:///Schemas/BTS.xsd?xsdelement={http://www.example.org/BTS}EventDateTime"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_UO0r0bkzEeajYsanxe9sog" iD="_UO0r0LkzEeajYsanxe9sog" source="_TBxC0bkzEeajYsanxe9sog" target="_Nbkr0bkyEea98_xmAI6CLw"/>
+</bpmn:BpmnDiagram>

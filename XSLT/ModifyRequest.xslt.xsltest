@@ -19,5 +19,5 @@
       </BTS:RequestInfo>
     </this:Receive_requestRequest>
   </test:input>
-  <!--No parameters are currently passed to doXslTransform.-->
+  <test:param name="urgency">High</test:param>
 </test:testxsl>

@@ -1,0 +1,13 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<wsdl:definitions xmlns:tns="http://everteam.com/xvar/example" xmlns:diag="http://thisdiagram" xmlns:caller="http://thisdiagram/caller" xmlns:process="http://thisdiagram/process" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" targetNamespace="http://thisdiagram" bpdm:version="6000089" bpdm:canid="_Il8ZoLkyEea98_xmAI6CLw" bpdm:displayName="diag">
+  <pnlk:partnerLinkType name="processAndCaller" bpdm:poolOneId="_Q0GG0LkyEea98_xmAI6CLw" bpdm:poolOneIsExecutable="true" bpdm:poolOneName="process" bpdm:poolTwoId="_ImPUkLkyEea98_xmAI6CLw" bpdm:poolTwoIsExecutable="false" bpdm:poolTwoName="caller">
+    <pnlk:role name="process_for_caller" portType="process:Forcaller" bpdm:thisPoolId="_Q0GG0LkyEea98_xmAI6CLw">
+      <wsdl:portType name="Forcaller">
+        <wsdl:operation name="Calculare_urgency_request" bpdm:canid="_Nbkr0LkyEea98_xmAI6CLw._TBxC0LkzEeajYsanxe9sog._XC_5ELkyEea98_xmAI6CLw.">
+          <wsdl:input message="process:Calculare_urgency_requestRequest" name="Calculare_urgency_request" bpdm:canid="_XC_5GbkyEea98_xmAI6CLw" bpdm:senderId="_Nbkr0LkyEea98_xmAI6CLw" bpdm:receiverId="_XC_5ELkyEea98_xmAI6CLw" bpdm:senderName="Get Request Urgency" bpdm:receiverName="Calculare urgency request" bpdm:receiverPoolId="_Q0GG0LkyEea98_xmAI6CLw" bpdm:dataobjectPointer="builtin:///xsd?xsdtype={http://www.w3.org/2001/XMLSchema}dateTime" bpdm:bodyPartElemName="Calculare_urgency_requestRequest" bpdm:bodyPartElemType="{http://www.w3.org/2001/XMLSchema}dateTime"></wsdl:input>
+          <wsdl:output message="process:Calculare_urgency_requestResponse" name="Calculare_urgency_requestResponse" bpdm:canid="_UO0r0LkzEeajYsanxe9sog" bpdm:senderId="_TBxC0LkzEeajYsanxe9sog" bpdm:receiverId="_Nbkr0LkyEea98_xmAI6CLw" bpdm:senderName="Reply" bpdm:receiverName="Get Request Urgency" bpdm:receiverPoolId="_ImPUkLkyEea98_xmAI6CLw" bpdm:bodyPartElemName="Calculare_urgency_requestResponse" bpdm:bodyPartElemType="xs:string"></wsdl:output>
+        </wsdl:operation>
+      </wsdl:portType>
+    </pnlk:role>
+  </pnlk:partnerLinkType>
+</wsdl:definitions>
