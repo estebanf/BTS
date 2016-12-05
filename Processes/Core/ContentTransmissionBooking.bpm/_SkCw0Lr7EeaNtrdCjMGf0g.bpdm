@@ -1,4 +1,4 @@
-﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:this="http://thisdiagram/HSAN_Coordinator" xmlns:tns="http://everteam.com/xvar/example" xmlns:BTS="http://thisdiagram/BTS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:attachments="http://www.intalio.com/gi/Forms/ManualHSANInquiry.gi/attachments" xmlns:HSAN_CoordinatorimplicitPartner="http://thisdiagram/HSAN_CoordinatorimplicitPartner" xmlns:BTS1="http://www.example.org/BTS" xmlns:Provider="http://mockproviderservice.com/NewDiagram/service" xmlns:ContentTransmissionBooking="http://thisdiagram" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ProviderSchema="http://www.example.org/ProviderSchema" xmlns:ns="urn:intalio.com:connectors:database:bts:get_hsan_providersservice" xmlns:ManualHSANInquiry="http://www.intalio.com/gi/Forms/ManualHSANInquiry.gi" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/HSAN_Coordinator">
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:this="http://thisdiagram/HSAN_Coordinator" xmlns:tns="http://everteam.com/xvar/example" xmlns:BTS="http://thisdiagram/BTS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:attachments="http://www.intalio.com/gi/Forms/ManualHSANInquiry.gi/attachments" xmlns:HSAN_CoordinatorimplicitPartner="http://thisdiagram/HSAN_CoordinatorimplicitPartner" xmlns:ax221="http://taskprioritization.rules.bts/xsd" xmlns:BTS1="http://www.example.org/BTS" xmlns:Provider="http://mockproviderservice.com/NewDiagram/service" xmlns:ContentTransmissionBooking="http://thisdiagram" xmlns:ax222="http://taskprioritization.rules.bts/bre" xmlns:dtws_bts_rules_taskprioritization="http://taskprioritization.rules.bts" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ProviderSchema="http://www.example.org/ProviderSchema" xmlns:ns="urn:intalio.com:connectors:database:bts:get_hsan_providersservice" xmlns:ManualHSANInquiry="http://www.intalio.com/gi/Forms/ManualHSANInquiry.gi" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/HSAN_Coordinator">
     <bpdm:dependencies version="6000089">
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/HSAN_Coordinator" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://everteam.com/xvar/example" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///IntalioObjects/customVariable.xvar"></bpdm:namespaceDefinition>
@@ -6,15 +6,19 @@
         <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/gi/Forms/ManualHSANInquiry.gi/attachments" bpdm:prefix="attachments" bpdm:comment="contrib=&apos;project:///Forms/ManualHSANInquiry.gi.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/HSAN_CoordinatorimplicitPartner" bpdm:prefix="HSAN_CoordinatorimplicitPartner" bpdm:comment="contrib=&apos;partner-pool:///_SkCw0Lr7EeaNtrdCjMGf0gimplicitPartner"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://taskprioritization.rules.bts/xsd" bpdm:prefix="ax221" bpdm:comment="contrib=&apos;project:///Rules/TaskPrioritization.bre/dtws_bts_rules_taskprioritization/META-INF/dtws_bts_rules_taskprioritization.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.example.org/BTS" bpdm:prefix="BTS1" bpdm:comment="contrib=&apos;project:///Schemas/BTS.xsd"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://mockproviderservice.com/NewDiagram/service" bpdm:prefix="Provider" bpdm:comment="contrib=&apos;project:///Services/SOAP/Provider.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="ContentTransmissionBooking" bpdm:comment="contrib=&apos;partner-pool:///_EYvp67dEEeaCaYmVKR7BjA"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://taskprioritization.rules.bts/bre" bpdm:prefix="ax222" bpdm:comment="contrib=&apos;project:///Rules/TaskPrioritization.bre/dtws_bts_rules_taskprioritization/META-INF/dtws_bts_rules_taskprioritization.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://taskprioritization.rules.bts" bpdm:prefix="dtws_bts_rules_taskprioritization" bpdm:comment="contrib=&apos;project:///Rules/TaskPrioritization.bre/dtws_bts_rules_taskprioritization/META-INF/dtws_bts_rules_taskprioritization.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.example.org/ProviderSchema" bpdm:prefix="ProviderSchema" bpdm:comment="contrib=&apos;project:///Services/SOAP/ProviderSchema.xsd"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="urn:intalio.com:connectors:database:bts:get_hsan_providersservice" bpdm:prefix="ns" bpdm:comment="contrib=&apos;project:///Connectors/Database/get_hsan_providers.sql/get_hsan_providers.sql.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/gi/Forms/ManualHSANInquiry.gi" bpdm:prefix="ManualHSANInquiry" bpdm:comment="contrib=&apos;project:///Forms/ManualHSANInquiry.gi.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
         <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types">
+            <vprop:property name="reqID" type="xs:string"/>
             <wsdl:portType name="ForBTS">
                 <wsdl:operation name="Receive_hsan_inquiry" bpdm:source="partner-pool:///_EYvp67dEEeaCaYmVKR7BjA">
                     <wsdl:input message="this:Receive_hsan_inquiryRequest" name="Receive_hsan_inquiry"/>
@@ -22,7 +26,6 @@
                 </wsdl:operation>
             </wsdl:portType>
             <bpel:binding name="CanonicBindingForBTS" type="this:ForBTS" bpdm:isSynchronized="true"/>
-            <vprop:property name="reqID" type="xs:string"/>
             <xs:element name="Receive_hsan_inquiryRequest" type="BTS1:RequestType" bpdm:source="partner-pool:///_EYvp67dEEeaCaYmVKR7BjA"/>
             <wsdl:message name="Receive_hsan_inquiryRequest" bpdm:source="partner-pool:///_EYvp67dEEeaCaYmVKR7BjA">
                 <wsdl:part name="body" element="this:Receive_hsan_inquiryRequest"/>
@@ -42,10 +45,11 @@
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_SkCw0Lr7EeaNtrdCjMGf0gimplicitPartner" bpdm:label="HSAN CoordinatorimplicitPartner"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/BTS.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Forms/ManualHSANInquiry.gi.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Services/SOAP/Provider.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Services/SOAP/ProviderSchema.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/get_hsan_providers.sql/get_hsan_providers.sql.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/get_hsan_providers.sql/get_hsan_providers.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Services/SOAP/Provider.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Services/SOAP/ProviderSchema.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Rules/TaskPrioritization.bre/dtws_bts_rules_taskprioritization/META-INF/dtws_bts_rules_taskprioritization.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar"/>
         <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar.xsd"/>
     </bpdm:dependencies>
@@ -55,6 +59,7 @@
             <bpel:partnerLink name="hSAN_CoordinatorimplicitPartnerAndHSAN_CoordinatorForGet_hsan_providersPortPlkVar" partnerLinkType="ContentTransmissionBooking:HSAN_CoordinatorimplicitPartnerAndHSAN_CoordinatorForGet_hsan_providersPortPlk" initializePartnerRole="yes" partnerRole="HSAN_CoordinatorimplicitPartner_for_HSAN_Coordinator" bpdm:invokedService="ns:get_hsan_providersService" bpdm:invokedPort="get_hsan_providersPort" bpdm:invokedSOAPAddress="http://ubuntu.estebanf.com:8080/everteam/ode/processes/BTS/Connectors/Database/get_hsan_providers" bpdm:invokedIsDefault="true" bpdm:clientTasks="_SkCw0Lr7EeaNtrdCjMGf0g:_MsxJgLr9EeaNtrdCjMGf0g" bpdm:isManaged="true" bpdm:otherPoolId="_SkCw0Lr7EeaNtrdCjMGf0gimplicitPartner"/>
             <bpel:partnerLink name="wFmagic_xuMNwLr9EeaNtrdCjMGf0gPlkVar" partnerLinkType="ContentTransmissionBooking:WFmagic_xuMNwLr9EeaNtrdCjMGf0g" initializePartnerRole="no" myRole="HSAN_CoordinatorForManualHSAN_for_HSAN_CoordinatorimplicitPartnerForThePortTypeProcess" bpdm:enableSharing="false" bpdm:providedService="this:WFmagic_xuMNwLr9EeaNtrdCjMGf0gService" bpdm:providedPort="HSAN_CoordinatorForManualHSAN_for_HSAN_CoordinatorimplicitPartnerForThePortTypeProcessPort" bpdm:providedIsDefault="true" partnerRole="HSAN_CoordinatorimplicitPartner_for_HSAN_CoordinatorForManualHSANInquiryPort" bpdm:invokedService="ManualHSANInquiry:WorkflowSoapService" bpdm:invokedPort="ManualHSANInquiryPort" bpdm:invokedSOAPAddress="http://ubuntu.estebanf.com:8080/fds/workflow/ManualHSANInquiry" bpdm:invokedIsDefault="true" bpdm:clientTasks="_SkCw0Lr7EeaNtrdCjMGf0g:_xuMNwLr9EeaNtrdCjMGf0g" bpdm:isManaged="true" bpdm:otherPoolId="_SkCw0Lr7EeaNtrdCjMGf0gimplicitPartner"/>
             <bpel:partnerLink name="hSAN_CoordinatorimplicitPartnerAndHSAN_CoordinatorForCanonicPortPlkVar" partnerLinkType="ContentTransmissionBooking:HSAN_CoordinatorimplicitPartnerAndHSAN_CoordinatorForCanonicPortPlk" initializePartnerRole="yes" partnerRole="HSAN_CoordinatorimplicitPartner_for_HSAN_Coordinator" bpdm:invokedService="Provider:CanonicServiceForBTS" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="Provider/" bpdm:invokedIsDefault="true" bpdm:clientTasks="_SkCw0Lr7EeaNtrdCjMGf0g:_vZCUQLr9EeaNtrdCjMGf0g" bpdm:isManaged="true" bpdm:otherPoolId="_SkCw0Lr7EeaNtrdCjMGf0gimplicitPartner"/>
+            <bpel:partnerLink name="hSAN_CoordinatorimplicitPartnerAndHSAN_CoordinatorForPortDtws_bts_rules_taskprioritizationHttpSoap11EndpointPlkVar" partnerLinkType="ContentTransmissionBooking:HSAN_CoordinatorimplicitPartnerAndHSAN_CoordinatorForPortDtws_bts_rules_taskprioritizationHttpSoap11EndpointPlk" initializePartnerRole="yes" partnerRole="HSAN_CoordinatorimplicitPartner_for_HSAN_Coordinator" bpdm:invokedService="dtws_bts_rules_taskprioritization:dtws_bts_rules_taskprioritization" bpdm:invokedPort="dtws_bts_rules_taskprioritizationHttpSoap11Endpoint" bpdm:invokedSOAPAddress="http://localhost:8080/everteam/ode/processes/dtws_bts_rules_taskprioritization" bpdm:invokedIsDefault="true" bpdm:clientTasks="_SkCw0Lr7EeaNtrdCjMGf0g:_3mWHkbs3Eeash72vczxLlw" bpdm:isManaged="true" bpdm:otherPoolId="_SkCw0Lr7EeaNtrdCjMGf0gimplicitPartner"/>
         </bpel:partnerLinks>
         <bpel:correlationSets>
             <bpel:correlationSet name="HSANCorrelationSet" properties="this:reqID"/>
@@ -91,30 +96,26 @@
                     <bpel:literal bpdm:linkedMessageType="Provider:Get_HSAN_CostRequest" bpdm:linkedPart="body" bpdm:binding="Provider:CanonicBindingForBTS" bpdm:opMsgType="0" bpdm:operation="Get_HSAN_Cost"></bpel:literal>
                 </bpel:from>
             </bpel:variable>
+            <bpel:variable name="dtws_bts_rules_taskprioritizationInvokeDecisionTableResponse1Msg" messageType="dtws_bts_rules_taskprioritization:invokeDecisionTableResponse" binding="dtws_bts_rules_taskprioritization:dtws_bts_rules_taskprioritizationSoap11Binding" operation="invokeDecisionTable" opMsgType="1" bpdm:messageIds="inc:_3mWHkbs3Eeash72vczxLlwIncoming"/>
+            <bpel:variable name="dtws_bts_rules_taskprioritizationInvokeDecisionTableRequest1Msg" messageType="dtws_bts_rules_taskprioritization:invokeDecisionTableRequest" binding="dtws_bts_rules_taskprioritization:dtws_bts_rules_taskprioritizationSoap11Binding" operation="invokeDecisionTable" opMsgType="0" bpdm:messageIds=" out:_3mWHkbs3Eeash72vczxLlwOutgoing">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="dtws_bts_rules_taskprioritization:invokeDecisionTableRequest" bpdm:linkedPart="parameters" bpdm:binding="dtws_bts_rules_taskprioritization:dtws_bts_rules_taskprioritizationSoap11Binding" bpdm:opMsgType="0" bpdm:operation="invokeDecisionTable"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
         </bpel:variables>
         <bpel:sequence>
             <bpdm:messagingtask eventType="start: message" operation="Receive_hsan_inquiry" partnerLink="hSAN_CoordinatorAndBTSPlkVar" portType="this:ForBTS" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Receive hsan inquiry" bpdm:ID="_I1a58Lr8EeaNtrdCjMGf0g">
                 <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisReceive_hsan_inquiryRequest1Msg" bpdm:msgVarScopeId="_SkCw0Lr7EeaNtrdCjMGf0g" bpdm:variableIsManaged="true" bpdm:messageType="this:Receive_hsan_inquiryRequest" bpdm:ID="_FG-c0Lr9EeaNtrdCjMGf0g">
-                    <bpel:correlation set="HSANCorrelationSet" initiate="join" pattern="response"></bpel:correlation>
+                    <bpel:correlation set="HSANCorrelationSet" initiate="join" pattern="response" bpdm:isSource="false"></bpel:correlation>
                 </bpdm:linkset>
                 <bpdm:linkset bpdm:type="assignments">
                     <bpel:copy>
                         <bpel:from>$ode:pid</bpel:from>
-                        <bpel:to>$thisReceive_hsan_inquiryResponse2Msg.body/BTS1:Pid</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1344593162" targetPath="$thisReceive_hsan_inquiryResponse2Msg.body/BTS1:Pid" targetedBy="335548238-arg0"></mapper:vertice>
-  <mapper:vertice id="335548238" sourcePath="$ode:pid"></mapper:vertice>
-</mapper:mapperLink>
+                        <bpel:to>$thisReceive_hsan_inquiryResponse2Msg.body/BTS1:Pid</bpel:to><mapper:mapperLink><mapper:vertice id="1344593162" targetPath="$thisReceive_hsan_inquiryResponse2Msg.body/BTS1:Pid" targetedBy="335548238-arg0"></mapper:vertice><mapper:vertice id="335548238" sourcePath="$ode:pid"></mapper:vertice></mapper:mapperLink>
                     </bpel:copy>
                     <bpel:copy>
                         <bpel:from>current-dateTime()</bpel:from>
-                        <bpel:to>$thisReceive_hsan_inquiryResponse2Msg.body/BTS1:Timestamp</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1368417801" targetPath="$thisReceive_hsan_inquiryResponse2Msg.body/BTS1:Timestamp" targetedBy="449201681-arg0"></mapper:vertice>
-  <mapper:vertice id="449201681" dimension="109x24" location="534,79">
-    <mapper:value>current-dateTime()</mapper:value>
-  </mapper:vertice>
-</mapper:mapperLink>
+                        <bpel:to>$thisReceive_hsan_inquiryResponse2Msg.body/BTS1:Timestamp</bpel:to><mapper:mapperLink><mapper:vertice id="1368417801" targetPath="$thisReceive_hsan_inquiryResponse2Msg.body/BTS1:Timestamp" targetedBy="449201681-arg0"></mapper:vertice><mapper:vertice id="449201681" dimension="109x24" location="534,79"><mapper:value>current-dateTime()</mapper:value></mapper:vertice></mapper:mapperLink>
                     </bpel:copy>
                 </bpdm:linkset>
                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisReceive_hsan_inquiryResponse2Msg" bpdm:msgVarScopeId="_SkCw0Lr7EeaNtrdCjMGf0g" bpdm:variableIsManaged="true" bpdm:messageType="this:Receive_hsan_inquiryResponse" bpdm:ID="_FfayALr9EeaNtrdCjMGf0g"></bpdm:linkset>
@@ -123,11 +124,7 @@
                 <bpdm:linkset bpdm:type="assignments">
                     <bpel:copy>
                         <bpel:from>$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Information/BTS1:Location</bpel:from>
-                        <bpel:to>$nsGet_hsan_providersRequest1Msg.parameters/ns:execute/ns:parameters/ns:Location</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="623115150" targetPath="$nsGet_hsan_providersRequest1Msg.parameters/ns:execute/ns:parameters/ns:Location" targetedBy="478950123-arg0"></mapper:vertice>
-  <mapper:vertice id="478950123" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Information/BTS1:Location"></mapper:vertice>
-</mapper:mapperLink>
+                        <bpel:to>$nsGet_hsan_providersRequest1Msg.parameters/ns:execute/ns:parameters/ns:Location</bpel:to><mapper:mapperLink><mapper:vertice id="623115150" targetPath="$nsGet_hsan_providersRequest1Msg.parameters/ns:execute/ns:parameters/ns:Location" targetedBy="478950123-arg0"></mapper:vertice><mapper:vertice id="478950123" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Information/BTS1:Location"></mapper:vertice></mapper:mapperLink>
                     </bpel:copy>
                 </bpdm:linkset>
                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="nsGet_hsan_providersRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="ns:get_hsan_providersInput" bpdm:binding="ns:get_hsan_providersPortSoapBinding" bpdm:ID="_MsxJgLr9EeaNtrdCjMGf0gOutgoing"></bpdm:linkset>
@@ -136,20 +133,7 @@
             </bpdm:messagingtask>
             <bpdm:gateway bpdm:label="Automated provider" bpdm:ID="_uKy_gLr9EeaNtrdCjMGf0g" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
                 <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_vZLeMLr9EeaNtrdCjMGf0g" bpdm:targetDisplayName="Yes">
-                    <bpel:condition>count($nsGet_hsan_providersResponse1Msg.parameters/ns:rows/ns:row) &gt;= 1
-<mapper:mapperLink>
-  <mapper:vertice id="1720539922" targetPath="$condition" targetedBy="1710405561-arg2"></mapper:vertice>
-  <mapper:vertice id="1710405561" dimension="79x24" location="475,107">
-    <mapper:value>&gt;=</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1983647423" dimension="79x24" location="322,67" targetedBy="1710405561-arg0">
-    <mapper:value>count()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1508830912" sourcePath="$nsGet_hsan_providersResponse1Msg.parameters/ns:rows/ns:row" targetedBy="1983647423-arg0"></mapper:vertice>
-  <mapper:vertice id="1667466992" dimension="79x24" location="361,145" targetedBy="1710405561-arg1">
-    <mapper:value>1</mapper:value>
-  </mapper:vertice>
-</mapper:mapperLink></bpel:condition>
+                    <bpel:condition>count($nsGet_hsan_providersResponse1Msg.parameters/ns:rows/ns:row)&gt;= 1<mapper:mapperLink><mapper:vertice id="1720539922" targetPath="$condition" targetedBy="1710405561-arg2"></mapper:vertice><mapper:vertice id="1710405561" dimension="79x24" location="475,107"><mapper:value>&gt;=</mapper:value></mapper:vertice><mapper:vertice id="1983647423" dimension="79x24" location="322,67" targetedBy="1710405561-arg0"><mapper:value>count()</mapper:value></mapper:vertice><mapper:vertice id="1508830912" sourcePath="$nsGet_hsan_providersResponse1Msg.parameters/ns:rows/ns:row" targetedBy="1983647423-arg0"></mapper:vertice><mapper:vertice id="1667466992" dimension="79x24" location="361,145" targetedBy="1710405561-arg1"><mapper:value>1</mapper:value></mapper:vertice></mapper:mapperLink></bpel:condition>
                 </bpdm:linkset>
                 <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_xuV-x7r9EeaNtrdCjMGf0g" bpdm:targetDisplayName="default"></bpdm:linkset>
                 <bpel:sequence>
@@ -157,40 +141,19 @@
                         <bpdm:linkset bpdm:type="assignments">
                             <bpel:copy>
                                 <bpel:from>$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Information/BTS1:EventDateTime</bpel:from>
-                                <bpel:to>$providerGet_HSAN_Cost1Msg.body/ProviderSchema:EventDate</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="852458036" targetPath="$providerGet_HSAN_Cost1Msg.body/ProviderSchema:EventDate" targetedBy="1138457281-arg0"></mapper:vertice>
-  <mapper:vertice id="1138457281" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Information/BTS1:EventDateTime"></mapper:vertice>
-</mapper:mapperLink>
+                                <bpel:to>$providerGet_HSAN_Cost1Msg.body/ProviderSchema:EventDate</bpel:to><mapper:mapperLink><mapper:vertice id="852458036" targetPath="$providerGet_HSAN_Cost1Msg.body/ProviderSchema:EventDate" targetedBy="1138457281-arg0"></mapper:vertice><mapper:vertice id="1138457281" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Information/BTS1:EventDateTime"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                             <bpel:copy>
                                 <bpel:from>$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Information/BTS1:EventDuration</bpel:from>
-                                <bpel:to>$providerGet_HSAN_Cost1Msg.body/ProviderSchema:EventDuration</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="360788369" targetPath="$providerGet_HSAN_Cost1Msg.body/ProviderSchema:EventDuration" targetedBy="2018879893-arg0"></mapper:vertice>
-  <mapper:vertice id="2018879893" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Information/BTS1:EventDuration"></mapper:vertice>
-</mapper:mapperLink>
+                                <bpel:to>$providerGet_HSAN_Cost1Msg.body/ProviderSchema:EventDuration</bpel:to><mapper:mapperLink><mapper:vertice id="360788369" targetPath="$providerGet_HSAN_Cost1Msg.body/ProviderSchema:EventDuration" targetedBy="2018879893-arg0"></mapper:vertice><mapper:vertice id="2018879893" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Information/BTS1:EventDuration"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                             <bpel:copy>
                                 <bpel:from>$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:RequestId</bpel:from>
-                                <bpel:to>$providerGet_HSAN_Cost1Msg.body/ProviderSchema:RequestID</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1159659406" targetPath="$providerGet_HSAN_Cost1Msg.body/ProviderSchema:RequestID" targetedBy="723065868-arg0"></mapper:vertice>
-  <mapper:vertice id="723065868" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:RequestId"></mapper:vertice>
-</mapper:mapperLink>
+                                <bpel:to>$providerGet_HSAN_Cost1Msg.body/ProviderSchema:RequestID</bpel:to><mapper:mapperLink><mapper:vertice id="1159659406" targetPath="$providerGet_HSAN_Cost1Msg.body/ProviderSchema:RequestID" targetedBy="723065868-arg0"></mapper:vertice><mapper:vertice id="723065868" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:RequestId"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                             <bpel:copy>
                                 <bpel:from>ode:get-property-value("provider_endpoint")</bpel:from>
-                                <bpel:to endpointReference="partnerRole"/>
-<mapper:mapperLink>
-  <mapper:vertice id="1615013230" targetPath="$endpoint" targetedBy="402187715-arg1"></mapper:vertice>
-  <mapper:vertice id="402187715" dimension="139x24" location="372,216">
-    <mapper:value>ode:get-property-value()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1847239173" dimension="115x24" location="216,192" targetedBy="402187715-arg0">
-    <mapper:value>"provider_endpoint"</mapper:value>
-  </mapper:vertice>
-</mapper:mapperLink>
+                                <bpel:to endpointReference="partnerRole"/><mapper:mapperLink><mapper:vertice id="1615013230" targetPath="$endpoint" targetedBy="402187715-arg1"></mapper:vertice><mapper:vertice id="402187715" dimension="139x24" location="372,216"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="1847239173" dimension="115x24" location="216,192" targetedBy="402187715-arg0"><mapper:value>"provider_endpoint"</mapper:value></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                         </bpdm:linkset>
                         <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="providerGet_HSAN_Cost1Msg" bpdm:variableIsManaged="true" bpdm:messageType="Provider:Get_HSAN_CostRequest" bpdm:binding="Provider:CanonicBindingForBTS" bpdm:ID="_vZCUQLr9EeaNtrdCjMGf0gOutgoing"></bpdm:linkset>
@@ -200,46 +163,90 @@
                         <bpdm:linkset bpdm:type="assignments">
                             <bpel:copy>
                                 <bpel:from>$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:RequestId</bpel:from>
-                                <bpel:to>$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="645891614" targetPath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID" targetedBy="1075837637-arg0"></mapper:vertice>
-  <mapper:vertice id="1075837637" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:RequestId"></mapper:vertice>
-</mapper:mapperLink>
+                                <bpel:to>$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID</bpel:to><mapper:mapperLink><mapper:vertice id="645891614" targetPath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID" targetedBy="1075837637-arg0"></mapper:vertice><mapper:vertice id="1075837637" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:RequestId"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                             <bpel:copy>
                                 <bpel:from>$providerGet_HSAN_CostResponse1Msg.body/ProviderSchema:Cost</bpel:from>
-                                <bpel:to>$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:HSANCost</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="949987030" targetPath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:HSANCost" targetedBy="472325739-arg0"></mapper:vertice>
-  <mapper:vertice id="472325739" sourcePath="$providerGet_HSAN_CostResponse1Msg.body/ProviderSchema:Cost"></mapper:vertice>
-</mapper:mapperLink>
+                                <bpel:to>$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:HSANCost</bpel:to><mapper:mapperLink><mapper:vertice id="949987030" targetPath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:HSANCost" targetedBy="472325739-arg0"></mapper:vertice><mapper:vertice id="472325739" sourcePath="$providerGet_HSAN_CostResponse1Msg.body/ProviderSchema:Cost"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                         </bpdm:linkset>
                     </bpdm:messagingtask>
                 </bpel:sequence>
                 <bpel:sequence>
+                    <bpdm:messagingtask operation="invokeDecisionTable" partnerLink="hSAN_CoordinatorimplicitPartnerAndHSAN_CoordinatorForPortDtws_bts_rules_taskprioritizationHttpSoap11EndpointPlkVar" portType="dtws_bts_rules_taskprioritization:dtws_bts_rules_taskprioritizationPortType" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="TaskPrioritization" bpdm:ID="_3mWHkbs3Eeash72vczxLlw">
+                        <bpdm:linkset bpdm:type="assignments">
+                            <bpel:copy>
+                                <bpel:from>$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Information/BTS1:EventDuration</bpel:from>
+                                <bpel:to>$dtws_bts_rules_taskprioritizationInvokeDecisionTableRequest1Msg.parameters/dtws_bts_rules_taskprioritization:param0/ax221:requestExternalDepencies/ax222:eventDuration</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="471964873" targetPath="$dtws_bts_rules_taskprioritizationInvokeDecisionTableRequest1Msg.parameters/dtws_bts_rules_taskprioritization:param0/ax221:requestExternalDepencies/ax222:eventDuration" targetedBy="912548080-arg0"></mapper:vertice>
+  <mapper:vertice id="912548080" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Information/BTS1:EventDuration"></mapper:vertice>
+</mapper:mapperLink>
+                            </bpel:copy>
+                            <bpel:copy>
+                                <bpel:from>$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Information/BTS1:Location</bpel:from>
+                                <bpel:to>$dtws_bts_rules_taskprioritizationInvokeDecisionTableRequest1Msg.parameters/dtws_bts_rules_taskprioritization:param0/ax221:requestExternalDepencies/ax222:eventLocation</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1878483932" targetPath="$dtws_bts_rules_taskprioritizationInvokeDecisionTableRequest1Msg.parameters/dtws_bts_rules_taskprioritization:param0/ax221:requestExternalDepencies/ax222:eventLocation" targetedBy="2061990558-arg0"></mapper:vertice>
+  <mapper:vertice id="2061990558" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Information/BTS1:Location"></mapper:vertice>
+</mapper:mapperLink>
+                            </bpel:copy>
+                            <bpel:copy>
+                                <bpel:from>$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Information/BTS1:EventType</bpel:from>
+                                <bpel:to>$dtws_bts_rules_taskprioritizationInvokeDecisionTableRequest1Msg.parameters/dtws_bts_rules_taskprioritization:param0/ax221:requestExternalDepencies/ax222:eventType</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1423098048" targetPath="$dtws_bts_rules_taskprioritizationInvokeDecisionTableRequest1Msg.parameters/dtws_bts_rules_taskprioritization:param0/ax221:requestExternalDepencies/ax222:eventType" targetedBy="1679597537-arg0"></mapper:vertice>
+  <mapper:vertice id="1679597537" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Information/BTS1:EventType"></mapper:vertice>
+</mapper:mapperLink>
+                            </bpel:copy>
+                            <bpel:copy>
+                                <bpel:from>$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Urgency</bpel:from>
+                                <bpel:to>$dtws_bts_rules_taskprioritizationInvokeDecisionTableRequest1Msg.parameters/dtws_bts_rules_taskprioritization:param0/ax221:requestExternalDepencies/ax222:urgency</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="561356483" targetPath="$dtws_bts_rules_taskprioritizationInvokeDecisionTableRequest1Msg.parameters/dtws_bts_rules_taskprioritization:param0/ax221:requestExternalDepencies/ax222:urgency" targetedBy="271251337-arg0"></mapper:vertice>
+  <mapper:vertice id="271251337" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Urgency"></mapper:vertice>
+</mapper:mapperLink>
+                            </bpel:copy>
+                            <bpel:copy>
+                                <bpel:from>$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Information/BTS1:RequestType</bpel:from>
+                                <bpel:to>$dtws_bts_rules_taskprioritizationInvokeDecisionTableRequest1Msg.parameters/dtws_bts_rules_taskprioritization:param0/ax221:requestExternalDepencies/ax222:requestType</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1637038858" targetPath="$dtws_bts_rules_taskprioritizationInvokeDecisionTableRequest1Msg.parameters/dtws_bts_rules_taskprioritization:param0/ax221:requestExternalDepencies/ax222:requestType" targetedBy="99019403-arg0"></mapper:vertice>
+  <mapper:vertice id="99019403" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:Information/BTS1:RequestType"></mapper:vertice>
+</mapper:mapperLink>
+                            </bpel:copy>
+                        </bpdm:linkset>
+                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="dtws_bts_rules_taskprioritizationInvokeDecisionTableRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="dtws_bts_rules_taskprioritization:invokeDecisionTableRequest" bpdm:binding="dtws_bts_rules_taskprioritization:dtws_bts_rules_taskprioritizationSoap11Binding" bpdm:ID="_3mWHkbs3Eeash72vczxLlwOutgoing"></bpdm:linkset>
+                        <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="dtws_bts_rules_taskprioritizationInvokeDecisionTableResponse1Msg" bpdm:variableIsManaged="true" bpdm:messageType="dtws_bts_rules_taskprioritization:invokeDecisionTableResponse" bpdm:binding="dtws_bts_rules_taskprioritization:dtws_bts_rules_taskprioritizationSoap11Binding" bpdm:ID="_3mWHkbs3Eeash72vczxLlwIncoming"></bpdm:linkset>
+                        <bpdm:thrownFault msgFaultNcName="Exception" msgFaultTypeQname="dtws_bts_rules_taskprioritization:Exception"/>
+                    </bpdm:messagingtask>
                     <bpdm:messagingtask operation="createTaskSingleActivity" partnerLink="wFmagic_xuMNwLr9EeaNtrdCjMGf0gPlkVar" portType="ManualHSANInquiry:Workflow" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Get cost manually" bpdm:ID="_xuMNwLr9EeaNtrdCjMGf0g">
                         <bpdm:linkset bpdm:type="assignments">
                             <bpel:copy>
                                 <bpel:from>concat("Get HSAN Cost for Request #", $thisReceive_hsan_inquiryRequest1Msg.body/BTS1:RequestId)</bpel:from>
-                                <bpel:to>$manualHSANInquiryCreateTaskSingleActivityRequest1Msg.root/ManualHSANInquiry:taskMetaData/ManualHSANInquiry:description</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1479584296" targetPath="$manualHSANInquiryCreateTaskSingleActivityRequest1Msg.root/ManualHSANInquiry:taskMetaData/ManualHSANInquiry:description" targetedBy="223198278-arg2"></mapper:vertice>
-  <mapper:vertice id="223198278" dimension="79x24" location="533,77">
-    <mapper:value>concat()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="850024381" dimension="171x24" location="324,46" targetedBy="223198278-arg0">
-    <mapper:value>"Get HSAN Cost for Request #"</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1922416449" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:RequestId" targetedBy="223198278-arg1"></mapper:vertice>
-</mapper:mapperLink>
+                                <bpel:to>$manualHSANInquiryCreateTaskSingleActivityRequest1Msg.root/ManualHSANInquiry:taskMetaData/ManualHSANInquiry:description</bpel:to><mapper:mapperLink><mapper:vertice id="1479584296" targetPath="$manualHSANInquiryCreateTaskSingleActivityRequest1Msg.root/ManualHSANInquiry:taskMetaData/ManualHSANInquiry:description" targetedBy="223198278-arg2"></mapper:vertice><mapper:vertice id="223198278" dimension="79x24" location="533,77"><mapper:value>concat()</mapper:value></mapper:vertice><mapper:vertice id="850024381" dimension="171x24" location="324,46" targetedBy="223198278-arg0"><mapper:value>"Get HSAN Cost for Request #"</mapper:value></mapper:vertice><mapper:vertice id="1922416449" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:RequestId" targetedBy="223198278-arg1"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                             <bpel:copy>
                                 <bpel:from>$thisReceive_hsan_inquiryRequest1Msg.body</bpel:from>
-                                <bpel:to>$manualHSANInquiryCreateTaskSingleActivityRequest1Msg.root/ManualHSANInquiry:taskInput/BTS1:ManualHSANInquiry/BTS1:Request</bpel:to>
+                                <bpel:to>$manualHSANInquiryCreateTaskSingleActivityRequest1Msg.root/ManualHSANInquiry:taskInput/BTS1:ManualHSANInquiry/BTS1:Request</bpel:to><mapper:mapperLink><mapper:vertice id="1552450480" targetPath="$manualHSANInquiryCreateTaskSingleActivityRequest1Msg.root/ManualHSANInquiry:taskInput/BTS1:ManualHSANInquiry/BTS1:Request" targetedBy="486425753-arg0"></mapper:vertice><mapper:vertice id="486425753" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body"></mapper:vertice></mapper:mapperLink>
+                            </bpel:copy>
+                            <bpel:copy>
+                                <bpel:from>$dtws_bts_rules_taskprioritizationInvokeDecisionTableResponse1Msg.parameters/dtws_bts_rules_taskprioritization:return/ax221:taskInfo/ax222:priority</bpel:from>
+                                <bpel:to>$manualHSANInquiryCreateTaskSingleActivityRequest1Msg.root/ManualHSANInquiry:taskMetaData/ManualHSANInquiry:priority</bpel:to>
 <mapper:mapperLink>
-  <mapper:vertice id="1552450480" targetPath="$manualHSANInquiryCreateTaskSingleActivityRequest1Msg.root/ManualHSANInquiry:taskInput/BTS1:ManualHSANInquiry/BTS1:Request" targetedBy="486425753-arg0"></mapper:vertice>
-  <mapper:vertice id="486425753" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body"></mapper:vertice>
+  <mapper:vertice id="1438000920" targetPath="$manualHSANInquiryCreateTaskSingleActivityRequest1Msg.root/ManualHSANInquiry:taskMetaData/ManualHSANInquiry:priority" targetedBy="143073169-arg0"></mapper:vertice>
+  <mapper:vertice id="143073169" sourcePath="$dtws_bts_rules_taskprioritizationInvokeDecisionTableResponse1Msg.parameters/dtws_bts_rules_taskprioritization:return/ax221:taskInfo/ax222:priority"></mapper:vertice>
+</mapper:mapperLink>
+                            </bpel:copy>
+                            <bpel:copy>
+                                <bpel:from>xs:duration($dtws_bts_rules_taskprioritizationInvokeDecisionTableResponse1Msg.parameters/dtws_bts_rules_taskprioritization:return/ax221:taskInfo/ax222:duePeriod)</bpel:from>
+                                <bpel:to>$manualHSANInquiryCreateTaskSingleActivityRequest1Msg.root/ManualHSANInquiry:taskMetaData/ManualHSANInquiry:scheduledActions/ManualHSANInquiry:expiration/ManualHSANInquiry:until</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1867480508" targetPath="$manualHSANInquiryCreateTaskSingleActivityRequest1Msg.root/ManualHSANInquiry:taskMetaData/ManualHSANInquiry:scheduledActions/ManualHSANInquiry:expiration/ManualHSANInquiry:until" targetedBy="1423944234-arg1"></mapper:vertice>
+  <mapper:vertice id="1423944234" dimension="79x24" location="344,517">
+    <mapper:value>xs:duration()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="561945427" sourcePath="$dtws_bts_rules_taskprioritizationInvokeDecisionTableResponse1Msg.parameters/dtws_bts_rules_taskprioritization:return/ax221:taskInfo/ax222:duePeriod" targetedBy="1423944234-arg0"></mapper:vertice>
 </mapper:mapperLink>
                             </bpel:copy>
                         </bpdm:linkset>
@@ -250,19 +257,11 @@
                         <bpdm:linkset bpdm:type="assignments">
                             <bpel:copy>
                                 <bpel:from>$manualHSANInquiryCreateTaskSingleActivityResponse1Msg.root/ManualHSANInquiry:taskOutput/BTS1:ManualHSANInquiry/BTS1:HSANCost</bpel:from>
-                                <bpel:to>$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:HSANCost</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1689030568" targetPath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:HSANCost" targetedBy="1206236018-arg0"></mapper:vertice>
-  <mapper:vertice id="1206236018" sourcePath="$manualHSANInquiryCreateTaskSingleActivityResponse1Msg.root/ManualHSANInquiry:taskOutput/BTS1:ManualHSANInquiry/BTS1:HSANCost"></mapper:vertice>
-</mapper:mapperLink>
+                                <bpel:to>$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:HSANCost</bpel:to><mapper:mapperLink><mapper:vertice id="1689030568" targetPath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:HSANCost" targetedBy="1206236018-arg0"></mapper:vertice><mapper:vertice id="1206236018" sourcePath="$manualHSANInquiryCreateTaskSingleActivityResponse1Msg.root/ManualHSANInquiry:taskOutput/BTS1:ManualHSANInquiry/BTS1:HSANCost"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                             <bpel:copy>
                                 <bpel:from>$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID</bpel:from>
-                                <bpel:to>$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="977427137" targetPath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID" targetedBy="736171155-arg0"></mapper:vertice>
-  <mapper:vertice id="736171155" sourcePath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID"></mapper:vertice>
-</mapper:mapperLink>
+                                <bpel:to>$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID</bpel:to><mapper:mapperLink><mapper:vertice id="977427137" targetPath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID" targetedBy="736171155-arg0"></mapper:vertice><mapper:vertice id="736171155" sourcePath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                         </bpdm:linkset>
                     </bpdm:messagingtask>
@@ -271,7 +270,7 @@
             <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_3zafkLr9EeaNtrdCjMGf0g" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
             <bpdm:messagingtask eventType="end: message" operation="Receive__HSAN_Cost" partnerLink="hSAN_CoordinatorAndBTSPlkVar" portType="BTS:ForHSAN_Coordinator" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Submit response" bpdm:ID="_MIFkkLr8EeaNtrdCjMGf0g">
                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="bTSReceive__HSAN_CostRequest1Msg" bpdm:msgVarScopeId="_SkCw0Lr7EeaNtrdCjMGf0g" bpdm:variableIsManaged="true" bpdm:messageType="BTS:Receive__HSAN_CostRequest" bpdm:ID="_NsJ_YLr8EeaNtrdCjMGf0g">
-                    <bpel:correlation set="HSANCorrelationSet" initiate="join" pattern="request"></bpel:correlation>
+                    <bpel:correlation set="HSANCorrelationSet" initiate="join" pattern="request" bpdm:isSource="false"></bpel:correlation>
                 </bpdm:linkset>
                 <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="bTSReceive__HSAN_CostResponse2Msg" bpdm:msgVarScopeId="_SkCw0Lr7EeaNtrdCjMGf0g" bpdm:variableIsManaged="true" bpdm:messageType="BTS:Receive__HSAN_CostResponse" bpdm:ID="_5HTwYLr9EeaNtrdCjMGf0g"></bpdm:linkset>
             </bpdm:messagingtask>

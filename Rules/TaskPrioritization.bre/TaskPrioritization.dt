@@ -1,0 +1,97 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<decisiontable name="TaskPrioritization">
+  <import>bre.TaskInfo</import>
+  <import>bre.RequestExternalDepencies</import>
+  <decisionheader expression="RequestExternalDepencies.requestType" returntype="String" nodetype="Condition"/>
+  <decisionheader expression="RequestExternalDepencies.urgency" returntype="String" nodetype="Condition"/>
+  <decisionheader expression="TaskInfo.duePeriod = {value}" returntype="String" nodetype="Action"/>
+  <decisionheader expression="TaskInfo.priority = {value}" returntype="Integer" nodetype="Action"/>
+  <decisionheader expression="Effective Date" returntype="Date" nodetype="Options"/>
+  <decisionheader expression="Expiration Date" returntype="Date" nodetype="Options"/>
+  <decisionheader expression="Salience" returntype="Integer" nodetype="Options"/>
+  <decisionheader expression="XOR Rule Group" returntype="String" nodetype="Options"/>
+  <decisionnode headerid="-1">
+    <decisionnode expression="== &quot;Inquiry&quot;" headerid="0">
+      <decisionnode expression="== &quot;Low&quot;" headerid="1">
+        <decisionnode expression="&quot;P2D&quot;" headerid="2">
+          <decisionnode expression="0" headerid="3">
+            <optionnode expression="" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="0" headerid="6">
+                  <optionnode expression="" headerid="7"/>
+                </optionnode>
+              </optionnode>
+            </optionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+      <decisionnode expression="== &quot;Normal&quot;" headerid="1">
+        <decisionnode expression="&quot;P1D&quot;" headerid="2">
+          <decisionnode expression="1" headerid="3">
+            <optionnode expression="" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="0" headerid="6">
+                  <optionnode expression="" headerid="7"/>
+                </optionnode>
+              </optionnode>
+            </optionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+      <decisionnode expression="== &quot;High&quot;" headerid="1">
+        <decisionnode expression="&quot;PT1H&quot;" headerid="2">
+          <decisionnode expression="10" headerid="3">
+            <optionnode expression="" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="0" headerid="6">
+                  <optionnode expression="" headerid="7"/>
+                </optionnode>
+              </optionnode>
+            </optionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+    </decisionnode>
+    <decisionnode expression="== &quot;Booking&quot;" headerid="0">
+      <decisionnode expression="== &quot;Low&quot;" headerid="1">
+        <decisionnode expression="&quot;PT4H&quot;" headerid="2">
+          <decisionnode expression="10" headerid="3">
+            <optionnode expression="" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="0" headerid="6">
+                  <optionnode expression="" headerid="7"/>
+                </optionnode>
+              </optionnode>
+            </optionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+      <decisionnode expression="== &quot;Normal&quot;" headerid="1">
+        <decisionnode expression="&quot;PT2H&quot;" headerid="2">
+          <decisionnode expression="16" headerid="3">
+            <optionnode expression="" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="0" headerid="6">
+                  <optionnode expression="" headerid="7"/>
+                </optionnode>
+              </optionnode>
+            </optionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+      <decisionnode expression="== &quot;High&quot;" headerid="1">
+        <decisionnode expression="&quot;PT15M&quot;" headerid="2">
+          <decisionnode expression="37" headerid="3">
+            <optionnode expression="" headerid="4">
+              <optionnode expression="" headerid="5">
+                <optionnode expression="0" headerid="6">
+                  <optionnode expression="" headerid="7"/>
+                </optionnode>
+              </optionnode>
+            </optionnode>
+          </decisionnode>
+        </decisionnode>
+      </decisionnode>
+    </decisionnode>
+  </decisionnode>
+</decisiontable>
