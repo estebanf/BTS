@@ -1,0 +1,117 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<serialization xmlns="urn:tibco.com/v3.0" jsxversion="3.6">
+  <name/>
+  <icon/>
+  <description/>
+  <onBeforeDeserialize/>
+  <onAfterDeserialize/>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"/>
+    <strings jsxheight="100%" jsxwidth="100%" jsxname="root"/>
+    <object type="jsx3.gui.Block">
+      <variants/>
+      <strings jsxwidth="100%" jsxpadding="5 10 0 10" jsxname="header" jsxrelativeposition="1"/>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1"/>
+        <strings jsxwidth="100%" jsxname="form-title" jsxclassname="form-title" jsxtext="Form generated for ManualHSANInquiry."/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1"/>
+        <strings jsxwidth="100%" jsxname="required-note" jsxtext="&lt;strong>Note:&lt;/strong> Required fields are marked with an asterisk (&lt;span class=&quot;required&quot;>*&lt;/span>)."/>
+      </object>
+    </object>
+    <object type="com.intalio.ria.Section">
+      <variants/>
+      <strings riaTitleText="ManualHSANInquiry" jsxname="ManualHSANInquiry" jsxclassname="fieldset"/>
+      <object type="com.intalio.ria.Section">
+        <variants/>
+        <strings riaTitleText="Request" jsxname="Request" jsxclassname="fieldset"/>
+        <object type="com.intalio.ria.Field">
+          <variants/>
+          <strings riaLabelText="RequestId" jsxname="RequestId-field" riaErrorImageSrc="images/error.gif" jsxclassname="field" riaHelpImageSrc="images/help.gif"/>
+          <object type="jsx3.gui.TextBox">
+            <variants/>
+            <strings jsxpadding="2 2 0 0" jsxname="RequestId" jsxmargin="0 4 0 0"/>
+            <events jsxincchange="com.intalio.ria.validate(this, objEVENT);" jsxfocus="com.intalio.ria.highlightTextInput(this, false);" jsxchange="com.intalio.ria.validate(this, objEVENT);" jsxblur="com.intalio.ria.highlightTextInput(this, true);"/>
+          </object>
+        </object>
+        <object type="com.intalio.ria.Section">
+          <variants/>
+          <strings riaTitleText="Information" jsxname="Information" jsxclassname="fieldset"/>
+          <object type="com.intalio.ria.Field">
+            <variants/>
+            <strings riaLabelText="CustomerId" jsxname="CustomerId-field" riaErrorImageSrc="images/error.gif" jsxclassname="field" riaHelpImageSrc="images/help.gif"/>
+            <object type="jsx3.gui.TextBox">
+              <variants/>
+              <strings jsxpadding="2 2 0 0" jsxname="CustomerId" jsxmargin="0 4 0 0"/>
+              <events jsxincchange="com.intalio.ria.validate(this, objEVENT);" jsxfocus="com.intalio.ria.highlightTextInput(this, false);" jsxchange="com.intalio.ria.validate(this, objEVENT);" jsxblur="com.intalio.ria.highlightTextInput(this, true);"/>
+            </object>
+          </object>
+          <object type="com.intalio.ria.Field">
+            <variants/>
+            <strings riaLabelText="EventDateTime" jsxname="EventDateTime-field" riaErrorImageSrc="images/error.gif" jsxclassname="field" riaHelpImageSrc="images/help.gif"/>
+            <object type="jsx3.gui.TextBox">
+              <variants/>
+              <strings jsxpadding="2 2 0 0" jsxname="EventDateTime" jsxmargin="0 4 0 0"/>
+              <events jsxincchange="com.intalio.ria.validate(this, objEVENT);" jsxfocus="com.intalio.ria.highlightTextInput(this, false);" jsxchange="com.intalio.ria.validate(this, objEVENT);" jsxblur="com.intalio.ria.highlightTextInput(this, true);"/>
+            </object>
+          </object>
+          <object type="com.intalio.ria.Field">
+            <variants/>
+            <strings riaLabelText="EventDuration" jsxname="EventDuration-field" riaErrorImageSrc="images/error.gif" jsxclassname="field" riaHelpImageSrc="images/help.gif"/>
+            <object type="jsx3.gui.TextBox">
+              <variants/>
+              <strings jsxpadding="2 2 0 0" jsxname="EventDuration" jsxmargin="0 4 0 0"/>
+              <events jsxincchange="com.intalio.ria.validate(this, objEVENT);" jsxfocus="com.intalio.ria.highlightTextInput(this, false);" jsxchange="com.intalio.ria.validate(this, objEVENT);" jsxblur="com.intalio.ria.highlightTextInput(this, true);"/>
+            </object>
+          </object>
+          <object type="com.intalio.ria.Field">
+            <variants/>
+            <strings riaLabelText="EventType" jsxname="EventType-field" riaErrorImageSrc="images/error.gif" jsxclassname="field" riaHelpImageSrc="images/help.gif"/>
+            <object type="jsx3.gui.Select">
+              <variants jsxheight="18" jsxwidth="150" jsxxmlasync="1"/>
+              <strings jsxxml="&lt;data jsxid=&quot;jsxroot&quot;> &lt;record jsxid=&quot;News&quot; jsxtext=&quot;News&quot; jsxtip=&quot;News&quot;/> &lt;record jsxid=&quot;Entertainment&quot; jsxtext=&quot;Entertainment&quot; jsxtip=&quot;Entertainment&quot;/>&lt;/data>" jsxname="EventType" jsxmargin="0 4 0 0"/>
+              <events jsxselect="com.intalio.ria.validate(this, objEVENT);"/>
+            </object>
+          </object>
+          <object type="com.intalio.ria.Field">
+            <variants/>
+            <strings riaLabelText="RequestType" jsxname="RequestType-field" riaErrorImageSrc="images/error.gif" jsxclassname="field" riaHelpImageSrc="images/help.gif"/>
+            <object type="jsx3.gui.Select">
+              <variants jsxheight="18" jsxwidth="150" jsxxmlasync="1"/>
+              <strings jsxxml="&lt;data jsxid=&quot;jsxroot&quot;> &lt;record jsxid=&quot;Inquiry&quot; jsxtext=&quot;Inquiry&quot; jsxtip=&quot;Inquiry&quot;/> &lt;record jsxid=&quot;Booking&quot; jsxtext=&quot;Booking&quot; jsxtip=&quot;Booking&quot;/>&lt;/data>" jsxname="RequestType" jsxmargin="0 4 0 0"/>
+              <events jsxselect="com.intalio.ria.validate(this, objEVENT);"/>
+            </object>
+          </object>
+          <object type="com.intalio.ria.Field">
+            <variants/>
+            <strings riaLabelText="Location" jsxname="Location-field" riaErrorImageSrc="images/error.gif" jsxclassname="field" riaHelpImageSrc="images/help.gif"/>
+            <object type="jsx3.gui.TextBox">
+              <variants/>
+              <strings jsxpadding="2 2 0 0" jsxname="Location" jsxmargin="0 4 0 0"/>
+              <events jsxincchange="com.intalio.ria.validate(this, objEVENT);" jsxfocus="com.intalio.ria.highlightTextInput(this, false);" jsxchange="com.intalio.ria.validate(this, objEVENT);" jsxblur="com.intalio.ria.highlightTextInput(this, true);"/>
+            </object>
+          </object>
+        </object>
+        <object type="com.intalio.ria.Field">
+          <variants/>
+          <strings riaLabelText="Urgency" jsxname="Urgency-field" riaErrorImageSrc="images/error.gif" jsxclassname="field" riaHelpImageSrc="images/help.gif"/>
+          <object type="jsx3.gui.Select">
+            <variants jsxheight="18" jsxwidth="150" jsxxmlasync="1"/>
+            <strings jsxxml="&lt;data jsxid=&quot;jsxroot&quot;> &lt;record jsxid=&quot;High&quot; jsxtext=&quot;High&quot; jsxtip=&quot;High&quot;/> &lt;record jsxid=&quot;Normal&quot; jsxtext=&quot;Normal&quot; jsxtip=&quot;Normal&quot;/> &lt;record jsxid=&quot;Low&quot; jsxtext=&quot;Low&quot; jsxtip=&quot;Low&quot;/>&lt;/data>" jsxname="Urgency" jsxmargin="0 4 0 0"/>
+            <events jsxselect="com.intalio.ria.validate(this, objEVENT);"/>
+          </object>
+        </object>
+      </object>
+      <object type="com.intalio.ria.Field">
+        <variants/>
+        <strings riaLabelText="HSANCost" jsxname="HSANCost-field" riaErrorImageSrc="images/error.gif" jsxclassname="field" riaHelpImageSrc="images/help.gif"/>
+        <object type="jsx3.gui.TextBox">
+          <variants/>
+          <strings jsxpadding="2 2 0 0" jsxname="HSANCost" jsxmargin="0 4 0 0"/>
+          <events jsxincchange="com.intalio.ria.validate(this, objEVENT);" jsxfocus="com.intalio.ria.highlightTextInput(this, false);" jsxchange="com.intalio.ria.validate(this, objEVENT);" jsxblur="com.intalio.ria.highlightTextInput(this, true);"/>
+        </object>
+      </object>
+    </object>
+  </object>
+</serialization>

@@ -152,4 +152,21 @@
     </complexType>
 
     <element name="EventDateTime" type="dateTime"></element>
+
+
+    <complexType name="HSANCostInquiry">
+    	<sequence>
+    		<element name="RequestID" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="HSANCost" type="double" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="ManualHSANInquiry">
+    	<complexType>
+    		<sequence>
+    			<element name="Request" type="tns:RequestType"></element>
+    			<element name="HSANCost" type="double"></element>
+    		</sequence>
+    	</complexType>
+    </element>
 </schema>

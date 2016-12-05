@@ -1,0 +1,180 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<data jsxid="jsxroot" jsxnamespace="jsx3.ide.mapper.Mapper" jsxversion="1.0">
+  <record jsxid="mi_1" jxstext="Operation (Transaction)" type="T" jsxopen="1" opname="jsxtransaction">
+    <headers jsxid="mi_2">
+      <record jsxid="mi_3" name="Content-Type" value="text/xml"/>
+    </headers>
+    <record jsxid="mi_4" jsxtext="Input (request)" type="I" jsxopen="1" src="../../Schemas/BTS.xsd">
+      <record jsxid="mi_5" jsxtext="ManualHSANInquiry" type="C" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='ManualHSANInquiry']" datatype="" tns="http://www.example.org/BTS">
+        <record jsxid="mi_6" jsxtext="Request" type="C" datatype="" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='Request']">
+          <restrictions>
+            <record jsxid="mi_7" name="nillable" value="true"/>
+          </restrictions>
+          <record jsxid="mi_8" jsxtext="RequestId" type="E" datatype="string" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='RequestId']">
+            <restrictions>
+              <record jsxid="mi_9" name="nillable" value="true"/>
+            </restrictions>
+            <mappings jsxid="mi_10">
+              <record jsxid="mi_11" name="DOM" value="RequestId"/>
+            </mappings>
+          </record>
+          <record jsxid="mi_12" jsxtext="Information" type="C" datatype="" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='Information']">
+            <restrictions>
+              <record jsxid="mi_13" name="nillable" value="true"/>
+            </restrictions>
+            <record jsxid="mi_14" jsxtext="CustomerId" type="E" datatype="string" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='CustomerId']">
+              <restrictions>
+                <record jsxid="mi_15" name="nillable" value="true"/>
+              </restrictions>
+              <mappings jsxid="mi_16">
+                <record jsxid="mi_17" name="DOM" value="CustomerId"/>
+              </mappings>
+            </record>
+            <record jsxid="mi_18" jsxtext="EventDateTime" type="E" datatype="dateTime" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='EventDateTime']">
+              <restrictions>
+                <record jsxid="mi_19" name="nillable" value="true"/>
+              </restrictions>
+              <mappings jsxid="mi_20">
+                <record jsxid="mi_21" name="DOM" value="EventDateTime"/>
+              </mappings>
+            </record>
+            <record jsxid="mi_22" jsxtext="EventDuration" type="E" datatype="int" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='EventDuration']">
+              <restrictions>
+                <record jsxid="mi_23" name="nillable" value="true"/>
+              </restrictions>
+              <mappings jsxid="mi_24">
+                <record jsxid="mi_25" name="DOM" value="EventDuration"/>
+              </mappings>
+            </record>
+            <record jsxid="mi_26" jsxtext="EventType" type="E" datatype="string" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='EventType']">
+              <restrictions>
+                <record jsxid="mi_27" name="nillable" value="true"/>
+              </restrictions>
+              <mappings jsxid="mi_28">
+                <record jsxid="mi_29" name="DOM" value="EventType"/>
+              </mappings>
+            </record>
+            <record jsxid="mi_30" jsxtext="RequestType" type="E" datatype="string" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='RequestType']">
+              <restrictions>
+                <record jsxid="mi_31" name="nillable" value="true"/>
+              </restrictions>
+              <mappings jsxid="mi_32">
+                <record jsxid="mi_33" name="DOM" value="RequestType"/>
+              </mappings>
+            </record>
+            <record jsxid="mi_34" jsxtext="Location" type="E" datatype="string" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='Location']">
+              <restrictions>
+                <record jsxid="mi_35" name="nillable" value="true"/>
+              </restrictions>
+              <mappings jsxid="mi_36">
+                <record jsxid="mi_37" name="DOM" value="Location"/>
+              </mappings>
+            </record>
+          </record>
+          <record jsxid="mi_38" jsxtext="Urgency" type="E" datatype="string" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='Urgency']">
+            <restrictions>
+              <record jsxid="mi_39" name="nillable" value="true"/>
+            </restrictions>
+            <mappings jsxid="mi_40">
+              <record jsxid="mi_41" name="DOM" value="Urgency"/>
+            </mappings>
+          </record>
+        </record>
+        <record jsxid="mi_42" jsxtext="HSANCost" type="E" datatype="double" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='HSANCost']">
+          <restrictions>
+            <record jsxid="mi_43" name="nillable" value="true"/>
+          </restrictions>
+          <mappings jsxid="mi_44">
+            <record jsxid="mi_45" name="DOM" value="HSANCost"/>
+          </mappings>
+        </record>
+      </record>
+    </record>
+    <record jsxid="mi_46" jsxtext="Output (response)" type="O" jsxopen="1" src="../../Schemas/BTS.xsd">
+      <record jsxid="mi_47" jsxtext="ManualHSANInquiry" type="C" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='ManualHSANInquiry']" datatype="" tns="http://www.example.org/BTS">
+        <record jsxid="mi_48" jsxtext="Request" type="C" datatype="" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='Request']">
+          <restrictions>
+            <record jsxid="mi_49" name="nillable" value="true"/>
+          </restrictions>
+          <record jsxid="mi_50" jsxtext="RequestId" type="E" datatype="string" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='RequestId']">
+            <restrictions>
+              <record jsxid="mi_51" name="nillable" value="true"/>
+            </restrictions>
+            <mappings jsxid="mi_52">
+              <record jsxid="mi_53" name="DOM" value="RequestId"/>
+            </mappings>
+          </record>
+          <record jsxid="mi_54" jsxtext="Information" type="C" datatype="" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='Information']">
+            <restrictions>
+              <record jsxid="mi_55" name="nillable" value="true"/>
+            </restrictions>
+            <record jsxid="mi_56" jsxtext="CustomerId" type="E" datatype="string" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='CustomerId']">
+              <restrictions>
+                <record jsxid="mi_57" name="nillable" value="true"/>
+              </restrictions>
+              <mappings jsxid="mi_58">
+                <record jsxid="mi_59" name="DOM" value="CustomerId"/>
+              </mappings>
+            </record>
+            <record jsxid="mi_60" jsxtext="EventDateTime" type="E" datatype="dateTime" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='EventDateTime']">
+              <restrictions>
+                <record jsxid="mi_61" name="nillable" value="true"/>
+              </restrictions>
+              <mappings jsxid="mi_62">
+                <record jsxid="mi_63" name="DOM" value="EventDateTime"/>
+              </mappings>
+            </record>
+            <record jsxid="mi_64" jsxtext="EventDuration" type="E" datatype="int" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='EventDuration']">
+              <restrictions>
+                <record jsxid="mi_65" name="nillable" value="true"/>
+              </restrictions>
+              <mappings jsxid="mi_66">
+                <record jsxid="mi_67" name="DOM" value="EventDuration"/>
+              </mappings>
+            </record>
+            <record jsxid="mi_68" jsxtext="EventType" type="E" datatype="string" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='EventType']">
+              <restrictions>
+                <record jsxid="mi_69" name="nillable" value="true"/>
+              </restrictions>
+              <mappings jsxid="mi_70">
+                <record jsxid="mi_71" name="DOM" value="EventType"/>
+              </mappings>
+            </record>
+            <record jsxid="mi_72" jsxtext="RequestType" type="E" datatype="string" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='RequestType']">
+              <restrictions>
+                <record jsxid="mi_73" name="nillable" value="true"/>
+              </restrictions>
+              <mappings jsxid="mi_74">
+                <record jsxid="mi_75" name="DOM" value="RequestType"/>
+              </mappings>
+            </record>
+            <record jsxid="mi_76" jsxtext="Location" type="E" datatype="string" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='Location']">
+              <restrictions>
+                <record jsxid="mi_77" name="nillable" value="true"/>
+              </restrictions>
+              <mappings jsxid="mi_78">
+                <record jsxid="mi_79" name="DOM" value="Location"/>
+              </mappings>
+            </record>
+          </record>
+          <record jsxid="mi_80" jsxtext="Urgency" type="E" datatype="string" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='Urgency']">
+            <restrictions>
+              <record jsxid="mi_81" name="nillable" value="true"/>
+            </restrictions>
+            <mappings jsxid="mi_82">
+              <record jsxid="mi_83" name="DOM" value="Urgency"/>
+            </mappings>
+          </record>
+        </record>
+        <record jsxid="mi_84" jsxtext="HSANCost" type="E" datatype="double" tns="http://www.example.org/BTS" path="//jsx1:schema[@targetNamespace='http://www.example.org/BTS']//jsx1:element[@name='HSANCost']">
+          <restrictions>
+            <record jsxid="mi_85" name="nillable" value="true"/>
+          </restrictions>
+          <mappings jsxid="mi_86">
+            <record jsxid="mi_87" name="DOM" value="HSANCost"/>
+          </mappings>
+        </record>
+      </record>
+    </record>
+  </record>
+</data>

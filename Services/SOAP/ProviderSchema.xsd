@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/ProviderSchema" targetNamespace="http://www.example.org/ProviderSchema" elementFormDefault="qualified">
+  <annotation xmlns:imported="http://www.intalio.com/designer/remote-services-import" imported:importTime="2016-12-05T13:37:18-0500" imported:sourceURI="http://ubuntu.estebanf.com:8881/Provider/?WSDL&amp;interface=CanonicBindingForBTS&amp;part=ProviderSchema.xsd" imported:baseImportDir="BTS/Services/SOAP" imported:isRootImport="false" imported:isIndented="true"/>
+<element name="inquiryRequest">
+    <complexType>
+      <sequence>
+        <element name="EventDate" type="dateTime"/>
+        <element name="EventDuration" type="string"/>
+        <element name="RequestID" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="inquiryResponse">
+    <complexType>
+      <sequence>
+        <element name="requestId" type="string"/>
+        <element name="Cost" type="double"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>

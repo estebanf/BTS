@@ -1,0 +1,1 @@
+SELECT `ProviderID`, `ProviderName` FROM `BTS_HSAN_Providers` WHERE Location = ?

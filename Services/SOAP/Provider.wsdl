@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions xmlns:BTS="http://mockproviderservice.com/NewDiagram/BTS" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:diag="http://mockproviderservice.com/NewDiagram" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://everteam.com/xvar/example" xmlns:ProviderSchema="http://www.example.org/ProviderSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://mockproviderservice.com/NewDiagram/service" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://mockproviderservice.com/NewDiagram/service">
+  <wsdl:documentation>
+<imported:imported xmlns:imported="http://www.intalio.com/designer/remote-services-import" imported:importTime="2016-12-05T13:37:18-0500" imported:sourceURI="http://ubuntu.estebanf.com:8881/Provider/?wsdl" imported:baseImportDir="BTS/Services/SOAP" imported:isRootImport="true" imported:isIndented="true"/>
+</wsdl:documentation>
+<wsdl:types>
+    <xs:schema targetNamespace="http://www.example.org/ProviderSchema">
+      <xs:include schemaLocation="ProviderSchema.xsd"><xs:annotation xmlns:imported="http://www.intalio.com/designer/remote-services-import" imported:importTime="2016-12-05T13:37:18-0500" imported:originalLocation="?WSDL&amp;interface=CanonicBindingForBTS&amp;part=ProviderSchema.xsd"/>
+</xs:include>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_HSAN_CostRequest">
+    <wsdl:part name="body" element="ProviderSchema:inquiryRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Get_HSAN_CostResponse">
+    <wsdl:part name="body" element="ProviderSchema:inquiryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ForBTS">
+    <wsdl:operation name="Get_HSAN_Cost">
+      <wsdl:input name="Get_HSAN_Cost" message="this:Get_HSAN_CostRequest">
+    </wsdl:input>
+      <wsdl:output name="Get_HSAN_CostResponse" message="this:Get_HSAN_CostResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CanonicBindingForBTS" type="this:ForBTS">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Get_HSAN_Cost">
+      <soap:operation soapAction="http://mockproviderservice.com/NewDiagram/service/ForBTS/Get_HSAN_Cost" style="document"/>
+      <wsdl:input name="Get_HSAN_Cost">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="Get_HSAN_CostResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CanonicServiceForBTS">
+    <wsdl:port name="canonicPort" binding="this:CanonicBindingForBTS">
+      <soap:address location="Provider/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

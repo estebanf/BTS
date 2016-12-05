@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jdbc:descriptor wsdlLocation="get_hsan_providers.sql.wsdl" targetNamespace="urn:intalio.com:connectors:database:bts:get_hsan_providersservice" xmlns:jdbc="http://bpms.intalio.com/connectors/jdbc/">
+    <jdbc:service name="get_hsan_providersService">
+        <jdbc:operation name="urn:get_hsan_providers" sqlStatement="SELECT `ProviderID`, `ProviderName` FROM `BTS_HSAN_Providers` WHERE Location = ?" event="false" dynamicCredentials="true" xmlns:urn="urn:intalio.com:connectors:database:bts:get_hsan_providersservice">
+            <jdbc:input>
+                <jdbc:parameter>
+                    <jdbc:mode>1</jdbc:mode>
+                    <jdbc:name>Location</jdbc:name>
+                    <jdbc:type>40</jdbc:type>
+                    <jdbc:length>10</jdbc:length>
+                    <jdbc:typeName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                    <jdbc:precision>0</jdbc:precision>
+                    <jdbc:scale>0</jdbc:scale>
+                    <jdbc:nullable>false</jdbc:nullable>
+                    <jdbc:index>0</jdbc:index>
+                </jdbc:parameter>
+            </jdbc:input>
+            <jdbc:filter rowsToSendService="1" rowsToFetch="-1" duration="-PT1S">
+                <jdbc:unique scope="none"/>
+            </jdbc:filter>
+            <jdbc:output/>
+        </jdbc:operation>
+        <jdbc:port>
+            <jdbc:address location="http://ubuntu.estebanf.com:8080/everteam/ode/processes/get_hsan_providersService"/>
+        </jdbc:port>
+        <jdbc:connection jndiName="java:comp/env/jdbc/">
+            <jdbc:databaseProductName>Generic JDBC</jdbc:databaseProductName>
+            <jdbc:databaseProductVersion>1.0</jdbc:databaseProductVersion>
+            <jdbc:driverClass>com.mysql.jdbc.Driver</jdbc:driverClass>
+            <jdbc:databaseUrl>jdbc:mysql://ubuntu.estebanf.com:3306/bpmsdb?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true</jdbc:databaseUrl>
+            <jdbc:databaseName>bpmsdb</jdbc:databaseName>
+            <jdbc:userName>root</jdbc:userName>
+            <jdbc:password>decrypt[gxJEMbwJ8/L65F2NFa4bfyG6NGijXobp]</jdbc:password>
+        </jdbc:connection>
+    </jdbc:service>
+</jdbc:descriptor>
