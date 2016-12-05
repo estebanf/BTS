@@ -54,90 +54,24 @@
                 <bpdm:linkset bpdm:type="assignments">
                     <bpel:copy>
                         <bpel:from>xs:dateTime($thisCalculare_urgency_requestRequest2Msg.body) - current-dateTime()</bpel:from>
-                        <bpel:to>$durationUntilEvent</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="521774403" targetPath="$durationUntilEvent" targetedBy="1615293776-arg2"></mapper:vertice>
-  <mapper:vertice id="1615293776" dimension="79x24" location="535,86">
-    <mapper:value>-</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1806697912" dimension="79x24" location="276,36" targetedBy="1615293776-arg0">
-    <mapper:value>xs:dateTime()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1359688973" sourcePath="$thisCalculare_urgency_requestRequest2Msg.body" targetedBy="1806697912-arg0"></mapper:vertice>
-  <mapper:vertice id="1135372101" dimension="109x24" location="380,103" targetedBy="1615293776-arg1">
-    <mapper:value>current-dateTime()</mapper:value>
-  </mapper:vertice>
-</mapper:mapperLink>
+                        <bpel:to>$durationUntilEvent</bpel:to><mapper:mapperLink><mapper:vertice id="521774403" targetPath="$durationUntilEvent" targetedBy="1615293776-arg2"></mapper:vertice><mapper:vertice id="1615293776" dimension="79x24" location="535,86"><mapper:value>-</mapper:value></mapper:vertice><mapper:vertice id="1806697912" dimension="79x24" location="276,36" targetedBy="1615293776-arg0"><mapper:value>xs:dateTime()</mapper:value></mapper:vertice><mapper:vertice id="1359688973" sourcePath="$thisCalculare_urgency_requestRequest2Msg.body" targetedBy="1806697912-arg0"></mapper:vertice><mapper:vertice id="1135372101" dimension="109x24" location="380,103" targetedBy="1615293776-arg1"><mapper:value>current-dateTime()</mapper:value></mapper:vertice></mapper:mapperLink>
                     </bpel:copy>
                 </bpdm:linkset>
             </bpdm:messagingtask>
             <bpdm:gateway bpdm:label="Time until event?" bpdm:ID="_wfQRALkyEea98_xmAI6CLw" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
                 <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_FkPGt7kzEeajYsanxe9sog" bpdm:targetDisplayName="Less than 3 hours">
-                    <bpel:condition>xs:dayTimeDuration($durationUntilEvent) &lt; xs:dayTimeDuration(xs:duration(ode:get-property-value("high_priority_compare")))
-<mapper:mapperLink>
-  <mapper:vertice id="1764910333" targetPath="$condition" targetedBy="1206284755-arg2"></mapper:vertice>
-  <mapper:vertice id="1206284755" dimension="79x24" location="600,144">
-    <mapper:value>&lt;</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="933682544" dimension="121x24" location="420,120" targetedBy="1206284755-arg0">
-    <mapper:value>xs:dayTimeDuration()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="378158132" sourcePath="$durationUntilEvent" targetedBy="933682544-arg0"></mapper:vertice>
-  <mapper:vertice id="2063155655" dimension="121x24" location="456,192" targetedBy="1206284755-arg1">
-    <mapper:value>xs:dayTimeDuration()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1476576952" dimension="79x24" location="360,216" targetedBy="2063155655-arg0">
-    <mapper:value>xs:duration()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="150052612" dimension="139x24" location="192,276" targetedBy="1476576952-arg0">
-    <mapper:value>ode:get-property-value()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="2105010165" dimension="137x24" location="36,324" targetedBy="150052612-arg0">
-    <mapper:value>"high_priority_compare"</mapper:value>
-  </mapper:vertice>
-</mapper:mapperLink></bpel:condition>
+                    <bpel:condition>xs:dayTimeDuration($durationUntilEvent)&lt; xs:dayTimeDuration(xs:duration(ode:get-property-value("high_priority_compare")))<mapper:mapperLink><mapper:vertice id="1764910333" targetPath="$condition" targetedBy="1206284755-arg2"></mapper:vertice><mapper:vertice id="1206284755" dimension="79x24" location="600,144"><mapper:value>&lt;</mapper:value></mapper:vertice><mapper:vertice id="933682544" dimension="121x24" location="420,120" targetedBy="1206284755-arg0"><mapper:value>xs:dayTimeDuration()</mapper:value></mapper:vertice><mapper:vertice id="378158132" sourcePath="$durationUntilEvent" targetedBy="933682544-arg0"></mapper:vertice><mapper:vertice id="2063155655" dimension="121x24" location="456,192" targetedBy="1206284755-arg1"><mapper:value>xs:dayTimeDuration()</mapper:value></mapper:vertice><mapper:vertice id="1476576952" dimension="79x24" location="360,216" targetedBy="2063155655-arg0"><mapper:value>xs:duration()</mapper:value></mapper:vertice><mapper:vertice id="150052612" dimension="139x24" location="192,276" targetedBy="1476576952-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="2105010165" dimension="137x24" location="36,324" targetedBy="150052612-arg0"><mapper:value>"high_priority_compare"</mapper:value></mapper:vertice></mapper:mapperLink></bpel:condition>
                 </bpdm:linkset>
                 <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_HqpZmbkzEeajYsanxe9sog" bpdm:targetDisplayName="default"></bpdm:linkset>
                 <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_KYHscLkzEeajYsanxe9sog" bpdm:targetDisplayName="More than 3 days">
-                    <bpel:condition>xs:dayTimeDuration($durationUntilEvent) &gt; xs:dayTimeDuration(xs:duration(ode:get-property-value("low_priority_compare")))
-<mapper:mapperLink>
-  <mapper:vertice id="1282239211" targetPath="$condition" targetedBy="986406898-arg2"></mapper:vertice>
-  <mapper:vertice id="986406898" dimension="79x24" location="552,132">
-    <mapper:value>&gt;</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1360061302" dimension="121x24" location="336,120" targetedBy="986406898-arg0">
-    <mapper:value>xs:dayTimeDuration()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="302720939" sourcePath="$durationUntilEvent" targetedBy="1360061302-arg0"></mapper:vertice>
-  <mapper:vertice id="25270274" dimension="121x24" location="384,192" targetedBy="986406898-arg1">
-    <mapper:value>xs:dayTimeDuration()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="2106175321" dimension="79x24" location="276,204" targetedBy="25270274-arg0">
-    <mapper:value>xs:duration()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1133284611" dimension="139x24" location="144,264" targetedBy="2106175321-arg0">
-    <mapper:value>ode:get-property-value()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1259022851" dimension="132x24" location="0,300" targetedBy="1133284611-arg0">
-    <mapper:value>"low_priority_compare"</mapper:value>
-  </mapper:vertice>
-</mapper:mapperLink></bpel:condition>
+                    <bpel:condition>xs:dayTimeDuration($durationUntilEvent)&gt; xs:dayTimeDuration(xs:duration(ode:get-property-value("low_priority_compare")))<mapper:mapperLink><mapper:vertice id="1282239211" targetPath="$condition" targetedBy="986406898-arg2"></mapper:vertice><mapper:vertice id="986406898" dimension="79x24" location="552,132"><mapper:value>&gt;</mapper:value></mapper:vertice><mapper:vertice id="1360061302" dimension="121x24" location="336,120" targetedBy="986406898-arg0"><mapper:value>xs:dayTimeDuration()</mapper:value></mapper:vertice><mapper:vertice id="302720939" sourcePath="$durationUntilEvent" targetedBy="1360061302-arg0"></mapper:vertice><mapper:vertice id="25270274" dimension="121x24" location="384,192" targetedBy="986406898-arg1"><mapper:value>xs:dayTimeDuration()</mapper:value></mapper:vertice><mapper:vertice id="2106175321" dimension="79x24" location="276,204" targetedBy="25270274-arg0"><mapper:value>xs:duration()</mapper:value></mapper:vertice><mapper:vertice id="1133284611" dimension="139x24" location="144,264" targetedBy="2106175321-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="1259022851" dimension="132x24" location="0,300" targetedBy="1133284611-arg0"><mapper:value>"low_priority_compare"</mapper:value></mapper:vertice></mapper:mapperLink></bpel:condition>
                 </bpdm:linkset>
                 <bpel:sequence>
                     <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="High priority" bpdm:ID="_FkHK4LkzEeajYsanxe9sog">
                         <bpdm:linkset bpdm:type="assignments">
                             <bpel:copy>
                                 <bpel:from>ode:get-property-value("high_urgency_key")</bpel:from>
-                                <bpel:to>$thisCalculare_urgency_requestResponse2Msg.body</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="718446366" targetPath="$thisCalculare_urgency_requestResponse2Msg.body" targetedBy="488193200-arg1"></mapper:vertice>
-  <mapper:vertice id="488193200" dimension="139x24" location="708,84">
-    <mapper:value>ode:get-property-value()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1163073246" dimension="113x24" location="516,120" targetedBy="488193200-arg0">
-    <mapper:value>"high_urgency_key"</mapper:value>
-  </mapper:vertice>
-</mapper:mapperLink>
+                                <bpel:to>$thisCalculare_urgency_requestResponse2Msg.body</bpel:to><mapper:mapperLink><mapper:vertice id="718446366" targetPath="$thisCalculare_urgency_requestResponse2Msg.body" targetedBy="488193200-arg1"></mapper:vertice><mapper:vertice id="488193200" dimension="139x24" location="708,84"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="1163073246" dimension="113x24" location="516,120" targetedBy="488193200-arg0"><mapper:value>"high_urgency_key"</mapper:value></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                         </bpdm:linkset>
                     </bpdm:messagingtask>
@@ -147,16 +81,7 @@
                         <bpdm:linkset bpdm:type="assignments">
                             <bpel:copy>
                                 <bpel:from>ode:get-property-value("normal_urgency_key")</bpel:from>
-                                <bpel:to>$thisCalculare_urgency_requestResponse2Msg.body</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1759461395" targetPath="$thisCalculare_urgency_requestResponse2Msg.body" targetedBy="466349775-arg1"></mapper:vertice>
-  <mapper:vertice id="466349775" dimension="139x24" location="648,96">
-    <mapper:value>ode:get-property-value()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1877448737" dimension="127x24" location="412,146" targetedBy="466349775-arg0">
-    <mapper:value>"normal_urgency_key"</mapper:value>
-  </mapper:vertice>
-</mapper:mapperLink>
+                                <bpel:to>$thisCalculare_urgency_requestResponse2Msg.body</bpel:to><mapper:mapperLink><mapper:vertice id="1759461395" targetPath="$thisCalculare_urgency_requestResponse2Msg.body" targetedBy="466349775-arg1"></mapper:vertice><mapper:vertice id="466349775" dimension="139x24" location="648,96"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="1877448737" dimension="127x24" location="412,146" targetedBy="466349775-arg0"><mapper:value>"normal_urgency_key"</mapper:value></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                         </bpdm:linkset>
                     </bpdm:messagingtask>
@@ -166,16 +91,7 @@
                         <bpdm:linkset bpdm:type="assignments">
                             <bpel:copy>
                                 <bpel:from>ode:get-property-value("low_urgency_key")</bpel:from>
-                                <bpel:to>$thisCalculare_urgency_requestResponse2Msg.body</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="788633175" targetPath="$thisCalculare_urgency_requestResponse2Msg.body" targetedBy="755894309-arg1"></mapper:vertice>
-  <mapper:vertice id="755894309" dimension="139x24" location="636,120">
-    <mapper:value>ode:get-property-value()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1250485550" dimension="108x24" location="400,170" targetedBy="755894309-arg0">
-    <mapper:value>"low_urgency_key"</mapper:value>
-  </mapper:vertice>
-</mapper:mapperLink>
+                                <bpel:to>$thisCalculare_urgency_requestResponse2Msg.body</bpel:to><mapper:mapperLink><mapper:vertice id="788633175" targetPath="$thisCalculare_urgency_requestResponse2Msg.body" targetedBy="755894309-arg1"></mapper:vertice><mapper:vertice id="755894309" dimension="139x24" location="636,120"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="1250485550" dimension="108x24" location="400,170" targetedBy="755894309-arg0"><mapper:value>"low_urgency_key"</mapper:value></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                         </bpdm:linkset>
                     </bpdm:messagingtask>

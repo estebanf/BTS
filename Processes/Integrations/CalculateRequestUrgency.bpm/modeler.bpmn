@@ -16,7 +16,7 @@
         </eAnnotations>
       </associations>
     </artifacts>
-    <artifacts xmi:type="bpmn:DataObject" xmi:id="_UPUbGLkzEeajYsanxe9sog" iD="_UPUbF7kzEeajYsanxe9sog">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_UPUbGLkzEeajYsanxe9sog" iD="_UPUbF7kzEeajYsanxe9sog" name="processCalculare_urgency_requestResponse2Msg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UPUbGbkzEeajYsanxe9sog" source="attachedDataobject">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UPUbGrkzEeajYsanxe9sog" key="isBpelDeclaration" value="true"/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UPc9-LkzEeajYsanxe9sog" key="defaultDeclarationName" value="processCalculare_urgency_requestResponse2Msg"/>
@@ -56,7 +56,7 @@
         </eAnnotations>
       </associations>
     </artifacts>
-    <artifacts xmi:type="bpmn:DataObject" xmi:id="_UPEjcbkzEeajYsanxe9sog" iD="_UPEjcLkzEeajYsanxe9sog">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_UPEjcbkzEeajYsanxe9sog" iD="_UPEjcLkzEeajYsanxe9sog" name="thisCalculare_urgency_requestResponse2Msg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UPEjcrkzEeajYsanxe9sog" source="attachedDataobject">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UPEjc7kzEeajYsanxe9sog" key="isBpelDeclaration" value="true"/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UPMfSLkzEeajYsanxe9sog" key="defaultDeclarationName" value="thisCalculare_urgency_requestResponse2Msg"/>
