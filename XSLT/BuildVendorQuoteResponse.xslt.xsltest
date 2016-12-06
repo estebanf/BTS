@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<test:testxsl xmlns:test="http://intalio.com/xsltestcase" xsl="BuildVendorQuoteResponse.xslt" xmlns:tns="http://everteam.com/xvar/example" xmlns:BTS="http://bts.com/Processes/Core/ContentTransmissionBooking/BTS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:attachments="http://www.intalio.com/BTS/Webcontents/ExternalVendorInquiry/index.html/attachments" xmlns:insert_vendor_quote="urn:intalio.com:connectors:database:bts:insert_vendor_quoteservice" xmlns:BTS1="http://www.example.org/BTS" xmlns:ax261="http://taskprioritization.rules.bts/xsd" xmlns:index="http://www.intalio.com/BTS/Webcontents/ExternalVendorInquiry/index.html" xmlns:ContentTransmissionBooking="http://bts.com/Processes/Core/ContentTransmissionBooking" xmlns:ax262="http://taskprioritization.rules.bts/bre" xmlns:ns="http://taskprioritization.rules.bts" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:Vendor_coordinatorimplicitPartner="http://bts.com/Processes/Core/ContentTransmissionBooking/Vendor_coordinatorimplicitPartner" xmlns:this="http://bts.com/Processes/Core/ContentTransmissionBooking/Vendor_coordinator">
+  <!--XSL Test sample  generated on Tue Dec 06 09:01:09 EST 2016
+ for F/BTS/Processes/Core/ContentTransmissionBooking.bpm
+   pool:Vendor coordinator
+   activity: Message_End_Event
+ Complete doXslTransform: bpel:doXslTransform("../../XSLT/BuildVendorQuoteResponse.xslt", $indexCreateTaskSingleActivityResponse1Msg.root/index:taskOutput/BTS1:ExternalVendorInquiry)
+ Input document as defined in the mapper: $indexCreateTaskSingleActivityResponse1Msg.root/index:taskOutput/BTS1:ExternalVendorInquiry-->
+  <test:input>
+    <BTS1:ExternalVendorInquiry>
+      <BTS1:Request>
+        <BTS1:RequestId>asdasd</BTS1:RequestId>
+        <BTS1:Information>
+          <BTS1:CustomerId>string</BTS1:CustomerId>
+          <BTS1:EventDateTime>dateTime</BTS1:EventDateTime>
+          <BTS1:EventDuration>int</BTS1:EventDuration>
+          <BTS1:EventType>string</BTS1:EventType>
+          <BTS1:RequestType>string</BTS1:RequestType>
+          <BTS1:Location>string</BTS1:Location>
+        </BTS1:Information>
+        <BTS1:Urgency>string</BTS1:Urgency>
+      </BTS1:Request>
+      <BTS1:Vendors>
+        <BTS1:Resource>asdasd</BTS1:Resource>
+        <BTS1:Vendor>23afds</BTS1:Vendor>
+        <BTS1:Cost>23424</BTS1:Cost>
+      </BTS1:Vendors>
+      <BTS1:Vendors>
+        <BTS1:Resource>asdasd23</BTS1:Resource>
+        <BTS1:Vendor>gfgf</BTS1:Vendor>
+        <BTS1:Cost>3434</BTS1:Cost>
+      </BTS1:Vendors>
+      <BTS1:Vendors>
+        <BTS1:Resource>dfsdf</BTS1:Resource>
+        <BTS1:Vendor>23afdddds</BTS1:Vendor>
+        <BTS1:Cost>gfg</BTS1:Cost>
+      </BTS1:Vendors>
+    </BTS1:ExternalVendorInquiry>
+  </test:input>
+  <!--No parameters are currently passed to doXslTransform.-->
+</test:testxsl>

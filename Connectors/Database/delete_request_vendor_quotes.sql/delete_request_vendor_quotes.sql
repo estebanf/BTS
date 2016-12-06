@@ -1,0 +1,1 @@
+DELETE FROM `BTS_Vendors` WHERE RequestID = ?
