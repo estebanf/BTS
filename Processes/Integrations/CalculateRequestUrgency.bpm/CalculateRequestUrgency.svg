@@ -98,34 +98,34 @@
 <path d="M772 299 L782 299 L782 308 L772 308 L772 299 Z"/>
 </clipPath>
 <clipPath clipPathUnits="userSpaceOnUse" id="clipPath32">
-<path d="M620 427 L721 427 L721 442 L620 442 L620 427 Z"/>
+<path d="M1008 396 L1017 396 L1017 406 L1008 406 L1008 396 Z"/>
 </clipPath>
 <clipPath clipPathUnits="userSpaceOnUse" id="clipPath33">
-<path d="M772 440 L782 440 L782 449 L772 449 L772 440 Z"/>
+<path d="M574 367 L584 367 L584 376 L574 376 L574 367 Z"/>
 </clipPath>
 <clipPath clipPathUnits="userSpaceOnUse" id="clipPath34">
 <path d="M1113 368 L1123 368 L1123 377 L1113 377 L1113 368 Z"/>
 </clipPath>
 <clipPath clipPathUnits="userSpaceOnUse" id="clipPath35">
-<path d="M979 367 L989 367 L989 376 L979 376 L979 367 Z"/>
+<path d="M686 354 L726 354 L726 369 L686 369 L686 354 Z"/>
 </clipPath>
 <clipPath clipPathUnits="userSpaceOnUse" id="clipPath36">
-<path d="M574 367 L584 367 L584 376 L574 376 L574 367 Z"/>
+<path d="M772 367 L782 367 L782 376 L772 376 L772 367 Z"/>
 </clipPath>
 <clipPath clipPathUnits="userSpaceOnUse" id="clipPath37">
 <path d="M375 367 L385 367 L385 376 L375 376 L375 367 Z"/>
 </clipPath>
 <clipPath clipPathUnits="userSpaceOnUse" id="clipPath38">
-<path d="M1008 396 L1017 396 L1017 406 L1008 406 L1008 396 Z"/>
+<path d="M1008 339 L1017 339 L1017 349 L1008 349 L1008 339 Z"/>
 </clipPath>
 <clipPath clipPathUnits="userSpaceOnUse" id="clipPath39">
-<path d="M686 354 L726 354 L726 369 L686 369 L686 354 Z"/>
+<path d="M979 367 L989 367 L989 376 L979 376 L979 367 Z"/>
 </clipPath>
 <clipPath clipPathUnits="userSpaceOnUse" id="clipPath40">
-<path d="M772 367 L782 367 L782 376 L772 376 L772 367 Z"/>
+<path d="M620 427 L721 427 L721 442 L620 442 L620 427 Z"/>
 </clipPath>
 <clipPath clipPathUnits="userSpaceOnUse" id="clipPath41">
-<path d="M1008 339 L1017 339 L1017 349 L1008 349 L1008 339 Z"/>
+<path d="M772 440 L782 440 L782 449 L772 449 L772 440 Z"/>
 </clipPath>
 <clipPath clipPathUnits="userSpaceOnUse" id="clipPath42">
 <path d="M769 155 L779 155 L779 165 L769 165 L769 155 Z"/>
@@ -220,33 +220,6 @@
 <polygon fill="black" clip-path="url(#clipPath31)" opacity="0.6667" points=" 773 306 780 303 773 300" stroke="none"/>
 <line clip-path="url(#clipPath31)" fill="none" x1="773" x2="780" y1="306" y2="303" opacity="0.6667" stroke="black"/>
 <line clip-path="url(#clipPath31)" fill="none" x1="780" x2="773" y1="303" y2="300" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath29)" fill="none" x1="607" x2="607" y1="397" y2="428" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath29)" fill="none" x1="607" x2="607" y1="428" y2="432" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath29)" fill="none" x1="607" x2="610" y1="432" y2="437" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath29)" fill="none" x1="610" x2="613" y1="437" y2="440" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath29)" fill="none" x1="613" x2="618" y1="440" y2="443" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath29)" fill="none" x1="618" x2="623" y1="443" y2="444" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath29)" fill="none" x1="623" x2="780" y1="444" y2="444" opacity="0.6667" stroke="black"/>
-<text x="621" y="440" clip-path="url(#clipPath32)" fill="black" stroke="none" xml:space="preserve">More than 3 days</text>
-<polygon fill="black" clip-path="url(#clipPath33)" opacity="0.6667" points=" 773 447 780 444 773 441" stroke="none"/>
-<line clip-path="url(#clipPath33)" fill="none" x1="773" x2="780" y1="447" y2="444" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath33)" fill="none" x1="780" x2="773" y1="444" y2="441" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath29)" fill="none" x1="1037" x2="1121" y1="372" y2="372" opacity="0.6667" stroke="black"/>
-<polygon fill="black" clip-path="url(#clipPath34)" opacity="0.6667" points=" 1114 375 1121 372 1114 369" stroke="none"/>
-<line clip-path="url(#clipPath34)" fill="none" x1="1114" x2="1121" y1="375" y2="372" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath34)" fill="none" x1="1121" x2="1114" y1="372" y2="369" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath29)" fill="none" x1="887" x2="987" y1="371" y2="371" opacity="0.6667" stroke="black"/>
-<polygon fill="black" clip-path="url(#clipPath35)" opacity="0.6667" points=" 980 374 987 371 980 368" stroke="none"/>
-<line clip-path="url(#clipPath35)" fill="none" x1="980" x2="987" y1="374" y2="371" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath35)" fill="none" x1="987" x2="980" y1="371" y2="368" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath29)" fill="none" x1="490" x2="582" y1="371" y2="371" opacity="0.6667" stroke="black"/>
-<polygon fill="black" clip-path="url(#clipPath36)" opacity="0.6667" points=" 575 374 582 371 575 368" stroke="none"/>
-<line clip-path="url(#clipPath36)" fill="none" x1="575" x2="582" y1="374" y2="371" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath36)" fill="none" x1="582" x2="575" y1="371" y2="368" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath29)" fill="none" x1="293" x2="383" y1="371" y2="371" opacity="0.6667" stroke="black"/>
-<polygon fill="black" clip-path="url(#clipPath37)" opacity="0.6667" points=" 376 374 383 371 376 368" stroke="none"/>
-<line clip-path="url(#clipPath37)" fill="none" x1="376" x2="383" y1="374" y2="371" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath37)" fill="none" x1="383" x2="376" y1="371" y2="368" opacity="0.6667" stroke="black"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="887" x2="996" y1="444" y2="444" opacity="0.6667" stroke="black"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="996" x2="1000" y1="444" y2="443" opacity="0.6667" stroke="black"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="1000" x2="1005" y1="443" y2="440" opacity="0.6667" stroke="black"/>
@@ -254,15 +227,27 @@
 <line clip-path="url(#clipPath29)" fill="none" x1="1008" x2="1011" y1="437" y2="432" opacity="0.6667" stroke="black"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="1011" x2="1012" y1="432" y2="428" opacity="0.6667" stroke="black"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="1012" x2="1012" y1="428" y2="397" opacity="0.6667" stroke="black"/>
-<polygon fill="black" clip-path="url(#clipPath38)" opacity="0.6667" points=" 1015 404 1012 397 1009 404" stroke="none"/>
-<line clip-path="url(#clipPath38)" fill="none" x1="1015" x2="1012" y1="404" y2="397" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath38)" fill="none" x1="1012" x2="1009" y1="397" y2="404" opacity="0.6667" stroke="black"/>
+<polygon fill="black" clip-path="url(#clipPath32)" opacity="0.6667" points=" 1015 404 1012 397 1009 404" stroke="none"/>
+<line clip-path="url(#clipPath32)" fill="none" x1="1015" x2="1012" y1="404" y2="397" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath32)" fill="none" x1="1012" x2="1009" y1="397" y2="404" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath29)" fill="none" x1="490" x2="582" y1="371" y2="371" opacity="0.6667" stroke="black"/>
+<polygon fill="black" clip-path="url(#clipPath33)" opacity="0.6667" points=" 575 374 582 371 575 368" stroke="none"/>
+<line clip-path="url(#clipPath33)" fill="none" x1="575" x2="582" y1="374" y2="371" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath33)" fill="none" x1="582" x2="575" y1="371" y2="368" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath29)" fill="none" x1="1037" x2="1121" y1="372" y2="372" opacity="0.6667" stroke="black"/>
+<polygon fill="black" clip-path="url(#clipPath34)" opacity="0.6667" points=" 1114 375 1121 372 1114 369" stroke="none"/>
+<line clip-path="url(#clipPath34)" fill="none" x1="1114" x2="1121" y1="375" y2="372" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath34)" fill="none" x1="1121" x2="1114" y1="372" y2="369" opacity="0.6667" stroke="black"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="632" x2="780" y1="371" y2="371" opacity="0.6667" stroke="black"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="669" x2="674" y1="364" y2="377" opacity="0.6667" stroke="black"/>
-<text x="687" y="367" clip-path="url(#clipPath39)" fill="black" stroke="none" xml:space="preserve">3 days</text>
-<polygon fill="black" clip-path="url(#clipPath40)" opacity="0.6667" points=" 773 374 780 371 773 368" stroke="none"/>
-<line clip-path="url(#clipPath40)" fill="none" x1="773" x2="780" y1="374" y2="371" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath40)" fill="none" x1="780" x2="773" y1="371" y2="368" opacity="0.6667" stroke="black"/>
+<text x="687" y="367" clip-path="url(#clipPath35)" fill="black" stroke="none" xml:space="preserve">3 days</text>
+<polygon fill="black" clip-path="url(#clipPath36)" opacity="0.6667" points=" 773 374 780 371 773 368" stroke="none"/>
+<line clip-path="url(#clipPath36)" fill="none" x1="773" x2="780" y1="374" y2="371" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath36)" fill="none" x1="780" x2="773" y1="371" y2="368" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath29)" fill="none" x1="293" x2="383" y1="371" y2="371" opacity="0.6667" stroke="black"/>
+<polygon fill="black" clip-path="url(#clipPath37)" opacity="0.6667" points=" 376 374 383 371 376 368" stroke="none"/>
+<line clip-path="url(#clipPath37)" fill="none" x1="376" x2="383" y1="374" y2="371" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath37)" fill="none" x1="383" x2="376" y1="371" y2="368" opacity="0.6667" stroke="black"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="887" x2="996" y1="303" y2="303" opacity="0.6667" stroke="black"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="996" x2="1000" y1="303" y2="303" opacity="0.6667" stroke="black"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="1000" x2="1005" y1="303" y2="306" opacity="0.6667" stroke="black"/>
@@ -270,9 +255,24 @@
 <line clip-path="url(#clipPath29)" fill="none" x1="1008" x2="1011" y1="309" y2="314" opacity="0.6667" stroke="black"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="1011" x2="1012" y1="314" y2="319" opacity="0.6667" stroke="black"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="1012" x2="1012" y1="319" y2="347" opacity="0.6667" stroke="black"/>
-<polygon fill="black" clip-path="url(#clipPath41)" opacity="0.6667" points=" 1009 340 1012 347 1015 340" stroke="none"/>
-<line clip-path="url(#clipPath41)" fill="none" x1="1009" x2="1012" y1="340" y2="347" opacity="0.6667" stroke="black"/>
-<line clip-path="url(#clipPath41)" fill="none" x1="1012" x2="1015" y1="347" y2="340" opacity="0.6667" stroke="black"/>
+<polygon fill="black" clip-path="url(#clipPath38)" opacity="0.6667" points=" 1009 340 1012 347 1015 340" stroke="none"/>
+<line clip-path="url(#clipPath38)" fill="none" x1="1009" x2="1012" y1="340" y2="347" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath38)" fill="none" x1="1012" x2="1015" y1="347" y2="340" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath29)" fill="none" x1="887" x2="987" y1="371" y2="371" opacity="0.6667" stroke="black"/>
+<polygon fill="black" clip-path="url(#clipPath39)" opacity="0.6667" points=" 980 374 987 371 980 368" stroke="none"/>
+<line clip-path="url(#clipPath39)" fill="none" x1="980" x2="987" y1="374" y2="371" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath39)" fill="none" x1="987" x2="980" y1="371" y2="368" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath29)" fill="none" x1="607" x2="607" y1="397" y2="428" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath29)" fill="none" x1="607" x2="607" y1="428" y2="432" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath29)" fill="none" x1="607" x2="610" y1="432" y2="437" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath29)" fill="none" x1="610" x2="613" y1="437" y2="440" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath29)" fill="none" x1="613" x2="618" y1="440" y2="443" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath29)" fill="none" x1="618" x2="623" y1="443" y2="444" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath29)" fill="none" x1="623" x2="780" y1="444" y2="444" opacity="0.6667" stroke="black"/>
+<text x="621" y="440" clip-path="url(#clipPath40)" fill="black" stroke="none" xml:space="preserve">More than 3 days</text>
+<polygon fill="black" clip-path="url(#clipPath41)" opacity="0.6667" points=" 773 447 780 444 773 441" stroke="none"/>
+<line clip-path="url(#clipPath41)" fill="none" x1="773" x2="780" y1="447" y2="444" opacity="0.6667" stroke="black"/>
+<line clip-path="url(#clipPath41)" fill="none" x1="780" x2="773" y1="444" y2="441" opacity="0.6667" stroke="black"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="774" x2="774" y1="160" y2="242" stroke-dasharray="7,5" opacity="0.5882" stroke="black"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="774" x2="773" y1="242" y2="246" stroke-dasharray="7,5" opacity="0.5882" stroke="black"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="773" x2="770" y1="246" y2="251" stroke-dasharray="7,5" opacity="0.5882" stroke="black"/>
@@ -300,9 +300,9 @@
 <line clip-path="url(#clipPath37)" fill="none" x1="376" x2="383" y1="374" y2="371" opacity="0.6667"/>
 <line clip-path="url(#clipPath37)" fill="none" x1="383" x2="376" y1="371" y2="368" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="490" x2="582" y1="371" y2="371" opacity="0.6667"/>
-<polygon clip-path="url(#clipPath36)" opacity="0.6667" points=" 575 374 582 371 575 368" stroke="none"/>
-<line clip-path="url(#clipPath36)" fill="none" x1="575" x2="582" y1="374" y2="371" opacity="0.6667"/>
-<line clip-path="url(#clipPath36)" fill="none" x1="582" x2="575" y1="371" y2="368" opacity="0.6667"/>
+<polygon clip-path="url(#clipPath33)" opacity="0.6667" points=" 575 374 582 371 575 368" stroke="none"/>
+<line clip-path="url(#clipPath33)" fill="none" x1="575" x2="582" y1="374" y2="371" opacity="0.6667"/>
+<line clip-path="url(#clipPath33)" fill="none" x1="582" x2="575" y1="371" y2="368" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="607" x2="607" y1="347" y2="319" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="607" x2="607" y1="319" y2="314" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="607" x2="610" y1="314" y2="309" opacity="0.6667"/>
@@ -316,10 +316,10 @@
 <line clip-path="url(#clipPath31)" fill="none" x1="780" x2="773" y1="303" y2="300" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="632" x2="780" y1="371" y2="371" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="669" x2="674" y1="364" y2="377" opacity="0.6667"/>
-<text font-size="11" x="687" y="367" clip-path="url(#clipPath39)" font-family="'Verdana'" stroke="none" xml:space="preserve">3 days</text>
-<polygon clip-path="url(#clipPath40)" opacity="0.6667" points=" 773 374 780 371 773 368" stroke="none"/>
-<line clip-path="url(#clipPath40)" fill="none" x1="773" x2="780" y1="374" y2="371" opacity="0.6667"/>
-<line clip-path="url(#clipPath40)" fill="none" x1="780" x2="773" y1="371" y2="368" opacity="0.6667"/>
+<text font-size="11" x="687" y="367" clip-path="url(#clipPath35)" font-family="'Verdana'" stroke="none" xml:space="preserve">3 days</text>
+<polygon clip-path="url(#clipPath36)" opacity="0.6667" points=" 773 374 780 371 773 368" stroke="none"/>
+<line clip-path="url(#clipPath36)" fill="none" x1="773" x2="780" y1="374" y2="371" opacity="0.6667"/>
+<line clip-path="url(#clipPath36)" fill="none" x1="780" x2="773" y1="371" y2="368" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="607" x2="607" y1="397" y2="428" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="607" x2="607" y1="428" y2="432" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="607" x2="610" y1="432" y2="437" opacity="0.6667"/>
@@ -327,10 +327,10 @@
 <line clip-path="url(#clipPath29)" fill="none" x1="613" x2="618" y1="440" y2="443" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="618" x2="623" y1="443" y2="444" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="623" x2="780" y1="444" y2="444" opacity="0.6667"/>
-<text font-size="11" x="621" y="440" clip-path="url(#clipPath32)" font-family="'Verdana'" stroke="none" xml:space="preserve">More than 3 days</text>
-<polygon clip-path="url(#clipPath33)" opacity="0.6667" points=" 773 447 780 444 773 441" stroke="none"/>
-<line clip-path="url(#clipPath33)" fill="none" x1="773" x2="780" y1="447" y2="444" opacity="0.6667"/>
-<line clip-path="url(#clipPath33)" fill="none" x1="780" x2="773" y1="444" y2="441" opacity="0.6667"/>
+<text font-size="11" x="621" y="440" clip-path="url(#clipPath40)" font-family="'Verdana'" stroke="none" xml:space="preserve">More than 3 days</text>
+<polygon clip-path="url(#clipPath41)" opacity="0.6667" points=" 773 447 780 444 773 441" stroke="none"/>
+<line clip-path="url(#clipPath41)" fill="none" x1="773" x2="780" y1="447" y2="444" opacity="0.6667"/>
+<line clip-path="url(#clipPath41)" fill="none" x1="780" x2="773" y1="444" y2="441" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="887" x2="996" y1="303" y2="303" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="996" x2="1000" y1="303" y2="303" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="1000" x2="1005" y1="303" y2="306" opacity="0.6667"/>
@@ -338,13 +338,13 @@
 <line clip-path="url(#clipPath29)" fill="none" x1="1008" x2="1011" y1="309" y2="314" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="1011" x2="1012" y1="314" y2="319" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="1012" x2="1012" y1="319" y2="347" opacity="0.6667"/>
-<polygon clip-path="url(#clipPath41)" opacity="0.6667" points=" 1009 340 1012 347 1015 340" stroke="none"/>
-<line clip-path="url(#clipPath41)" fill="none" x1="1009" x2="1012" y1="340" y2="347" opacity="0.6667"/>
-<line clip-path="url(#clipPath41)" fill="none" x1="1012" x2="1015" y1="347" y2="340" opacity="0.6667"/>
+<polygon clip-path="url(#clipPath38)" opacity="0.6667" points=" 1009 340 1012 347 1015 340" stroke="none"/>
+<line clip-path="url(#clipPath38)" fill="none" x1="1009" x2="1012" y1="340" y2="347" opacity="0.6667"/>
+<line clip-path="url(#clipPath38)" fill="none" x1="1012" x2="1015" y1="347" y2="340" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="887" x2="987" y1="371" y2="371" opacity="0.6667"/>
-<polygon clip-path="url(#clipPath35)" opacity="0.6667" points=" 980 374 987 371 980 368" stroke="none"/>
-<line clip-path="url(#clipPath35)" fill="none" x1="980" x2="987" y1="374" y2="371" opacity="0.6667"/>
-<line clip-path="url(#clipPath35)" fill="none" x1="987" x2="980" y1="371" y2="368" opacity="0.6667"/>
+<polygon clip-path="url(#clipPath39)" opacity="0.6667" points=" 980 374 987 371 980 368" stroke="none"/>
+<line clip-path="url(#clipPath39)" fill="none" x1="980" x2="987" y1="374" y2="371" opacity="0.6667"/>
+<line clip-path="url(#clipPath39)" fill="none" x1="987" x2="980" y1="371" y2="368" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="887" x2="996" y1="444" y2="444" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="996" x2="1000" y1="444" y2="443" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="1000" x2="1005" y1="443" y2="440" opacity="0.6667"/>
@@ -352,9 +352,9 @@
 <line clip-path="url(#clipPath29)" fill="none" x1="1008" x2="1011" y1="437" y2="432" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="1011" x2="1012" y1="432" y2="428" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="1012" x2="1012" y1="428" y2="397" opacity="0.6667"/>
-<polygon clip-path="url(#clipPath38)" opacity="0.6667" points=" 1015 404 1012 397 1009 404" stroke="none"/>
-<line clip-path="url(#clipPath38)" fill="none" x1="1015" x2="1012" y1="404" y2="397" opacity="0.6667"/>
-<line clip-path="url(#clipPath38)" fill="none" x1="1012" x2="1009" y1="397" y2="404" opacity="0.6667"/>
+<polygon clip-path="url(#clipPath32)" opacity="0.6667" points=" 1015 404 1012 397 1009 404" stroke="none"/>
+<line clip-path="url(#clipPath32)" fill="none" x1="1015" x2="1012" y1="404" y2="397" opacity="0.6667"/>
+<line clip-path="url(#clipPath32)" fill="none" x1="1012" x2="1009" y1="397" y2="404" opacity="0.6667"/>
 <line clip-path="url(#clipPath29)" fill="none" x1="1037" x2="1121" y1="372" y2="372" opacity="0.6667"/>
 <polygon clip-path="url(#clipPath34)" opacity="0.6667" points=" 1114 375 1121 372 1114 369" stroke="none"/>
 <line clip-path="url(#clipPath34)" fill="none" x1="1114" x2="1121" y1="375" y2="372" opacity="0.6667"/>
