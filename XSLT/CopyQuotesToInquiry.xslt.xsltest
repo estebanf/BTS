@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<test:testxsl xmlns:test="http://intalio.com/xsltestcase" xsl="CopyQuotesToInquiry.xslt" xmlns:tns="http://everteam.com/xvar/example" xmlns:BTS="http://bts.com/Processes/Core/ContentTransmissionBooking/BTS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:attachments="http://www.intalio.com/BTS/Webcontents/ExternalVendorInquiry/index.html/attachments" xmlns:insert_vendor_quote="urn:intalio.com:connectors:database:bts:insert_vendor_quoteservice" xmlns:BTS1="http://www.example.org/BTS" xmlns:ax261="http://taskprioritization.rules.bts/xsd" xmlns:index="http://www.intalio.com/BTS/Webcontents/ExternalVendorInquiry/index.html" xmlns:ContentTransmissionBooking="http://bts.com/Processes/Core/ContentTransmissionBooking" xmlns:ax262="http://taskprioritization.rules.bts/bre" xmlns:ns="http://taskprioritization.rules.bts" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:delete_request_vendor_quotes="urn:intalio.com:connectors:database:bts:delete_request_vendor_quotesservice" xmlns:Vendor_coordinatorimplicitPartner="http://bts.com/Processes/Core/ContentTransmissionBooking/Vendor_coordinatorimplicitPartner" xmlns:select_existing_vendor_quotes="urn:intalio.com:connectors:database:bts:select_existing_vendor_quotesservice" xmlns:this="http://bts.com/Processes/Core/ContentTransmissionBooking/Vendor_coordinator">
+  <!--XSL Test sample  generated on Tue Dec 06 09:57:57 EST 2016
+ for F/BTS/Processes/Core/ContentTransmissionBooking.bpm
+   pool:Vendor coordinator
+   activity: Copy existing vendors
+ Complete doXslTransform: bpel:doXslTransform("../../XSLT/CopyQuotesToInquiry.xslt", $select_existing_vendor_quotesSelect_existing_vendor_quotesResponse1Msg.parameters)
+ Input document as defined in the mapper: $select_existing_vendor_quotesSelect_existing_vendor_quotesResponse1Msg.parameters-->
+  <test:input>
+    <select_existing_vendor_quotes:select_existing_vendor_quotesResultSet>
+      <select_existing_vendor_quotes:rows>
+        <select_existing_vendor_quotes:row>
+          <select_existing_vendor_quotes:RequestID>aqwesdf</select_existing_vendor_quotes:RequestID>
+          <select_existing_vendor_quotes:Resource>sdfg</select_existing_vendor_quotes:Resource>
+          <select_existing_vendor_quotes:Vendor>fghfgh</select_existing_vendor_quotes:Vendor>
+          <select_existing_vendor_quotes:Cost>345345</select_existing_vendor_quotes:Cost>
+        </select_existing_vendor_quotes:row>
+        <select_existing_vendor_quotes:row>
+          <select_existing_vendor_quotes:RequestID>aqwesdf2</select_existing_vendor_quotes:RequestID>
+          <select_existing_vendor_quotes:Resource>sdf345g</select_existing_vendor_quotes:Resource>
+          <select_existing_vendor_quotes:Vendor>fghfgh</select_existing_vendor_quotes:Vendor>
+          <select_existing_vendor_quotes:Cost>1345345</select_existing_vendor_quotes:Cost>
+        </select_existing_vendor_quotes:row>
+      </select_existing_vendor_quotes:rows>
+    </select_existing_vendor_quotes:select_existing_vendor_quotesResultSet>
+  </test:input>
+  <!--No parameters are currently passed to doXslTransform.-->
+</test:testxsl>

@@ -39,11 +39,11 @@
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_SkCw0Lr7EeaNtrdCjMGf0gimplicitPartner" bpdm:label="HSAN CoordinatorimplicitPartner"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/BTS.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Forms/ManualHSANInquiry.gi.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Services/SOAP/Provider.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Services/SOAP/ProviderSchema.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Rules/TaskPrioritization.bre/dtws_bts_rules_taskprioritization/META-INF/dtws_bts_rules_taskprioritization.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/get_hsan_providers.sql/get_hsan_providers.sql.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/get_hsan_providers.sql/get_hsan_providers.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Services/SOAP/Provider.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Services/SOAP/ProviderSchema.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar"/>
         <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar.xsd"/>
     </bpdm:dependencies>
@@ -205,14 +205,7 @@
                             </bpel:copy>
                             <bpel:copy>
                                 <bpel:from>xs:duration($dtws_bts_rules_taskprioritizationInvokeDecisionTableResponse1Msg.parameters/dtws_bts_rules_taskprioritization:return/ax221:taskInfo/ax222:duePeriod)</bpel:from>
-                                <bpel:to>$manualHSANInquiryCreateTaskSingleActivityRequest1Msg.root/ManualHSANInquiry:taskMetaData/ManualHSANInquiry:scheduledActions/ManualHSANInquiry:expiration/ManualHSANInquiry:for</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1830390215" targetPath="$manualHSANInquiryCreateTaskSingleActivityRequest1Msg.root/ManualHSANInquiry:taskMetaData/ManualHSANInquiry:scheduledActions/ManualHSANInquiry:expiration/ManualHSANInquiry:for" targetedBy="663214660-arg1"></mapper:vertice>
-  <mapper:vertice id="663214660" dimension="79x24" location="344,517">
-    <mapper:value>xs:duration()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="474845933" sourcePath="$dtws_bts_rules_taskprioritizationInvokeDecisionTableResponse1Msg.parameters/dtws_bts_rules_taskprioritization:return/ax221:taskInfo/ax222:duePeriod" targetedBy="663214660-arg0"></mapper:vertice>
-</mapper:mapperLink>
+                                <bpel:to>$manualHSANInquiryCreateTaskSingleActivityRequest1Msg.root/ManualHSANInquiry:taskMetaData/ManualHSANInquiry:scheduledActions/ManualHSANInquiry:expiration/ManualHSANInquiry:for</bpel:to><mapper:mapperLink><mapper:vertice id="1830390215" targetPath="$manualHSANInquiryCreateTaskSingleActivityRequest1Msg.root/ManualHSANInquiry:taskMetaData/ManualHSANInquiry:scheduledActions/ManualHSANInquiry:expiration/ManualHSANInquiry:for" targetedBy="663214660-arg1"></mapper:vertice><mapper:vertice id="663214660" dimension="79x24" location="344,517"><mapper:value>xs:duration()</mapper:value></mapper:vertice><mapper:vertice id="474845933" sourcePath="$dtws_bts_rules_taskprioritizationInvokeDecisionTableResponse1Msg.parameters/dtws_bts_rules_taskprioritization:return/ax221:taskInfo/ax222:duePeriod" targetedBy="663214660-arg0"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                         </bpdm:linkset>
                         <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="manualHSANInquiryCreateTaskSingleActivityRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="ManualHSANInquiry:createTaskSingleActivityRequest" bpdm:binding="ManualHSANInquiry:WorkflowSoapBinding" bpdm:ID="_xuMNwLr9EeaNtrdCjMGf0gOutgoing"></bpdm:linkset>

@@ -1,0 +1,1 @@
+select RequestID,Resource,Vendor,Cost from BTS_Vendors where RequestID = ? order by QuoteId 

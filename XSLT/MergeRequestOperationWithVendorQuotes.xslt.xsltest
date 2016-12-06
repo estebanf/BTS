@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<test:testxsl xmlns:test="http://intalio.com/xsltestcase" xsl="MergeRequestOperationWithVendorQuotes.xslt" xmlns:BTS_metrics="http://test.com/xvar/example" xmlns:BTSimplicitPartner="http://bts.com/Processes/Core/ContentTransmissionBooking/BTSimplicitPartner" xmlns:HSAN_Coordinator="http://bts.com/Processes/Core/ContentTransmissionBooking/HSAN_Coordinator" xmlns:tns="http://everteam.com/xvar/example" xmlns:this="http://bts.com/Processes/Core/ContentTransmissionBooking/BTS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ax214="http://externaldependencies.rules.bts/bre" xmlns:BTS="http://www.example.org/BTS" xmlns:ax213="http://externaldependencies.rules.bts/xsd" xmlns:ns="http://externaldependencies.rules.bts" xmlns:ContentTransmissionBooking="http://bts.com/Processes/Core/ContentTransmissionBooking" xmlns:RouterAssignment-process="http://bts.com/Processes/Integrations/RouterAssignment/process" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:CalculateRequestUrgency-process="http://bts.com/Processes/Integrations/CalculateRequestUrgency/process" xmlns:Client="http://bts.com/Processes/Core/ContentTransmissionBooking/Client" xmlns:Vendor_coordinator="http://bts.com/Processes/Core/ContentTransmissionBooking/Vendor_coordinator">
+  <!--XSL Test sample  generated on Tue Dec 06 14:34:50 EST 2016
+ for F/BTS/Processes/Core/ContentTransmissionBooking.bpm
+   pool:BTS
+   activity: Empty_Intermediate_Event
+ Complete doXslTransform: bpel:doXslTransform("../../XSLT/MergeRequestOperationWithVendorQuotes.xslt", $thisReceive_external_vendor_costsRequest1Msg.body, "obj", $RequestOperation)
+ Input document as defined in the mapper: $thisReceive_external_vendor_costsRequest1Msg.body-->
+  <test:input>
+    <this:Receive_external_vendor_costsRequest>
+      <BTS:RequestId>1234</BTS:RequestId>
+      <BTS:Vendors>
+        <BTS:Resource>ad</BTS:Resource>
+        <BTS:Vendor>sgdfg</BTS:Vendor>
+        <BTS:Cost>1234</BTS:Cost>
+      </BTS:Vendors>
+      <BTS:Vendors>
+        <BTS:Resource>ad2</BTS:Resource>
+        <BTS:Vendor>sgdfg2</BTS:Vendor>
+        <BTS:Cost>12342</BTS:Cost>
+      </BTS:Vendors>
+      <BTS:Vendors>
+        <BTS:Resource>ad3</BTS:Resource>
+        <BTS:Vendor>sgdfg3</BTS:Vendor>
+        <BTS:Cost>12343</BTS:Cost>
+      </BTS:Vendors>
+    </this:Receive_external_vendor_costsRequest>
+  </test:input>
+  <test:param name="obj"><BTS:RequestOperation>
+      <BTS:Request>
+        <BTS:RequestId>BTS:RequestId</BTS:RequestId>
+        <BTS:Information>
+          <BTS:CustomerId>BTS:CustomerId</BTS:CustomerId>
+          <BTS:EventDateTime>BTS:EventDateTime</BTS:EventDateTime>
+          <BTS:EventDuration>BTS:EventDuration</BTS:EventDuration>
+          <BTS:EventType>BTS:EventType</BTS:EventType>
+          <BTS:RequestType>BTS:RequestType</BTS:RequestType>
+          <BTS:Location>BTS:Location</BTS:Location>
+        </BTS:Information>
+        <BTS:Urgency>BTS:Urgency</BTS:Urgency>
+      </BTS:Request>
+      <BTS:AssignedRouter>BTS:AssignedRouter</BTS:AssignedRouter>
+      <BTS:RouterCost>BTS:RouterCost</BTS:RouterCost>
+      <BTS:HSANRequired>BTS:HSANRequired</BTS:HSANRequired>
+      <BTS:HSANCost>BTS:HSANCost</BTS:HSANCost>
+      <BTS:ExternalResourcesRequired>BTS:ExternalResourcesRequired</BTS:ExternalResourcesRequired>
+      <BTS:ExternalResources>
+        <BTS:Resource>string</BTS:Resource>
+        <BTS:Vendor>string</BTS:Vendor>
+        <BTS:Cost>double</BTS:Cost>
+      </BTS:ExternalResources>
+      <BTS:ApprovalNeeded>BTS:ApprovalNeeded</BTS:ApprovalNeeded>
+      <BTS:Approved>BTS:Approved</BTS:Approved>
+    </BTS:RequestOperation></test:param>
+</test:testxsl>
