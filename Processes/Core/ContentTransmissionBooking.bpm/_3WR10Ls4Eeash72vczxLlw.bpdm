@@ -1,17 +1,215 @@
-﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:tns="http://everteam.com/xvar/example" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:this="http://thisdiagram/Vendor_coordinator" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Vendor_coordinator">
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:tns="http://everteam.com/xvar/example" xmlns:BTS="http://thisdiagram/BTS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:attachments="http://www.intalio.com/BTS/Webcontents/ExternalVendorInquiry/index.html/attachments" xmlns:BTS1="http://www.example.org/BTS" xmlns:ax261="http://taskprioritization.rules.bts/xsd" xmlns:index="http://www.intalio.com/BTS/Webcontents/ExternalVendorInquiry/index.html" xmlns:ContentTransmissionBooking="http://thisdiagram" xmlns:ax262="http://taskprioritization.rules.bts/bre" xmlns:ns="http://taskprioritization.rules.bts" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:Vendor_coordinatorimplicitPartner="http://thisdiagram/Vendor_coordinatorimplicitPartner" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:this="http://thisdiagram/Vendor_coordinator" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Vendor_coordinator">
     <bpdm:dependencies version="6000089">
         <bpdm:namespaceDefinition bpdm:uri="http://everteam.com/xvar/example" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///IntalioObjects/customVariable.xvar"></bpdm:namespaceDefinition>
-        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/BTS" bpdm:prefix="BTS" bpdm:comment="contrib=&apos;partner-pool:///_EYvp67dEEeaCaYmVKR7BjA"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
-        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Vendor_coordinator" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/BTS/Webcontents/ExternalVendorInquiry/index.html/attachments" bpdm:prefix="attachments" bpdm:comment="contrib=&apos;project:///Webcontents/ExternalVendorInquiry/index.html.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.example.org/BTS" bpdm:prefix="BTS1" bpdm:comment="contrib=&apos;project:///Schemas/BTS.xsd"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://taskprioritization.rules.bts/xsd" bpdm:prefix="ax261" bpdm:comment="contrib=&apos;project:///Rules/TaskPrioritization.bre/dtws_bts_rules_taskprioritization/META-INF/dtws_bts_rules_taskprioritization.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/BTS/Webcontents/ExternalVendorInquiry/index.html" bpdm:prefix="index" bpdm:comment="contrib=&apos;project:///Webcontents/ExternalVendorInquiry/index.html.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="ContentTransmissionBooking" bpdm:comment="contrib=&apos;partner-pool:///_EYvp67dEEeaCaYmVKR7BjA"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://taskprioritization.rules.bts/bre" bpdm:prefix="ax262" bpdm:comment="contrib=&apos;project:///Rules/TaskPrioritization.bre/dtws_bts_rules_taskprioritization/META-INF/dtws_bts_rules_taskprioritization.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://taskprioritization.rules.bts" bpdm:prefix="ns" bpdm:comment="contrib=&apos;project:///Rules/TaskPrioritization.bre/dtws_bts_rules_taskprioritization/META-INF/dtws_bts_rules_taskprioritization.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Vendor_coordinatorimplicitPartner" bpdm:prefix="Vendor_coordinatorimplicitPartner" bpdm:comment="contrib=&apos;partner-pool:///_3WR10Ls4Eeash72vczxLlwimplicitPartner"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
-        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Vendor_coordinator" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types">
+            <wsdl:portType name="ForBTS">
+                <wsdl:operation name="Receive_vendors_inquiry" bpdm:source="partner-pool:///_EYvp67dEEeaCaYmVKR7BjA">
+                    <wsdl:input message="this:Receive_vendors_inquiryRequest" name="Receive_vendors_inquiry"/>
+                    <wsdl:output message="this:Receive_vendors_inquiryResponse" name="Receive_vendors_inquiryResponse"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <bpel:binding name="CanonicBindingForBTS" type="this:ForBTS" bpdm:isSynchronized="true"/>
+            <xs:element name="Receive_vendors_inquiryRequest" type="BTS1:RequestType" bpdm:source="partner-pool:///_EYvp67dEEeaCaYmVKR7BjA"/>
+            <wsdl:message name="Receive_vendors_inquiryRequest" bpdm:source="partner-pool:///_EYvp67dEEeaCaYmVKR7BjA">
+                <wsdl:part name="body" element="this:Receive_vendors_inquiryRequest"/>
+            </wsdl:message>
+            <xs:element name="Receive_vendors_inquiryResponse" type="BTS1:ACKType" bpdm:source="partner-pool:///_EYvp67dEEeaCaYmVKR7BjA"/>
+            <wsdl:message name="Receive_vendors_inquiryResponse" bpdm:source="partner-pool:///_EYvp67dEEeaCaYmVKR7BjA">
+                <wsdl:part name="body" element="this:Receive_vendors_inquiryResponse"/>
+            </wsdl:message>
+        </bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_EYvp67dEEeaCaYmVKR7BjA" bpdm:label="BTS"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_3WR10Ls4Eeash72vczxLlwimplicitPartner" bpdm:label="Vendor coordinatorimplicitPartner"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Schemas/BTS.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Webcontents/ExternalVendorInquiry/index.html.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Rules/TaskPrioritization.bre/dtws_bts_rules_taskprioritization/META-INF/dtws_bts_rules_taskprioritization.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar"/>
         <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar.xsd"/>
     </bpdm:dependencies>
     <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Vendor coordinator" bpdm:ID="_3WR10Ls4Eeash72vczxLlw">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="bTsAndVendor_coordinatorPlkVar" partnerLinkType="ContentTransmissionBooking:BTsAndVendor_coordinator" initializePartnerRole="yes" myRole="Vendor_coordinator_for_BTS" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForBTS" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Vendor_coordinator/BTS" bpdm:providedIsDefault="true" partnerRole="BTS_for_Vendor_coordinator" bpdm:invokedService="BTS:CanonicServiceForVendor_coordinator" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/BTS/Vendor_coordinator" bpdm:invokedIsDefault="true" bpdm:clientTasks="_3WR10Ls4Eeash72vczxLlw:_AtIowLs_Eea34N1b-T2NDQ, _3WR10Ls4Eeash72vczxLlw:_KleRwLs9Eea34N1b-T2NDQ" bpdm:isManaged="true" bpdm:otherPoolId="_EYvp67dEEeaCaYmVKR7BjA"/>
+            <bpel:partnerLink name="vendor_coordinatorimplicitPartnerAndVendor_coordinatorForPortDtws_bts_rules_taskprioritizationHttpSoap11EndpointPlkVar" partnerLinkType="ContentTransmissionBooking:Vendor_coordinatorimplicitPartnerAndVendor_coordinatorForPortDtws_bts_rules_taskprioritizationHttpSoap11EndpointPlk" initializePartnerRole="yes" partnerRole="Vendor_coordinatorimplicitPartner_for_Vendor_coordinator" bpdm:invokedService="ns:dtws_bts_rules_taskprioritization" bpdm:invokedPort="dtws_bts_rules_taskprioritizationHttpSoap11Endpoint" bpdm:invokedSOAPAddress="http://localhost:8080/everteam/ode/processes/dtws_bts_rules_taskprioritization" bpdm:invokedIsDefault="true" bpdm:clientTasks="_3WR10Ls4Eeash72vczxLlw:_tQ2rtrs9Eea34N1b-T2NDQ" bpdm:isManaged="true" bpdm:otherPoolId="_3WR10Ls4Eeash72vczxLlwimplicitPartner"/>
+            <bpel:partnerLink name="wFmagic_PxNhZrs-Eea34N1b-T2NDQPlkVar" partnerLinkType="ContentTransmissionBooking:WFmagic_PxNhZrs-Eea34N1b-T2NDQ" initializePartnerRole="no" myRole="Vendor_coordinato_for_Vendor_coordinatorimplicitPartnerForThePortTypeProcess" bpdm:enableSharing="false" bpdm:providedService="this:WFmagic_PxNhZrs-Eea34N1b-T2NDQService" bpdm:providedPort="Vendor_coordinato_for_Vendor_coordinatorimplicitPartnerForThePortTypeProcessPort" bpdm:providedIsDefault="true" partnerRole="Vendor_coordinatorimplicitPartner_for_Vendor_coordinatorForTnsPort" bpdm:invokedService="index:WorkflowSoapService" bpdm:invokedPort="tnsPort" bpdm:invokedSOAPAddress="http://ubuntu.estebanf.com:8080/fds/workflow/tns" bpdm:invokedIsDefault="true" bpdm:clientTasks="_3WR10Ls4Eeash72vczxLlw:_PxNhZrs-Eea34N1b-T2NDQ" bpdm:isManaged="true" bpdm:otherPoolId="_3WR10Ls4Eeash72vczxLlwimplicitPartner"/>
+        </bpel:partnerLinks>
         <bpel:variables xmlns:xvar="http://ode.apache.org/externalVariables">
             <bpel:variable name="customVariable" element="tns:customVariable" xvar:id="customVariable-_3Wuhxrs4Eeash72vczxLlw" xvar:relates-to="customVariable-keys" bpdm:xvarType="tns:customVariable" bpdm:id="_3Wuhxrs4Eeash72vczxLlw"/>
+            <bpel:variable name="thisEventStartMessageRequest1" messageType="this:Receive_vendors_inquiryRequest" bpdm:id="_KmEusLs9Eea34N1b-T2NDQ" bpdm:messageIds="inc:_KloCwLs9Eea34N1b-T2NDQ"/>
+            <bpel:variable name="thisReceive_vendors_inquiryResponse2Msg" messageType="this:Receive_vendors_inquiryResponse" bpdm:id="_LHmuebs9Eea34N1b-T2NDQ" bpdm:messageIds=" out:_LHTMcLs9Eea34N1b-T2NDQ">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="this:Receive_vendors_inquiryResponse" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="nsInvokeDecisionTableResponse1Msg" messageType="ns:invokeDecisionTableResponse" binding="ns:dtws_bts_rules_taskprioritizationSoap11Binding" operation="invokeDecisionTable" opMsgType="1" bpdm:messageIds="inc:_tQ2rtrs9Eea34N1b-T2NDQIncoming"/>
+            <bpel:variable name="nsInvokeDecisionTableRequest1Msg" messageType="ns:invokeDecisionTableRequest" binding="ns:dtws_bts_rules_taskprioritizationSoap11Binding" operation="invokeDecisionTable" opMsgType="0" bpdm:messageIds=" out:_tQ2rtrs9Eea34N1b-T2NDQOutgoing">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="ns:invokeDecisionTableRequest" bpdm:linkedPart="parameters" bpdm:binding="ns:dtws_bts_rules_taskprioritizationSoap11Binding" bpdm:opMsgType="0" bpdm:operation="invokeDecisionTable"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="indexCreateTaskSingleActivityResponse1Msg" messageType="index:createTaskSingleActivityResponse" binding="index:WorkflowSoapBinding" operation="createTaskSingleActivity" opMsgType="1" bpdm:messageIds="inc:_PxNhZrs-Eea34N1b-T2NDQIncoming"/>
+            <bpel:variable name="indexCreateTaskSingleActivityRequest1Msg" messageType="index:createTaskSingleActivityRequest" binding="index:WorkflowSoapBinding" operation="createTaskSingleActivity" opMsgType="0" bpdm:messageIds=" out:_PxNhZrs-Eea34N1b-T2NDQOutgoing">
+                <bpel:from bpdm:toPart="root">
+                    <bpel:literal bpdm:linkedMessageType="index:createTaskSingleActivityRequest" bpdm:linkedPart="root" bpdm:binding="index:WorkflowSoapBinding" bpdm:opMsgType="0" bpdm:operation="createTaskSingleActivity"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="bTSReceive_external_vendor_costsRequest1Msg" messageType="BTS:Receive_external_vendor_costsRequest" bpdm:id="_BXcxGbs_Eea34N1b-T2NDQ" bpdm:messageIds=" out:_BXJ2ILs_Eea34N1b-T2NDQ">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="BTS:Receive_external_vendor_costsRequest" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="bTSReceive_external_vendor_costsResponse2Msg" messageType="BTS:Receive_external_vendor_costsResponse" bpdm:id="_BtqRqLs_Eea34N1b-T2NDQ" bpdm:messageIds="inc:_BtD0sLs_Eea34N1b-T2NDQ"/>
         </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask eventType="start: message" operation="Receive_vendors_inquiry" partnerLink="bTsAndVendor_coordinatorPlkVar" portType="this:ForBTS" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Receive vendors inquiry" bpdm:ID="_KleRwLs9Eea34N1b-T2NDQ">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisEventStartMessageRequest1" bpdm:variableIsManaged="true" bpdm:messageType="this:Receive_vendors_inquiryRequest" bpdm:ID="_KloCwLs9Eea34N1b-T2NDQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$ode:pid</bpel:from>
+                        <bpel:to>$thisReceive_vendors_inquiryResponse2Msg.body/BTS1:Pid</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1899147239" targetPath="$thisReceive_vendors_inquiryResponse2Msg.body/BTS1:Pid" targetedBy="1571044497-arg0"></mapper:vertice>
+  <mapper:vertice id="1571044497" sourcePath="$ode:pid"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>current-dateTime()</bpel:from>
+                        <bpel:to>$thisReceive_vendors_inquiryResponse2Msg.body/BTS1:Timestamp</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1049138498" targetPath="$thisReceive_vendors_inquiryResponse2Msg.body/BTS1:Timestamp" targetedBy="814234661-arg0"></mapper:vertice>
+  <mapper:vertice id="814234661" dimension="109x24" location="592,386">
+    <mapper:value>current-dateTime()</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisReceive_vendors_inquiryResponse2Msg" bpdm:variableIsManaged="true" bpdm:messageType="this:Receive_vendors_inquiryResponse" bpdm:ID="_LHTMcLs9Eea34N1b-T2NDQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="invokeDecisionTable" partnerLink="vendor_coordinatorimplicitPartnerAndVendor_coordinatorForPortDtws_bts_rules_taskprioritizationHttpSoap11EndpointPlkVar" portType="ns:dtws_bts_rules_taskprioritizationPortType" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="TaskPrioritization" bpdm:ID="_tQ2rtrs9Eea34N1b-T2NDQ">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$thisEventStartMessageRequest1.body/BTS1:Information/BTS1:EventDuration</bpel:from>
+                        <bpel:to>$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax261:requestExternalDepencies/ax262:eventDuration</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="2146647864" targetPath="$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax261:requestExternalDepencies/ax262:eventDuration" targetedBy="1076182155-arg0"></mapper:vertice>
+  <mapper:vertice id="1076182155" sourcePath="$thisEventStartMessageRequest1.body/BTS1:Information/BTS1:EventDuration"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$thisEventStartMessageRequest1.body/BTS1:Information/BTS1:EventType</bpel:from>
+                        <bpel:to>$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax261:requestExternalDepencies/ax262:eventType</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="287882543" targetPath="$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax261:requestExternalDepencies/ax262:eventType" targetedBy="733284306-arg0"></mapper:vertice>
+  <mapper:vertice id="733284306" sourcePath="$thisEventStartMessageRequest1.body/BTS1:Information/BTS1:EventType"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$thisEventStartMessageRequest1.body/BTS1:Information/BTS1:RequestType</bpel:from>
+                        <bpel:to>$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax261:requestExternalDepencies/ax262:requestType</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="951183850" targetPath="$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax261:requestExternalDepencies/ax262:requestType" targetedBy="934726265-arg0"></mapper:vertice>
+  <mapper:vertice id="934726265" sourcePath="$thisEventStartMessageRequest1.body/BTS1:Information/BTS1:RequestType"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$thisEventStartMessageRequest1.body/BTS1:Urgency</bpel:from>
+                        <bpel:to>$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax261:requestExternalDepencies/ax262:urgency</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="363296744" targetPath="$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax261:requestExternalDepencies/ax262:urgency" targetedBy="999648781-arg0"></mapper:vertice>
+  <mapper:vertice id="999648781" sourcePath="$thisEventStartMessageRequest1.body/BTS1:Urgency"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$thisEventStartMessageRequest1.body/BTS1:Information/BTS1:Location</bpel:from>
+                        <bpel:to>$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax261:requestExternalDepencies/ax262:eventLocation</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="609106197" targetPath="$nsInvokeDecisionTableRequest1Msg.parameters/ns:param0/ax261:requestExternalDepencies/ax262:eventLocation" targetedBy="317278149-arg0"></mapper:vertice>
+  <mapper:vertice id="317278149" sourcePath="$thisEventStartMessageRequest1.body/BTS1:Information/BTS1:Location"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="nsInvokeDecisionTableRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="ns:invokeDecisionTableRequest" bpdm:binding="ns:dtws_bts_rules_taskprioritizationSoap11Binding" bpdm:ID="_tQ2rtrs9Eea34N1b-T2NDQOutgoing"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="nsInvokeDecisionTableResponse1Msg" bpdm:variableIsManaged="true" bpdm:messageType="ns:invokeDecisionTableResponse" bpdm:binding="ns:dtws_bts_rules_taskprioritizationSoap11Binding" bpdm:ID="_tQ2rtrs9Eea34N1b-T2NDQIncoming"></bpdm:linkset>
+                <bpdm:thrownFault msgFaultNcName="Exception" msgFaultTypeQname="ns:Exception"/>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="createTaskSingleActivity" partnerLink="wFmagic_PxNhZrs-Eea34N1b-T2NDQPlkVar" portType="index:Workflow" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Get Vendor costs" bpdm:ID="_PxNhZrs-Eea34N1b-T2NDQ">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>concat("Get external vendors for request #", $thisEventStartMessageRequest1.body/BTS1:RequestId)</bpel:from>
+                        <bpel:to>$indexCreateTaskSingleActivityRequest1Msg.root/index:taskMetaData/index:description</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="529014554" targetPath="$indexCreateTaskSingleActivityRequest1Msg.root/index:taskMetaData/index:description" targetedBy="937867880-arg2"></mapper:vertice>
+  <mapper:vertice id="937867880" dimension="79x24" location="349,110">
+    <mapper:value>concat()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="1816671236" dimension="195x24" location="117,74" targetedBy="937867880-arg0">
+    <mapper:value>"Get external vendors for request #"</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="1648207522" sourcePath="$thisEventStartMessageRequest1.body/BTS1:RequestId" targetedBy="937867880-arg1"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$thisEventStartMessageRequest1.body</bpel:from>
+                        <bpel:to>$indexCreateTaskSingleActivityRequest1Msg.root/index:taskInput/BTS1:ExternalVendorInquiry/BTS1:Request</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1610997015" targetPath="$indexCreateTaskSingleActivityRequest1Msg.root/index:taskInput/BTS1:ExternalVendorInquiry/BTS1:Request" targetedBy="2016546321-arg0"></mapper:vertice>
+  <mapper:vertice id="2016546321" sourcePath="$thisEventStartMessageRequest1.body"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$nsInvokeDecisionTableResponse1Msg.parameters/ns:return/ax261:taskInfo/ax262:duePeriod</bpel:from>
+                        <bpel:to>$indexCreateTaskSingleActivityRequest1Msg.root/index:taskMetaData/index:scheduledActions/index:expiration/index:for</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1228936849" targetPath="$indexCreateTaskSingleActivityRequest1Msg.root/index:taskMetaData/index:scheduledActions/index:expiration/index:for" targetedBy="968009850-arg0"></mapper:vertice>
+  <mapper:vertice id="968009850" sourcePath="$nsInvokeDecisionTableResponse1Msg.parameters/ns:return/ax261:taskInfo/ax262:duePeriod"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$nsInvokeDecisionTableResponse1Msg.parameters/ns:return/ax261:taskInfo/ax262:priority</bpel:from>
+                        <bpel:to>$indexCreateTaskSingleActivityRequest1Msg.root/index:taskMetaData/index:priority</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1752110110" targetPath="$indexCreateTaskSingleActivityRequest1Msg.root/index:taskMetaData/index:priority" targetedBy="1718908665-arg0"></mapper:vertice>
+  <mapper:vertice id="1718908665" sourcePath="$nsInvokeDecisionTableResponse1Msg.parameters/ns:return/ax261:taskInfo/ax262:priority"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="indexCreateTaskSingleActivityRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="index:createTaskSingleActivityRequest" bpdm:binding="index:WorkflowSoapBinding" bpdm:ID="_PxNhZrs-Eea34N1b-T2NDQOutgoing"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="indexCreateTaskSingleActivityResponse1Msg" bpdm:variableIsManaged="true" bpdm:messageType="index:createTaskSingleActivityResponse" bpdm:binding="index:WorkflowSoapBinding" bpdm:ID="_PxNhZrs-Eea34N1b-T2NDQIncoming"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask eventType="end: message" operation="Receive_external_vendor_costs" partnerLink="bTsAndVendor_coordinatorPlkVar" portType="BTS:ForVendor_coordinator" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Message_End_Event" bpdm:ID="_AtIowLs_Eea34N1b-T2NDQ">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$thisEventStartMessageRequest1.body/BTS1:RequestId</bpel:from>
+                        <bpel:to>$bTSReceive_external_vendor_costsRequest1Msg.body/BTS1:RequestId</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1736399272" targetPath="$bTSReceive_external_vendor_costsRequest1Msg.body/BTS1:RequestId" targetedBy="48840616-arg0"></mapper:vertice>
+  <mapper:vertice id="48840616" sourcePath="$thisEventStartMessageRequest1.body/BTS1:RequestId"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$indexCreateTaskSingleActivityResponse1Msg.root/index:taskOutput/BTS1:ExternalVendorInquiry/BTS1:Vendors</bpel:from>
+                        <bpel:to>$bTSReceive_external_vendor_costsRequest1Msg.body/BTS1:Vendors</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1412853025" targetPath="$bTSReceive_external_vendor_costsRequest1Msg.body/BTS1:Vendors" targetedBy="1670638326-arg0"></mapper:vertice>
+  <mapper:vertice id="1670638326" sourcePath="$indexCreateTaskSingleActivityResponse1Msg.root/index:taskOutput/BTS1:ExternalVendorInquiry/BTS1:Vendors"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="bTSReceive_external_vendor_costsRequest1Msg" bpdm:msgVarScopeId="_3WR10Ls4Eeash72vczxLlw" bpdm:variableIsManaged="true" bpdm:messageType="BTS:Receive_external_vendor_costsRequest" bpdm:ID="_BXJ2ILs_Eea34N1b-T2NDQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="bTSReceive_external_vendor_costsResponse2Msg" bpdm:msgVarScopeId="_3WR10Ls4Eeash72vczxLlw" bpdm:variableIsManaged="true" bpdm:messageType="BTS:Receive_external_vendor_costsResponse" bpdm:ID="_BtD0sLs_Eea34N1b-T2NDQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
     </bpel:scope>
 </bpel:process>

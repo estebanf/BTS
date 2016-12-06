@@ -169,4 +169,23 @@
     		</sequence>
     	</complexType>
     </element>
+
+    <complexType name="ExternalVendorInquiryType">
+    	<sequence>
+    		<element name="Request" type="tns:RequestType" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Vendors" type="tns:ExternalResourceType" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="ExternalVendorInquiry"
+    	type="tns:ExternalVendorInquiryType">
+    </element>
+
+
+    <complexType name="ExternalVendorInquiry">
+    	<sequence>
+    		<element name="RequestId" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Vendors" type="tns:ExternalResourceType" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
 </schema>
