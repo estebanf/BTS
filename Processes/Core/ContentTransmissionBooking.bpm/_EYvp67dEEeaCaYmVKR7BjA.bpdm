@@ -1,4 +1,4 @@
-﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:BTS_metrics="http://test.com/xvar/example" xmlns:BTSimplicitPartner="http://thisdiagram/BTSimplicitPartner" xmlns:HSAN_Coordinator="http://thisdiagram/HSAN_Coordinator" xmlns:tns="http://everteam.com/xvar/example" xmlns:this="http://thisdiagram/BTS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ax214="http://externaldependencies.rules.bts/bre" xmlns:BTS="http://www.example.org/BTS" xmlns:ax213="http://externaldependencies.rules.bts/xsd" xmlns:ns="http://externaldependencies.rules.bts" xmlns:ContentTransmissionBooking="http://thisdiagram" xmlns:RouterAssignment-process="http://thisproject/Processes/Integrations/RouterAssignment/process" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:CalculateRequestUrgency-process="http://thisproject/Processes/Integrations/CalculateRequestUrgency/process" xmlns:Client="http://thisdiagram/Client" xmlns:Vendor_coordinator="http://thisdiagram/Vendor_coordinator" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/BTS">
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:BTS_metrics="http://test.com/xvar/example" xmlns:BTSimplicitPartner="http://thisdiagram/BTSimplicitPartner" xmlns:HSAN_Coordinator="http://thisdiagram/HSAN_Coordinator" xmlns:tns="http://everteam.com/xvar/example" xmlns:this="http://thisdiagram/BTS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ax214="http://externaldependencies.rules.bts/bre" xmlns:BTS="http://www.example.org/BTS" xmlns:ax213="http://externaldependencies.rules.bts/xsd" xmlns:ContentTransmissionBooking="http://thisdiagram" xmlns:ns="http://externaldependencies.rules.bts" xmlns:RouterAssignment-process="http://thisproject/Processes/Integrations/RouterAssignment/process" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:CalculateRequestUrgency-process="http://thisproject/Processes/Integrations/CalculateRequestUrgency/process" xmlns:Client="http://thisdiagram/Client" xmlns:Vendor_coordinator="http://thisdiagram/Vendor_coordinator" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/BTS">
     <bpdm:dependencies version="6000089">
         <bpdm:namespaceDefinition bpdm:uri="http://test.com/xvar/example" bpdm:prefix="BTS_metrics" bpdm:comment="contrib=&apos;project:///Metrics/BTS_metrics.xvar"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/BTSimplicitPartner" bpdm:prefix="BTSimplicitPartner" bpdm:comment="contrib=&apos;partner-pool:///_EYvp67dEEeaCaYmVKR7BjAimplicitPartner"></bpdm:namespaceDefinition>
@@ -9,8 +9,8 @@
         <bpdm:namespaceDefinition bpdm:uri="http://externaldependencies.rules.bts/bre" bpdm:prefix="ax214" bpdm:comment="contrib=&apos;project:///Rules/ExternalDependencies.bre/dtws_bts_rules_externaldependencies/META-INF/dtws_bts_rules_externaldependencies.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.example.org/BTS" bpdm:prefix="BTS" bpdm:comment="contrib=&apos;project:///Schemas/BTS.xsd"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://externaldependencies.rules.bts/xsd" bpdm:prefix="ax213" bpdm:comment="contrib=&apos;project:///Rules/ExternalDependencies.bre/dtws_bts_rules_externaldependencies/META-INF/dtws_bts_rules_externaldependencies.wsdl"></bpdm:namespaceDefinition>
-        <bpdm:namespaceDefinition bpdm:uri="http://externaldependencies.rules.bts" bpdm:prefix="ns" bpdm:comment="contrib=&apos;project:///Rules/ExternalDependencies.bre/dtws_bts_rules_externaldependencies/META-INF/dtws_bts_rules_externaldependencies.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="ContentTransmissionBooking" bpdm:comment="contrib=&apos;partner-pool:///_EYmf9rdEEeaCaYmVKR7BjA"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://externaldependencies.rules.bts" bpdm:prefix="ns" bpdm:comment="contrib=&apos;project:///Rules/ExternalDependencies.bre/dtws_bts_rules_externaldependencies/META-INF/dtws_bts_rules_externaldependencies.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://thisproject/Processes/Integrations/RouterAssignment/process" bpdm:prefix="RouterAssignment-process" bpdm:comment="contrib=&apos;project:///Processes/Integrations/RouterAssignment-process.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://thisproject/Processes/Integrations/CalculateRequestUrgency/process" bpdm:prefix="CalculateRequestUrgency-process" bpdm:comment="contrib=&apos;project:///Processes/Integrations/CalculateRequestUrgency-process.wsdl"></bpdm:namespaceDefinition>
@@ -82,8 +82,8 @@
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_SkCw0Lr7EeaNtrdCjMGf0g" bpdm:label="HSAN Coordinator"/>
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_EYvp67dEEeaCaYmVKR7BjAimplicitPartner" bpdm:label="BTSimplicitPartner"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/BTS.xsd"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/RouterAssignment-process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Rules/ExternalDependencies.bre/dtws_bts_rules_externaldependencies/META-INF/dtws_bts_rules_externaldependencies.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/RouterAssignment-process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/CalculateRequestUrgency-process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar"/>
         <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar.xsd"/>
@@ -464,21 +464,7 @@
                                                                 <bpdm:linkset bpdm:type="assignments">
                                                                     <bpel:copy>
                                                                         <bpel:from>bpel:doXslTransform("../../XSLT/MergeRequestOperationWithVendorQuotes.xslt", $thisReceive_external_vendor_costsRequest1Msg.body, "obj", $RequestOperation)</bpel:from>
-                                                                        <bpel:to>$RequestOperation</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1340758396" targetPath="$RequestOperation" targetedBy="966014884-arg4"></mapper:vertice>
-  <mapper:vertice id="966014884" dimension="126x24" location="528,120">
-    <mapper:value>bpel:doXslTransform()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1497227201" dimension="321x24" location="120,60" targetedBy="966014884-arg0">
-    <mapper:value>"../../XSLT/MergeRequestOperationWithVendorQuotes.xslt"</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1289011137" sourcePath="$thisReceive_external_vendor_costsRequest1Msg.body" targetedBy="966014884-arg1"></mapper:vertice>
-  <mapper:vertice id="1867240514" dimension="79x24" location="251,168" targetedBy="966014884-arg2">
-    <mapper:value>"obj"</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="585488073" sourcePath="$RequestOperation" targetedBy="966014884-arg3"></mapper:vertice>
-</mapper:mapperLink>
+                                                                        <bpel:to>$RequestOperation</bpel:to><mapper:mapperLink><mapper:vertice id="1340758396" targetPath="$RequestOperation" targetedBy="966014884-arg4"></mapper:vertice><mapper:vertice id="966014884" dimension="126x24" location="528,120"><mapper:value>bpel:doXslTransform()</mapper:value></mapper:vertice><mapper:vertice id="1497227201" dimension="321x24" location="120,60" targetedBy="966014884-arg0"><mapper:value>"../../XSLT/MergeRequestOperationWithVendorQuotes.xslt"</mapper:value></mapper:vertice><mapper:vertice id="1289011137" sourcePath="$thisReceive_external_vendor_costsRequest1Msg.body" targetedBy="966014884-arg1"></mapper:vertice><mapper:vertice id="1867240514" dimension="79x24" location="251,168" targetedBy="966014884-arg2"><mapper:value>"obj"</mapper:value></mapper:vertice><mapper:vertice id="585488073" sourcePath="$RequestOperation" targetedBy="966014884-arg3"></mapper:vertice></mapper:mapperLink>
                                                                     </bpel:copy>
                                                                 </bpdm:linkset>
                                                             </bpdm:messagingtask>
