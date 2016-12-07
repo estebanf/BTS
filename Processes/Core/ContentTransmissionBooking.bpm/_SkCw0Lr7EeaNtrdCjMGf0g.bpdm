@@ -151,10 +151,6 @@
                     <bpdm:messagingtask eventType="intermediate: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_Intermediate_Event" bpdm:ID="_7arhMLr9EeaNtrdCjMGf0g">
                         <bpdm:linkset bpdm:type="assignments">
                             <bpel:copy>
-                                <bpel:from>$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:RequestId</bpel:from>
-                                <bpel:to>$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID</bpel:to><mapper:mapperLink><mapper:vertice id="645891614" targetPath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID" targetedBy="1075837637-arg0"></mapper:vertice><mapper:vertice id="1075837637" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:RequestId"></mapper:vertice></mapper:mapperLink>
-                            </bpel:copy>
-                            <bpel:copy>
                                 <bpel:from>$providerGet_HSAN_CostResponse1Msg.body/ProviderSchema:Cost</bpel:from>
                                 <bpel:to>$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:HSANCost</bpel:to><mapper:mapperLink><mapper:vertice id="949987030" targetPath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:HSANCost" targetedBy="472325739-arg0"></mapper:vertice><mapper:vertice id="472325739" sourcePath="$providerGet_HSAN_CostResponse1Msg.body/ProviderSchema:Cost"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
@@ -217,16 +213,22 @@
                                 <bpel:from>$manualHSANInquiryCreateTaskSingleActivityResponse1Msg.root/ManualHSANInquiry:taskOutput/BTS1:ManualHSANInquiry/BTS1:HSANCost</bpel:from>
                                 <bpel:to>$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:HSANCost</bpel:to><mapper:mapperLink><mapper:vertice id="1689030568" targetPath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:HSANCost" targetedBy="1206236018-arg0"></mapper:vertice><mapper:vertice id="1206236018" sourcePath="$manualHSANInquiryCreateTaskSingleActivityResponse1Msg.root/ManualHSANInquiry:taskOutput/BTS1:ManualHSANInquiry/BTS1:HSANCost"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
-                            <bpel:copy>
-                                <bpel:from>$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID</bpel:from>
-                                <bpel:to>$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID</bpel:to><mapper:mapperLink><mapper:vertice id="977427137" targetPath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID" targetedBy="736171155-arg0"></mapper:vertice><mapper:vertice id="736171155" sourcePath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID"></mapper:vertice></mapper:mapperLink>
-                            </bpel:copy>
                         </bpdm:linkset>
                     </bpdm:messagingtask>
                 </bpel:sequence>
             </bpdm:gateway>
             <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_3zafkLr9EeaNtrdCjMGf0g" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
             <bpdm:messagingtask eventType="end: message" operation="Receive__HSAN_Cost" partnerLink="hSAN_CoordinatorAndBTSPlkVar" portType="BTS:ForHSAN_Coordinator" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Submit response" bpdm:ID="_MIFkkLr8EeaNtrdCjMGf0g">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:RequestId</bpel:from>
+                        <bpel:to>$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1887197067" targetPath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID" targetedBy="822212972-arg0"></mapper:vertice>
+  <mapper:vertice id="822212972" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:RequestId"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="bTSReceive__HSAN_CostRequest1Msg" bpdm:msgVarScopeId="_SkCw0Lr7EeaNtrdCjMGf0g" bpdm:variableIsManaged="true" bpdm:messageType="BTS:Receive__HSAN_CostRequest" bpdm:ID="_NsJ_YLr8EeaNtrdCjMGf0g"></bpdm:linkset>
                 <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="bTSReceive__HSAN_CostResponse2Msg" bpdm:msgVarScopeId="_SkCw0Lr7EeaNtrdCjMGf0g" bpdm:variableIsManaged="true" bpdm:messageType="BTS:Receive__HSAN_CostResponse" bpdm:ID="_5HTwYLr9EeaNtrdCjMGf0g"></bpdm:linkset>
             </bpdm:messagingtask>
