@@ -41,9 +41,9 @@
         <bpdm:namespaceContributor bpdm:url="project:///Forms/ManualHSANInquiry.gi.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/get_hsan_providers.sql/get_hsan_providers.sql.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/get_hsan_providers.sql/get_hsan_providers.xsd"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Rules/TaskPrioritization.bre/dtws_bts_rules_taskprioritization/META-INF/dtws_bts_rules_taskprioritization.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Services/SOAP/Provider.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Services/SOAP/ProviderSchema.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Rules/TaskPrioritization.bre/dtws_bts_rules_taskprioritization/META-INF/dtws_bts_rules_taskprioritization.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar"/>
         <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar.xsd"/>
     </bpdm:dependencies>
