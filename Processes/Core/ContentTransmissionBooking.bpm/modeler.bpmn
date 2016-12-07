@@ -287,14 +287,12 @@
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sNUQILyzEeaEvIAxHAjZ3A" key="defaultDeclarationName" value="ProposalTotal"/>
         </eAnnotations>
       </artifacts>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_-iFvYbywEeaEvIAxHAjZ3A" iD="_-iFvYLywEeaEvIAxHAjZ3A" outgoingEdges="_Ig5h6LyxEeaEvIAxHAjZ3A" incomingEdges="_-iYqWLywEeaEvIAxHAjZ3A" name="Email proposal to customer" activityType="Task"/>
       <vertices xmi:type="bpmn:Activity" xmi:id="_k2Cn8bywEeaEvIAxHAjZ3A" iD="_k2Cn8LywEeaEvIAxHAjZ3A" outgoingEdges="_l5_YSLywEeaEvIAxHAjZ3A _nD5mobywEeaEvIAxHAjZ3A" activityType="GatewayParallel"/>
       <vertices xmi:type="bpmn:Activity" xmi:id="_CsEcgbyxEeaEvIAxHAjZ3A" iD="_CsEcgLyxEeaEvIAxHAjZ3A" outgoingEdges="_SEmFuLyxEeaEvIAxHAjZ3A" incomingEdges="_I8w-gbyxEeaEvIAxHAjZ3A" name="Get customer decision" activityType="Task"/>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_Igvw4byxEeaEvIAxHAjZ3A" iD="_Igvw4LyxEeaEvIAxHAjZ3A" outgoingEdges="_I8w-gbyxEeaEvIAxHAjZ3A" incomingEdges="_Ig5h6LyxEeaEvIAxHAjZ3A" activityType="EventIntermediateEmpty"/>
+      <vertices xmi:type="bpmn:Activity" xmi:id="_Igvw4byxEeaEvIAxHAjZ3A" iD="_Igvw4LyxEeaEvIAxHAjZ3A" outgoingEdges="_I8w-gbyxEeaEvIAxHAjZ3A" incomingEdges="_NEsjkby5Eea8DveVMuPLZg" activityType="EventIntermediateEmpty"/>
       <vertices xmi:type="bpmn:Activity" xmi:id="_wJMXMbywEeaEvIAxHAjZ3A" iD="_wJMXMLywEeaEvIAxHAjZ3A" outgoingEdges="_6UE22LywEeaEvIAxHAjZ3A _JrGrOLyxEeaEvIAxHAjZ3A" incomingEdges="_1fv9cby2EeaEvIAxHAjZ3A" name="Approval needed" activityType="GatewayDataBasedExclusive"/>
       <vertices xmi:type="bpmn:Activity" xmi:id="_l51nQbywEeaEvIAxHAjZ3A" iD="_l51nQLywEeaEvIAxHAjZ3A" outgoingEdges="_pG4LCLywEeaEvIAxHAjZ3A" incomingEdges="_l5_YSLywEeaEvIAxHAjZ3A" name="Calculate total" activityType="Task"/>
       <vertices xmi:type="bpmn:Activity" xmi:id="_pGuaAbywEeaEvIAxHAjZ3A" iD="_pGuaALywEeaEvIAxHAjZ3A" outgoingEdges="_1fv9cby2EeaEvIAxHAjZ3A" incomingEdges="_pG4LCLywEeaEvIAxHAjZ3A _potFsbywEeaEvIAxHAjZ3A" activityType="GatewayParallel"/>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_6T7s4bywEeaEvIAxHAjZ3A" iD="_6T7s4LywEeaEvIAxHAjZ3A" outgoingEdges="_-iYqWLywEeaEvIAxHAjZ3A" incomingEdges="_BM-Zkby3EeaEvIAxHAjZ3A" name="Generate proposal PDF" activityType="Task"/>
       <vertices xmi:type="bpmn:Activity" xmi:id="_Jq86MbyxEeaEvIAxHAjZ3A" iD="_Jq86MLyxEeaEvIAxHAjZ3A" incomingEdges="_JrGrOLyxEeaEvIAxHAjZ3A" activityType="EventIntermediateEmpty"/>
       <vertices xmi:type="bpmn:Activity" xmi:id="_SEcUsbyxEeaEvIAxHAjZ3A" iD="_SEcUsLyxEeaEvIAxHAjZ3A" incomingEdges="_SEmFuLyxEeaEvIAxHAjZ3A" activityType="EventIntermediateEmpty"/>
       <vertices xmi:type="bpmn:ActivityService" xmi:id="_D31aIbyzEeaEvIAxHAjZ3A" iD="_nDmrsLywEeaEvIAxHAjZ3A" outgoingEdges="_potFsbywEeaEvIAxHAjZ3A" incomingEdges="_nD5mobywEeaEvIAxHAjZ3A" name="Get customer info" looping="false">
@@ -304,9 +302,36 @@
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_D4IVE7yzEeaEvIAxHAjZ3A" key="blackbox" value="true"/>
         </eAnnotations>
       </vertices>
-      <vertices xmi:type="bpmn:Activity" xmi:id="__xer8by2EeaEvIAxHAjZ3A" iD="__xer8Ly2EeaEvIAxHAjZ3A" outgoingEdges="_BM-Zkby3EeaEvIAxHAjZ3A" incomingEdges="_6UE22LywEeaEvIAxHAjZ3A" activityType="EventIntermediateEmpty"/>
-      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_-iYqWLywEeaEvIAxHAjZ3A" iD="_-iYqV7ywEeaEvIAxHAjZ3A"/>
-      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_Ig5h6LyxEeaEvIAxHAjZ3A" iD="_Ig5h57yxEeaEvIAxHAjZ3A"/>
+      <vertices xmi:type="bpmn:Activity" xmi:id="__xer8by2EeaEvIAxHAjZ3A" iD="__xer8Ly2EeaEvIAxHAjZ3A" outgoingEdges="_xZMs4by4Eea8DveVMuPLZg" incomingEdges="_6UE22LywEeaEvIAxHAjZ3A" activityType="EventIntermediateEmpty"/>
+      <vertices xmi:type="bpmn:Activity" xmi:id="_uMx0Mby4Eea8DveVMuPLZg" iD="_uMx0MLy4Eea8DveVMuPLZg" outgoingEdges="_xr934by4Eea8DveVMuPLZg" incomingEdges="_xZMs4by4Eea8DveVMuPLZg" name="Generate proposal PDF" activityType="PDFTask">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uShP0Ly4Eea8DveVMuPLZg" source="attachedDataobject">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uShP0by4Eea8DveVMuPLZg" key="douri" value="project:///IntalioObjects/_uMx0MLy4Eea8DveVMuPLZg.wsdl?invokerequestresponsebound={http://bpms.intalio.com/tools/webservices/javainternalservices/pdf/_uMx0MLy4Eea8DveVMuPLZg}JavaInternalWS/JavaInternalWSSOAP11port_http/com.intalio.bpms.pdfgen.PDFGenerator.generatePDF"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uShP1by4Eea8DveVMuPLZg" key="blackbox" value="true"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uShP1ry4Eea8DveVMuPLZg" key="isBpelDeclaration" value="true"/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uShP0ry4Eea8DveVMuPLZg" source="pdfActivitySource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uShP07y4Eea8DveVMuPLZg" key="pdfActivityCreatorKey" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uShP1Ly4Eea8DveVMuPLZg" key="pdfTemplateContentIsHtml" value="true"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zp8AcLy4Eea8DveVMuPLZg" key="pdfActivityAuthorKey" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0k8QILy4Eea8DveVMuPLZg" key="pdfActivityTemplateFileKey" value="../../templates/proposal.vm"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3NLdsLy4Eea8DveVMuPLZg" key="pdfActivityVariableNamesKey" value="req,cust, total"/>
+        </eAnnotations>
+      </vertices>
+      <vertices xmi:type="bpmn:Activity" xmi:id="_KgCOcby5Eea8DveVMuPLZg" iD="_KgCOcLy5Eea8DveVMuPLZg" outgoingEdges="_NEsjkby5Eea8DveVMuPLZg" incomingEdges="_xr934by4Eea8DveVMuPLZg" name="Email proposal to customer" activityType="EmailTask">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KlQFo7y5Eea8DveVMuPLZg" source="fromTextAnnotation">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KlQFpLy5Eea8DveVMuPLZg" key="fromText" value="e.felipe@everteam.com"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KlQFpby5Eea8DveVMuPLZg" key="To" value="e.felipe@everteam.com"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KlQFpry5Eea8DveVMuPLZg" key="cc" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KlQFp7y5Eea8DveVMuPLZg" key="Bcc" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KlQFqLy5Eea8DveVMuPLZg" key="Subject" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KlQFqby5Eea8DveVMuPLZg" key="bodyvalue" value="Please approve"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pF5kgLy5Eea8DveVMuPLZg" key="plainText" value="true"/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NE1tgLy5Eea8DveVMuPLZg" source="attachedDataobject">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NE1tgby5Eea8DveVMuPLZg" key="douri" value="project:///EmailActivityWSDL.wsdl?invokerequestresponsebound={http://bpms.intalio.com/tools/webservices/email}EmailWS/EmailWSSOAP11port_http/send"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NE1tgry5Eea8DveVMuPLZg" key="blackbox" value="true"/>
+        </eAnnotations>
+      </vertices>
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_6UE22LywEeaEvIAxHAjZ3A" iD="_6UE217ywEeaEvIAxHAjZ3A" name="Yes"/>
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_I8w-gbyxEeaEvIAxHAjZ3A" iD="_I8w-gLyxEeaEvIAxHAjZ3A"/>
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_l5_YSLywEeaEvIAxHAjZ3A" iD="_l5_YR7ywEeaEvIAxHAjZ3A"/>
@@ -316,7 +341,9 @@
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_nD5mobywEeaEvIAxHAjZ3A" iD="_nD5moLywEeaEvIAxHAjZ3A"/>
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_SEmFuLyxEeaEvIAxHAjZ3A" iD="_SEmFt7yxEeaEvIAxHAjZ3A"/>
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_1fv9cby2EeaEvIAxHAjZ3A" iD="_1fv9cLy2EeaEvIAxHAjZ3A"/>
-      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_BM-Zkby3EeaEvIAxHAjZ3A" iD="_BM-ZkLy3EeaEvIAxHAjZ3A"/>
+      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_xZMs4by4Eea8DveVMuPLZg" iD="_xZMs4Ly4Eea8DveVMuPLZg"/>
+      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_xr934by4Eea8DveVMuPLZg" iD="_xr934Ly4Eea8DveVMuPLZg"/>
+      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_NEsjkby5Eea8DveVMuPLZg" iD="_NEsjkLy5Eea8DveVMuPLZg"/>
     </vertices>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bHbdEEeaCaYmVKR7BjA" iD="_EYvp8bdEEeaCaYmVKR7BjA" name=""/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bHrdEEeaCaYmVKR7BjA" iD="_EYvqHLdEEeaCaYmVKR7BjA" name="Yes"/>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Proposal</title>
+    <style>
+      body {
+        font-family:  'Helvetica Neue', sans-serif;;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-color: #111111;
+      }
+      h1 {
+        font-weight: bold;
+        letter-spacing: 5px;
+        line-height: 1;
+        text-align: center;
+        color:#262526;
+        border-bottom: 3px solid #8097a3;
+        padding-bottom: 30px;
+        display: block;
+        font-size: 2em;
+      }
+      h2 {
+        display: block;
+        font-size: 1.5em;
+      }
+      h3 {
+        display: block;
+        font-size: 1.1em;
+      }
+      div {
+        display: block;
+      }
+      .content {
+        margin: 10px;
+      }
+      table {
+        display: table;
+        border-collapse: separate;
+        border-spacing: 0px;
+        border-color: grey;
+      }
+      .service {
+        width: 100%;
+        border-bottom: solid 1px #8097a3;
+      }
+      .service thead{
+        background-color: #f7f7f7;
+      }
+      .service thead th{
+        letter-spacing: 3px;
+        border-top: solid 1px #8097a3;
+        border-bottom: solid 1px #8097a3;
+      }
+      .service tbody tr td {
+        padding: 5px;
+        padding-left: 20px;
+        vertical-align: top;
+      }
+      .td-left {
+        border-right: solid 1px #fcfeff;
+      }
+      label {
+        font-weight: bold;
+      }
+      ul {
+        list-style-type: square;
+      }
+      li {
+        padding: 5px;
+      }
+      .column {
+        width:50%
+      }
+      .list-item {
+        width: 70%;
+      }
+      .cost-column {
+        text-align: right;
+      }
+      .cost {
+        padding-right: 10px;
+      }
+      .cost-row {
+        border-bottom: dashed 1px #8097a3;
+      }
+      .total-row {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Broadcast transmission services proposal</h1>
+    <div class="content">
+      <h2>Service request</h2>
+      <table class="service">
+        <thead>
+          <tr>
+            <th class="column"><h3>Customer</h3></th>
+            <th class="column"><h3>Request</h3></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-left">
+              <ul>
+                <li><label>Customer name:</label> Something</li>
+                <li><label>Customer Tier:</label> Tier 1</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li><label>Request type:</label> Something</li>
+                <li><label>Eventy type:</label> Something</li>
+                <li><label>Event date:</label> Something</li>
+                <li><label>Event duration:</label> Something</li>
+                <li><label>Event location:</label> Something</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="content">
+      <h2>Proposal</h2>
+      <table class="service">
+        <thead>
+          <tr>
+            <th class="list-item"><h3>Service</h3></th>
+            <th><h3>Amount</h3></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-left cost-row"><label>Something</label></td>
+            <td class="cost-column cost-row"><span class="cost">$ 1234.00</span></td>
+          </tr>
+          <tr>
+            <td class="td-left cost-row"><label>Something</label></td>
+            <td class="cost-column cost-row"><span class="cost">$ 1234.00</span></td>
+          </tr>
+          <tr>
+            <td class="td-left cost-row"><label>Something</label></td>
+            <td class="cost-column cost-row"><span class="cost">$ 1234.00</span></td>
+          </tr>
+          <tr>
+            <td class="td-left cost-row"><label>Something</label></td>
+            <td class="cost-column cost-row"><span class="cost">$ 1234.00</span></td>
+          </tr>
+          <tr>
+            <td class="td-left cost-row"><label>Something</label></td>
+            <td class="cost-column cost-row"><span class="cost">$ 1234.00</span></td>
+          </tr>
+          <tr>
+            <td class="td-left total-row"><label>Total</label></td>
+            <td class="cost-column cost-row"><label><span class="cost">$ 1234.00</span></label></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </body>
+</html>
