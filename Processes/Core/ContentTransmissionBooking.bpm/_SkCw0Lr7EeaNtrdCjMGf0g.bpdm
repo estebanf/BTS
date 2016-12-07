@@ -222,11 +222,7 @@
                 <bpdm:linkset bpdm:type="assignments">
                     <bpel:copy>
                         <bpel:from>$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:RequestId</bpel:from>
-                        <bpel:to>$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1887197067" targetPath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID" targetedBy="822212972-arg0"></mapper:vertice>
-  <mapper:vertice id="822212972" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:RequestId"></mapper:vertice>
-</mapper:mapperLink>
+                        <bpel:to>$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID</bpel:to><mapper:mapperLink><mapper:vertice id="1887197067" targetPath="$bTSReceive__HSAN_CostRequest1Msg.body/BTS1:RequestID" targetedBy="822212972-arg0"></mapper:vertice><mapper:vertice id="822212972" sourcePath="$thisReceive_hsan_inquiryRequest1Msg.body/BTS1:RequestId"></mapper:vertice></mapper:mapperLink>
                     </bpel:copy>
                 </bpdm:linkset>
                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="bTSReceive__HSAN_CostRequest1Msg" bpdm:msgVarScopeId="_SkCw0Lr7EeaNtrdCjMGf0g" bpdm:variableIsManaged="true" bpdm:messageType="BTS:Receive__HSAN_CostRequest" bpdm:ID="_NsJ_YLr8EeaNtrdCjMGf0g"></bpdm:linkset>

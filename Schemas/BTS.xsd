@@ -188,4 +188,12 @@
     		<element name="Vendors" type="tns:ExternalResourceType" maxOccurs="unbounded" minOccurs="1"></element>
     	</sequence>
     </complexType>
+
+    <element name="ProposalTotal">
+    	<complexType>
+    		<sequence>
+    			<element name="Amount" type="double"></element>
+    		</sequence>
+    	</complexType>
+    </element>
 </schema>
