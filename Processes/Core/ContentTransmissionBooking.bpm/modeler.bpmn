@@ -287,6 +287,20 @@
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sNUQILyzEeaEvIAxHAjZ3A" key="defaultDeclarationName" value="ProposalTotal"/>
         </eAnnotations>
       </artifacts>
+      <artifacts xmi:type="bpmn:DataObject" xmi:id="_T7C2uLzBEea8DveVMuPLZg" iD="_T65sxrzBEea8DveVMuPLZg" name="PDFReqData">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T7C2ubzBEea8DveVMuPLZg" source="attachedDataobject">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T7C2urzBEea8DveVMuPLZg" key="isBpelDeclaration" value="true"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T7C2u7zBEea8DveVMuPLZg" key="douri" value="project:///Schemas/BTS.xsd?xsdelement={http://www.example.org/BTS}PDFReqData"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T7MnsLzBEea8DveVMuPLZg" key="defaultDeclarationName" value="PDFReqData"/>
+        </eAnnotations>
+      </artifacts>
+      <artifacts xmi:type="bpmn:DataObject" xmi:id="_tUeyAbzGEea8DveVMuPLZg" iD="_tUex5rzGEea8DveVMuPLZg" name="PDFVendors">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tUeyArzGEea8DveVMuPLZg" source="attachedDataobject">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tUeyA7zGEea8DveVMuPLZg" key="isBpelDeclaration" value="true"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tUeyBLzGEea8DveVMuPLZg" key="douri" value="project:///Schemas/BTS.xsd?xsdelement={http://www.example.org/BTS}PDFVendors"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tUoi4LzGEea8DveVMuPLZg" key="defaultDeclarationName" value="PDFVendors"/>
+        </eAnnotations>
+      </artifacts>
       <vertices xmi:type="bpmn:Activity" xmi:id="_k2Cn8bywEeaEvIAxHAjZ3A" iD="_k2Cn8LywEeaEvIAxHAjZ3A" outgoingEdges="_l5_YSLywEeaEvIAxHAjZ3A _nD5mobywEeaEvIAxHAjZ3A" activityType="GatewayParallel"/>
       <vertices xmi:type="bpmn:Activity" xmi:id="_CsEcgbyxEeaEvIAxHAjZ3A" iD="_CsEcgLyxEeaEvIAxHAjZ3A" outgoingEdges="_SEmFuLyxEeaEvIAxHAjZ3A" incomingEdges="_I8w-gbyxEeaEvIAxHAjZ3A" name="Get customer decision" activityType="Task"/>
       <vertices xmi:type="bpmn:Activity" xmi:id="_Igvw4byxEeaEvIAxHAjZ3A" iD="_Igvw4LyxEeaEvIAxHAjZ3A" outgoingEdges="_I8w-gbyxEeaEvIAxHAjZ3A" incomingEdges="_NEsjkby5Eea8DveVMuPLZg" activityType="EventIntermediateEmpty"/>
@@ -312,9 +326,9 @@
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uShP0ry4Eea8DveVMuPLZg" source="pdfActivitySource">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uShP07y4Eea8DveVMuPLZg" key="pdfActivityCreatorKey" value=""/>
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uShP1Ly4Eea8DveVMuPLZg" key="pdfTemplateContentIsHtml" value="true"/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zp8AcLy4Eea8DveVMuPLZg" key="pdfActivityAuthorKey" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zp8AcLy4Eea8DveVMuPLZg" key="pdfActivityAuthorKey" value="estebanf"/>
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0k8QILy4Eea8DveVMuPLZg" key="pdfActivityTemplateFileKey" value="../../templates/proposal.vm"/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3NLdsLy4Eea8DveVMuPLZg" key="pdfActivityVariableNamesKey" value="req,cust, total"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3NLdsLy4Eea8DveVMuPLZg" key="pdfActivityVariableNamesKey" value="req,cust, total,vendors"/>
         </eAnnotations>
       </vertices>
       <vertices xmi:type="bpmn:Activity" xmi:id="_KgCOcby5Eea8DveVMuPLZg" iD="_KgCOcLy5Eea8DveVMuPLZg" outgoingEdges="_NEsjkby5Eea8DveVMuPLZg" incomingEdges="_xr934by4Eea8DveVMuPLZg" name="Email proposal to customer" activityType="EmailTask">

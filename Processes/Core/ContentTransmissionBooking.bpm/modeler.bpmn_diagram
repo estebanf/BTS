@@ -803,6 +803,24 @@
             <element xmi:type="bpmn:Activity" href="modeler.bpmn#_KgCOcby5Eea8DveVMuPLZg"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Klsxlby5Eea8DveVMuPLZg" x="710" y="31" width="111" height="61"/>
           </children>
+          <children xmi:type="notation:Node" xmi:id="_T7C2sbzBEea8DveVMuPLZg" type="2005">
+            <children xmi:type="notation:Node" xmi:id="_T7C2srzBEea8DveVMuPLZg" type="4004"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_T7C2s7zBEea8DveVMuPLZg" fontName="Verdana" fontHeight="8"/>
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_T7C2tLzBEea8DveVMuPLZg"/>
+            <styles xmi:type="notation:FillStyle" xmi:id="_T7C2tbzBEea8DveVMuPLZg"/>
+            <styles xmi:type="notation:LineStyle" xmi:id="_T7C2trzBEea8DveVMuPLZg" lineColor="0"/>
+            <element xmi:type="bpmn:DataObject" href="modeler.bpmn#_T7C2uLzBEea8DveVMuPLZg"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T7C2t7zBEea8DveVMuPLZg" x="171" y="29"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_tUex-rzGEea8DveVMuPLZg" type="2005">
+            <children xmi:type="notation:Node" xmi:id="_tUex-7zGEea8DveVMuPLZg" type="4004"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_tUex_LzGEea8DveVMuPLZg" fontName="Verdana" fontHeight="8"/>
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_tUex_bzGEea8DveVMuPLZg"/>
+            <styles xmi:type="notation:FillStyle" xmi:id="_tUex_rzGEea8DveVMuPLZg"/>
+            <styles xmi:type="notation:LineStyle" xmi:id="_tUex_7zGEea8DveVMuPLZg" lineColor="0"/>
+            <element xmi:type="bpmn:DataObject" href="modeler.bpmn#_tUeyAbzGEea8DveVMuPLZg"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tUeyALzGEea8DveVMuPLZg" x="279" y="29"/>
+          </children>
           <styles xmi:type="notation:DrawerStyle" xmi:id="_LuPAmLyxEeaEvIAxHAjZ3A"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_LuPAmbyxEeaEvIAxHAjZ3A"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_LuPAmryxEeaEvIAxHAjZ3A"/>

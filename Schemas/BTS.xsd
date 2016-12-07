@@ -196,4 +196,30 @@
     		</sequence>
     	</complexType>
     </element>
+
+
+    <element name="PDFReqData">
+    	<complexType>
+    		<sequence>
+    			<element name="id" type="string"></element>
+    			<element name="requestType" type="string"></element>
+    			<element name="eventType" type="string"></element>
+    			<element name="eventDate" type="dateTime"></element>
+    			<element name="eventDuration" type="int"></element>
+    			<element name="eventLocation" type="string"></element>
+    			<element name="routerCost" type="double"></element>
+    			<element name="hsan" type="boolean"></element>
+    			<element name="hsanCost" type="double"></element>
+    			<element name="external" type="boolean"></element>
+    		</sequence>
+    	</complexType>
+    </element>
+
+    <element name="PDFVendors">
+    	<complexType>
+    		<sequence>
+    			<element name="Vendors" type="tns:ExternalResourceType" maxOccurs="unbounded" minOccurs="0"></element>
+    		</sequence>
+    	</complexType>
+    </element>
 </schema>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<test:testxsl xmlns:test="http://intalio.com/xsltestcase"
+	xsl="PreparePDFData.xslt" xmlns:BTS_metrics="http://test.com/xvar/example"
+	xmlns:BTSimplicitPartner="http://bts.com/Processes/Core/ContentTransmissionBooking/BTSimplicitPartner"
+	xmlns:HSAN_Coordinator="http://bts.com/Processes/Core/ContentTransmissionBooking/HSAN_Coordinator"
+	xmlns:tns="http://everteam.com/xvar/example"
+	xmlns:this="http://bts.com/Processes/Core/ContentTransmissionBooking/BTS"
+	xmlns:EmailActivityWSDL="http://bpms.intalio.com/tools/webservices/email"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Customer1="__project:///Schemas/Customer.xsd"
+	xmlns:ax214="http://externaldependencies.rules.bts/bre" xmlns:BTS="http://www.example.org/BTS"
+	xmlns:ax213="http://externaldependencies.rules.bts/xsd"
+	xmlns:ContentTransmissionBooking="http://bts.com/Processes/Core/ContentTransmissionBooking"
+	xmlns:ns="http://externaldependencies.rules.bts" xmlns:Customer="http://bts.com/Services/REST/Customer.rest"
+	xmlns:RouterAssignment-process="http://bts.com/Processes/Integrations/RouterAssignment/process"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:CalculateRequestUrgency-process="http://bts.com/Processes/Integrations/CalculateRequestUrgency/process"
+	xmlns:ns0="http://bpms.intalio.com/tools/webservices/javainternalservices/pdf/_uMx0MLy4Eea8DveVMuPLZg"
+	xmlns:Client="http://bts.com/Processes/Core/ContentTransmissionBooking/Client"
+	xmlns:Vendor_coordinator="http://bts.com/Processes/Core/ContentTransmissionBooking/Vendor_coordinator">
+	<!--XSL Test sample generated on Wed Dec 07 16:10:26 EST 2016 for F/BTS/Processes/Core/ContentTransmissionBooking.bpm 
+		pool:BTS activity: Empty_Intermediate_Event Complete doXslTransform: bpel:doXslTransform("../../XSLT/PreparePDFData.xslt", 
+		$RequestOperation) Input document as defined in the mapper: $RequestOperation -->
+	<test:input>
+		<BTS:RequestOperation>
+			<BTS:Request>
+				<BTS:RequestId>1234</BTS:RequestId>
+				<BTS:Information>
+					<BTS:CustomerId>string</BTS:CustomerId>
+					<BTS:EventDateTime>dateTime</BTS:EventDateTime>
+					<BTS:EventDuration>i123nt</BTS:EventDuration>
+					<BTS:EventType>str1231ing</BTS:EventType>
+					<BTS:RequestType>str43444ing</BTS:RequestType>
+					<BTS:Location>str44ing</BTS:Location>
+				</BTS:Information>
+				<BTS:Urgency>string</BTS:Urgency>
+			</BTS:Request>
+			<BTS:AssignedRouter>string</BTS:AssignedRouter>
+			<BTS:RouterCost>1234</BTS:RouterCost>
+			<BTS:HSANRequired>true</BTS:HSANRequired>
+			<BTS:HSANCost>1234</BTS:HSANCost>
+			<BTS:ExternalResourcesRequired>true</BTS:ExternalResourcesRequired>
+			<BTS:ExternalResources>
+				<BTS:Resource>st12ring</BTS:Resource>
+				<BTS:Vendor>st2ring</BTS:Vendor>
+				<BTS:Cost>doubl3e</BTS:Cost>
+			</BTS:ExternalResources>
+			<BTS:ExternalResources>
+				<BTS:Resource>st124ring</BTS:Resource>
+				<BTS:Vendor>st2rin4g</BTS:Vendor>
+				<BTS:Cost>doubl34e</BTS:Cost>
+			</BTS:ExternalResources>
+			<BTS:ApprovalNeeded>boolean</BTS:ApprovalNeeded>
+			<BTS:Approved>boolean</BTS:Approved>
+		</BTS:RequestOperation>
+	</test:input>
+	<!--No parameters are currently passed to doXslTransform. -->
+</test:testxsl>

@@ -94,7 +94,7 @@
   <body>
     <h1>Broadcast transmission services proposal</h1>
     <div class="content">
-      <h2>Service request</h2>
+      <h2>Service request #$req.id</h2>
       <table class="service">
         <thead>
           <tr>
@@ -106,17 +106,17 @@
           <tr>
             <td class="td-left">
               <ul>
-                <li><label>Customer name:</label> Something</li>
-                <li><label>Customer Tier:</label> Tier 1</li>
+                <li><label>Customer name:</label> $cust.customername</li>
+                <li><label>Customer Tier:</label> Tier $cust.customertier</li>
               </ul>
             </td>
             <td>
               <ul>
-                <li><label>Request type:</label> Something</li>
-                <li><label>Eventy type:</label> Something</li>
-                <li><label>Event date:</label> Something</li>
-                <li><label>Event duration:</label> Something</li>
-                <li><label>Event location:</label> Something</li>
+                <li><label>Request type:</label> $req.requestType</li>
+                <li><label>Event type:</label> $req.eventType</li>
+                <li><label>Event date:</label> $req.eventDate</li>
+                <li><label>Event duration:</label> $req.eventDuration hour(s)</li>
+                <li><label>Event location:</label> $req.eventLocation</li>
               </ul>
             </td>
           </tr>
@@ -134,28 +134,26 @@
         </thead>
         <tbody>
           <tr>
-            <td class="td-left cost-row"><label>Something</label></td>
-            <td class="cost-column cost-row"><span class="cost">$ 1234.00</span></td>
+            <td class="td-left cost-row"><label>Router </label></td>
+            <td class="cost-column cost-row"><span class="cost">$ $req.routerCost</span></td>
           </tr>
+          #if ($req.hsan)
           <tr>
-            <td class="td-left cost-row"><label>Something</label></td>
-            <td class="cost-column cost-row"><span class="cost">$ 1234.00</span></td>
+            <td class="td-left cost-row"><label>HSAN</label></td>
+            <td class="cost-column cost-row"><span class="cost">$ $req.hsanCost</span></td>
           </tr>
+          #end
+          #if ($req.external)
+          #foreach ($external in $vendors)
           <tr>
-            <td class="td-left cost-row"><label>Something</label></td>
-            <td class="cost-column cost-row"><span class="cost">$ 1234.00</span></td>
+            <td class="td-left cost-row"><label>$external.Resource</label></td>
+            <td class="cost-column cost-row"><span class="cost">$ $external.Cost</span></td>
           </tr>
-          <tr>
-            <td class="td-left cost-row"><label>Something</label></td>
-            <td class="cost-column cost-row"><span class="cost">$ 1234.00</span></td>
-          </tr>
-          <tr>
-            <td class="td-left cost-row"><label>Something</label></td>
-            <td class="cost-column cost-row"><span class="cost">$ 1234.00</span></td>
-          </tr>
+          #end
+          #end
           <tr>
             <td class="td-left total-row"><label>Total</label></td>
-            <td class="cost-column cost-row"><label><span class="cost">$ 1234.00</span></label></td>
+            <td class="cost-column cost-row"><label><span class="cost">$ $total.Amount</span></label></td>
           </tr>
         </tbody>
       </table>

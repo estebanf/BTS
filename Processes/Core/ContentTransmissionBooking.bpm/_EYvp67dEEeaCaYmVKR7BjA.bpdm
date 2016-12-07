@@ -1,18 +1,18 @@
-﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:BTS_metrics="http://test.com/xvar/example" xmlns:BTSimplicitPartner="http://thisdiagram/BTSimplicitPartner" xmlns:HSAN_Coordinator="http://thisdiagram/HSAN_Coordinator" xmlns:tns="http://everteam.com/xvar/example" xmlns:EmailActivityWSDL="http://bpms.intalio.com/tools/webservices/email" xmlns:this="http://thisdiagram/BTS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Customer1="__project:///Schemas/Customer.xsd" xmlns:ax214="http://externaldependencies.rules.bts/bre" xmlns:BTS="http://www.example.org/BTS" xmlns:ax213="http://externaldependencies.rules.bts/xsd" xmlns:ContentTransmissionBooking="http://thisdiagram" xmlns:ns="http://externaldependencies.rules.bts" xmlns:Customer="http://bts.com/Services/REST/Customer.rest" xmlns:RouterAssignment-process="http://thisproject/Processes/Integrations/RouterAssignment/process" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:CalculateRequestUrgency-process="http://thisproject/Processes/Integrations/CalculateRequestUrgency/process" xmlns:ns0="http://bpms.intalio.com/tools/webservices/javainternalservices/pdf/_uMx0MLy4Eea8DveVMuPLZg" xmlns:Client="http://thisdiagram/Client" xmlns:Vendor_coordinator="http://thisdiagram/Vendor_coordinator" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/BTS">
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:BTS_metrics="http://test.com/xvar/example" xmlns:BTSimplicitPartner="http://thisdiagram/BTSimplicitPartner" xmlns:HSAN_Coordinator="http://thisdiagram/HSAN_Coordinator" xmlns:tns="http://everteam.com/xvar/example" xmlns:this="http://thisdiagram/BTS" xmlns:EmailActivityWSDL="http://bpms.intalio.com/tools/webservices/email" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Customer1="__project:///Schemas/Customer.xsd" xmlns:ax214="http://externaldependencies.rules.bts/bre" xmlns:BTS="http://www.example.org/BTS" xmlns:ax213="http://externaldependencies.rules.bts/xsd" xmlns:ns="http://externaldependencies.rules.bts" xmlns:ContentTransmissionBooking="http://thisdiagram" xmlns:Customer="http://bts.com/Services/REST/Customer.rest" xmlns:RouterAssignment-process="http://thisproject/Processes/Integrations/RouterAssignment/process" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:CalculateRequestUrgency-process="http://thisproject/Processes/Integrations/CalculateRequestUrgency/process" xmlns:ns0="http://bpms.intalio.com/tools/webservices/javainternalservices/pdf/_uMx0MLy4Eea8DveVMuPLZg" xmlns:Client="http://thisdiagram/Client" xmlns:Vendor_coordinator="http://thisdiagram/Vendor_coordinator" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/BTS">
     <bpdm:dependencies version="6000089">
         <bpdm:namespaceDefinition bpdm:uri="http://test.com/xvar/example" bpdm:prefix="BTS_metrics" bpdm:comment="contrib=&apos;project:///Metrics/BTS_metrics.xvar"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/BTSimplicitPartner" bpdm:prefix="BTSimplicitPartner" bpdm:comment="contrib=&apos;partner-pool:///_EYvp67dEEeaCaYmVKR7BjAimplicitPartner"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/HSAN_Coordinator" bpdm:prefix="HSAN_Coordinator" bpdm:comment="contrib=&apos;partner-pool:///_SkCw0Lr7EeaNtrdCjMGf0g"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://everteam.com/xvar/example" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///IntalioObjects/customVariable.xvar"></bpdm:namespaceDefinition>
-        <bpdm:namespaceDefinition bpdm:uri="http://bpms.intalio.com/tools/webservices/email" bpdm:prefix="EmailActivityWSDL" bpdm:comment="contrib=&apos;project:///EmailActivityWSDL.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/BTS" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://bpms.intalio.com/tools/webservices/email" bpdm:prefix="EmailActivityWSDL" bpdm:comment="contrib=&apos;project:///EmailActivityWSDL.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="__project:///Schemas/Customer.xsd" bpdm:prefix="Customer1" bpdm:comment="contrib=&apos;project:///Schemas/Customer.xsd"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://externaldependencies.rules.bts/bre" bpdm:prefix="ax214" bpdm:comment="contrib=&apos;project:///Rules/ExternalDependencies.bre/dtws_bts_rules_externaldependencies/META-INF/dtws_bts_rules_externaldependencies.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.example.org/BTS" bpdm:prefix="BTS" bpdm:comment="contrib=&apos;project:///Schemas/BTS.xsd"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://externaldependencies.rules.bts/xsd" bpdm:prefix="ax213" bpdm:comment="contrib=&apos;project:///Rules/ExternalDependencies.bre/dtws_bts_rules_externaldependencies/META-INF/dtws_bts_rules_externaldependencies.wsdl"></bpdm:namespaceDefinition>
-        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="ContentTransmissionBooking" bpdm:comment="contrib=&apos;partner-pool:///_EYmf9rdEEeaCaYmVKR7BjA"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://externaldependencies.rules.bts" bpdm:prefix="ns" bpdm:comment="contrib=&apos;project:///Rules/ExternalDependencies.bre/dtws_bts_rules_externaldependencies/META-INF/dtws_bts_rules_externaldependencies.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="ContentTransmissionBooking" bpdm:comment="contrib=&apos;partner-pool:///_EYmf9rdEEeaCaYmVKR7BjA"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://bts.com/Services/REST/Customer.rest" bpdm:prefix="Customer" bpdm:comment="contrib=&apos;project:///Services/REST/Customer.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://thisproject/Processes/Integrations/RouterAssignment/process" bpdm:prefix="RouterAssignment-process" bpdm:comment="contrib=&apos;project:///Processes/Integrations/RouterAssignment-process.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
@@ -86,13 +86,13 @@
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_SkCw0Lr7EeaNtrdCjMGf0g" bpdm:label="HSAN Coordinator"/>
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_EYvp67dEEeaCaYmVKR7BjAimplicitPartner" bpdm:label="BTSimplicitPartner"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/BTS.xsd"/>
-        <bpdm:namespaceContributor bpdm:url="project:///EmailActivityWSDL.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Rules/ExternalDependencies.bre/dtws_bts_rules_externaldependencies/META-INF/dtws_bts_rules_externaldependencies.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Services/REST/Customer.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/Customer.xsd"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/RouterAssignment-process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/_uMx0MLy4Eea8DveVMuPLZg.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/CalculateRequestUrgency-process.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Rules/ExternalDependencies.bre/dtws_bts_rules_externaldependencies/META-INF/dtws_bts_rules_externaldependencies.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///EmailActivityWSDL.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/RouterAssignment-process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar"/>
         <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/BTS_metrics.xvar"/>
@@ -581,6 +581,16 @@
                                             <bpel:literal bpdm:linkedMessageType="EmailActivityWSDL:sendRequest" bpdm:linkedPart="InputParameters" bpdm:binding="EmailActivityWSDL:EmailWSSOAP11Binding" bpdm:opMsgType="0" bpdm:operation="send"></bpel:literal>
                                         </bpel:from>
                                     </bpel:variable>
+                                    <bpel:variable name="PDFReqData" element="BTS:PDFReqData" bpdm:id="_T65sxrzBEea8DveVMuPLZg">
+                                        <bpel:from>
+                                            <bpel:literal bpdm:linkedElement="BTS:PDFReqData"></bpel:literal>
+                                        </bpel:from>
+                                    </bpel:variable>
+                                    <bpel:variable name="PDFVendors" element="BTS:PDFVendors" bpdm:id="_tUex5rzGEea8DveVMuPLZg">
+                                        <bpel:from>
+                                            <bpel:literal bpdm:linkedElement="BTS:PDFVendors"></bpel:literal>
+                                        </bpel:from>
+                                    </bpel:variable>
                                 </bpel:variables>
                                 <bpel:links>
                                     <bpel:link name="_nDmrsLywEeaEvIAxHAjZ3A_to__pGuaALywEeaEvIAxHAjZ3A"/>
@@ -643,63 +653,54 @@
                                                         <bpel:from>false()</bpel:from>
                                                         <bpel:to>$BTS_Request/BTS_metrics:Approved</bpel:to><mapper:mapperLink><mapper:vertice id="1803037804" targetPath="$BTS_Request/BTS_metrics:Approved" targetedBy="994195624-arg0"></mapper:vertice><mapper:vertice id="994195624" dimension="79x24" location="321,298"><mapper:value>false()</mapper:value></mapper:vertice></mapper:mapperLink>
                                                     </bpel:copy>
+                                                    <bpel:copy>
+                                                        <bpel:from>bpel:doXslTransform("../../XSLT/PreparePDFData.xslt", $RequestOperation)</bpel:from>
+                                                        <bpel:to>$PDFReqData</bpel:to><mapper:mapperLink><mapper:vertice id="683533706" targetPath="$PDFReqData" targetedBy="1192306959-arg2"></mapper:vertice><mapper:vertice id="1192306959" dimension="126x24" location="420,36"><mapper:value>bpel:doXslTransform()</mapper:value></mapper:vertice><mapper:vertice id="130448507" dimension="176x24" location="170,11" targetedBy="1192306959-arg0"><mapper:value>"../../XSLT/PreparePDFData.xslt"</mapper:value></mapper:vertice><mapper:vertice id="1521415199" sourcePath="$RequestOperation" targetedBy="1192306959-arg1"></mapper:vertice></mapper:mapperLink>
+                                                    </bpel:copy>
+                                                    <bpel:copy>
+                                                        <bpel:from>bpel:doXslTransform("../../XSLT/PreparePDFVendors.xslt", $RequestOperation)</bpel:from>
+                                                        <bpel:to>$PDFVendors</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1919831484" targetPath="$PDFVendors" targetedBy="1223528578-arg2"></mapper:vertice>
+  <mapper:vertice id="1223528578" dimension="126x24" location="478,85">
+    <mapper:value>bpel:doXslTransform()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="663143365" dimension="195x24" location="108,96" targetedBy="1223528578-arg0">
+    <mapper:value>"../../XSLT/PreparePDFVendors.xslt"</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="462347130" sourcePath="$RequestOperation" targetedBy="1223528578-arg1"></mapper:vertice>
+</mapper:mapperLink>
+                                                    </bpel:copy>
                                                 </bpdm:linkset>
                                             </bpdm:messagingtask>
                                             <bpdm:messagingtask operation="com.intalio.bpms.pdfgen.PDFGenerator.generatePDF" partnerLink="bTSimplicitPartnerAndBTSForJavaInternalWSSOAP11port_httpPlkVar" portType="ns0:JavaInternalWSPortType" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Generate proposal PDF" bpdm:ID="_uMx0MLy4Eea8DveVMuPLZg">
                                                 <bpdm:linkset bpdm:type="assignments">
                                                     <bpel:copy>
                                                         <bpel:from>concat("request-", $RequestOperation/BTS:Request/BTS:RequestId, ".pdf")</bpel:from>
-                                                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:pdfMetaData/ns0:fileName</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="363012555" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:pdfMetaData/ns0:fileName" targetedBy="1725597595-arg3"></mapper:vertice>
-  <mapper:vertice id="1725597595" dimension="79x24" location="388,131">
-    <mapper:value>concat()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1141185883" dimension="79x24" location="283,100" targetedBy="1725597595-arg0">
-    <mapper:value>"request-"</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1565061814" sourcePath="$RequestOperation/BTS:Request/BTS:RequestId" targetedBy="1725597595-arg1"></mapper:vertice>
-  <mapper:vertice id="2002975887" dimension="79x24" location="267,160" targetedBy="1725597595-arg2">
-    <mapper:value>".pdf"</mapper:value>
-  </mapper:vertice>
-</mapper:mapperLink>
+                                                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:pdfMetaData/ns0:fileName</bpel:to><mapper:mapperLink><mapper:vertice id="363012555" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:pdfMetaData/ns0:fileName" targetedBy="1725597595-arg3"></mapper:vertice><mapper:vertice id="1725597595" dimension="79x24" location="388,131"><mapper:value>concat()</mapper:value></mapper:vertice><mapper:vertice id="1141185883" dimension="79x24" location="283,100" targetedBy="1725597595-arg0"><mapper:value>"request-"</mapper:value></mapper:vertice><mapper:vertice id="1565061814" sourcePath="$RequestOperation/BTS:Request/BTS:RequestId" targetedBy="1725597595-arg1"></mapper:vertice><mapper:vertice id="2002975887" dimension="79x24" location="267,160" targetedBy="1725597595-arg2"><mapper:value>".pdf"</mapper:value></mapper:vertice></mapper:mapperLink>
                                                     </bpel:copy>
                                                     <bpel:copy>
                                                         <bpel:from>concat("Proposal for request ", $RequestOperation/BTS:Request/BTS:RequestId)</bpel:from>
-                                                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:pdfMetaData/ns0:title</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="268388646" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:pdfMetaData/ns0:title" targetedBy="1438662901-arg2"></mapper:vertice>
-  <mapper:vertice id="1438662901" dimension="79x24" location="518,223">
-    <mapper:value>concat()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="62474849" dimension="127x24" location="357,199" targetedBy="1438662901-arg0">
-    <mapper:value>"Proposal for request "</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="801927029" sourcePath="$RequestOperation/BTS:Request/BTS:RequestId" targetedBy="1438662901-arg1"></mapper:vertice>
-</mapper:mapperLink>
-                                                    </bpel:copy>
-                                                    <bpel:copy>
-                                                        <bpel:from>$RequestOperation</bpel:from>
-                                                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:req</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1773810780" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:req" targetedBy="146064861-arg0"></mapper:vertice>
-  <mapper:vertice id="146064861" sourcePath="$RequestOperation"></mapper:vertice>
-</mapper:mapperLink>
+                                                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:pdfMetaData/ns0:title</bpel:to><mapper:mapperLink><mapper:vertice id="268388646" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:pdfMetaData/ns0:title" targetedBy="1438662901-arg2"></mapper:vertice><mapper:vertice id="1438662901" dimension="79x24" location="518,223"><mapper:value>concat()</mapper:value></mapper:vertice><mapper:vertice id="62474849" dimension="127x24" location="357,199" targetedBy="1438662901-arg0"><mapper:value>"Proposal for request "</mapper:value></mapper:vertice><mapper:vertice id="801927029" sourcePath="$RequestOperation/BTS:Request/BTS:RequestId" targetedBy="1438662901-arg1"></mapper:vertice></mapper:mapperLink>
                                                     </bpel:copy>
                                                     <bpel:copy>
                                                         <bpel:from>$customerGet_customerResponse1Msg.customer</bpel:from>
-                                                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:cust</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1540697121" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:cust" targetedBy="13866519-arg0"></mapper:vertice>
-  <mapper:vertice id="13866519" sourcePath="$customerGet_customerResponse1Msg.customer"></mapper:vertice>
-</mapper:mapperLink>
+                                                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:cust</bpel:to><mapper:mapperLink><mapper:vertice id="1540697121" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:cust" targetedBy="13866519-arg0"></mapper:vertice><mapper:vertice id="13866519" sourcePath="$customerGet_customerResponse1Msg.customer"></mapper:vertice></mapper:mapperLink>
                                                     </bpel:copy>
                                                     <bpel:copy>
                                                         <bpel:from>$ProposalTotal</bpel:from>
-                                                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:total</bpel:to>
+                                                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:total</bpel:to><mapper:mapperLink><mapper:vertice id="188703868" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:total" targetedBy="1149696962-arg0"></mapper:vertice><mapper:vertice id="1149696962" sourcePath="$ProposalTotal"></mapper:vertice></mapper:mapperLink>
+                                                    </bpel:copy>
+                                                    <bpel:copy>
+                                                        <bpel:from>$PDFReqData</bpel:from>
+                                                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:req</bpel:to><mapper:mapperLink><mapper:vertice id="1844865184" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:req" targetedBy="1974207083-arg0"></mapper:vertice><mapper:vertice id="1974207083" sourcePath="$PDFReqData"></mapper:vertice></mapper:mapperLink>
+                                                    </bpel:copy>
+                                                    <bpel:copy>
+                                                        <bpel:from>$PDFVendors</bpel:from>
+                                                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:vendors</bpel:to>
 <mapper:mapperLink>
-  <mapper:vertice id="188703868" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:total" targetedBy="1149696962-arg0"></mapper:vertice>
-  <mapper:vertice id="1149696962" sourcePath="$ProposalTotal"></mapper:vertice>
+  <mapper:vertice id="1376028131" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:vendors" targetedBy="1509062569-arg0"></mapper:vertice>
+  <mapper:vertice id="1509062569" sourcePath="$PDFVendors"></mapper:vertice>
 </mapper:mapperLink>
                                                     </bpel:copy>
                                                 </bpdm:linkset>
@@ -711,33 +712,15 @@
                                                 <bpdm:linkset bpdm:type="assignments">
                                                     <bpel:copy>
                                                         <bpel:from>concat("Approve proposal for request #", $RequestOperation/BTS:Request/BTS:RequestId)</bpel:from>
-                                                        <bpel:to>$emailActivityWSDLSendRequest1Msg.InputParameters/EmailActivityWSDL:Subject</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="672399081" targetPath="$emailActivityWSDLSendRequest1Msg.InputParameters/EmailActivityWSDL:Subject" targetedBy="2010464815-arg2"></mapper:vertice>
-  <mapper:vertice id="2010464815" dimension="79x24" location="529,190">
-    <mapper:value>concat()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1583195542" dimension="182x24" location="309,156" targetedBy="2010464815-arg0">
-    <mapper:value>"Approve proposal for request #"</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1263609827" sourcePath="$RequestOperation/BTS:Request/BTS:RequestId" targetedBy="2010464815-arg1"></mapper:vertice>
-</mapper:mapperLink>
+                                                        <bpel:to>$emailActivityWSDLSendRequest1Msg.InputParameters/EmailActivityWSDL:Subject</bpel:to><mapper:mapperLink><mapper:vertice id="672399081" targetPath="$emailActivityWSDLSendRequest1Msg.InputParameters/EmailActivityWSDL:Subject" targetedBy="2010464815-arg2"></mapper:vertice><mapper:vertice id="2010464815" dimension="79x24" location="529,190"><mapper:value>concat()</mapper:value></mapper:vertice><mapper:vertice id="1583195542" dimension="182x24" location="309,156" targetedBy="2010464815-arg0"><mapper:value>"Approve proposal for request #"</mapper:value></mapper:vertice><mapper:vertice id="1263609827" sourcePath="$RequestOperation/BTS:Request/BTS:RequestId" targetedBy="2010464815-arg1"></mapper:vertice></mapper:mapperLink>
                                                     </bpel:copy>
                                                     <bpel:copy>
                                                         <bpel:from>$PDFTaskRequest1Msg.inputParams/ns0:pdfMetaData/ns0:fileName</bpel:from>
-                                                        <bpel:to>$emailActivityWSDLSendRequest1Msg.InputParameters/EmailActivityWSDL:Attachments/EmailActivityWSDL:Attachment/EmailActivityWSDL:fileName</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="876943612" targetPath="$emailActivityWSDLSendRequest1Msg.InputParameters/EmailActivityWSDL:Attachments/EmailActivityWSDL:Attachment/EmailActivityWSDL:fileName" targetedBy="283950716-arg0"></mapper:vertice>
-  <mapper:vertice id="283950716" sourcePath="$PDFTaskRequest1Msg.inputParams/ns0:pdfMetaData/ns0:fileName"></mapper:vertice>
-</mapper:mapperLink>
+                                                        <bpel:to>$emailActivityWSDLSendRequest1Msg.InputParameters/EmailActivityWSDL:Attachments/EmailActivityWSDL:Attachment/EmailActivityWSDL:fileName</bpel:to><mapper:mapperLink><mapper:vertice id="876943612" targetPath="$emailActivityWSDLSendRequest1Msg.InputParameters/EmailActivityWSDL:Attachments/EmailActivityWSDL:Attachment/EmailActivityWSDL:fileName" targetedBy="283950716-arg0"></mapper:vertice><mapper:vertice id="283950716" sourcePath="$PDFTaskRequest1Msg.inputParams/ns0:pdfMetaData/ns0:fileName"></mapper:vertice></mapper:mapperLink>
                                                     </bpel:copy>
                                                     <bpel:copy>
                                                         <bpel:from>$PDFTaskResponse1Msg.pdfAccessUrl</bpel:from>
-                                                        <bpel:to>$emailActivityWSDLSendRequest1Msg.InputParameters/EmailActivityWSDL:Attachments/EmailActivityWSDL:Attachment/EmailActivityWSDL:filePath</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="225959802" targetPath="$emailActivityWSDLSendRequest1Msg.InputParameters/EmailActivityWSDL:Attachments/EmailActivityWSDL:Attachment/EmailActivityWSDL:filePath" targetedBy="577218835-arg0"></mapper:vertice>
-  <mapper:vertice id="577218835" sourcePath="$PDFTaskResponse1Msg.pdfAccessUrl"></mapper:vertice>
-</mapper:mapperLink>
+                                                        <bpel:to>$emailActivityWSDLSendRequest1Msg.InputParameters/EmailActivityWSDL:Attachments/EmailActivityWSDL:Attachment/EmailActivityWSDL:filePath</bpel:to><mapper:mapperLink><mapper:vertice id="225959802" targetPath="$emailActivityWSDLSendRequest1Msg.InputParameters/EmailActivityWSDL:Attachments/EmailActivityWSDL:Attachment/EmailActivityWSDL:filePath" targetedBy="577218835-arg0"></mapper:vertice><mapper:vertice id="577218835" sourcePath="$PDFTaskResponse1Msg.pdfAccessUrl"></mapper:vertice></mapper:mapperLink>
                                                     </bpel:copy>
                                                 </bpdm:linkset>
                                                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="emailActivityWSDLSendRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="EmailActivityWSDL:sendRequest" bpdm:binding="EmailActivityWSDL:EmailWSSOAP11Binding" bpdm:ID="_KgCOcLy5Eea8DveVMuPLZgOutgoing"></bpdm:linkset>
@@ -750,13 +733,7 @@
                                                 <bpdm:linkset bpdm:type="assignments">
                                                     <bpel:copy>
                                                         <bpel:from>false()</bpel:from>
-                                                        <bpel:to>$RequestOperation/BTS:Approved</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1159726871" targetPath="$RequestOperation/BTS:Approved" targetedBy="195262678-arg0"></mapper:vertice>
-  <mapper:vertice id="195262678" dimension="79x24" location="585,183">
-    <mapper:value>false()</mapper:value>
-  </mapper:vertice>
-</mapper:mapperLink>
+                                                        <bpel:to>$RequestOperation/BTS:Approved</bpel:to><mapper:mapperLink><mapper:vertice id="1159726871" targetPath="$RequestOperation/BTS:Approved" targetedBy="195262678-arg0"></mapper:vertice><mapper:vertice id="195262678" dimension="79x24" location="585,183"><mapper:value>false()</mapper:value></mapper:vertice></mapper:mapperLink>
                                                     </bpel:copy>
                                                 </bpdm:linkset>
                                             </bpdm:messagingtask>
