@@ -38,13 +38,13 @@
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_3WR10Ls4Eeash72vczxLlwimplicitPartner" bpdm:label="Vendor coordinatorimplicitPartner"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/BTS.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Webcontents/ExternalVendorInquiry/index.html.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/insert_vendor_quote.sql/insert_vendor_quote.sql.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/insert_vendor_quote.sql/insert_vendor_quote.xsd"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/delete_request_vendor_quotes.sql/delete_request_vendor_quotes.sql.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/delete_request_vendor_quotes.sql/delete_request_vendor_quotes.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Rules/TaskPrioritization.bre/dtws_bts_rules_taskprioritization/META-INF/dtws_bts_rules_taskprioritization.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_existing_vendor_quotes.sql/select_existing_vendor_quotes.sql.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_existing_vendor_quotes.sql/select_existing_vendor_quotes.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/delete_request_vendor_quotes.sql/delete_request_vendor_quotes.sql.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/delete_request_vendor_quotes.sql/delete_request_vendor_quotes.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/insert_vendor_quote.sql/insert_vendor_quote.sql.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/insert_vendor_quote.sql/insert_vendor_quote.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar"/>
         <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar.xsd"/>
     </bpdm:dependencies>

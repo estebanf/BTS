@@ -222,4 +222,11 @@
     		</sequence>
     	</complexType>
     </element>
+
+    <complexType name="RequestACKType">
+    	<sequence>
+    		<element name="ACK" type="tns:ACKType"></element>
+    		<element name="RequestId" type="string"></element>
+    	</sequence>
+    </complexType>
 </schema>

@@ -30,13 +30,6 @@
                 </wsdl:operation>
             </wsdl:portType>
             <bpel:binding name="CanonicBindingForVendor_coordinator" type="this:ForVendor_coordinator" bpdm:isSynchronized="true"/>
-            <wsdl:portType name="ForClient">
-                <wsdl:operation name="Receive_request" bpdm:source="partner-pool:///_EYmf9rdEEeaCaYmVKR7BjA">
-                    <wsdl:input message="this:Receive_requestRequest" name="Receive_request"/>
-                    <wsdl:output message="this:Receive_requestResponse" name="Receive_requestResponse"/>
-                </wsdl:operation>
-            </wsdl:portType>
-            <bpel:binding name="CanonicBindingForClient" type="this:ForClient" bpdm:isSynchronized="true"/>
             <wsdl:portType name="ForHSAN_Coordinator">
                 <wsdl:operation name="Receive__HSAN_Cost" bpdm:source="partner-pool:///_SkCw0Lr7EeaNtrdCjMGf0g">
                     <wsdl:input message="this:Receive__HSAN_CostRequest" name="Receive__HSAN_Cost"/>
@@ -44,6 +37,13 @@
                 </wsdl:operation>
             </wsdl:portType>
             <bpel:binding name="CanonicBindingForHSAN_Coordinator" type="this:ForHSAN_Coordinator" bpdm:isSynchronized="true"/>
+            <wsdl:portType name="ForClient">
+                <wsdl:operation name="Receive_request" bpdm:source="partner-pool:///_EYmf9rdEEeaCaYmVKR7BjA">
+                    <wsdl:input message="this:Receive_requestRequest" name="Receive_request"/>
+                    <wsdl:output message="this:Receive_requestResponse" name="Receive_requestResponse"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <bpel:binding name="CanonicBindingForClient" type="this:ForClient" bpdm:isSynchronized="true"/>
             <xs:element name="Receive_external_vendor_costsRequest" type="BTS:ExternalVendorInquiry" bpdm:source="partner-pool:///_3WR10Ls4Eeash72vczxLlw"/>
             <wsdl:message name="Receive_external_vendor_costsRequest" bpdm:source="partner-pool:///_3WR10Ls4Eeash72vczxLlw">
                 <wsdl:part name="body" element="this:Receive_external_vendor_costsRequest"/>
@@ -56,7 +56,7 @@
             <wsdl:message name="Receive_requestRequest" bpdm:source="partner-pool:///_EYmf9rdEEeaCaYmVKR7BjA">
                 <wsdl:part name="body" element="this:Receive_requestRequest"/>
             </wsdl:message>
-            <xs:element name="Receive_requestResponse" type="BTS:ACKType" bpdm:source="partner-pool:///_EYmf9rdEEeaCaYmVKR7BjA"/>
+            <xs:element name="Receive_requestResponse" type="BTS:RequestACKType" bpdm:source="partner-pool:///_EYmf9rdEEeaCaYmVKR7BjA"/>
             <wsdl:message name="Receive_requestResponse" bpdm:source="partner-pool:///_EYmf9rdEEeaCaYmVKR7BjA">
                 <wsdl:part name="body" element="this:Receive_requestResponse"/>
             </wsdl:message>
@@ -86,13 +86,13 @@
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_SkCw0Lr7EeaNtrdCjMGf0g" bpdm:label="HSAN Coordinator"/>
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_EYvp67dEEeaCaYmVKR7BjAimplicitPartner" bpdm:label="BTSimplicitPartner"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/BTS.xsd"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Rules/ExternalDependencies.bre/dtws_bts_rules_externaldependencies/META-INF/dtws_bts_rules_externaldependencies.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Services/REST/Customer.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/Customer.xsd"/>
-        <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/_uMx0MLy4Eea8DveVMuPLZg.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/CalculateRequestUrgency-process.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///EmailActivityWSDL.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/RouterAssignment-process.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Rules/ExternalDependencies.bre/dtws_bts_rules_externaldependencies/META-INF/dtws_bts_rules_externaldependencies.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/_uMx0MLy4Eea8DveVMuPLZg.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///EmailActivityWSDL.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/CalculateRequestUrgency-process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar"/>
         <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/customVariable.xvar.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/BTS_metrics.xvar"/>
@@ -100,7 +100,7 @@
     </bpdm:dependencies>
     <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="BTS" bpdm:ID="_EYvp67dEEeaCaYmVKR7BjA">
         <bpel:partnerLinks>
-            <bpel:partnerLink name="bTsAndClientPlkVar" partnerLinkType="ContentTransmissionBooking:BTsAndClient" myRole="BTS_for_Client" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForClient" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/BTS/Client" bpdm:providedIsDefault="true" bpdm:clientTasks="_EYvp67dEEeaCaYmVKR7BjA:_EYvp77dEEeaCaYmVKR7BjA" bpdm:isManaged="true" bpdm:otherPoolId="_EYmf9rdEEeaCaYmVKR7BjA"/>
+            <bpel:partnerLink name="bTsAndClientPlkVar" partnerLinkType="ContentTransmissionBooking:BTsAndClient" myRole="BTS_for_Client" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForClient" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/BTS/Client" bpdm:providedIsDefault="true" bpdm:clientTasks="_EYvp67dEEeaCaYmVKR7BjA:_EYvp77dEEeaCaYmVKR7BjA, _l4q6sLyREeaEvIAxHAjZ3A:_KS6ewL2FEeaXDrw_F1y5qw" bpdm:isManaged="true" bpdm:otherPoolId="_EYmf9rdEEeaCaYmVKR7BjA"/>
             <bpel:partnerLink name="bTSimplicitPartnerAndBTSForCanonicPortPlk1Var" partnerLinkType="ContentTransmissionBooking:BTSimplicitPartnerAndBTSForCanonicPortPlk1" initializePartnerRole="yes" partnerRole="BTSimplicitPartner_for_BTS" bpdm:invokedService="RouterAssignment-process:CanonicServiceForcaller" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="epr" bpdm:invokedIsDefault="true" bpdm:clientTasks="_l4q6sLyREeaEvIAxHAjZ3A:_EYvp9bdEEeaCaYmVKR7BjA" bpdm:isManaged="true" bpdm:otherPoolId="_EYvp67dEEeaCaYmVKR7BjAimplicitPartner"/>
             <bpel:partnerLink name="bTSimplicitPartnerAndBTSForCanonicPortPlk0Var" partnerLinkType="ContentTransmissionBooking:BTSimplicitPartnerAndBTSForCanonicPortPlk0" initializePartnerRole="yes" partnerRole="BTSimplicitPartner_for_BTS" bpdm:invokedService="CalculateRequestUrgency-process:CanonicServiceForcaller" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="epr" bpdm:invokedIsDefault="true" bpdm:clientTasks="_l4q6sLyREeaEvIAxHAjZ3A:_ckcBBrk1EeajYsanxe9sog" bpdm:isManaged="true" bpdm:otherPoolId="_EYvp67dEEeaCaYmVKR7BjAimplicitPartner"/>
             <bpel:partnerLink name="bTSimplicitPartnerAndBTSForPortDtws_bts_rules_externaldependenciesHttpSoap11EndpointPlkVar" partnerLinkType="ContentTransmissionBooking:BTSimplicitPartnerAndBTSForPortDtws_bts_rules_externaldependenciesHttpSoap11EndpointPlk" initializePartnerRole="yes" partnerRole="BTSimplicitPartner_for_BTS" bpdm:invokedService="ns:dtws_bts_rules_externaldependencies" bpdm:invokedPort="dtws_bts_rules_externaldependenciesHttpSoap11Endpoint" bpdm:invokedSOAPAddress="http://localhost:8080/everteam/ode/processes/dtws_bts_rules_externaldependencies" bpdm:invokedIsDefault="true" bpdm:clientTasks="_I3Py4LyREeaEvIAxHAjZ3A:_EYvp_bdEEeaCaYmVKR7BjA" bpdm:isManaged="true" bpdm:otherPoolId="_EYvp67dEEeaCaYmVKR7BjAimplicitPartner"/>
@@ -111,13 +111,8 @@
             <bpel:partnerLink name="bTSimplicitPartnerAndBTSForEmailWSSOAP11port_httpPlkVar" partnerLinkType="ContentTransmissionBooking:BTSimplicitPartnerAndBTSForEmailWSSOAP11port_httpPlk" initializePartnerRole="yes" partnerRole="BTSimplicitPartner_for_BTS" bpdm:invokedService="EmailActivityWSDL:EmailWS" bpdm:invokedPort="EmailWSSOAP11port_http" bpdm:invokedSOAPAddress="http://localhost:8080/everteam/ode/processes/EmailWS" bpdm:invokedIsDefault="true" bpdm:clientTasks="_LuF2oLyxEeaEvIAxHAjZ3A:_KgCOcLy5Eea8DveVMuPLZg" bpdm:isManaged="true" bpdm:otherPoolId="_EYvp67dEEeaCaYmVKR7BjAimplicitPartner"/>
         </bpel:partnerLinks>
         <bpel:variables xmlns:xvar="http://ode.apache.org/externalVariables">
-            <bpel:variable name="thisReceive_requestRequest1Msg" messageType="this:Receive_requestRequest" bpdm:messageIds="inc:_EYmf8LdEEeaCaYmVKR7BjA"/>
+            <bpel:variable name="thisReceive_requestRequest2Msg" messageType="this:Receive_requestRequest" bpdm:messageIds="inc:_EYmf8LdEEeaCaYmVKR7BjA"/>
             <bpel:variable name="customVariable" element="tns:customVariable" xvar:id="customVariable-_aFithrdEEeaCaYmVKR7BjA" xvar:relates-to="customVariable-keys" bpdm:xvarType="tns:customVariable" bpdm:id="_aFithrdEEeaCaYmVKR7BjA"/>
-            <bpel:variable name="thisReceive_requestResponse1Msg" messageType="this:Receive_requestResponse" bpdm:id="_LZOisLdHEeaCaYmVKR7BjA" bpdm:messageIds=" out:_LZExsLdHEeaCaYmVKR7BjA">
-                <bpel:from bpdm:toPart="body">
-                    <bpel:literal bpdm:linkedMessageType="this:Receive_requestResponse" bpdm:linkedPart="body"></bpel:literal>
-                </bpel:from>
-            </bpel:variable>
             <bpel:variable name="RequestOperation" element="BTS:RequestOperation" bpdm:id="_T77vEbgBEeaCaYmVKR7BjA">
                 <bpel:from>
                     <bpel:literal bpdm:linkedElement="BTS:RequestOperation"></bpel:literal>
@@ -132,29 +127,18 @@
         </bpel:links>
         <bpel:sequence>
             <bpdm:messagingtask eventType="start: message" operation="Receive_request" partnerLink="bTsAndClientPlkVar" portType="this:ForClient" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Receive request" bpdm:ID="_EYvp77dEEeaCaYmVKR7BjA">
-                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisReceive_requestRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="this:Receive_requestRequest" bpdm:ID="_EYmf8LdEEeaCaYmVKR7BjA"></bpdm:linkset>
-                <bpdm:linkset bpdm:type="assignments">
-                    <bpel:copy>
-                        <bpel:from>$ode:pid</bpel:from>
-                        <bpel:to>$thisReceive_requestResponse1Msg.body/BTS:Pid</bpel:to><mapper:mapperLink><mapper:vertice id="1631166311" targetPath="$thisReceive_requestResponse1Msg.body/BTS:Pid" targetedBy="826459816-arg0"></mapper:vertice><mapper:vertice id="826459816" sourcePath="$ode:pid"></mapper:vertice></mapper:mapperLink>
-                    </bpel:copy>
-                    <bpel:copy>
-                        <bpel:from>current-dateTime()</bpel:from>
-                        <bpel:to>$thisReceive_requestResponse1Msg.body/BTS:Timestamp</bpel:to><mapper:mapperLink><mapper:vertice id="632534356" targetPath="$thisReceive_requestResponse1Msg.body/BTS:Timestamp" targetedBy="777700166-arg0"></mapper:vertice><mapper:vertice id="777700166" dimension="109x24" location="480,89"><mapper:value>current-dateTime()</mapper:value></mapper:vertice></mapper:mapperLink>
-                    </bpel:copy>
-                </bpdm:linkset>
-                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisReceive_requestResponse1Msg" bpdm:msgVarScopeId="_EYvp67dEEeaCaYmVKR7BjA" bpdm:variableIsManaged="true" bpdm:messageType="this:Receive_requestResponse" bpdm:ID="_LZExsLdHEeaCaYmVKR7BjA"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisReceive_requestRequest2Msg" bpdm:variableIsManaged="true" bpdm:messageType="this:Receive_requestRequest" bpdm:ID="_EYmf8LdEEeaCaYmVKR7BjA"></bpdm:linkset>
             </bpdm:messagingtask>
             <bpdm:gateway bpdm:label="Release existing request? " bpdm:ID="_EYvqGrdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
                 <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_EYvqHbdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="default"></bpdm:linkset>
                 <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_EYvqHLdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="Yes">
-                    <bpel:condition>ode:get-property-value("release_key") = $thisReceive_requestRequest1Msg.body/BTS:Action<mapper:mapperLink><mapper:vertice id="1632139128" targetPath="$condition" targetedBy="805896485-arg2"></mapper:vertice><mapper:vertice id="805896485" dimension="79x24" location="483,75"><mapper:value>=</mapper:value></mapper:vertice><mapper:vertice id="759923941" dimension="139x24" location="286,38" targetedBy="805896485-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="742527223" dimension="79x24" location="133,40" targetedBy="759923941-arg0"><mapper:value>"release_key"</mapper:value></mapper:vertice><mapper:vertice id="1925582510" sourcePath="$thisReceive_requestRequest1Msg.body/BTS:Action" targetedBy="805896485-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
+                    <bpel:condition>ode:get-property-value("release_key") = $thisReceive_requestRequest2Msg.body/BTS:Action<mapper:mapperLink><mapper:vertice id="1632139128" targetPath="$condition" targetedBy="805896485-arg2"></mapper:vertice><mapper:vertice id="805896485" dimension="79x24" location="483,75"><mapper:value>=</mapper:value></mapper:vertice><mapper:vertice id="759923941" dimension="139x24" location="286,38" targetedBy="805896485-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="742527223" dimension="79x24" location="133,40" targetedBy="759923941-arg0"><mapper:value>"release_key"</mapper:value></mapper:vertice><mapper:vertice id="1925582510" sourcePath="$thisReceive_requestRequest2Msg.body/BTS:Action" targetedBy="805896485-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
                 </bpdm:linkset>
                 <bpel:sequence>
                     <bpdm:gateway bpdm:label="New or modify existing?" bpdm:ID="_EYvqHrdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
                         <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_EYvqIbdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="default"></bpdm:linkset>
                         <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_EYvqILdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="Yes">
-                            <bpel:condition>ode:get-property-value("confirm_key") != $thisReceive_requestRequest1Msg.body/BTS:Action<mapper:mapperLink><mapper:vertice id="864063789" targetPath="$condition" targetedBy="2028018803-arg2"></mapper:vertice><mapper:vertice id="2028018803" dimension="79x24" location="572,66"><mapper:value>!=</mapper:value></mapper:vertice><mapper:vertice id="1035680709" dimension="139x24" location="389,40" targetedBy="2028018803-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="1469751138" dimension="83x24" location="250,20" targetedBy="1035680709-arg0"><mapper:value>"confirm_key"</mapper:value></mapper:vertice><mapper:vertice id="1746809351" sourcePath="$thisReceive_requestRequest1Msg.body/BTS:Action" targetedBy="2028018803-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
+                            <bpel:condition>ode:get-property-value("confirm_key") != $thisReceive_requestRequest2Msg.body/BTS:Action<mapper:mapperLink><mapper:vertice id="864063789" targetPath="$condition" targetedBy="2028018803-arg2"></mapper:vertice><mapper:vertice id="2028018803" dimension="79x24" location="572,66"><mapper:value>!=</mapper:value></mapper:vertice><mapper:vertice id="1035680709" dimension="139x24" location="389,40" targetedBy="2028018803-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="1469751138" dimension="83x24" location="250,20" targetedBy="1035680709-arg0"><mapper:value>"confirm_key"</mapper:value></mapper:vertice><mapper:vertice id="1746809351" sourcePath="$thisReceive_requestRequest2Msg.body/BTS:Action" targetedBy="2028018803-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
                         </bpdm:linkset>
                         <bpel:sequence>
                             <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_EYvqLrdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
@@ -218,6 +202,11 @@
                                             <bpel:literal bpdm:linkedMessageType="CalculateRequestUrgency-process:Calculare_urgency_requestRequest" bpdm:linkedPart="body" bpdm:binding="CalculateRequestUrgency-process:processAndCallerServiceBinding" bpdm:opMsgType="0" bpdm:operation="Calculare_urgency_request"></bpel:literal>
                                         </bpel:from>
                                     </bpel:variable>
+                                    <bpel:variable name="thisReceive_requestResponse2Msg" messageType="this:Receive_requestResponse" bpdm:id="_MpRSIL2FEeaXDrw_F1y5qw" bpdm:messageIds=" out:_MpHhIL2FEeaXDrw_F1y5qw">
+                                        <bpel:from bpdm:toPart="body">
+                                            <bpel:literal bpdm:linkedMessageType="this:Receive_requestResponse" bpdm:linkedPart="body"></bpel:literal>
+                                        </bpel:from>
+                                    </bpel:variable>
                                 </bpel:variables>
                                 <bpel:links>
                                     <bpel:link name="_I3Py4LyREeaEvIAxHAjZ3A_to__EYvqF7dEEeaCaYmVKR7BjA"/>
@@ -227,8 +216,8 @@
                                     <bpdm:messagingtask operation="Calculare_urgency_request" partnerLink="bTSimplicitPartnerAndBTSForCanonicPortPlk0Var" portType="CalculateRequestUrgency-process:Forcaller" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Get Request Urgency" bpdm:ID="_ckcBBrk1EeajYsanxe9sog">
                                         <bpdm:linkset bpdm:type="assignments">
                                             <bpel:copy>
-                                                <bpel:from>$thisReceive_requestRequest1Msg.body/BTS:RequestInfo/BTS:EventDateTime</bpel:from>
-                                                <bpel:to>$calculateRequestUrgency-processCalculare_urgency_request1Msg.body</bpel:to><mapper:mapperLink><mapper:vertice id="125021116" targetPath="$calculateRequestUrgency-processCalculare_urgency_request1Msg.body" targetedBy="665021781-arg0"></mapper:vertice><mapper:vertice id="665021781" sourcePath="$thisReceive_requestRequest1Msg.body/BTS:RequestInfo/BTS:EventDateTime"></mapper:vertice></mapper:mapperLink>
+                                                <bpel:from>$thisReceive_requestRequest2Msg.body/BTS:RequestInfo/BTS:EventDateTime</bpel:from>
+                                                <bpel:to>$calculateRequestUrgency-processCalculare_urgency_request1Msg.body</bpel:to><mapper:mapperLink><mapper:vertice id="125021116" targetPath="$calculateRequestUrgency-processCalculare_urgency_request1Msg.body" targetedBy="665021781-arg0"></mapper:vertice><mapper:vertice id="665021781" sourcePath="$thisReceive_requestRequest2Msg.body/BTS:RequestInfo/BTS:EventDateTime"></mapper:vertice></mapper:mapperLink>
                                             </bpel:copy>
                                         </bpdm:linkset>
                                         <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="calculateRequestUrgency-processCalculare_urgency_request1Msg" bpdm:variableIsManaged="true" bpdm:messageType="CalculateRequestUrgency-process:Calculare_urgency_requestRequest" bpdm:binding="CalculateRequestUrgency-process:processAndCallerServiceBinding" bpdm:ID="_ckcBBrk1EeajYsanxe9sogOutgoing"></bpdm:linkset>
@@ -236,15 +225,15 @@
                                     </bpdm:messagingtask>
                                     <bpdm:gateway bpdm:label="Modify existing?" bpdm:ID="_EYvqIrdEEeaCaYmVKR7BjA" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
                                         <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_EYvqJLdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="Yes">
-                                            <bpel:condition>ode:get-property-value("modify_key") = $thisReceive_requestRequest1Msg.body/BTS:Action<mapper:mapperLink><mapper:vertice id="1305020409" targetPath="$condition" targetedBy="1725488507-arg2"></mapper:vertice><mapper:vertice id="1725488507" dimension="79x24" location="570,74"><mapper:value>=</mapper:value></mapper:vertice><mapper:vertice id="1942717997" dimension="139x24" location="359,43" targetedBy="1725488507-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="310656162" dimension="79x24" location="75,31" targetedBy="1942717997-arg0"><mapper:value>"modify_key"</mapper:value></mapper:vertice><mapper:vertice id="692486007" sourcePath="$thisReceive_requestRequest1Msg.body/BTS:Action" targetedBy="1725488507-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
+                                            <bpel:condition>ode:get-property-value("modify_key") = $thisReceive_requestRequest2Msg.body/BTS:Action<mapper:mapperLink><mapper:vertice id="1305020409" targetPath="$condition" targetedBy="1725488507-arg2"></mapper:vertice><mapper:vertice id="1725488507" dimension="79x24" location="570,74"><mapper:value>=</mapper:value></mapper:vertice><mapper:vertice id="1942717997" dimension="139x24" location="359,43" targetedBy="1725488507-arg0"><mapper:value>ode:get-property-value()</mapper:value></mapper:vertice><mapper:vertice id="310656162" dimension="79x24" location="75,31" targetedBy="1942717997-arg0"><mapper:value>"modify_key"</mapper:value></mapper:vertice><mapper:vertice id="692486007" sourcePath="$thisReceive_requestRequest2Msg.body/BTS:Action" targetedBy="1725488507-arg1"></mapper:vertice></mapper:mapperLink></bpel:condition>
                                         </bpdm:linkset>
                                         <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_EYvqJbdEEeaCaYmVKR7BjA" bpdm:targetDisplayName="default"></bpdm:linkset>
                                         <bpel:sequence>
                                             <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Mofidy request data" bpdm:ID="_EY5bCLdEEeaCaYmVKR7BjA">
                                                 <bpdm:linkset bpdm:type="assignments">
                                                     <bpel:copy>
-                                                        <bpel:from>bpel:doXslTransform("../../XSLT/ModifyRequest.xslt", $thisReceive_requestRequest1Msg.body, "urgency", $calculateRequestUrgency-processCalculare_urgency_requestResponse1Msg.body)</bpel:from>
-                                                        <bpel:to>$RequestOperation</bpel:to><mapper:mapperLink><mapper:vertice id="899336973" targetPath="$RequestOperation" targetedBy="1612185430-arg2"></mapper:vertice><mapper:vertice id="1612185430" dimension="126x24" location="396,84"><mapper:value>bpel:doXslTransform()</mapper:value></mapper:vertice><mapper:vertice id="480586265" dimension="171x24" location="172,47" targetedBy="1612185430-arg0"><mapper:value>"../../XSLT/ModifyRequest.xslt"</mapper:value></mapper:vertice><mapper:vertice id="665903647" sourcePath="$thisReceive_requestRequest1Msg.body" targetedBy="1612185430-arg1"></mapper:vertice><mapper:vertice id="1951602670" dimension="79x24" location="154,121" targetedBy="1612185430-arg3"><mapper:value>"urgency"</mapper:value></mapper:vertice><mapper:vertice id="1509776095" sourcePath="$calculateRequestUrgency-processCalculare_urgency_requestResponse1Msg.body" targetedBy="1612185430-arg4"></mapper:vertice></mapper:mapperLink>
+                                                        <bpel:from>bpel:doXslTransform("../../XSLT/ModifyRequest.xslt", $thisReceive_requestRequest2Msg.body, "urgency", $calculateRequestUrgency-processCalculare_urgency_requestResponse1Msg.body)</bpel:from>
+                                                        <bpel:to>$RequestOperation</bpel:to><mapper:mapperLink><mapper:vertice id="899336973" targetPath="$RequestOperation" targetedBy="1612185430-arg2"></mapper:vertice><mapper:vertice id="1612185430" dimension="126x24" location="396,84"><mapper:value>bpel:doXslTransform()</mapper:value></mapper:vertice><mapper:vertice id="480586265" dimension="171x24" location="172,47" targetedBy="1612185430-arg0"><mapper:value>"../../XSLT/ModifyRequest.xslt"</mapper:value></mapper:vertice><mapper:vertice id="665903647" sourcePath="$thisReceive_requestRequest2Msg.body" targetedBy="1612185430-arg1"></mapper:vertice><mapper:vertice id="1951602670" dimension="79x24" location="154,121" targetedBy="1612185430-arg3"><mapper:value>"urgency"</mapper:value></mapper:vertice><mapper:vertice id="1509776095" sourcePath="$calculateRequestUrgency-processCalculare_urgency_requestResponse1Msg.body" targetedBy="1612185430-arg4"></mapper:vertice></mapper:mapperLink>
                                                     </bpel:copy>
                                                 </bpdm:linkset>
                                             </bpdm:messagingtask>
@@ -253,8 +242,8 @@
                                             <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Save request data" bpdm:ID="_3j4v4LgKEeaCaYmVKR7BjA">
                                                 <bpdm:linkset bpdm:type="assignments">
                                                     <bpel:copy>
-                                                        <bpel:from>bpel:doXslTransform("../../XSLT/NewRequest.xslt", $thisReceive_requestRequest1Msg.body, "pid", $ode:pid, "urgency", $calculateRequestUrgency-processCalculare_urgency_requestResponse1Msg.body)</bpel:from>
-                                                        <bpel:to>$RequestOperation</bpel:to><mapper:mapperLink><mapper:vertice id="896566624" targetPath="$RequestOperation" targetedBy="781359616-arg4"></mapper:vertice><mapper:vertice id="781359616" dimension="126x109" location="300,96"><mapper:value>bpel:doXslTransform()</mapper:value></mapper:vertice><mapper:vertice id="1382863046" dimension="157x24" location="90,51" targetedBy="781359616-arg0"><mapper:value>"../../XSLT/NewRequest.xslt"</mapper:value></mapper:vertice><mapper:vertice id="806941792" sourcePath="$thisReceive_requestRequest1Msg.body" targetedBy="781359616-arg1"></mapper:vertice><mapper:vertice id="1030712522" dimension="79x24" location="143,135" targetedBy="781359616-arg2"><mapper:value>"pid"</mapper:value></mapper:vertice><mapper:vertice id="763096663" sourcePath="$ode:pid" targetedBy="781359616-arg3"></mapper:vertice><mapper:vertice id="1415458274" dimension="79x24" location="156,192" targetedBy="781359616-arg5"><mapper:value>"urgency"</mapper:value></mapper:vertice><mapper:vertice id="861344123" sourcePath="$calculateRequestUrgency-processCalculare_urgency_requestResponse1Msg.body" targetedBy="781359616-arg6"></mapper:vertice></mapper:mapperLink>
+                                                        <bpel:from>bpel:doXslTransform("../../XSLT/NewRequest.xslt", $thisReceive_requestRequest2Msg.body, "pid", $ode:pid, "urgency", $calculateRequestUrgency-processCalculare_urgency_requestResponse1Msg.body)</bpel:from>
+                                                        <bpel:to>$RequestOperation</bpel:to><mapper:mapperLink><mapper:vertice id="896566624" targetPath="$RequestOperation" targetedBy="781359616-arg4"></mapper:vertice><mapper:vertice id="781359616" dimension="126x109" location="300,96"><mapper:value>bpel:doXslTransform()</mapper:value></mapper:vertice><mapper:vertice id="1382863046" dimension="157x24" location="90,51" targetedBy="781359616-arg0"><mapper:value>"../../XSLT/NewRequest.xslt"</mapper:value></mapper:vertice><mapper:vertice id="806941792" sourcePath="$thisReceive_requestRequest2Msg.body" targetedBy="781359616-arg1"></mapper:vertice><mapper:vertice id="1030712522" dimension="79x24" location="143,135" targetedBy="781359616-arg2"><mapper:value>"pid"</mapper:value></mapper:vertice><mapper:vertice id="763096663" sourcePath="$ode:pid" targetedBy="781359616-arg3"></mapper:vertice><mapper:vertice id="1415458274" dimension="79x24" location="156,192" targetedBy="781359616-arg5"><mapper:value>"urgency"</mapper:value></mapper:vertice><mapper:vertice id="861344123" sourcePath="$calculateRequestUrgency-processCalculare_urgency_requestResponse1Msg.body" targetedBy="781359616-arg6"></mapper:vertice></mapper:mapperLink>
                                                     </bpel:copy>
                                                 </bpdm:linkset>
                                             </bpdm:messagingtask>
@@ -296,6 +285,37 @@
                                                 <bpel:to>$BTS_Request/BTS_metrics:Urgency</bpel:to><mapper:mapperLink><mapper:vertice id="2028427734" targetPath="$BTS_Request/BTS_metrics:Urgency" targetedBy="532527805-arg0"></mapper:vertice><mapper:vertice id="532527805" sourcePath="$RequestOperation/BTS:Request/BTS:Urgency"></mapper:vertice></mapper:mapperLink>
                                             </bpel:copy>
                                         </bpdm:linkset>
+                                    </bpdm:messagingtask>
+                                    <bpdm:messagingtask eventType="intermediate: message" operation="Receive_request" partnerLink="bTsAndClientPlkVar" portType="this:ForClient" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Reply caller" bpdm:ID="_KS6ewL2FEeaXDrw_F1y5qw">
+                                        <bpdm:linkset bpdm:type="assignments">
+                                            <bpel:copy>
+                                                <bpel:from>$ode:pid</bpel:from>
+                                                <bpel:to>$thisReceive_requestResponse2Msg.body/BTS:ACK/BTS:Pid</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1785797002" targetPath="$thisReceive_requestResponse2Msg.body/BTS:ACK/BTS:Pid" targetedBy="1878005545-arg0"></mapper:vertice>
+  <mapper:vertice id="1878005545" sourcePath="$ode:pid"></mapper:vertice>
+</mapper:mapperLink>
+                                            </bpel:copy>
+                                            <bpel:copy>
+                                                <bpel:from>current-dateTime()</bpel:from>
+                                                <bpel:to>$thisReceive_requestResponse2Msg.body/BTS:ACK/BTS:Timestamp</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="13323659" targetPath="$thisReceive_requestResponse2Msg.body/BTS:ACK/BTS:Timestamp" targetedBy="838769608-arg0"></mapper:vertice>
+  <mapper:vertice id="838769608" dimension="109x24" location="438,68">
+    <mapper:value>current-dateTime()</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink>
+                                            </bpel:copy>
+                                            <bpel:copy>
+                                                <bpel:from>$RequestOperation/BTS:Request/BTS:RequestId</bpel:from>
+                                                <bpel:to>$thisReceive_requestResponse2Msg.body/BTS:RequestId</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1846795482" targetPath="$thisReceive_requestResponse2Msg.body/BTS:RequestId" targetedBy="1178500341-arg0"></mapper:vertice>
+  <mapper:vertice id="1178500341" sourcePath="$RequestOperation/BTS:Request/BTS:RequestId"></mapper:vertice>
+</mapper:mapperLink>
+                                            </bpel:copy>
+                                        </bpdm:linkset>
+                                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisReceive_requestResponse2Msg" bpdm:msgVarScopeId="_l4q6sLyREeaEvIAxHAjZ3A" bpdm:variableIsManaged="true" bpdm:messageType="this:Receive_requestResponse" bpdm:ID="_MpHhIL2FEeaXDrw_F1y5qw"></bpdm:linkset>
                                     </bpdm:messagingtask>
                                     <bpdm:gateway bpdm:label="Parallel_Gateway" bpdm:ID="_EYvp-bdEEeaCaYmVKR7BjA" bpdm:gatewayType="parallel_and" bpdm:isMerge="false">
                                         <bpel:sequence>
@@ -659,17 +679,7 @@
                                                     </bpel:copy>
                                                     <bpel:copy>
                                                         <bpel:from>bpel:doXslTransform("../../XSLT/PreparePDFVendors.xslt", $RequestOperation)</bpel:from>
-                                                        <bpel:to>$PDFVendors</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1919831484" targetPath="$PDFVendors" targetedBy="1223528578-arg2"></mapper:vertice>
-  <mapper:vertice id="1223528578" dimension="126x24" location="478,85">
-    <mapper:value>bpel:doXslTransform()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="663143365" dimension="195x24" location="108,96" targetedBy="1223528578-arg0">
-    <mapper:value>"../../XSLT/PreparePDFVendors.xslt"</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="462347130" sourcePath="$RequestOperation" targetedBy="1223528578-arg1"></mapper:vertice>
-</mapper:mapperLink>
+                                                        <bpel:to>$PDFVendors</bpel:to><mapper:mapperLink><mapper:vertice id="1919831484" targetPath="$PDFVendors" targetedBy="1223528578-arg2"></mapper:vertice><mapper:vertice id="1223528578" dimension="126x24" location="478,85"><mapper:value>bpel:doXslTransform()</mapper:value></mapper:vertice><mapper:vertice id="663143365" dimension="195x24" location="108,96" targetedBy="1223528578-arg0"><mapper:value>"../../XSLT/PreparePDFVendors.xslt"</mapper:value></mapper:vertice><mapper:vertice id="462347130" sourcePath="$RequestOperation" targetedBy="1223528578-arg1"></mapper:vertice></mapper:mapperLink>
                                                     </bpel:copy>
                                                 </bpdm:linkset>
                                             </bpdm:messagingtask>
@@ -697,11 +707,7 @@
                                                     </bpel:copy>
                                                     <bpel:copy>
                                                         <bpel:from>$PDFVendors</bpel:from>
-                                                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:vendors</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1376028131" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:vendors" targetedBy="1509062569-arg0"></mapper:vertice>
-  <mapper:vertice id="1509062569" sourcePath="$PDFVendors"></mapper:vertice>
-</mapper:mapperLink>
+                                                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:vendors</bpel:to><mapper:mapperLink><mapper:vertice id="1376028131" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:vendors" targetedBy="1509062569-arg0"></mapper:vertice><mapper:vertice id="1509062569" sourcePath="$PDFVendors"></mapper:vertice></mapper:mapperLink>
                                                     </bpel:copy>
                                                 </bpdm:linkset>
                                                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="PDFTaskRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="ns0:sendRequest" bpdm:binding="ns0:JavaInternalWSSOAP11Binding" bpdm:ID="_uMx0MLy4Eea8DveVMuPLZgOutgoing"></bpdm:linkset>
@@ -727,7 +733,26 @@
                                                 <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="emailActivityWSDLSendResponse1Msg" bpdm:variableIsManaged="true" bpdm:messageType="EmailActivityWSDL:sendResponse" bpdm:binding="EmailActivityWSDL:EmailWSSOAP11Binding" bpdm:ID="_KgCOcLy5Eea8DveVMuPLZgIncoming"></bpdm:linkset>
                                                 <bpdm:thrownFault msgFaultNcName="emailFault" msgFaultTypeQname="EmailActivityWSDL:emailFault"/>
                                             </bpdm:messagingtask>
-                                            <bpdm:messagingtask eventType="intermediate: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_Intermediate_Event" bpdm:ID="_Igvw4LyxEeaEvIAxHAjZ3A"></bpdm:messagingtask>
+                                            <bpdm:messagingtask eventType="intermediate: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_Intermediate_Event" bpdm:ID="_Igvw4LyxEeaEvIAxHAjZ3A">
+                                                <bpdm:linkset bpdm:type="assignments">
+                                                    <bpel:copy>
+                                                        <bpel:from>$RequestOperation/BTS:Request/BTS:RequestId</bpel:from>
+                                                        <bpel:to>$BTS_Request/BTS_metrics:RequestID</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="25285426" targetPath="$BTS_Request/BTS_metrics:RequestID" targetedBy="74137947-arg0"></mapper:vertice>
+  <mapper:vertice id="74137947" sourcePath="$RequestOperation/BTS:Request/BTS:RequestId"></mapper:vertice>
+</mapper:mapperLink>
+                                                    </bpel:copy>
+                                                    <bpel:copy>
+                                                        <bpel:from>$PDFTaskResponse1Msg.pdfAccessUrl</bpel:from>
+                                                        <bpel:to>$BTS_Request/BTS_metrics:proposal</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1657625543" targetPath="$BTS_Request/BTS_metrics:proposal" targetedBy="1399047501-arg0"></mapper:vertice>
+  <mapper:vertice id="1399047501" sourcePath="$PDFTaskResponse1Msg.pdfAccessUrl"></mapper:vertice>
+</mapper:mapperLink>
+                                                    </bpel:copy>
+                                                </bpdm:linkset>
+                                            </bpdm:messagingtask>
                                             <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Get customer decision" bpdm:ID="_CsEcgLyxEeaEvIAxHAjZ3A"></bpdm:messagingtask>
                                             <bpdm:messagingtask eventType="intermediate: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_Intermediate_Event" bpdm:ID="_SEcUsLyxEeaEvIAxHAjZ3A">
                                                 <bpdm:linkset bpdm:type="assignments">

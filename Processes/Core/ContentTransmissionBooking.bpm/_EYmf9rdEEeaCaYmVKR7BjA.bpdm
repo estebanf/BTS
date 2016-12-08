@@ -16,18 +16,18 @@
             <bpel:partnerLink name="bTsAndClientPlkVar" partnerLinkType="ContentTransmissionBooking:BTsAndClient" initializePartnerRole="yes" partnerRole="BTS_for_Client" bpdm:invokedService="BTS:CanonicServiceForClient" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/BTS/Client" bpdm:invokedIsDefault="true" bpdm:clientTasks="_EYmf9rdEEeaCaYmVKR7BjA:_EYvp4LdEEeaCaYmVKR7BjA" bpdm:isManaged="true" bpdm:otherPoolId="_EYvp67dEEeaCaYmVKR7BjA"/>
         </bpel:partnerLinks>
         <bpel:variables>
-            <bpel:variable name="bTSReceive_requestRequest1Msg" messageType="BTS:Receive_requestRequest" bpdm:messageIds=" out:_EYmf8LdEEeaCaYmVKR7BjA">
+            <bpel:variable name="bTSReceive_requestRequest2Msg" messageType="BTS:Receive_requestRequest" bpdm:messageIds=" out:_EYmf8LdEEeaCaYmVKR7BjA">
                 <bpel:from bpdm:toPart="body">
                     <bpel:literal bpdm:linkedMessageType="BTS:Receive_requestRequest" bpdm:linkedPart="body"></bpel:literal>
                 </bpel:from>
             </bpel:variable>
-            <bpel:variable name="bTSReceive_requestResponse1Msg" messageType="BTS:Receive_requestResponse" bpdm:id="_LZhdp7dHEeaCaYmVKR7BjA" bpdm:messageIds="inc:_LZExsLdHEeaCaYmVKR7BjA"/>
+            <bpel:variable name="bTSReceive_requestResponse1Msg" messageType="BTS:Receive_requestResponse" bpdm:id="_MqKqB72FEeaXDrw_F1y5qw" bpdm:messageIds="inc:_MpHhIL2FEeaXDrw_F1y5qw"/>
         </bpel:variables>
         <bpel:sequence>
             <bpdm:messagingtask eventType="start: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_Start_Event" bpdm:ID="_EYmf-rdEEeaCaYmVKR7BjA"></bpdm:messagingtask>
             <bpdm:messagingtask operation="Receive_request" partnerLink="bTsAndClientPlkVar" portType="BTS:ForClient" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Submit request" bpdm:ID="_EYvp4LdEEeaCaYmVKR7BjA">
-                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="bTSReceive_requestRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="BTS:Receive_requestRequest" bpdm:ID="_EYmf8LdEEeaCaYmVKR7BjA"></bpdm:linkset>
-                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="bTSReceive_requestResponse1Msg" bpdm:msgVarScopeId="_EYmf9rdEEeaCaYmVKR7BjA" bpdm:variableIsManaged="true" bpdm:messageType="BTS:Receive_requestResponse" bpdm:ID="_LZExsLdHEeaCaYmVKR7BjA"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="bTSReceive_requestRequest2Msg" bpdm:variableIsManaged="true" bpdm:messageType="BTS:Receive_requestRequest" bpdm:ID="_EYmf8LdEEeaCaYmVKR7BjA"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="bTSReceive_requestResponse1Msg" bpdm:msgVarScopeId="_EYmf9rdEEeaCaYmVKR7BjA" bpdm:variableIsManaged="true" bpdm:messageType="BTS:Receive_requestResponse" bpdm:ID="_MpHhIL2FEeaXDrw_F1y5qw"></bpdm:linkset>
             </bpdm:messagingtask>
             <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Recieve approval request" bpdm:ID="_EYvp47dEEeaCaYmVKR7BjA"></bpdm:messagingtask>
             <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Receive notification" bpdm:ID="_EYvp5rdEEeaCaYmVKR7BjA"></bpdm:messagingtask>

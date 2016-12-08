@@ -22,6 +22,7 @@
         <xjdbc:column key="no" name="ExternalResourceRequired" sql-type="BOOLEAN" xbpms:type-label="boolean" xsd-type="xs:boolean"/>
         <xjdbc:column key="no" name="ApprovalNeeded" sql-type="BOOLEAN" xbpms:type-label="boolean" xsd-type="xs:boolean"/>
         <xjdbc:column key="no" name="Approved" sql-type="BOOLEAN" xbpms:type-label="boolean" xsd-type="xs:boolean"/>
+        <xjdbc:column key="no" name="proposal" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
         <xjdbc:column generator="ctimestamp" key="no" name="created_on" xbpms:type-label="creation-timestamp"/>
         <xjdbc:column generator="utimestamp" key="no" name="updated_on" xbpms:type-label="update-timestamp"/>
         <xjdbc:column generator="pid" key="no" name="process_id" xbpms:type-label="process-definition-id"/>
