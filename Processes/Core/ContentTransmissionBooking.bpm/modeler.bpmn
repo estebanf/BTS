@@ -44,6 +44,8 @@
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvp4bdEEeaCaYmVKR7BjA" iD="_EYvp4LdEEeaCaYmVKR7BjA" associations="_MqTz872FEeaXDrw_F1y5qw" outgoingEdges="_EYvp6bdEEeaCaYmVKR7BjA" incomingEdges="_EYvp6LdEEeaCaYmVKR7BjA" name="Submit request" activityType="Task">
       <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_EYmf8bdEEeaCaYmVKR7BjA"/>
       <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_MpHhIb2FEeaXDrw_F1y5qw"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_8_zk8b27EeaXDrw_F1y5qw"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_ylGj0b2_EeaXDrw_F1y5qw"/>
     </vertices>
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvp5LdEEeaCaYmVKR7BjA" iD="_EYvp47dEEeaCaYmVKR7BjA" associations="_CriL872sEeaXDrw_F1y5qw _EdhuCb2sEeaXDrw_F1y5qw" incomingEdges="_EYvp6bdEEeaCaYmVKR7BjA" name="Recieve approval request" activityType="Task">
       <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_CrOp8b2sEeaXDrw_F1y5qw"/>
@@ -82,7 +84,7 @@
     </vertices>
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqG7dEEeaCaYmVKR7BjA" iD="_EYvqGrdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bH7dEEeaCaYmVKR7BjA _EY5bHrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bHbdEEeaCaYmVKR7BjA" name="Release existing request? " activityType="GatewayDataBasedExclusive"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqH7dEEeaCaYmVKR7BjA" iD="_EYvqHrdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bJbdEEeaCaYmVKR7BjA _EY5bILdEEeaCaYmVKR7BjA" incomingEdges="_EY5bH7dEEeaCaYmVKR7BjA" name="New or modify existing?" activityType="GatewayDataBasedExclusive"/>
-    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqL7dEEeaCaYmVKR7BjA" iD="_EYvqLrdEEeaCaYmVKR7BjA" outgoingEdges="_od8GQbyxEeaEvIAxHAjZ3A" incomingEdges="_oI64gbyxEeaEvIAxHAjZ3A _JUpQIb27EeaXDrw_F1y5qw" name="" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqL7dEEeaCaYmVKR7BjA" iD="_EYvqLrdEEeaCaYmVKR7BjA" outgoingEdges="_od8GQbyxEeaEvIAxHAjZ3A" incomingEdges="_oI64gbyxEeaEvIAxHAjZ3A _04zoob27EeaXDrw_F1y5qw" name="" activityType="GatewayDataBasedExclusive"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqObdEEeaCaYmVKR7BjA" iD="_EYvqOLdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bLbdEEeaCaYmVKR7BjA _EY5bLrdEEeaCaYmVKR7BjA" incomingEdges="_fYyfobyxEeaEvIAxHAjZ3A" name="Approved?" activityType="GatewayDataBasedExclusive"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqPbdEEeaCaYmVKR7BjA" iD="_EYvqPLdEEeaCaYmVKR7BjA" outgoingEdges="_oI64gbyxEeaEvIAxHAjZ3A" incomingEdges="_EY5bLbdEEeaCaYmVKR7BjA" name="" activityType="EventIntermediateEmpty" looping="false"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_EYvqQLdEEeaCaYmVKR7BjA" iD="_EYvqP7dEEeaCaYmVKR7BjA" incomingEdges="_EY5bLrdEEeaCaYmVKR7BjA" name="End rejected" activityType="EventEndEmpty"/>
@@ -100,9 +102,23 @@
     <vertices xmi:type="bpmn:Activity" xmi:id="_EY5bA7dEEeaCaYmVKR7BjA" iD="_EY5bArdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bNLdEEeaCaYmVKR7BjA _EY5bM7dEEeaCaYmVKR7BjA" incomingEdges="_EY5bMrdEEeaCaYmVKR7BjA" name="Client" activityType="GatewayDataBasedExclusive"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_EY5bBbdEEeaCaYmVKR7BjA" iD="_EY5bBLdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bN7dEEeaCaYmVKR7BjA _EY5bNrdEEeaCaYmVKR7BjA" incomingEdges="_EY5bNbdEEeaCaYmVKR7BjA" name="Client" activityType="GatewayDataBasedExclusive"/>
     <vertices xmi:type="bpmn:SubProcess" xmi:id="_BGytobs5Eeash72vczxLlw" iD="_BGytoLs5Eeash72vczxLlw" incomingEdges="_EY5bHrdEEeaCaYmVKR7BjA" name="Inquiry release">
-      <vertices xmi:type="bpmn:Activity" xmi:id="_EYvp87dEEeaCaYmVKR7BjA" iD="_EYvp8rdEEeaCaYmVKR7BjA" incomingEdges="_EY5bDrdEEeaCaYmVKR7BjA" name="End released" activityType="EventEndEmpty"/>
-      <vertices xmi:type="bpmn:ActivityService" xmi:id="_EY5bB7dEEeaCaYmVKR7BjA" iD="_EY5bBrdEEeaCaYmVKR7BjA" outgoingEdges="_EY5bDrdEEeaCaYmVKR7BjA" name="Release inquiry" activityType="ServiceTask"/>
-      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bDrdEEeaCaYmVKR7BjA" iD="_EYvp9LdEEeaCaYmVKR7BjA" name=""/>
+      <artifacts xmi:type="bpmn:DataObject" xmi:id="_ylGj072_EeaXDrw_F1y5qw" iD="_ylGj0r2_EeaXDrw_F1y5qw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ylGj1L2_EeaXDrw_F1y5qw" source="attachedDataobject">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ylGj1b2_EeaXDrw_F1y5qw" key="isBpelDeclaration" value="true"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ylQU2L2_EeaXDrw_F1y5qw" key="defaultDeclarationName" value="thisReceive_requestResponse3Msg"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ylQU3L2_EeaXDrw_F1y5qw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/BTS}Receive_requestResponse"/>
+        </eAnnotations>
+        <associations xmi:type="bpmn:Association" xmi:id="_ylQU2b2_EeaXDrw_F1y5qw" direction="To">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ylQU2r2_EeaXDrw_F1y5qw" source="dataObjectAssociationTypeSource">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ylQU272_EeaXDrw_F1y5qw" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+          </eAnnotations>
+        </associations>
+      </artifacts>
+      <vertices xmi:type="bpmn:Activity" xmi:id="_EYvp87dEEeaCaYmVKR7BjA" iD="_EYvp8rdEEeaCaYmVKR7BjA" associations="_ylQU2b2_EeaXDrw_F1y5qw" outgoingEdges="_87w1ob2_EeaXDrw_F1y5qw" name="Reply" activityType="EventIntermediateMessage" looping="false">
+        <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_ylGj0b2_EeaXDrw_F1y5qw"/>
+      </vertices>
+      <vertices xmi:type="bpmn:ActivityService" xmi:id="_87nEob2_EeaXDrw_F1y5qw" iD="_87nEoL2_EeaXDrw_F1y5qw" incomingEdges="_87w1ob2_EeaXDrw_F1y5qw" name="Release inquiry" activityType="ServiceTask"/>
+      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_87w1ob2_EeaXDrw_F1y5qw" iD="_87w1oL2_EeaXDrw_F1y5qw"/>
     </vertices>
     <vertices xmi:type="bpmn:SubProcess" xmi:id="_l4q6sbyREeaEvIAxHAjZ3A" iD="_l4q6sLyREeaEvIAxHAjZ3A" outgoingEdges="_kZDowb2nEeaXDrw_F1y5qw" incomingEdges="_EY5bILdEEeaCaYmVKR7BjA" name="Request valuation">
       <artifacts xmi:type="bpmn:DataObject" xmi:id="_MpRSIb2FEeaXDrw_F1y5qw" iD="_MpRSIL2FEeaXDrw_F1y5qw" name="thisReceive_requestResponse2Msg">
@@ -432,8 +448,37 @@
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_ImQv4b2qEeaXDrw_F1y5qw" iD="_ImQv4L2qEeaXDrw_F1y5qw"/>
     </vertices>
     <vertices xmi:type="bpmn:Activity" xmi:id="_kYdL0b2nEeaXDrw_F1y5qw" iD="_kYdL0L2nEeaXDrw_F1y5qw" outgoingEdges="_lw-d8b2nEeaXDrw_F1y5qw" incomingEdges="_kZDowb2nEeaXDrw_F1y5qw" activityType="EventIntermediateEmpty"/>
-    <vertices xmi:type="bpmn:Activity" xmi:id="_wuVowb26EeaXDrw_F1y5qw" iD="_wuVowL26EeaXDrw_F1y5qw" outgoingEdges="_IP8R6L27EeaXDrw_F1y5qw" incomingEdges="_EY5bJbdEEeaCaYmVKR7BjA" activityType="EventIntermediateEmpty"/>
-    <vertices xmi:type="bpmn:Activity" xmi:id="_IPfl8b27EeaXDrw_F1y5qw" iD="_IPfl8L27EeaXDrw_F1y5qw" outgoingEdges="_JUpQIb27EeaXDrw_F1y5qw" incomingEdges="_IP8R6L27EeaXDrw_F1y5qw" name="Retrieve data" activityType="Task"/>
+    <vertices xmi:type="bpmn:SubProcess" xmi:id="_2MjIcb27EeaXDrw_F1y5qw" iD="_2MjIcL27EeaXDrw_F1y5qw" outgoingEdges="_04zoob27EeaXDrw_F1y5qw" incomingEdges="_EY5bJbdEEeaCaYmVKR7BjA" name="Confirm request">
+      <artifacts xmi:type="bpmn:DataObject" xmi:id="_8_8u6r27EeaXDrw_F1y5qw" iD="_8_8u6b27EeaXDrw_F1y5qw" name="thisReceive_requestResponse1Msg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8_8u6727EeaXDrw_F1y5qw" source="attachedDataobject">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8_8u7L27EeaXDrw_F1y5qw" key="isBpelDeclaration" value="true"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9AGf6L27EeaXDrw_F1y5qw" key="defaultDeclarationName" value="thisReceive_requestResponse1Msg"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9AGf7L27EeaXDrw_F1y5qw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/BTS}Receive_requestResponse"/>
+        </eAnnotations>
+        <associations xmi:type="bpmn:Association" xmi:id="_9AGf6b27EeaXDrw_F1y5qw" direction="To">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9AGf6r27EeaXDrw_F1y5qw" source="dataObjectAssociationTypeSource">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9AGf6727EeaXDrw_F1y5qw" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+          </eAnnotations>
+        </associations>
+      </artifacts>
+      <vertices xmi:type="bpmn:Activity" xmi:id="_wuVowb26EeaXDrw_F1y5qw" iD="_wuVowL26EeaXDrw_F1y5qw" associations="_9AGf6b27EeaXDrw_F1y5qw" outgoingEdges="_8PBg4b2-EeaXDrw_F1y5qw" name="Reply" activityType="EventIntermediateMessage" looping="false">
+        <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_8_zk8b27EeaXDrw_F1y5qw"/>
+      </vertices>
+      <vertices xmi:type="bpmn:Activity" xmi:id="_w64agb27EeaXDrw_F1y5qw" iD="_w64agL27EeaXDrw_F1y5qw" incomingEdges="_w7VGcb27EeaXDrw_F1y5qw" activityType="EventIntermediateEmpty"/>
+      <vertices xmi:type="bpmn:Activity" xmi:id="_vUNXob27EeaXDrw_F1y5qw" iD="_vUNXoL27EeaXDrw_F1y5qw" outgoingEdges="_w7VGcb27EeaXDrw_F1y5qw" incomingEdges="_8kokgb2-EeaXDrw_F1y5qw" name="Retrieve data" activityType="Task"/>
+      <vertices xmi:type="bpmn:ActivityService" xmi:id="_6DjH6r2-EeaXDrw_F1y5qw" iD="_6DZW1r2-EeaXDrw_F1y5qw" outgoingEdges="_8kokgb2-EeaXDrw_F1y5qw" incomingEdges="_8PBg4b2-EeaXDrw_F1y5qw" name="Get service request" activityType="ServiceTask">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6DjH672-EeaXDrw_F1y5qw" source="attachedDataobject">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6DjH7L2-EeaXDrw_F1y5qw" key="blackbox" value="true"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6DjH7b2-EeaXDrw_F1y5qw" key="douri" value="project:///Connectors/Database/select_bts_request.sql/select_bts_request.sql.wsdl?invokerequestresponsebound={urn:intalio.com:connectors:database:bts:select_bts_requestservice}select_bts_requestService/select_bts_requestPort/select_bts_request"/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6DjH7r2-EeaXDrw_F1y5qw" source="genericFile">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6DjH772-EeaXDrw_F1y5qw" key="projectRelativePath" value="Connectors/Database/select_bts_request.sql/select_bts_request.sql"/>
+        </eAnnotations>
+      </vertices>
+      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_w7VGcb27EeaXDrw_F1y5qw" iD="_w7VGcL27EeaXDrw_F1y5qw"/>
+      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_8PBg4b2-EeaXDrw_F1y5qw" iD="_8PBg4L2-EeaXDrw_F1y5qw"/>
+      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_8kokgb2-EeaXDrw_F1y5qw" iD="_8kokgL2-EeaXDrw_F1y5qw"/>
+    </vertices>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bHbdEEeaCaYmVKR7BjA" iD="_EYvp8bdEEeaCaYmVKR7BjA" name=""/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bHrdEEeaCaYmVKR7BjA" iD="_EYvqHLdEEeaCaYmVKR7BjA" name="Yes"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bH7dEEeaCaYmVKR7BjA" iD="_EYvqHbdEEeaCaYmVKR7BjA" name="No" conditionType="Default" isDefault="true"/>
@@ -462,8 +507,7 @@
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_od8GQbyxEeaEvIAxHAjZ3A" iD="_od8GQLyxEeaEvIAxHAjZ3A"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_kZDowb2nEeaXDrw_F1y5qw" iD="_kZDowL2nEeaXDrw_F1y5qw"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_lw-d8b2nEeaXDrw_F1y5qw" iD="_lw-d8L2nEeaXDrw_F1y5qw"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_IP8R6L27EeaXDrw_F1y5qw" iD="_IP8R5727EeaXDrw_F1y5qw"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_JUpQIb27EeaXDrw_F1y5qw" iD="_JUpQIL27EeaXDrw_F1y5qw"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_04zoob27EeaXDrw_F1y5qw" iD="_04zooL27EeaXDrw_F1y5qw"/>
   </pools>
   <pools xmi:type="bpmn:Pool" xmi:id="_SkCw0br7EeaNtrdCjMGf0g" iD="_SkCw0Lr7EeaNtrdCjMGf0g" name="HSAN Coordinator">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Xd40oLr7EeaNtrdCjMGf0g" source="executablepool">
@@ -824,6 +868,16 @@
   <messages xmi:type="bpmn:MessagingEdge" xmi:id="_Ec7REb2sEeaXDrw_F1y5qw" iD="_Ec7REL2sEeaXDrw_F1y5qw" source="_CsEcgbyxEeaEvIAxHAjZ3A" target="_EYvp5LdEEeaCaYmVKR7BjA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WRUfwL2sEeaXDrw_F1y5qw" source="attachedDataobject">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WRUfwb2sEeaXDrw_F1y5qw" key="douri" value="project:///Schemas/BTS.xsd?xsdtype={http://www.example.org/BTS}RequestACKType"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_8_zk8b27EeaXDrw_F1y5qw" iD="_8_zk8L27EeaXDrw_F1y5qw" source="_wuVowb26EeaXDrw_F1y5qw" target="_EYvp4bdEEeaCaYmVKR7BjA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_A1rDQL28EeaXDrw_F1y5qw" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_A1rDQb28EeaXDrw_F1y5qw" key="douri" value="project:///Schemas/BTS.xsd?xsdtype={http://www.example.org/BTS}RequestACKType"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_ylGj0b2_EeaXDrw_F1y5qw" iD="_ylGj0L2_EeaXDrw_F1y5qw" source="_EYvp87dEEeaCaYmVKR7BjA" target="_EYvp4bdEEeaCaYmVKR7BjA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1OYTML2_EeaXDrw_F1y5qw" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1OYTMb2_EeaXDrw_F1y5qw" key="douri" value="project:///Schemas/BTS.xsd?xsdtype={http://www.example.org/BTS}RequestACKType"/>
     </eAnnotations>
   </messages>
 </bpmn:BpmnDiagram>
