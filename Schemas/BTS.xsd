@@ -229,4 +229,20 @@
     		<element name="RequestId" type="string"></element>
     	</sequence>
     </complexType>
+
+
+    <complexType name="ProposalApprovalType">
+    	<sequence>
+    		<element name="RequestId" type="string"></element>
+    		<element name="approved" type="boolean"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="emailvariables">
+    	<complexType>
+    		<sequence>
+    			<element name="requestid" type="string"></element>
+    		</sequence>
+    	</complexType>
+    </element>
 </schema>

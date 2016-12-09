@@ -1,0 +1,25 @@
+﻿<!doctype html>
+<html>
+	<head>
+   	<title>Proposal</title>
+    <style>
+      body {
+        font-family:  'Helvetica Neue', sans-serif;;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-color: #111111;
+      }
+     </style>
+	</head>
+	<body>
+		<p>Dear customer, please find attached the proposal for the requested service.</p>
+		<p/>
+		<p>To approve the proposal, <a href="http://localhost:3000/api/approve/$requestid">click here</a></p>
+		<p/>
+		<p/>
+		<p>To reject the proposal, <a href="http://localhost:3000/api/reject/$requestid">click here</a></p>
+	</body>
+</html>
+	
