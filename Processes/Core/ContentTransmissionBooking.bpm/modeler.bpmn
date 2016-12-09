@@ -114,11 +114,11 @@
           </eAnnotations>
         </associations>
       </artifacts>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_EYvp87dEEeaCaYmVKR7BjA" iD="_EYvp8rdEEeaCaYmVKR7BjA" associations="_ylQU2b2_EeaXDrw_F1y5qw" outgoingEdges="_87w1ob2_EeaXDrw_F1y5qw" name="Reply" activityType="EventIntermediateMessage" looping="false">
+      <vertices xmi:type="bpmn:Activity" xmi:id="_EYvp87dEEeaCaYmVKR7BjA" iD="_EYvp8rdEEeaCaYmVKR7BjA" associations="_ylQU2b2_EeaXDrw_F1y5qw" incomingEdges="_sGTssb3FEeaXDrw_F1y5qw" name="Reply" activityType="EventIntermediateMessage" looping="false">
         <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_ylGj0b2_EeaXDrw_F1y5qw"/>
       </vertices>
-      <vertices xmi:type="bpmn:ActivityService" xmi:id="_87nEob2_EeaXDrw_F1y5qw" iD="_87nEoL2_EeaXDrw_F1y5qw" incomingEdges="_87w1ob2_EeaXDrw_F1y5qw" name="Release inquiry" activityType="ServiceTask"/>
-      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_87w1ob2_EeaXDrw_F1y5qw" iD="_87w1oL2_EeaXDrw_F1y5qw"/>
+      <vertices xmi:type="bpmn:ActivityService" xmi:id="_87nEob2_EeaXDrw_F1y5qw" iD="_87nEoL2_EeaXDrw_F1y5qw" outgoingEdges="_sGTssb3FEeaXDrw_F1y5qw" name="Release inquiry" activityType="ServiceTask"/>
+      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_sGTssb3FEeaXDrw_F1y5qw" iD="_sGTssL3FEeaXDrw_F1y5qw"/>
     </vertices>
     <vertices xmi:type="bpmn:SubProcess" xmi:id="_l4q6sbyREeaEvIAxHAjZ3A" iD="_l4q6sLyREeaEvIAxHAjZ3A" outgoingEdges="_kZDowb2nEeaXDrw_F1y5qw" incomingEdges="_EY5bILdEEeaCaYmVKR7BjA" name="Request valuation">
       <artifacts xmi:type="bpmn:DataObject" xmi:id="_MpRSIb2FEeaXDrw_F1y5qw" iD="_MpRSIL2FEeaXDrw_F1y5qw" name="thisReceive_requestResponse2Msg">
@@ -461,12 +461,12 @@
           </eAnnotations>
         </associations>
       </artifacts>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_wuVowb26EeaXDrw_F1y5qw" iD="_wuVowL26EeaXDrw_F1y5qw" associations="_9AGf6b27EeaXDrw_F1y5qw" outgoingEdges="_8PBg4b2-EeaXDrw_F1y5qw" name="Reply" activityType="EventIntermediateMessage" looping="false">
+      <vertices xmi:type="bpmn:Activity" xmi:id="_wuVowb26EeaXDrw_F1y5qw" iD="_wuVowL26EeaXDrw_F1y5qw" associations="_9AGf6b27EeaXDrw_F1y5qw" incomingEdges="_oty4wb3FEeaXDrw_F1y5qw" name="Reply" activityType="EventIntermediateMessage" looping="false">
         <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_8_zk8b27EeaXDrw_F1y5qw"/>
       </vertices>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_w64agb27EeaXDrw_F1y5qw" iD="_w64agL27EeaXDrw_F1y5qw" incomingEdges="_w7VGcb27EeaXDrw_F1y5qw" activityType="EventIntermediateEmpty"/>
+      <vertices xmi:type="bpmn:Activity" xmi:id="_w64agb27EeaXDrw_F1y5qw" iD="_w64agL27EeaXDrw_F1y5qw" outgoingEdges="_oty4wb3FEeaXDrw_F1y5qw" incomingEdges="_w7VGcb27EeaXDrw_F1y5qw" activityType="EventIntermediateEmpty"/>
       <vertices xmi:type="bpmn:Activity" xmi:id="_vUNXob27EeaXDrw_F1y5qw" iD="_vUNXoL27EeaXDrw_F1y5qw" outgoingEdges="_w7VGcb27EeaXDrw_F1y5qw" incomingEdges="_8kokgb2-EeaXDrw_F1y5qw" name="Retrieve data" activityType="Task"/>
-      <vertices xmi:type="bpmn:ActivityService" xmi:id="_6DjH6r2-EeaXDrw_F1y5qw" iD="_6DZW1r2-EeaXDrw_F1y5qw" outgoingEdges="_8kokgb2-EeaXDrw_F1y5qw" incomingEdges="_8PBg4b2-EeaXDrw_F1y5qw" name="Get service request" activityType="ServiceTask">
+      <vertices xmi:type="bpmn:ActivityService" xmi:id="_6DjH6r2-EeaXDrw_F1y5qw" iD="_6DZW1r2-EeaXDrw_F1y5qw" outgoingEdges="_8kokgb2-EeaXDrw_F1y5qw" name="Get service request" activityType="ServiceTask">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6DjH672-EeaXDrw_F1y5qw" source="attachedDataobject">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6DjH7L2-EeaXDrw_F1y5qw" key="blackbox" value="true"/>
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6DjH7b2-EeaXDrw_F1y5qw" key="douri" value="project:///Connectors/Database/select_bts_request.sql/select_bts_request.sql.wsdl?invokerequestresponsebound={urn:intalio.com:connectors:database:bts:select_bts_requestservice}select_bts_requestService/select_bts_requestPort/select_bts_request"/>
@@ -476,8 +476,8 @@
         </eAnnotations>
       </vertices>
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_w7VGcb27EeaXDrw_F1y5qw" iD="_w7VGcL27EeaXDrw_F1y5qw"/>
-      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_8PBg4b2-EeaXDrw_F1y5qw" iD="_8PBg4L2-EeaXDrw_F1y5qw"/>
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_8kokgb2-EeaXDrw_F1y5qw" iD="_8kokgL2-EeaXDrw_F1y5qw"/>
+      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_oty4wb3FEeaXDrw_F1y5qw" iD="_oty4wL3FEeaXDrw_F1y5qw"/>
     </vertices>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bHbdEEeaCaYmVKR7BjA" iD="_EYvp8bdEEeaCaYmVKR7BjA" name=""/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EY5bHrdEEeaCaYmVKR7BjA" iD="_EYvqHLdEEeaCaYmVKR7BjA" name="Yes"/>
